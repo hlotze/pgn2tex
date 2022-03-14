@@ -20,13 +20,13 @@ This approach provides a printout in B/W with more contrast as the colored PDFs 
   - requirements.txt for the venv
 
 - run the Python script `run_pgn2tex.py`; its will generate TeX files only
-- install a TeX Live with its editor's TeX Maker or TexWorks
-- use your prefered TeX editor (Tex Maker, TeX Works, others) and generate the PDF file from a TeX file
-- or use in batch mode aka 'hatless': `latexmk --gg -pdf` within you `TEX/` folder at the console
+- install a TeX Live with its editor's TeX Maker or TeX Works
+- use your prefered TeX editor (TeX Maker, TeX Works, others) and generate the PDF file from a TeX file
+- or use in batch mode aka 'hatless': `latexmk --gg -pdf` within your `TEX/` folder at the console promt
 
 ## Open item
 - [ ] add ECO Opening diagram to each game's TeX
-- [ ] collect all games' TeX file to one or multiple TeX file(s), so that one PDF will be generate
+- [ ] collect all games' TeX files to one or multiple TeX file(s), so that one PDF will be generate
   - [ ] add a TOC
   - [ ] add bookmarks
 - [ ] documentation, e.g. wiki 
