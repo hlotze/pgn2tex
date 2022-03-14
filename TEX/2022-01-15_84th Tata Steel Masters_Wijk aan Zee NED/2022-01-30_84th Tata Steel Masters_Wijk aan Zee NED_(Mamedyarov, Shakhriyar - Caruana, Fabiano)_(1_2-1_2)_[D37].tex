@@ -1,0 +1,330 @@
+\documentclass[9pt]{extarticle}
+\usepackage[a4paper, total={180mm, 260mm}]{geometry}
+\usepackage{longtable}
+\setcounter{LTchunksize}{1000}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\let\newline\\ \arraybackslash\hspace{0pt}}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{xskak}
+\usepackage{chessboard}
+\usepackage{fancyhdr}
+\usepackage[lastpage,user]{zref}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{2022.01.30: 84th Tata Steel Masters -- Wijk aan Zee NED}
+\rhead{Mamedyarov, Shakhriyar vs. Caruana, Fabiano -- 1/2-1/2 -- D37}
+\cfoot{\thepage\ of \zpageref{LastPage}}
+
+\setchessboard{tinyboard, showmover=false}
+
+\begin{document}
+
+\section*{2022.01.30: 84th Tata Steel Masters -- Wijk aan Zee NED}
+
+\subsection*{Mamedyarov, Shakhriyar vs. Caruana, Fabiano -- 1/2-1/2 -- D37}
+\subsubsection*{Game's PGN}
+\begin{flushleft}
+[Event] "84th Tata Steel Masters"
+
+[Site] "Wijk aan Zee NED"
+
+[Date] "2022.01.30"
+
+[Round] "13.2"
+
+[White] "Mamedyarov, Shakhriyar"
+
+[Black] "Caruana, Fabiano"
+
+[Result] "1/2-1/2"
+
+[BlackElo] "2792"
+
+[BlackFideId] "2020009"
+
+[BlackTitle] "GM"
+
+[ECO] "D37"
+
+[EventDate] "2022.01.15"
+
+[Opening] "QGD"
+
+[Variation] "classical variation (5.Bf4)"
+
+[WhiteElo] "2767"
+
+[WhiteFideId] "13401319"
+
+[WhiteTitle] "GM"
+
+\end{flushleft}
+\begin{flushleft}
+1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 Be7 5. Bf4 O-O 6. e3 c5 7. dxc5 Bxc5 8. cxd5 Nxd5 9. Nxd5 exd5 10. a3 Nc6 11. Bd3 h6 12. O-O Qf6 13. b4 \quad  \quad 1/2-1/2
+\end{flushleft}
+\parindent 0mm
+\begin{flushleft}
+\newchessgame
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 Be7 5. Bf4 O-O 6. e3 c5 7. dxc5 Bxc5 8. cxd5 Nxd5 9. Nxd5 exd5 10. a3 Nc6 11. Bd3 h6 12. O-O Qf6 13. b4}
+\xskakset{moveid=13w}
+\chessboard[smallboard, setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b2,b4}]
+\newline
+13.\,\xskakget{lan} ... \quad 1/2-1/2
+\end{flushleft}
+\parindent 0mm
+\subsubsection*{Game's diagrams}
+\nopagebreak[4]
+\newchessgame
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 Be7 5. Bf4 O-O 6. e3 c5 7. dxc5 Bxc5 8. cxd5 Nxd5 9. Nxd5 exd5 10. a3 Nc6 11. Bd3 h6 12. O-O Qf6 13. b4}
+
+\begin{center}
+\begin{longtable}{C{40mm} C{40mm} C{40mm} C{40mm}}
+\hline
+Mamedyarov, Shakhriyar & Caruana, Fabiano & Mamedyarov, Shakhriyar & Caruana, Fabiano \\
+\hline
+\endhead
+
+% 1. d2-d4 ... 
+\xskakset{moveid=1w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d2,d4}]
+\newline
+1.\,\xskakget{lan} ...
+& 
+% 1.  ... Ng8-f6
+\xskakset{moveid=1b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6}]
+\newline
+1. ...\,\xskakget{lan}
+& 
+% 2. c2-c4 ... 
+\xskakset{moveid=2w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c2,c4}]
+\newline
+2.\,\xskakget{lan} ...
+& 
+% 2.  ... e7-e6
+\xskakset{moveid=2b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e7,e6}]
+\newline
+2. ...\,\xskakget{lan}
+\\[2mm] 
+
+% 3. Ng1-f3 ... 
+\xskakset{moveid=3w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g1,f3}]
+\newline
+3.\,\xskakget{lan} ...
+& 
+% 3.  ... d7-d5
+\xskakset{moveid=3b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d7,d5}]
+\newline
+3. ...\,\xskakget{lan}
+& 
+% 4. Nb1-c3 ... 
+\xskakset{moveid=4w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b1,c3}]
+\newline
+4.\,\xskakget{lan} ...
+& 
+% 4.  ... Bf8-e7
+\xskakset{moveid=4b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f8,e7}]
+\newline
+4. ...\,\xskakget{lan}
+\\[2mm] 
+
+% 5. Bc1-f4 ... 
+\xskakset{moveid=5w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c1,f4}]
+\newline
+5.\,\xskakget{lan} ...
+& 
+% 5.  ... O-O
+\xskakset{moveid=5b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e8,g8}]
+\newline
+5. ...\,\xskakget{lan}
+& 
+% 6. e2-e3 ... 
+\xskakset{moveid=6w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e2,e3}]
+\newline
+6.\,\xskakget{lan} ...
+& 
+% 6.  ... c7-c5
+\xskakset{moveid=6b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c5}]
+\newline
+6. ...\,\xskakget{lan}
+\\[2mm] 
+
+% 7. d4xc5 ... 
+\xskakset{moveid=7w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d4,c5}]
+\newline
+7.\,\xskakget{lan} ...
+& 
+% 7.  ... Be7xc5
+\xskakset{moveid=7b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e7,c5}]
+\newline
+7. ...\,\xskakget{lan}
+& 
+% 8. c4xd5 ... 
+\xskakset{moveid=8w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c4,d5}]
+\newline
+8.\,\xskakget{lan} ...
+& 
+% 8.  ... Nf6xd5
+\xskakset{moveid=8b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f6,d5}]
+\newline
+8. ...\,\xskakget{lan}
+\\[2mm] 
+
+% 9. Nc3xd5 ... 
+\xskakset{moveid=9w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c3,d5}]
+\newline
+9.\,\xskakget{lan} ...
+& 
+% 9.  ... e6xd5
+\xskakset{moveid=9b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e6,d5}]
+\newline
+9. ...\,\xskakget{lan}
+& 
+% 10. a2-a3 ... 
+\xskakset{moveid=10w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={a2,a3}]
+\newline
+10.\,\xskakget{lan} ...
+& 
+% 10.  ... Nb8-c6
+\xskakset{moveid=10b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b8,c6}]
+\newline
+10. ...\,\xskakget{lan}
+\\[2mm] 
+
+% 11. Bf1-d3 ... 
+\xskakset{moveid=11w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f1,d3}]
+\newline
+11.\,\xskakget{lan} ...
+& 
+% 11.  ... h7-h6
+\xskakset{moveid=11b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={h7,h6}]
+\newline
+11. ...\,\xskakget{lan}
+& 
+% 12. O-O ... 
+\xskakset{moveid=12w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e1,g1}]
+\newline
+12.\,\xskakget{lan} ...
+& 
+% 12.  ... Qd8-f6
+\xskakset{moveid=12b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d8,f6}]
+\newline
+12. ...\,\xskakget{lan}
+\\[2mm] 
+
+% 13. b2-b4 ... 
+\xskakset{moveid=13w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b2,b4}]
+\newline
+13.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+& 
+& 
+& 
+\\ 
+
+\end{longtable}
+\end{center}
+\end{document}
