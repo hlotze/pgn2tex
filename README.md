@@ -4,7 +4,8 @@
 - a script `run_pgn2tex.py` that generates one TeX file from one chess PGN[^1] match, with a chessboard for each half move. 
   - the script processes all `*.pgn` files that it find at `PGN/` directory.
   - be aware, a PGN file can have thousends of games inside, and with this script each of its games will get a TeX file in `TEX/` directory
-  - each game's TeX generation take about 1 minute (on my old machine.)
+  - each game's TeX generation take about 1/2 seconds (on my old machine.)
+    - a TeX to PDF generation of a single game in 'hatless' mode take about 30 sec for 4-5 PDF pages Din A4
   - the script was not possible without [`python chess`](https://github.com/niklasf/python-chess) and for PDF generation: [`Tex Live`](https://www.tug.org/texlive/)
 
 ## My intention
@@ -25,10 +26,11 @@ This approach provides a printout in B/W with more contrast as the colored PDFs 
 - or use in batch mode aka 'hatless': `latexmk --gg -pdf` within your `TEX/` folder at the console promt
 
 ## Open item
-- [ ] add ECO Opening diagram to each game's TeX
+- [x] add ECO Opening diagram to each game's TeX
 - [ ] collect all games' TeX files to one or multiple TeX file(s), so that one PDF will be generate
   - [ ] add a TOC
   - [ ] add bookmarks
+- [ ] complete testing
 - [ ] documentation, e.g. wiki 
 
 ## Contact

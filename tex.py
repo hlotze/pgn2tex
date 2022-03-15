@@ -145,13 +145,17 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
     out += '\\documentclass[9pt]{extarticle}\n' + \
         '\\usepackage[a4paper, total={180mm, 260mm}]{geometry}\n'
     if pgn_available == True:
-        out += '\\usepackage{longtable}\n' + \
+        out += '\\usepackage{multicol}\n' + \
+            '\n' + \
+            '\\usepackage{longtable}\n' + \
             '\\setcounter{LTchunksize}{1000}\n' + \
             '\\usepackage{array}\n' + \
             '\\newcolumntype{C}[1]{>{\\centering\\let\\newline\\\\ \\arraybackslash\\hspace{0pt}}p{#1}}\n' + \
+            '\n' + \
             '\\usepackage[dvipsnames]{xcolor}\n' + \
             '\\usepackage{xskak}\n' + \
-            '\\usepackage{chessboard}\n'
+            '\\usepackage{chessboard}\n' + \
+            '\n'
 
     # fancyhdr for the header / footer 
     out += '\\usepackage{fancyhdr}\n' + \
@@ -172,15 +176,30 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
     out += '\\cfoot{\\thepage\\ of \\zpageref{LastPage}}\n\n'
 
     if pgn_available == True:
+        # ifthen
+        out += '\\usepackage{ifthen}\n' + \
+            '\\newcommand{\\printmovercolor}[1]\n' + \
+            '{\n' + \
+            '    \\ifthenelse{\\equal{#1}{w}}\n' + \
+            '     { % True case - w_hite\n' + \
+            '         \\xskakgetgame{lastmovenr}.\\,\\xskakget{lan} ...\n' + \
+            '     }\n' + \
+            '     { % False case - b_lack\n' + \
+            '         \\xskakgetgame{lastmovenr}. ... \\,\\xskakget{lan}\n' + \
+            '     }\n' + \
+            '}\n'
+
+    if pgn_available == True:
         out += '\\setchessboard{tinyboard, showmover=false}\n\n'
     
     out += '\\begin{document}\n' + \
-           '\n' + \
-           '\\section*{' + pgn_dict['Date'] + ': ' + pgn_dict['Event'] + ' -- ' + \
-           pgn_dict['Site'] + '}\n' + \
-           '\n' + \
-           '\\subsection*{' + pgn_dict['White'] + ' vs. ' + pgn_dict['Black'] + ' -- ' + \
-           pgn_dict['Result']
+        '\\setlength{\\columnsep}{32pt}' + \
+        '\n' + \
+        '\\section*{' + pgn_dict['Date'] + ': ' + pgn_dict['Event'] + ' -- ' + \
+        pgn_dict['Site'] + '}\n' + \
+        '\n' + \
+        '\\subsection*{' + pgn_dict['White'] + ' vs. ' + pgn_dict['Black'] + ' -- ' + \
+        pgn_dict['Result']
 
     if pgn_available == True:
         out += ' -- ' + pgn_dict['ECO'] + '}\n'
@@ -190,7 +209,11 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
     out += "\\subsubsection*{Game's PGN}\n"
 
     # list pgn's tags, drop tags with no values given
+    if pgn_available == True:
+        out += '\\begin{multicols}{2}\n'
+
     out += '\\begin{flushleft}\n'
+
     for key in pgn_dict:
         if key not in ['pgn', 'file']:
             if pgn_dict[key] in ['','?']:
@@ -198,12 +221,8 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
             if (key == 'ECO') and (pgn_available == False):
                 continue
             else:
-                out += '[' + str(key) + '] "' + str(pgn_dict[key]) + '"\n\n'
-    out += '\\end{flushleft}\n'
-
-    out += '\\begin{flushleft}\n' + \
-        pgn_dict['pgn'] + ' \\quad  \\quad ' + pgn_dict['Result'] + '\n' + \
-        '\\end{flushleft}\n' + \
+                out += '[' + key + '] "' + pgn_dict[key] + '"\n\n'
+    out += '\\end{flushleft}\n' +\
         '\\parindent 0mm\n'
 
     if pgn_available == True:
@@ -211,10 +230,14 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
         # get the last half-move of game_data_df
         game_data_dict = game_data_df.iloc[-1].to_dict()
         out += '\\begin{flushleft}\n' + \
-            '\\newchessgame\n' + \
-            '\\hidemoves{' + pgn_dict['pgn'] + '}\n' + \
-            '\\xskakset{moveid=' + game_data_dict['moveid'] + '}\n' + \
-            '\\chessboard[smallboard, setfen=\\xskakget{nextfen},\n' + \
+            '\\newchessgame[id=overview]\n' + \
+            '\\longmoves\n' + \
+            '\\mainline{' + pgn_dict['pgn'] + '} \\quad ' + pgn_dict['Result'] + '\n' + \
+            '\\end{flushleft}\n' + \
+            '\\begin{center}\n' + \
+            '\\begin{tabular}{C{80mm}}\n' + \
+            '\\xskakset{moveid=\\xskakgetgame{lastmoveid}}\n' + \
+            '\\chessboard[normalboard, setfen=\\xskakget{nextfen},\n' + \
             '             pgfstyle=border,\n' + \
             '             color=YellowGreen,\n' + \
             '             markfields={' + \
@@ -237,13 +260,44 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
                 game_data_dict['moveid'][0:-1] + \
                 '. ...\\,\\xskakget{lan} \\quad ' + pgn_dict['Result'] + '\n'
 
-        out += '\\end{flushleft}\n' + \
-            '\\parindent 0mm\n'
+        out += '\\end{tabular}\n' + \
+            '\\end{center}\n' + \
+            '\\columnbreak\n'
 
-    #
-    # TODO add eco details from eco_dict
-    # evtl. as its own subsubsection
-    # 
+    # opening information
+    # eco details from eco_dict
+    if pgn_available == True:
+        out += '\\subsubsection*{' + \
+            eco_dict['eco'] + ' -- ' + eco_dict['title'] + '}\n' + \
+            '\\begin{flushleft}\n' + \
+            '\\newchessgame[id=eco]\n' + \
+            '\\longmoves\n' + \
+            '\\mainline{' + eco_dict['pgn'] + '}\n\n' + \
+            '\\end{flushleft}\n' + \
+            '\\begin{center}\n' + \
+            '\\begin{tabular}{C{60mm}}\n' + \
+            '\\chessboard[smallboard, setfen={' + eco_dict['fen'] + '},\n' + \
+            '             pgfstyle=border,\n' + \
+            '             color=YellowGreen,\n' + \
+            '             markfields={' + \
+            eco_dict['sq_from'] + ',' + eco_dict['sq_to'] + '}'
+
+        if eco_dict['sq_check'] != '':
+            out += ',\n' + \
+            '             pgfstyle=circle,\n' + \
+            '             color=BrickRed,\n' + \
+            '             markfield={' + eco_dict['sq_check'] + '}]\n'
+        else:
+            out += ']\n'
+
+        out += '\\newline\n' + \
+            '\\xskakset{moveid=\\xskakgetgame{lastmoveid}}\n' + \
+            '\\printmovercolor{\\xskakgetgame{lastplayer}}\n'
+
+        out += '\\end{tabular}\n' + \
+            '\\end{center}\n' + \
+            '\\end{multicols}\n' + \
+            '\n'
 
     # all games will start with 1. move
     # if this does not exist in pgn

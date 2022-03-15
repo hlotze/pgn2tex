@@ -80,6 +80,8 @@ def new_get_eco_data_for(eco=None, pgn=None) -> dict:
         for _, row in rev_sorted_eco_data_df.iterrows():
             #print('len:', len(row['pgn']), '[',row['pgn'], '] last char:', row['pgn'][-1])
             if row['pgn'] == pgn[:len(row['pgn'])]:
+                if pd.isna(row['sq_check']):
+                    row['sq_check'] = ''
                 found_eco_dict = row.to_dict()
                 break
 
@@ -93,6 +95,8 @@ def new_get_eco_data_for(eco=None, pgn=None) -> dict:
         for _, row in rev_sorted_eco_data_df.iterrows():
             #print('len:', len(row['pgn']), '[',row['pgn'], '] last char:', row['pgn'][-1])
             if row['pgn'] == pgn[:len(row['pgn'])]:
+                if pd.isna(row['sq_check']):
+                    row['sq_check'] = ''
                 found_eco_dict = row.to_dict()
                 break
     return found_eco_dict

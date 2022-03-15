@@ -1,12 +1,16 @@
 \documentclass[9pt]{extarticle}
 \usepackage[a4paper, total={180mm, 260mm}]{geometry}
+\usepackage{multicol}
+
 \usepackage{longtable}
 \setcounter{LTchunksize}{1000}
 \usepackage{array}
 \newcolumntype{C}[1]{>{\centering\let\newline\\ \arraybackslash\hspace{0pt}}p{#1}}
+
 \usepackage[dvipsnames]{xcolor}
 \usepackage{xskak}
 \usepackage{chessboard}
+
 \usepackage{fancyhdr}
 \usepackage[lastpage,user]{zref}
 
@@ -16,14 +20,26 @@
 \rhead{Caruana, Fabiano vs. Carlsen, Magnus -- 0-1 -- B31}
 \cfoot{\thepage\ of \zpageref{LastPage}}
 
+\usepackage{ifthen}
+\newcommand{\printmovercolor}[1]
+{
+    \ifthenelse{\equal{#1}{w}}
+     { % True case - w_hite
+         \xskakgetgame{lastmovenr}.\,\xskakget{lan} ...
+     }
+     { % False case - b_lack
+         \xskakgetgame{lastmovenr}. ... \,\xskakget{lan}
+     }
+}
 \setchessboard{tinyboard, showmover=false}
 
 \begin{document}
-
+\setlength{\columnsep}{32pt}
 \section*{2022.01.29: 84th Tata Steel Masters -- Wijk aan Zee NED}
 
 \subsection*{Caruana, Fabiano vs. Carlsen, Magnus -- 0-1 -- B31}
 \subsubsection*{Game's PGN}
+\begin{multicols}{2}
 \begin{flushleft}
 [Event] "84th Tata Steel Masters"
 
@@ -60,22 +76,44 @@
 [WhiteTitle] "GM"
 
 \end{flushleft}
-\begin{flushleft}
-1. e4 c5 2. Nf3 Nc6 3. Bb5 g6 4. O-O Bg7 5. c3 Nf6 6. Re1 O-O 7. d4 d5 8. e5 Ne4 9. Be3 cxd4 10. cxd4 Qb6 11. Qe2 Bd7 12. Ba4 Rac8 13. Nc3 Nxc3 14. bxc3 Qd8 15. Bb3 Na5 16. Rac1 Nxb3 17. axb3 Qb6 18. Qa2 a5 19. Qa3 Rfe8 20. c4 dxc4 21. bxc4 Qa6 22. c5 Bc6 23. Rb1 a4 24. Rec1 Rcd8 25. Nd2 Qe2 26. f3 Rxd4 27. Bxd4 Qxd2 28. Rd1 Qf4 29. Qb4 e6 30. Bc3 Qxb4 31. Bxb4 Bxe5 32. Ba3 Bf6 33. Kf2 Be7 34. Rb6 Rc8 35. Rd2 f6 36. f4 e5 37. fxe5 fxe5 38. Re2 Rf8+ 39. Ke1 Rf5 40. Rb1 e4 41. Rc1 Bh4+ 42. g3 Bg5 43. Rb1 Rf3 44. Bc1 Bf6 45. Rb6 Rf5 46. Ba3 Kf7 47. Rf2 Rf3 48. Rxf3 exf3 49. Kf1 Bd4 \quad  \quad 0-1
-\end{flushleft}
 \parindent 0mm
 \begin{flushleft}
-\newchessgame
-\hidemoves{1. e4 c5 2. Nf3 Nc6 3. Bb5 g6 4. O-O Bg7 5. c3 Nf6 6. Re1 O-O 7. d4 d5 8. e5 Ne4 9. Be3 cxd4 10. cxd4 Qb6 11. Qe2 Bd7 12. Ba4 Rac8 13. Nc3 Nxc3 14. bxc3 Qd8 15. Bb3 Na5 16. Rac1 Nxb3 17. axb3 Qb6 18. Qa2 a5 19. Qa3 Rfe8 20. c4 dxc4 21. bxc4 Qa6 22. c5 Bc6 23. Rb1 a4 24. Rec1 Rcd8 25. Nd2 Qe2 26. f3 Rxd4 27. Bxd4 Qxd2 28. Rd1 Qf4 29. Qb4 e6 30. Bc3 Qxb4 31. Bxb4 Bxe5 32. Ba3 Bf6 33. Kf2 Be7 34. Rb6 Rc8 35. Rd2 f6 36. f4 e5 37. fxe5 fxe5 38. Re2 Rf8+ 39. Ke1 Rf5 40. Rb1 e4 41. Rc1 Bh4+ 42. g3 Bg5 43. Rb1 Rf3 44. Bc1 Bf6 45. Rb6 Rf5 46. Ba3 Kf7 47. Rf2 Rf3 48. Rxf3 exf3 49. Kf1 Bd4}
-\xskakset{moveid=49b}
-\chessboard[smallboard, setfen=\xskakget{nextfen},
+\newchessgame[id=overview]
+\longmoves
+\mainline{1. e4 c5 2. Nf3 Nc6 3. Bb5 g6 4. O-O Bg7 5. c3 Nf6 6. Re1 O-O 7. d4 d5 8. e5 Ne4 9. Be3 cxd4 10. cxd4 Qb6 11. Qe2 Bd7 12. Ba4 Rac8 13. Nc3 Nxc3 14. bxc3 Qd8 15. Bb3 Na5 16. Rac1 Nxb3 17. axb3 Qb6 18. Qa2 a5 19. Qa3 Rfe8 20. c4 dxc4 21. bxc4 Qa6 22. c5 Bc6 23. Rb1 a4 24. Rec1 Rcd8 25. Nd2 Qe2 26. f3 Rxd4 27. Bxd4 Qxd2 28. Rd1 Qf4 29. Qb4 e6 30. Bc3 Qxb4 31. Bxb4 Bxe5 32. Ba3 Bf6 33. Kf2 Be7 34. Rb6 Rc8 35. Rd2 f6 36. f4 e5 37. fxe5 fxe5 38. Re2 Rf8+ 39. Ke1 Rf5 40. Rb1 e4 41. Rc1 Bh4+ 42. g3 Bg5 43. Rb1 Rf3 44. Bc1 Bf6 45. Rb6 Rf5 46. Ba3 Kf7 47. Rf2 Rf3 48. Rxf3 exf3 49. Kf1 Bd4} \quad 0-1
+\end{flushleft}
+\begin{center}
+\begin{tabular}{C{80mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[normalboard, setfen=\xskakget{nextfen},
              pgfstyle=border,
              color=YellowGreen,
              markfields={f6,d4}]
 \newline
 49. ...\,\xskakget{lan} \quad 0-1
+\end{tabular}
+\end{center}
+\columnbreak
+\subsubsection*{B31 -- Sicilian: Rossolimo, 3...g6 4.O-O Bg7 5.c3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c5 2. Nf3 Nc6 3. Bb5 g6 4. O-O Bg7 5. c3}
+
 \end{flushleft}
-\parindent 0mm
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[smallboard, setfen={r1bqk1nr/pp1pppbp/2n3p1/1Bp5/4P3/2P2N2/PP1P1PPP/RNBQ1RK1 b kq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c2,c3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+\end{multicols}
+
 \subsubsection*{Game's diagrams}
 \nopagebreak[4]
 \newchessgame

@@ -1,12 +1,16 @@
 \documentclass[9pt]{extarticle}
 \usepackage[a4paper, total={180mm, 260mm}]{geometry}
+\usepackage{multicol}
+
 \usepackage{longtable}
 \setcounter{LTchunksize}{1000}
 \usepackage{array}
 \newcolumntype{C}[1]{>{\centering\let\newline\\ \arraybackslash\hspace{0pt}}p{#1}}
+
 \usepackage[dvipsnames]{xcolor}
 \usepackage{xskak}
 \usepackage{chessboard}
+
 \usepackage{fancyhdr}
 \usepackage[lastpage,user]{zref}
 
@@ -16,14 +20,26 @@
 \rhead{Praggnanandhaa, R vs. Grandelius, Nils -- 1-0 -- D85}
 \cfoot{\thepage\ of \zpageref{LastPage}}
 
+\usepackage{ifthen}
+\newcommand{\printmovercolor}[1]
+{
+    \ifthenelse{\equal{#1}{w}}
+     { % True case - w_hite
+         \xskakgetgame{lastmovenr}.\,\xskakget{lan} ...
+     }
+     { % False case - b_lack
+         \xskakgetgame{lastmovenr}. ... \,\xskakget{lan}
+     }
+}
 \setchessboard{tinyboard, showmover=false}
 
 \begin{document}
-
+\setlength{\columnsep}{32pt}
 \section*{2022.01.18: 84th Tata Steel Masters -- Wijk aan Zee NED}
 
 \subsection*{Praggnanandhaa, R vs. Grandelius, Nils -- 1-0 -- D85}
 \subsubsection*{Game's PGN}
+\begin{multicols}{2}
 \begin{flushleft}
 [Event] "84th Tata Steel Masters"
 
@@ -60,22 +76,44 @@
 [WhiteTitle] "GM"
 
 \end{flushleft}
-\begin{flushleft}
-1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Nd7 8. Nf3 O-O 9. Qa3 c5 10. Be2 b6 11. h4 e5 12. d5 Nf6 13. Bg5 Qe8 14. Bxf6 Bxf6 15. h5 Bg4 16. Nd2 Bd7 17. c4 Qe7 18. Qc3 Bg7 19. Qe3 f5 20. hxg6 hxg6 21. a4 Bf6 22. a5 Bg5 23. Qh3 Qg7 24. Qc3 Qf6 25. Bd3 Qe7 26. Nf3 Bf6 27. Qc2 Rac8 28. axb6 axb6 29. O-O f4 30. Ra7 Qd6 31. Be2 Bd8 32. Nh2 Bc7 33. Rfa1 Kg7 34. Bg4 Bxg4 35. Nxg4 Rf7 36. f3 Rh8 37. Qb2 Rh5 38. Rb7 Qd8 39. Raa7 Kg8 40. Kf2 Rh1 41. Ra1 Rh4 42. Rxc7 Rxc7 43. Qxe5 Rf7 44. Qe6 Rxg4 45. Qxg4 Kg7 46. Qe6 Qh4+ 47. Ke2 Qg5 48. Kf1 Qh4 49. Kg1 Qf6 50. Qxf6+ Kxf6 51. Kf2 Ke5 52. Ke2 Kd4 53. Rd1+ Ke5 54. Ra1 Kd4 55. Rd1+ Ke5 56. Kd3 Ra7 57. Kc3 g5 58. Kb3 g4 59. d6 gxf3 60. gxf3 Ke6 61. d7 Rxd7 62. Rxd7 Kxd7 63. Ka4 Kc6 64. e5 \quad  \quad 1-0
-\end{flushleft}
 \parindent 0mm
 \begin{flushleft}
-\newchessgame
-\hidemoves{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Nd7 8. Nf3 O-O 9. Qa3 c5 10. Be2 b6 11. h4 e5 12. d5 Nf6 13. Bg5 Qe8 14. Bxf6 Bxf6 15. h5 Bg4 16. Nd2 Bd7 17. c4 Qe7 18. Qc3 Bg7 19. Qe3 f5 20. hxg6 hxg6 21. a4 Bf6 22. a5 Bg5 23. Qh3 Qg7 24. Qc3 Qf6 25. Bd3 Qe7 26. Nf3 Bf6 27. Qc2 Rac8 28. axb6 axb6 29. O-O f4 30. Ra7 Qd6 31. Be2 Bd8 32. Nh2 Bc7 33. Rfa1 Kg7 34. Bg4 Bxg4 35. Nxg4 Rf7 36. f3 Rh8 37. Qb2 Rh5 38. Rb7 Qd8 39. Raa7 Kg8 40. Kf2 Rh1 41. Ra1 Rh4 42. Rxc7 Rxc7 43. Qxe5 Rf7 44. Qe6 Rxg4 45. Qxg4 Kg7 46. Qe6 Qh4+ 47. Ke2 Qg5 48. Kf1 Qh4 49. Kg1 Qf6 50. Qxf6+ Kxf6 51. Kf2 Ke5 52. Ke2 Kd4 53. Rd1+ Ke5 54. Ra1 Kd4 55. Rd1+ Ke5 56. Kd3 Ra7 57. Kc3 g5 58. Kb3 g4 59. d6 gxf3 60. gxf3 Ke6 61. d7 Rxd7 62. Rxd7 Kxd7 63. Ka4 Kc6 64. e5}
-\xskakset{moveid=64w}
-\chessboard[smallboard, setfen=\xskakget{nextfen},
+\newchessgame[id=overview]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Nd7 8. Nf3 O-O 9. Qa3 c5 10. Be2 b6 11. h4 e5 12. d5 Nf6 13. Bg5 Qe8 14. Bxf6 Bxf6 15. h5 Bg4 16. Nd2 Bd7 17. c4 Qe7 18. Qc3 Bg7 19. Qe3 f5 20. hxg6 hxg6 21. a4 Bf6 22. a5 Bg5 23. Qh3 Qg7 24. Qc3 Qf6 25. Bd3 Qe7 26. Nf3 Bf6 27. Qc2 Rac8 28. axb6 axb6 29. O-O f4 30. Ra7 Qd6 31. Be2 Bd8 32. Nh2 Bc7 33. Rfa1 Kg7 34. Bg4 Bxg4 35. Nxg4 Rf7 36. f3 Rh8 37. Qb2 Rh5 38. Rb7 Qd8 39. Raa7 Kg8 40. Kf2 Rh1 41. Ra1 Rh4 42. Rxc7 Rxc7 43. Qxe5 Rf7 44. Qe6 Rxg4 45. Qxg4 Kg7 46. Qe6 Qh4+ 47. Ke2 Qg5 48. Kf1 Qh4 49. Kg1 Qf6 50. Qxf6+ Kxf6 51. Kf2 Ke5 52. Ke2 Kd4 53. Rd1+ Ke5 54. Ra1 Kd4 55. Rd1+ Ke5 56. Kd3 Ra7 57. Kc3 g5 58. Kb3 g4 59. d6 gxf3 60. gxf3 Ke6 61. d7 Rxd7 62. Rxd7 Kxd7 63. Ka4 Kc6 64. e5} \quad 1-0
+\end{flushleft}
+\begin{center}
+\begin{tabular}{C{80mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[normalboard, setfen=\xskakget{nextfen},
              pgfstyle=border,
              color=YellowGreen,
              markfields={e4,e5}]
 \newline
 64.\,\xskakget{lan} ... \quad 1-0
+\end{tabular}
+\end{center}
+\columnbreak
+\subsubsection*{D85 -- Grünfeld: Exchange, 5.e4 Nxc3 6.bxc3 Bg7}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7}
+
 \end{flushleft}
-\parindent 0mm
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[smallboard, setfen={rnbqk2r/ppp1ppbp/6p1/8/3PP3/2P5/P4PPP/R1BQKBNR w KQkq - 1 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f8,g7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+\end{multicols}
+
 \subsubsection*{Game's diagrams}
 \nopagebreak[4]
 \newchessgame

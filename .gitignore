@@ -3,3 +3,8 @@ __pycache__
 .ipynb_checkpoints
 .env
 my_snippets.ipynb
+TEX/*.aux
+TEX/*.fdb*
+TEX/*.fls
+TEX/*.log
+TEX/*.synctex.gz

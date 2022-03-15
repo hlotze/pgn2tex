@@ -1,12 +1,16 @@
 \documentclass[9pt]{extarticle}
 \usepackage[a4paper, total={180mm, 260mm}]{geometry}
+\usepackage{multicol}
+
 \usepackage{longtable}
 \setcounter{LTchunksize}{1000}
 \usepackage{array}
 \newcolumntype{C}[1]{>{\centering\let\newline\\ \arraybackslash\hspace{0pt}}p{#1}}
+
 \usepackage[dvipsnames]{xcolor}
 \usepackage{xskak}
 \usepackage{chessboard}
+
 \usepackage{fancyhdr}
 \usepackage[lastpage,user]{zref}
 
@@ -16,14 +20,26 @@
 \rhead{Mamedyarov, Shakhriyar vs. Esipenko, Andrey -- 1/2-1/2 -- E00}
 \cfoot{\thepage\ of \zpageref{LastPage}}
 
+\usepackage{ifthen}
+\newcommand{\printmovercolor}[1]
+{
+    \ifthenelse{\equal{#1}{w}}
+     { % True case - w_hite
+         \xskakgetgame{lastmovenr}.\,\xskakget{lan} ...
+     }
+     { % False case - b_lack
+         \xskakgetgame{lastmovenr}. ... \,\xskakget{lan}
+     }
+}
 \setchessboard{tinyboard, showmover=false}
 
 \begin{document}
-
+\setlength{\columnsep}{32pt}
 \section*{2022.01.16: 84th Tata Steel Masters -- Wijk aan Zee NED}
 
 \subsection*{Mamedyarov, Shakhriyar vs. Esipenko, Andrey -- 1/2-1/2 -- E00}
 \subsubsection*{Game's PGN}
+\begin{multicols}{2}
 \begin{flushleft}
 [Event] "84th Tata Steel Masters"
 
@@ -58,22 +74,44 @@
 [WhiteTitle] "GM"
 
 \end{flushleft}
-\begin{flushleft}
-1. d4 Nf6 2. c4 e6 3. g4 d5 4. g5 Ne4 5. Bg2 Bb4+ 6. Kf1 Be7 7. h4 O-O 8. Nh3 c6 9. Qc2 e5 10. Nd2 Nxd2+ 11. Bxd2 exd4 12. cxd5 cxd5 13. Nf4 Be6 14. g6 Nc6 15. gxh7+ Kh8 16. Qb3 Qd7 17. Bxd5 Bxd5 18. Qxd5 Rad8 19. Qxd7 Rxd7 20. Rc1 Kxh7 21. Nd3 Rd5 22. Bf4 Re8 23. Bg3 Bd6 24. Rg1 Re4 25. f3 Re7 26. Bf2 \quad  \quad 1/2-1/2
-\end{flushleft}
 \parindent 0mm
 \begin{flushleft}
-\newchessgame
-\hidemoves{1. d4 Nf6 2. c4 e6 3. g4 d5 4. g5 Ne4 5. Bg2 Bb4+ 6. Kf1 Be7 7. h4 O-O 8. Nh3 c6 9. Qc2 e5 10. Nd2 Nxd2+ 11. Bxd2 exd4 12. cxd5 cxd5 13. Nf4 Be6 14. g6 Nc6 15. gxh7+ Kh8 16. Qb3 Qd7 17. Bxd5 Bxd5 18. Qxd5 Rad8 19. Qxd7 Rxd7 20. Rc1 Kxh7 21. Nd3 Rd5 22. Bf4 Re8 23. Bg3 Bd6 24. Rg1 Re4 25. f3 Re7 26. Bf2}
-\xskakset{moveid=26w}
-\chessboard[smallboard, setfen=\xskakget{nextfen},
+\newchessgame[id=overview]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. g4 d5 4. g5 Ne4 5. Bg2 Bb4+ 6. Kf1 Be7 7. h4 O-O 8. Nh3 c6 9. Qc2 e5 10. Nd2 Nxd2+ 11. Bxd2 exd4 12. cxd5 cxd5 13. Nf4 Be6 14. g6 Nc6 15. gxh7+ Kh8 16. Qb3 Qd7 17. Bxd5 Bxd5 18. Qxd5 Rad8 19. Qxd7 Rxd7 20. Rc1 Kxh7 21. Nd3 Rd5 22. Bf4 Re8 23. Bg3 Bd6 24. Rg1 Re4 25. f3 Re7 26. Bf2} \quad 1/2-1/2
+\end{flushleft}
+\begin{center}
+\begin{tabular}{C{80mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[normalboard, setfen=\xskakget{nextfen},
              pgfstyle=border,
              color=YellowGreen,
              markfields={g3,f2}]
 \newline
 26.\,\xskakget{lan} ... \quad 1/2-1/2
+\end{tabular}
+\end{center}
+\columnbreak
+\subsubsection*{E00 -- Queen's Pawn: Neo-Indian, Devin Gambit}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. g4}
+
 \end{flushleft}
-\parindent 0mm
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[smallboard, setfen={rnbqkb1r/pppp1ppp/4pn2/8/2PP2P1/8/PP2PP1P/RNBQKBNR b KQkq - 0 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g2,g4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+\end{multicols}
+
 \subsubsection*{Game's diagrams}
 \nopagebreak[4]
 \newchessgame
