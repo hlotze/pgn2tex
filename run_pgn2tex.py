@@ -28,11 +28,18 @@ def main():
         finally:
             file_obj.close()
 
+        tex.mk_subdirs(fname, 'TEX/')
+
         # start to get the games out of one pgn file
         games_df = pgn.get_games_from_pgnfile(fname)
 
-        for _, row in games_df.iterrows():
+        section_subfile_list = []
+        for game_nr, row in games_df.iterrows():
             one_game_dict = row.to_dict()
+
+            section_heading = one_game_dict['Date'] + ': ' + \
+                one_game_dict['Event'] + ' -- ' + \
+                one_game_dict['Site']
 
             if one_game_dict['pgn'] == '':
                 pgn_available = False
@@ -65,28 +72,23 @@ def main():
                                         pgn_available,
                                         chessboard_pgn_df)
 
-            # fn fix for lichess pgn files
-            event = one_game_dict['Event'].replace(
-                '/', '_').replace(':', '_').replace('.', '-')
-            site = one_game_dict['Site'].replace(
-                '/', '_').replace(':', '_').replace('.', '-')
-
-            tex_fn = 'TEX/' + one_game_dict['Date'].replace('.', '-') + '_' + \
-                event + '_' + \
-                site + '_(' + \
-                one_game_dict['White'] + ' - ' + \
-                one_game_dict['Black'] + ')_(' + \
-                one_game_dict['Result'].replace('/','_') + ')'
-
-            if pgn_available == True:
-                tex_fn += '_[' + one_game_dict['ECO'] + ']'
-
-            tex_fn += '.tex'
-            tex_fn = tex_fn.replace('?', 'x')
+            num_of_games = len(games_df)
+            str_len_num_of_games = len(str(num_of_games))
+            fn = str("0" * (str_len_num_of_games + 1)) + str(game_nr + 1)
+            fn = fn[((str_len_num_of_games + 1) * -1):]
+            tex_fn =  os.path.join(f'TEX/'+fname.split("/")[1].split(".")[0]+'/sections/', fn + '.tex')
 
             ret_dict = tex.store_tex_document(tex_data, tex_fn)
             print('stored:', ret_dict['file_name'])
 
+            section_subfile_list.append({
+                    'section' : section_heading,
+                    'subfile' : tex_fn
+                })
+
+        # generate the master tex file
+        ret_dict = tex.generate_master_tex(fname, 'TEX/', section_subfile_list)
+        print('stored:', ret_dict['file_name'], '\n')
 
 
 if __name__ == '__main__':
