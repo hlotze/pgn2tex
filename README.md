@@ -29,7 +29,7 @@ This approach provides a printout in B/W with more contrast as the colored PDFs 
 
 ## Open item
 - [x] add ECO Opening diagram to each game's TeX
-- [x] collect all games' TeX files to multiple TeX file(s) using TeX `\subfiles` machanism, so that we got one PDF 
+- [x] collect all games' TeX files to multiple TeX file(s) using TeX `\subfile{}` machanism, so that we got one PDF 
   - [x] add a TOC
   - [x] add PDF outline headline at \section (= Date + Event), \subsection (= Players, Result, ECO)
 - [ ] complete testing
