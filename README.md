@@ -8,6 +8,8 @@
     - a TeX to PDF generation of a single game in 'hatless' mode take about 60 sec for 4-5 PDF pages Din A4
   - the script was not possible without [`python chess`](https://github.com/niklasf/python-chess) and for PDF generation: [`Tex Live`](https://www.tug.org/texlive/)
 
+  [[tex_folder_structure.png|alt='TeX folder structure']]
+
 ## My intention
 ... was to support myself learning chess by studying chess games offline form selected PGN printouts / PDF files reading at any tablet, incl. making notes at the PDF's.
 
