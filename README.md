@@ -41,7 +41,7 @@ That project allows me to play with all that free tools, we have today: Linux OS
 - [x] add ECO Opening diagram to each game's TeX
 - [x] collect all games' TeX files to multiple TeX file(s) using TeX `\subfile{}` machanism, so that we got one PDF 
   - [x] add a TOC
-  - [x] add PDF outline headline at \section (= Date + Event), \subsection (= Players, Result, ECO)
+  - [x] add PDF outline headline at \section (= Date, Event, Site), \subsection (= Players, Result, ECO)
 - [ ] complete testing
 - [ ] documentation, e.g. wiki 
 - [ ] to fix: Opening code does not always match to given ECO
