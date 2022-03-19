@@ -1,7 +1,7 @@
 # pgn2tex
 
 ## What this site provides 
-- a script `run_pgn2tex.py` that generates one TeX file from one chess PGN[^1] match, with a chessboard for each half move, and a 'main.tex' that collects all the sections TeX file, with this you can generate on PDF out of that bunch of TeX files.
+- a script `run_pgn2tex.py` that generates one TeX file from one chess PGN[^1] match, with a chessboard for each half move, and a 'main.tex' that collects all the sections TeX file, with this you can generate one PDF out of that bunch of TeX files.
   - the script processes all `*.pgn` files that it find at `PGN/` directory.
   - be aware, a PGN file can have thousends of games inside, and with this script each of its games will get a TeX file in `TEX/` directory
   - each game's TeX generation take about 1/2 seconds (on my old machine.)
