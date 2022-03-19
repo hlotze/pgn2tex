@@ -1,7 +1,7 @@
 # pgn2tex
 
 ## What this site provides 
-- a script `run_pgn2tex.py` that generates one TeX file from one chess PGN[^1] match, with a chessboard for each half move, and a 'main.tex' that collects all sthe sections TeX file, with this you can generate on PDF out of that bunch of TeX files.
+- a script `run_pgn2tex.py` that generates one TeX file from one chess PGN[^1] match, with a chessboard for each half move, and a 'main.tex' that collects all the sections TeX file, with this you can generate on PDF out of that bunch of TeX files.
   - the script processes all `*.pgn` files that it find at `PGN/` directory.
   - be aware, a PGN file can have thousends of games inside, and with this script each of its games will get a TeX file in `TEX/` directory
   - each game's TeX generation take about 1/2 seconds (on my old machine.)
@@ -11,7 +11,7 @@
   ![TeX folder structure](tex_folder_structure.png)
 
 ## My intention
-... was to support myself learning chess by studying chess games offline form selected PGN printouts / PDF files reading at any tablet, incl. making notes at the PDF's.
+... was to support myself learning chess by studying chess games offline, from selected PGN printouts / PDF files reading at any tablet, incl. making notes at the PDF's.
 
 
 For online studies a good starting point learning chess is [lichess.org](https://lichess.org/) or others.
@@ -35,7 +35,7 @@ That project allows me to play with all that free tools, we have today: Linux OS
 - run the Python script `run_pgn2tex.py`; its will generate TeX files only
 - install a TeX Live with its editor's TeX Maker or TeX Works
 - use your prefered TeX editor (TeX Maker, TeX Works, others) and generate the PDF file from a TeX file
-- or use batch mode aka 'hatless' command `latexmk --gg -pdf` within your `TEX/` folder at the console promt
+- or use batch mode aka 'hatless' command `latexmk --gg -pdf` within your `TEX/` folder at the console prompt
 
 ## Open item
 - [x] add ECO Opening diagram to each game's TeX
