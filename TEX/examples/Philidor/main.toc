@@ -1,0 +1,16 @@
+\contentsline {section}{1749.??.??: Game one -- ?}{2}{section*.2}%
+\contentsline {subsection}{Philidor, Francois Andre Dani vs. Analysis\ Analyse -- 1-0 -- C23}{2}{section*.3}%
+\contentsline {subsubsection}{C23 -- Bishop's Opening: 2...Bc5 3.c3 Nf6}{2}{section*.4}%
+\contentsline {section}{1783.??.??: London -- London}{13}{section*.5}%
+\contentsline {subsection}{Count Bruehl vs. Philidor, Francois Andre Dani -- 0-1 -- C23}{13}{section*.6}%
+\contentsline {subsubsection}{C23 -- Bishop's Opening: Philidor Counterattack}{13}{section*.7}%
+\contentsline {section}{1788.??.??: London -- London}{26}{section*.8}%
+\contentsline {subsection}{Von Bruehl, Hans Moritz vs. Philidor, Francois Andre Dani -- 0-1 -- C38}{26}{section*.9}%
+\contentsline {subsubsection}{C38 -- KGA: Philidor Gambit}{26}{section*.10}%
+\contentsline {section}{1794.??.??: London -- London}{38}{section*.11}%
+\contentsline {subsection}{Atwood, George vs. Philidor, Francois Andre Dani -- 1/2-1/2 -- D20}{38}{section*.12}%
+\contentsline {subsubsection}{D20 -- QGA: 3.e3 e5}{38}{section*.13}%
+\contentsline {subsection}{Atwood, George vs. Philidor, Francois Andre Dani -- 1-0 -- C00}{49}{section*.14}%
+\contentsline {subsubsection}{B21 -- Sicilian: Grand Prix, 2...Nc6 3.Nf3 e6}{49}{section*.15}%
+\contentsline {subsection}{Atwood, George vs. Philidor, Francois Andre Dani -- 0-1 -- C00}{60}{section*.16}%
+\contentsline {subsubsection}{B21 -- Sicilian: Grand Prix, 2...e6 3.Nf3}{60}{section*.17}%

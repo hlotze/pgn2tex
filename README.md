@@ -5,7 +5,7 @@
   - the script processes all `*.pgn` files that it find at `PGN/` directory.
   - be aware, a PGN file can have thousends of games inside, and with this script each of its games will get a TeX file in `TEX/` directory
   - each game's TeX generation take about 1/2 seconds (on my old machine.)
-    - a TeX to PDF generation of a single game in 'hatless' mode take about 60 sec for 4-5 PDF pages Din A4; e.g. the complete generation of the PDF example 'Tata Steel Masters 2022' (1.300 pages) take about 4 hours.
+    - a TeX to PDF generation of a single game in 'hatless' mode take about 60 sec for 4-5 PDF pages Din A4; e.g. the complete generation of the PDF  'Tata Steel Masters 2022' (1.300 pages) take about 4 hours.
   - my works here was not possible without [`python chess`](https://github.com/niklasf/python-chess) and for TeX / PDF generation: [`TeX Live`](https://www.tug.org/texlive/)
 
   ![TeX folder structure](tex_folder_structure.png)
@@ -44,8 +44,8 @@ That project allows me to play with all that free tools, we have today: Linux OS
   - [x] add PDF outline headline at \section (= Date, Event, Site), \subsection (= Players, Result, ECO)
 - [ ] complete testing
 - [ ] documentation, e.g. wiki 
-- [ ] to fix: Opening code does not always match to given ECO
-- [ ] try layout enhancements
+- [ ] to fix/optimize: some Openings code and wording does not match to given ECO's code or wording, seen there are multiple versions of ECO
+- [x] layout enhancements, in most cases 1st page shows the game moves in figurine long notation and the Opening, 2nd page give all halfmoves diagrams
 
 ## Contact
 [@hlotze](https://github.com/hlotze)

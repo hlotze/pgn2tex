@@ -1,7 +1,14 @@
 % exarticle, if needed to allow 9pt font size
 \documentclass[11pt]{article}
 
-\usepackage[a4paper, total={180mm, 260mm}]{geometry}
+\usepackage{geometry}
+\geometry{
+   a4paper,
+   top=20mm,
+   bottom=20mm,
+   left=20mm,
+   right=20mm
+}
 
 % fonts
 \usepackage{mathptmx}
@@ -35,7 +42,7 @@
 % chessboards
 \usepackage{xskak}
 \usepackage{chessboard}
-\setchessboard{normalboard, showmover=false}
+\setchessboard{smallboard, showmover=false}
 \styleC % for tabular pgn notation
 
 % if you want to add any graphics manually
@@ -49,7 +56,7 @@
 \usepackage{titleps}
 \newpagestyle{mypage}{%
    \headrule
-   \sethead{}{}{\subsectiontitle}
+   \sethead{\subsectiontitle}{}{}
    \footrule
    \setfoot{\sectiontitle}{}{\thepage\ of \zpageref{LastPage}}
 }
@@ -78,23 +85,23 @@
 
 % TODO: fill the \date{ ... }
 %  e.g. \date{18.01.2022}
-\date{1749 -- 1794}
+%\date{}
 
 % TODO: fill \href{ ... } with the home link of the site
 %  e.g. \href{https://theweekinchess.com}
 %  and  the site name you want to emphazie \emph{ ... }
 %  e.g. \emph{The Week in Chess}
-\author{downloaded from \href{https://www.pgnmentor.com/files.html}{\emph{PGN Mentor}}}
+%\author{downloaded from \href{}{\emph{}}}
 
 \begin{document}
 
 \maketitle
 
-%\begin{center}
 % TODO: fill \includegraphics[width=15cm]{ ... }
 %       with png image name without extention .png
 %       the png image shall be stored at TEX/<png>/images/
 %  e.g. \includegraphics[width=15cm]{participants}
+%\begin{center}
 %\includegraphics[width=15cm]{}
 %\end{center}
 
@@ -102,25 +109,25 @@
 \pagebreak[4]
 
 \section{1749.??.??: Game one -- ?}
-\subfile{sections/001}
+\subfile{sections/01}
 \pagebreak[4]
 
 \section{1783.??.??: London -- London}
-\subfile{sections/002}
+\subfile{sections/02}
 \pagebreak[4]
 
 \section{1788.??.??: London -- London}
-\subfile{sections/003}
+\subfile{sections/03}
 \pagebreak[4]
 
 \section{1794.??.??: London -- London}
-\subfile{sections/004}
+\subfile{sections/04}
 \pagebreak[4]
 
-\subfile{sections/005}
+\subfile{sections/05}
 \pagebreak[4]
 
-\subfile{sections/006}
+\subfile{sections/06}
 \pagebreak[4]
 
 \end{document}

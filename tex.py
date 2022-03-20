@@ -51,18 +51,18 @@ def gen_digram_table(white: str,
                      result: str) -> str:
     """Return the game's diagrams and lan into a table"""
     out = ''
-    out += '\\begin{center}\n'
+    out += '\setlength\LTleft{-5mm}\n'
     
     if cols == 4:
         out += '\\begin{longtable}{C{40mm} C{40mm} C{40mm} C{40mm}}\n' + \
-               '\\hline\n' + \
-               white + ' & ' + black + ' & ' + \
-               white + ' & ' + black + ' \\\\ \n'
+            '\\hline\n' + \
+            white + ' & ' + black + ' & ' + \
+            white + ' & ' + black + ' \\\\ \n'
         out += '\\hline\n' + \
            '\\endhead\n\n'
 
     if cols == 2:
-        out += '\\begin{longtable}{C{80mm} C{80mm}}\n'
+        out += '\\begin{longtable}{C{53mm} C{53mm}}\n'
 
         # out += '\\hline\n' + \
         #     white + ' & ' + black + ' \\\\ \n'
@@ -122,7 +122,7 @@ def gen_digram_table(white: str,
             if len(game_data_df) == cnt + 1:
                 cb_arr[cnt] += '\\newline\n' + \
                     result + '\n'
-            cb_arr[cnt] += '\\\\[2mm] \n\n'
+            cb_arr[cnt] += '\\\\ \n\n'
 
     # put arrays to out
     rows = int(len(cb_arr)/cols)
@@ -137,8 +137,8 @@ def gen_digram_table(white: str,
                 else:
                     out += '\\\\ \n'
 
-    out += '\n\\end{longtable}\n' + \
-           '\\end{center}\n'
+    out += '\n\\end{longtable}\n'
+
     return out
 
 
@@ -154,15 +154,18 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
     if pgn_available == True:
         out += ' -- ' + pgn_dict['ECO'] + '}\n'
     else:
-        out += '}\n'
+        out += '}\n' + \
+            '\n'
 
-    out += "\\subsubsection*{Game's PGN}\n"
+    #out += "\\subsubsection*{Game's PGN}\n"
 
     # list pgn's tags, drop tags with no values given
     if pgn_available == True:
-        out += '\\begin{multicols}{2}\n'
+        out += '\\begin{multicols*}{2}\n' + \
+            '\n'
 
-    out += '\\begin{flushleft}\n'
+    out += '% PGN tags\n' + \
+        '\\begin{flushleft}\n'
 
     for key in pgn_dict:
         if key not in ['pgn', 'file']:
@@ -173,31 +176,33 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
             else:
                 out += '[' + key + '] "' + pgn_dict[key] + '"\n\n'
     out += '\\end{flushleft}\n' +\
-        '\\parindent 0mm\n'
+        '\\parindent 0mm\n' + \
+        '\n'
 
     if pgn_available == True:
         # display last half move's diagramm
         # get the last half-move of game_data_df
         game_data_dict = game_data_df.iloc[-1].to_dict()
-        out += '\\begin{flushleft}\n' + \
+        out += "% Game's final diagram and result\n" + \
+            '\\begin{flushleft}\n' + \
             '\\newchessgame[id=overview]\n' + \
             '\\longmoves\n' + \
             '\\mainline{' + pgn_dict['pgn'] + '}\n' + \
             '\\end{flushleft}\n' + \
             '\\begin{center}\n' + \
-            '\\begin{tabular}{C{80mm}}\n' + \
+            '\\begin{tabular}{C{60mm}}\n' + \
             '\\xskakset{moveid=\\xskakgetgame{lastmoveid}}\n' + \
             '\\chessboard[setfen=\\xskakget{nextfen},\n' + \
-            '             pgfstyle=border,\n' + \
-            '             color=YellowGreen,\n' + \
-            '             markfields={' + \
+            '       pgfstyle=border,\n' + \
+            '       color=YellowGreen,\n' + \
+            '       markfields={' + \
             game_data_dict['sq_from'] + ',' + game_data_dict['sq_to'] + '}'
 
         if game_data_dict['sq_check'] != '':
             out += ',\n' + \
-            '             pgfstyle=circle,\n' + \
-            '             color=BrickRed,\n' + \
-            '             markfield={' + game_data_dict['sq_check'] + '}]\n'
+            '       pgfstyle=circle,\n' + \
+            '       color=BrickRed,\n' + \
+            '       markfield={' + game_data_dict['sq_check'] + '}]\n'
         else:
             out += ']\n'
         
@@ -209,23 +214,27 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
             out += '\\newline\n' + \
                 game_data_dict['moveid'][0:-1] + \
                 '. ...\\,\\xskakget{lan}\n'
+        
+        out += '\\newline\n' + \
+            pgn_dict['Result']+ '\n'
 
         out += '\\end{tabular}\n' + \
             '\\end{center}\n' + \
-            '\\columnbreak\n'
+            '\n'
 
     # opening information
     # eco details from eco_dict
     if pgn_available == True:
-        out += '\\subsubsection{' + \
+        out += "% Game's Opening ECO data\n" + \
+            '\\subsubsection{' + \
             eco_dict['eco'] + ' -- ' + eco_dict['title'] + '}\n' + \
             '\\begin{flushleft}\n' + \
             '\\newchessgame[id=eco]\n' + \
             '\\longmoves\n' + \
-            '\\mainline{' + eco_dict['pgn'] + '}\n\n' + \
+            '\\mainline{' + eco_dict['pgn'] + '}\n' + \
             '\\end{flushleft}\n' + \
             '\\begin{center}\n' + \
-            '\\begin{tabular}{C{80mm}}\n' + \
+            '\\begin{tabular}{C{60mm}}\n' + \
             '\\chessboard[setfen={' + eco_dict['fen'] + '},\n' + \
             '             pgfstyle=border,\n' + \
             '             color=YellowGreen,\n' + \
@@ -246,16 +255,15 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
 
         out += '\\end{tabular}\n' + \
             '\\end{center}\n' + \
-            '\\end{multicols}\n' + \
-            '\n'
+            '\\end{multicols*}\n' + \
+            '\\pagebreak\n'
 
     # all games will start with 1. move
     # if this does not exist in pgn
     # the game was not played, and
     # no game diagrams can be shown
     if pgn_available == True:
-        out += "\\subsubsection*{Game's diagrams}\n" + \
-            '\\nopagebreak[4]\n' + \
+        out += "% Game's diagrams\n" + \
             '\\newchessgame\n' + \
             '\\hidemoves{' + pgn_dict['pgn'] + '}\n' + \
             '\n'
@@ -330,7 +338,14 @@ def init_preamble(pgn_fn : str) -> str:
     tex_doc += '% exarticle, if needed to allow 9pt font size\n' + \
         '\\documentclass[11pt]{article}\n' + \
         '\n' + \
-        '\\usepackage[a4paper, total={180mm, 260mm}]{geometry}\n' + \
+        '\\usepackage{geometry}\n' + \
+        '\\geometry{\n' + \
+        '   a4paper,\n' + \
+        '   top=20mm,\n' + \
+        '   bottom=20mm,\n' + \
+        '   left=20mm,\n' + \
+        '   right=20mm\n' + \
+        '}\n' + \
         '\n' + \
         '% fonts\n' + \
         '\\usepackage{mathptmx}\n' + \
@@ -366,7 +381,7 @@ def init_preamble(pgn_fn : str) -> str:
         '\\usepackage{chessboard}\n'
     # change from small board to tinyboard
     # if you need 4 cols of chessboard, i.e. 2 moves
-    tex_doc += '\\setchessboard{normalboard, showmover=false}\n' + \
+    tex_doc += '\\setchessboard{smallboard, showmover=false}\n' + \
         '\\styleC % for tabular pgn notation\n' + \
         '\n' + \
         '% if you want to add any graphics manually\n' + \
@@ -380,7 +395,7 @@ def init_preamble(pgn_fn : str) -> str:
         '\\usepackage{titleps}\n' + \
         '\\newpagestyle{mypage}{%\n' + \
         '   \\headrule\n' + \
-        '   \\sethead{}{}{\\subsectiontitle}\n' + \
+        '   \\sethead{\\subsectiontitle}{}{}\n' + \
         '   \\footrule\n' + \
         '   \\setfoot{\\sectiontitle}{}{\\thepage\\ of \\zpageref{LastPage}}\n' + \
         '}\n' + \
