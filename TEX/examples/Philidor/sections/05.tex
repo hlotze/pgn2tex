@@ -2,34 +2,42 @@
 
 \begin{document}
 
+\index{Players ! Atwood, George $\square$}
+\index{Players ! Philidor, Francois Andre Dani $\blacksquare$}
 \subsection{Atwood, George vs. Philidor, Francois Andre Dani -- 1-0 -- C00}
 \begin{multicols*}{2}
 
-% PGN tags
+% Game's Opening ECO data
+\index{Openings ! B21 -- Sicilian: Grand Prix, 2...Nc6 3.Nf3 e6}
+\subsubsection{B21 -- Sicilian: Grand Prix, 2...Nc6 3.Nf3 e6}
 \begin{flushleft}
-[Event] "London"
-
-[Site] "London"
-
-[Date] "1794.??.??"
-
-[White] "Atwood, George"
-
-[Black] "Philidor, Francois Andre Dani"
-
-[Result] "1-0"
-
-[ECO] "C00"
-
-\end{flushleft}
-\parindent 0mm
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c5 2. f4 Nc6 3. Nf3 e6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkbnr/pp1p1ppp/2n1p3/2p5/4PP2/5N2/PPPP2PP/RNBQKB1R w KQkq - 0 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e7,e6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{London, London}}\\ 
+\multicolumn{2}{l}{1794.??.??}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Atwood, George} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Philidor, Francois Andre Dani} & \textbf{0}\\ 
+\end{tabular}
 
 % Game's final diagram and result
-\begin{flushleft}
 \newchessgame[id=overview]
 \longmoves
-\mainline{1. e4 c5 2. f4 Nc6 3. Nf3 e6 4. c3 d5 5. e5 f5 6. d4 Nh6 7. h3 Qb6 8. b3 Bd7 9. Be3 Nf7 10. Qd2 O-O-O 11. Qf2 cxd4 12. Nxd4 Nxd4 13. Bxd4 Qc6 14. Nd2 b6 15. a4 Bc5 16. Bb5 Bxd4 17. Qxd4 Qc5 18. Nf3 Bxb5 19. Qxc5+ bxc5 20. axb5 Kb7 21. Ke2 Ra8 22. Ra6 Rhe8 23. Rd1 Nd8 24. Ne1 c4 25. bxc4 dxc4 26. Rd7+ Kc8 27. Rxg7 Rb8 28. Raxa7 Rxb5 29. Rac7+ Kb8 30. Rxc4 Rb7 31. Rb4 Rxb4 32. cxb4 Nc6 33. Nd3 Re7 34. Rxe7 Nxe7 35. Nc5 Ng6 36. Nxe6 Kc8 37. Ke3 Kd7 38. Nd4 Ne7 39. g4 Ke8 40. g5}
-\end{flushleft}
+\hidemoves{1. e4 c5 2. f4 Nc6 3. Nf3 e6}\mainline{4. c3 d5 5. e5 f5 6. d4 Nh6 7. h3 Qb6 8. b3 Bd7 9. Be3 Nf7 10. Qd2 O-O-O 11. Qf2 cxd4 12. Nxd4 Nxd4 13. Bxd4 Qc6 14. Nd2 b6 15. a4 Bc5 16. Bb5 Bxd4 17. Qxd4 Qc5 18. Nf3 Bxb5 19. Qxc5+ bxc5 20. axb5 Kb7 21. Ke2 Ra8 22. Ra6 Rhe8 23. Rd1 Nd8 24. Ne1 c4 25. bxc4 dxc4 26. Rd7+ Kc8 27. Rxg7 Rb8 28. Raxa7 Rxb5 29. Rac7+ Kb8 30. Rxc4 Rb7 31. Rb4 Rxb4 32. cxb4 Nc6 33. Nd3 Re7 34. Rxe7 Nxe7 35. Nc5 Ng6 36. Nxe6 Kc8 37. Ke3 Kd7 38. Nd4 Ne7 39. g4 Ke8 40. g5 }
+
 \begin{center}
 \begin{tabular}{C{60mm}}
 \xskakset{moveid=\xskakgetgame{lastmoveid}}
@@ -43,33 +51,20 @@
 1-0
 \end{tabular}
 \end{center}
-
-% Game's Opening ECO data
-\subsubsection{B21 -- Sicilian: Grand Prix, 2...Nc6 3.Nf3 e6}
-\begin{flushleft}
-\newchessgame[id=eco]
-\longmoves
-\mainline{1. e4 c5 2. f4 Nc6 3. Nf3 e6}
 \end{flushleft}
-\begin{center}
-\begin{tabular}{C{60mm}}
-\chessboard[setfen={r1bqkbnr/pp1p1ppp/2n1p3/2p5/4PP2/5N2/PPPP2PP/RNBQKB1R w KQkq - 0 4},
-             pgfstyle=border,
-             color=YellowGreen,
-             markfields={e7,e6}]
-\newline
-\xskakset{moveid=\xskakgetgame{lastmoveid}}
-\printmovercolor{\xskakgetgame{lastplayer}}
-\end{tabular}
-\end{center}
 \end{multicols*}
 \pagebreak
 % Game's diagrams
 \newchessgame
 \hidemoves{1. e4 c5 2. f4 Nc6 3. Nf3 e6 4. c3 d5 5. e5 f5 6. d4 Nh6 7. h3 Qb6 8. b3 Bd7 9. Be3 Nf7 10. Qd2 O-O-O 11. Qf2 cxd4 12. Nxd4 Nxd4 13. Bxd4 Qc6 14. Nd2 b6 15. a4 Bc5 16. Bb5 Bxd4 17. Qxd4 Qc5 18. Nf3 Bxb5 19. Qxc5+ bxc5 20. axb5 Kb7 21. Ke2 Ra8 22. Ra6 Rhe8 23. Rd1 Nd8 24. Ne1 c4 25. bxc4 dxc4 26. Rd7+ Kc8 27. Rxg7 Rb8 28. Raxa7 Rxb5 29. Rac7+ Kb8 30. Rxc4 Rb7 31. Rb4 Rxb4 32. cxb4 Nc6 33. Nd3 Re7 34. Rxe7 Nxe7 35. Nc5 Ng6 36. Nxe6 Kc8 37. Ke3 Kd7 38. Nd4 Ne7 39. g4 Ke8 40. g5}
 
-\setlength\LTleft{-5mm}
-\begin{longtable}{C{53mm} C{53mm}}
+\setlength\LTleft{0mm}
+\begin{longtable}{C{53mm} C{53mm} | R{51mm}}
+\hline
+Atwood, George & Philidor, Francois Andre Dani & Your Comment \\ 
+\hline
+\endhead
+
 % 1. e2-e4 ... 
 \xskakset{moveid=1w}
 \chessboard[setfen=\xskakget{nextfen},

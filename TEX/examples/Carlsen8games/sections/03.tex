@@ -2,38 +2,42 @@
 
 \begin{document}
 
+\index{Players ! Carlsen,Magnus $\square$}
+\index{Players ! Fant,G $\blacksquare$}
 \subsection{Carlsen,Magnus vs. Fant,G -- 1-0 -- C16}
 \begin{multicols*}{2}
 
-% PGN tags
+% Game's Opening ECO data
+\index{Openings ! C16 -- French: Winawer, Advance, 4...Ne7 5.a3 Bxc3+ 6.bxc3 b6 7.Qg4}
+\subsubsection{C16 -- French: Winawer, Advance, 4...Ne7 5.a3 Bxc3+ 6.bxc3 b6 7.Qg4}
 \begin{flushleft}
-[Event] "Troll Masters"
-
-[Site] "Gausdal NOR"
-
-[Date] "2001.01.07"
-
-[Round] "3"
-
-[White] "Carlsen,Magnus"
-
-[Black] "Fant,G"
-
-[Result] "1-0"
-
-[BlackElo] "2062"
-
-[ECO] "C16"
-
-\end{flushleft}
-\parindent 0mm
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 Ne7 5. a3 Bxc3+ 6. bxc3 b6 7. Qg4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/p1p1nppp/1p2p3/3pP3/3P2Q1/P1P5/2P2PPP/R1B1KBNR b KQkq - 1 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d1,g4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Troll Masters, Gausdal NOR}}\\ 
+\multicolumn{2}{l}{2001.01.07 Round 3}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Carlsen,Magnus} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Fant,G} (2062)  & \textbf{0}\\ 
+\end{tabular}
 
 % Game's final diagram and result
-\begin{flushleft}
 \newchessgame[id=overview]
 \longmoves
-\mainline{1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 Ne7 5. a3 Bxc3+ 6. bxc3 b6 7. Qg4 Nf5 8. Bd3 h5 9. Qh3 c5 10. Bxf5 exf5 11. Qg3 Kf8 12. h4 Nc6 13. Bg5 f6 14. exf6 gxf6 15. Be3 Qe7 16. Ne2 Be6 17. O-O Kf7 18. Nf4 Rag8 19. Qf3 Qd7 20. Rad1 c4 21. Rfe1 Rg4 22. g3 Kf8 23. Nxe6+ Qxe6 24. Bh6+ Kf7 25. Rxe6 Kxe6 26. Bf4 Ne7 27. Re1+ Kd7 28. Qe3}
-\end{flushleft}
+\hidemoves{1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 Ne7 5. a3 Bxc3+ 6. bxc3 b6 7. Qg4}\mainline{7...  Nf5 8. Bd3 h5 9. Qh3 c5 10. Bxf5 exf5 11. Qg3 Kf8 12. h4 Nc6 13. Bg5 f6 14. exf6 gxf6 15. Be3 Qe7 16. Ne2 Be6 17. O-O Kf7 18. Nf4 Rag8 19. Qf3 Qd7 20. Rad1 c4 21. Rfe1 Rg4 22. g3 Kf8 23. Nxe6+ Qxe6 24. Bh6+ Kf7 25. Rxe6 Kxe6 26. Bf4 Ne7 27. Re1+ Kd7 28. Qe3 }
+
 \begin{center}
 \begin{tabular}{C{60mm}}
 \xskakset{moveid=\xskakgetgame{lastmoveid}}
@@ -47,33 +51,20 @@
 1-0
 \end{tabular}
 \end{center}
-
-% Game's Opening ECO data
-\subsubsection{C16 -- French: Winawer, Advance, 4...Ne7 5.a3 Bxc3+ 6.bxc3 b6 7.Qg4}
-\begin{flushleft}
-\newchessgame[id=eco]
-\longmoves
-\mainline{1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 Ne7 5. a3 Bxc3+ 6. bxc3 b6 7. Qg4}
 \end{flushleft}
-\begin{center}
-\begin{tabular}{C{60mm}}
-\chessboard[setfen={rnbqk2r/p1p1nppp/1p2p3/3pP3/3P2Q1/P1P5/2P2PPP/R1B1KBNR b KQkq - 1 7},
-             pgfstyle=border,
-             color=YellowGreen,
-             markfields={d1,g4}]
-\newline
-\xskakset{moveid=\xskakgetgame{lastmoveid}}
-\printmovercolor{\xskakgetgame{lastplayer}}
-\end{tabular}
-\end{center}
 \end{multicols*}
 \pagebreak
 % Game's diagrams
 \newchessgame
 \hidemoves{1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 Ne7 5. a3 Bxc3+ 6. bxc3 b6 7. Qg4 Nf5 8. Bd3 h5 9. Qh3 c5 10. Bxf5 exf5 11. Qg3 Kf8 12. h4 Nc6 13. Bg5 f6 14. exf6 gxf6 15. Be3 Qe7 16. Ne2 Be6 17. O-O Kf7 18. Nf4 Rag8 19. Qf3 Qd7 20. Rad1 c4 21. Rfe1 Rg4 22. g3 Kf8 23. Nxe6+ Qxe6 24. Bh6+ Kf7 25. Rxe6 Kxe6 26. Bf4 Ne7 27. Re1+ Kd7 28. Qe3}
 
-\setlength\LTleft{-5mm}
-\begin{longtable}{C{53mm} C{53mm}}
+\setlength\LTleft{0mm}
+\begin{longtable}{C{53mm} C{53mm} | R{51mm}}
+\hline
+Carlsen,Magnus & Fant,G & Your Comment \\ 
+\hline
+\endhead
+
 % 1. e2-e4 ... 
 \xskakset{moveid=1w}
 \chessboard[setfen=\xskakget{nextfen},

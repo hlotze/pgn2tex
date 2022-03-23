@@ -2,38 +2,42 @@
 
 \begin{document}
 
+\index{Players ! Grubert,C $\square$}
+\index{Players ! Carlsen,Magnus $\blacksquare$}
 \subsection{Grubert,C vs. Carlsen,Magnus -- 1-0 -- C42}
 \begin{multicols*}{2}
 
-% PGN tags
+% Game's Opening ECO data
+\index{Openings ! C42 -- Russian Game: Classical, Marshall, 8.c4 c6}
+\subsubsection{C42 -- Russian Game: Classical, Marshall, 8.c4 c6}
 \begin{flushleft}
-[Event] "Troll Masters"
-
-[Site] "Gausdal NOR"
-
-[Date] "2001.01.09"
-
-[Round] "6"
-
-[White] "Grubert,C"
-
-[Black] "Carlsen,Magnus"
-
-[Result] "1-0"
-
-[ECO] "C42"
-
-[WhiteElo] "2170"
-
-\end{flushleft}
-\parindent 0mm
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Bd6 7. O-O O-O 8. c4 c6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbq1rk1/pp3ppp/2pb4/3p4/2PPn3/3B1N2/PP3PPP/RNBQ1RK1 w - - 0 9},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Troll Masters, Gausdal NOR}}\\ 
+\multicolumn{2}{l}{2001.01.09 Round 6}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Grubert,C} (2170)  & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Carlsen,Magnus} & \textbf{0}\\ 
+\end{tabular}
 
 % Game's final diagram and result
-\begin{flushleft}
 \newchessgame[id=overview]
 \longmoves
-\mainline{1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Bd6 7. O-O O-O 8. c4 c6 9. Nc3 Nxc3 10. bxc3 Bg4 11. Rb1 b6 12. cxd5 cxd5 13. c4 Nc6 14. cxd5 Nxd4 15. Bxh7+ Kxh7 16. Qxd4 Bxf3 17. Qd3+ f5 18. Qxf3 Be5 19. Ba3 Bd6 20. Bxd6 Qxd6 21. Rbc1 g6 22. Rc6 Qd7 23. Rfc1 Rac8 24. Qh3+}
-\end{flushleft}
+\hidemoves{1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Bd6 7. O-O O-O 8. c4 c6}\mainline{9. Nc3 Nxc3 10. bxc3 Bg4 11. Rb1 b6 12. cxd5 cxd5 13. c4 Nc6 14. cxd5 Nxd4 15. Bxh7+ Kxh7 16. Qxd4 Bxf3 17. Qd3+ f5 18. Qxf3 Be5 19. Ba3 Bd6 20. Bxd6 Qxd6 21. Rbc1 g6 22. Rc6 Qd7 23. Rfc1 Rac8 24. Qh3+ }
+
 \begin{center}
 \begin{tabular}{C{60mm}}
 \xskakset{moveid=\xskakgetgame{lastmoveid}}
@@ -50,33 +54,20 @@
 1-0
 \end{tabular}
 \end{center}
-
-% Game's Opening ECO data
-\subsubsection{C42 -- Russian Game: Classical, Marshall, 8.c4 c6}
-\begin{flushleft}
-\newchessgame[id=eco]
-\longmoves
-\mainline{1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Bd6 7. O-O O-O 8. c4 c6}
 \end{flushleft}
-\begin{center}
-\begin{tabular}{C{60mm}}
-\chessboard[setfen={rnbq1rk1/pp3ppp/2pb4/3p4/2PPn3/3B1N2/PP3PPP/RNBQ1RK1 w - - 0 9},
-             pgfstyle=border,
-             color=YellowGreen,
-             markfields={c7,c6}]
-\newline
-\xskakset{moveid=\xskakgetgame{lastmoveid}}
-\printmovercolor{\xskakgetgame{lastplayer}}
-\end{tabular}
-\end{center}
 \end{multicols*}
 \pagebreak
 % Game's diagrams
 \newchessgame
 \hidemoves{1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Bd6 7. O-O O-O 8. c4 c6 9. Nc3 Nxc3 10. bxc3 Bg4 11. Rb1 b6 12. cxd5 cxd5 13. c4 Nc6 14. cxd5 Nxd4 15. Bxh7+ Kxh7 16. Qxd4 Bxf3 17. Qd3+ f5 18. Qxf3 Be5 19. Ba3 Bd6 20. Bxd6 Qxd6 21. Rbc1 g6 22. Rc6 Qd7 23. Rfc1 Rac8 24. Qh3+}
 
-\setlength\LTleft{-5mm}
-\begin{longtable}{C{53mm} C{53mm}}
+\setlength\LTleft{0mm}
+\begin{longtable}{C{53mm} C{53mm} | R{51mm}}
+\hline
+Grubert,C & Carlsen,Magnus & Your Comment \\ 
+\hline
+\endhead
+
 % 1. e2-e4 ... 
 \xskakset{moveid=1w}
 \chessboard[setfen=\xskakget{nextfen},

@@ -2,34 +2,42 @@
 
 \begin{document}
 
+\index{Players ! Tarrasch, Siegbert $\square$}
+\index{Players ! Mannheimer, Nathan $\blacksquare$}
 \subsection{Tarrasch, Siegbert vs. Mannheimer, Nathan -- 1-0 -- C42}
 \begin{multicols*}{2}
 
-% PGN tags
+% Game's Opening ECO data
+\index{Openings ! C42 -- Russian Game: Classical}
+\subsubsection{C42 -- Russian Game: Classical}
 \begin{flushleft}
-[Event] "Breslau"
-
-[Site] "Breslau"
-
-[Date] "1879.??.??"
-
-[White] "Tarrasch, Siegbert"
-
-[Black] "Mannheimer, Nathan"
-
-[Result] "1-0"
-
-[ECO] "C42"
-
-\end{flushleft}
-\parindent 0mm
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/ppp2ppp/3p4/8/3Pn3/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d2,d4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Breslau, Breslau}}\\ 
+\multicolumn{2}{l}{1879.??.??}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Tarrasch, Siegbert} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Mannheimer, Nathan} & \textbf{0}\\ 
+\end{tabular}
 
 % Game's final diagram and result
-\begin{flushleft}
 \newchessgame[id=overview]
 \longmoves
-\mainline{1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 Be7 6. Bd3 Nf6 7. O-O O-O 8. Nc3 Bg4 9. h3 Bh5 10. g4 Bg6 11. Nh4 Bxd3 12. Qxd3 Nxg4 13. Nf5 Nf6 14. Kh1 Nc6 15. Rg1 Ne8 16. Nxg7 Kh8 17. Bh6 Bf6 18. Ne6 fxe6 19. Bxf8 Ng7 20. Bxg7+ Bxg7 21. Rg4 Qe7 22. Rag1 Bh6 23. Qg3 Qf7 24. Qh4 Bd2 25. Ne4 Qf3+ 26. Kh2 Ba5 27. Qxh7+ Kxh7 28. Rh4+}
-\end{flushleft}
+\hidemoves{1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4}\mainline{5...  Be7 6. Bd3 Nf6 7. O-O O-O 8. Nc3 Bg4 9. h3 Bh5 10. g4 Bg6 11. Nh4 Bxd3 12. Qxd3 Nxg4 13. Nf5 Nf6 14. Kh1 Nc6 15. Rg1 Ne8 16. Nxg7 Kh8 17. Bh6 Bf6 18. Ne6 fxe6 19. Bxf8 Ng7 20. Bxg7+ Bxg7 21. Rg4 Qe7 22. Rag1 Bh6 23. Qg3 Qf7 24. Qh4 Bd2 25. Ne4 Qf3+ 26. Kh2 Ba5 27. Qxh7+ Kxh7 28. Rh4+ }
+
 \begin{center}
 \begin{tabular}{C{60mm}}
 \xskakset{moveid=\xskakgetgame{lastmoveid}}
@@ -46,33 +54,20 @@
 1-0
 \end{tabular}
 \end{center}
-
-% Game's Opening ECO data
-\subsubsection{C42 -- Russian Game: Classical}
-\begin{flushleft}
-\newchessgame[id=eco]
-\longmoves
-\mainline{1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4}
 \end{flushleft}
-\begin{center}
-\begin{tabular}{C{60mm}}
-\chessboard[setfen={rnbqkb1r/ppp2ppp/3p4/8/3Pn3/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 5},
-             pgfstyle=border,
-             color=YellowGreen,
-             markfields={d2,d4}]
-\newline
-\xskakset{moveid=\xskakgetgame{lastmoveid}}
-\printmovercolor{\xskakgetgame{lastplayer}}
-\end{tabular}
-\end{center}
 \end{multicols*}
 \pagebreak
 % Game's diagrams
 \newchessgame
 \hidemoves{1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 Be7 6. Bd3 Nf6 7. O-O O-O 8. Nc3 Bg4 9. h3 Bh5 10. g4 Bg6 11. Nh4 Bxd3 12. Qxd3 Nxg4 13. Nf5 Nf6 14. Kh1 Nc6 15. Rg1 Ne8 16. Nxg7 Kh8 17. Bh6 Bf6 18. Ne6 fxe6 19. Bxf8 Ng7 20. Bxg7+ Bxg7 21. Rg4 Qe7 22. Rag1 Bh6 23. Qg3 Qf7 24. Qh4 Bd2 25. Ne4 Qf3+ 26. Kh2 Ba5 27. Qxh7+ Kxh7 28. Rh4+}
 
-\setlength\LTleft{-5mm}
-\begin{longtable}{C{53mm} C{53mm}}
+\setlength\LTleft{0mm}
+\begin{longtable}{C{53mm} C{53mm} | R{51mm}}
+\hline
+Tarrasch, Siegbert & Mannheimer, Nathan & Your Comment \\ 
+\hline
+\endhead
+
 % 1. e2-e4 ... 
 \xskakset{moveid=1w}
 \chessboard[setfen=\xskakget{nextfen},

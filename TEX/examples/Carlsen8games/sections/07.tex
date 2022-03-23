@@ -2,38 +2,42 @@
 
 \begin{document}
 
+\index{Players ! Carlsen,Magnus $\square$}
+\index{Players ! Johansen,KR $\blacksquare$}
 \subsection{Carlsen,Magnus vs. Johansen,KR -- 1-0 -- B06}
 \begin{multicols*}{2}
 
-% PGN tags
+% Game's Opening ECO data
+\index{Openings ! B06 -- Modern: Pseudo-Austrian Attack, 1.e4 g6 2.d4 Bg7 3.Nc3 d6 4.f4}
+\subsubsection{B06 -- Modern: Pseudo-Austrian Attack, 1.e4 g6 2.d4 Bg7 3.Nc3 d6 4.f4}
 \begin{flushleft}
-[Event] "Troll Masters"
-
-[Site] "Gausdal NOR"
-
-[Date] "2001.01.10"
-
-[Round] "7"
-
-[White] "Carlsen,Magnus"
-
-[Black] "Johansen,KR"
-
-[Result] "1-0"
-
-[BlackElo] "2097"
-
-[ECO] "B06"
-
-\end{flushleft}
-\parindent 0mm
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 g6 2. d4 Bg7 3. Nc3 d6 4. f4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk1nr/ppp1ppbp/3p2p1/8/3PPP2/2N5/PPP3PP/R1BQKBNR b KQkq - 0 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f2,f4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Troll Masters, Gausdal NOR}}\\ 
+\multicolumn{2}{l}{2001.01.10 Round 7}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Carlsen,Magnus} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Johansen,KR} (2097)  & \textbf{0}\\ 
+\end{tabular}
 
 % Game's final diagram and result
-\begin{flushleft}
 \newchessgame[id=overview]
 \longmoves
-\mainline{1. e4 g6 2. d4 Bg7 3. Nc3 d6 4. f4 c5 5. dxc5 Qa5 6. cxd6 Bxc3+ 7. bxc3 Qxc3+ 8. Bd2 Qd4 9. Bd3 Qxd6 10. Bc3 f6 11. Nf3 Nc6 12. Bd2 Qc5 13. Qe2 Nh6 14. h3 O-O 15. Be3 Qc3+ 16. Kf2 Nf7 17. Rhd1 e5 18. Bc4 Qa5 19. Kg1 Kg7 20. Rab1 Qc7 21. Bc5 Re8 22. Bxf7 Qxf7 23. fxe5 fxe5 24. Ng5 Qxa2 25. Qf2 Nd8 26. Rf1 Qa6 27. Be7 Be6 28. Qf6+ Kg8 29. Bf8 Qxf1+ 30. Rxf1}
-\end{flushleft}
+\hidemoves{1. e4 g6 2. d4 Bg7 3. Nc3 d6 4. f4}\mainline{4...  c5 5. dxc5 Qa5 6. cxd6 Bxc3+ 7. bxc3 Qxc3+ 8. Bd2 Qd4 9. Bd3 Qxd6 10. Bc3 f6 11. Nf3 Nc6 12. Bd2 Qc5 13. Qe2 Nh6 14. h3 O-O 15. Be3 Qc3+ 16. Kf2 Nf7 17. Rhd1 e5 18. Bc4 Qa5 19. Kg1 Kg7 20. Rab1 Qc7 21. Bc5 Re8 22. Bxf7 Qxf7 23. fxe5 fxe5 24. Ng5 Qxa2 25. Qf2 Nd8 26. Rf1 Qa6 27. Be7 Be6 28. Qf6+ Kg8 29. Bf8 Qxf1+ 30. Rxf1 }
+
 \begin{center}
 \begin{tabular}{C{60mm}}
 \xskakset{moveid=\xskakgetgame{lastmoveid}}
@@ -47,33 +51,20 @@
 1-0
 \end{tabular}
 \end{center}
-
-% Game's Opening ECO data
-\subsubsection{B06 -- Modern: Pseudo-Austrian Attack, 1.e4 g6 2.d4 Bg7 3.Nc3 d6 4.f4}
-\begin{flushleft}
-\newchessgame[id=eco]
-\longmoves
-\mainline{1. e4 g6 2. d4 Bg7 3. Nc3 d6 4. f4}
 \end{flushleft}
-\begin{center}
-\begin{tabular}{C{60mm}}
-\chessboard[setfen={rnbqk1nr/ppp1ppbp/3p2p1/8/3PPP2/2N5/PPP3PP/R1BQKBNR b KQkq - 0 4},
-             pgfstyle=border,
-             color=YellowGreen,
-             markfields={f2,f4}]
-\newline
-\xskakset{moveid=\xskakgetgame{lastmoveid}}
-\printmovercolor{\xskakgetgame{lastplayer}}
-\end{tabular}
-\end{center}
 \end{multicols*}
 \pagebreak
 % Game's diagrams
 \newchessgame
 \hidemoves{1. e4 g6 2. d4 Bg7 3. Nc3 d6 4. f4 c5 5. dxc5 Qa5 6. cxd6 Bxc3+ 7. bxc3 Qxc3+ 8. Bd2 Qd4 9. Bd3 Qxd6 10. Bc3 f6 11. Nf3 Nc6 12. Bd2 Qc5 13. Qe2 Nh6 14. h3 O-O 15. Be3 Qc3+ 16. Kf2 Nf7 17. Rhd1 e5 18. Bc4 Qa5 19. Kg1 Kg7 20. Rab1 Qc7 21. Bc5 Re8 22. Bxf7 Qxf7 23. fxe5 fxe5 24. Ng5 Qxa2 25. Qf2 Nd8 26. Rf1 Qa6 27. Be7 Be6 28. Qf6+ Kg8 29. Bf8 Qxf1+ 30. Rxf1}
 
-\setlength\LTleft{-5mm}
-\begin{longtable}{C{53mm} C{53mm}}
+\setlength\LTleft{0mm}
+\begin{longtable}{C{53mm} C{53mm} | R{51mm}}
+\hline
+Carlsen,Magnus & Johansen,KR & Your Comment \\ 
+\hline
+\endhead
+
 % 1. e2-e4 ... 
 \xskakset{moveid=1w}
 \chessboard[setfen=\xskakget{nextfen},

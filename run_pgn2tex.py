@@ -67,7 +67,7 @@ def main():
 
             chessboard_pgn_df = pgn.prep_game_data_from_pgn(one_game_dict['pgn'])
 
-            tex_data = tex.gen_tex_data(one_game_dict,
+            tex_data = tex.new_gen_tex_data(one_game_dict,
                                         eco_result_dict,
                                         pgn_available,
                                         chessboard_pgn_df)

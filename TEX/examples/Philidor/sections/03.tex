@@ -2,34 +2,42 @@
 
 \begin{document}
 
+\index{Players ! Von Bruehl, Hans Moritz $\square$}
+\index{Players ! Philidor, Francois Andre Dani $\blacksquare$}
 \subsection{Von Bruehl, Hans Moritz vs. Philidor, Francois Andre Dani -- 0-1 -- C38}
 \begin{multicols*}{2}
 
-% PGN tags
+% Game's Opening ECO data
+\index{Openings ! C38 -- KGA: Philidor Gambit}
+\subsubsection{C38 -- KGA: Philidor Gambit}
 \begin{flushleft}
-[Event] "London"
-
-[Site] "London"
-
-[Date] "1788.??.??"
-
-[White] "Von Bruehl, Hans Moritz"
-
-[Black] "Philidor, Francois Andre Dani"
-
-[Result] "0-1"
-
-[ECO] "C38"
-
-\end{flushleft}
-\parindent 0mm
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. f4 exf4 3. Nf3 g5 4. Bc4 Bg7 5. h4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk1nr/pppp1pbp/8/6p1/2B1Pp1P/5N2/PPPP2P1/RNBQK2R b KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={h2,h4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{London, London}}\\ 
+\multicolumn{2}{l}{1788.??.??}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Von Bruehl, Hans Moritz} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Philidor, Francois Andre Dani} & \textbf{1}\\ 
+\end{tabular}
 
 % Game's final diagram and result
-\begin{flushleft}
 \newchessgame[id=overview]
 \longmoves
-\mainline{1. e4 e5 2. f4 exf4 3. Nf3 g5 4. Bc4 Bg7 5. h4 h6 6. hxg5 hxg5 7. Rxh8 Bxh8 8. d4 g4 9. Bxf4 gxf3 10. Qxf3 Qe7 11. c3 Nf6 12. Nd2 d5 13. Bd3 dxe4 14. Nxe4 Nxe4 15. Qxe4 Qxe4+ 16. Bxe4 c6 17. Kd2 Be6 18. b3 Nd7 19. Rh1 Bf6 20. Kc2 O-O-O 21. Bd6 Nb6 22. Bc5 Kc7 23. Rh7 Rh8 24. c4 Rxh7 25. Bxh7 Nd7 26. Kd3 Nxc5+ 27. dxc5 Be7 28. b4 a6 29. a3 f5 30. Bg6 Kd7 31. Bh5 Bg5 32. Bd1 Bc1 33. Ba4 Bxa3 34. Kc3 Bc1 35. Bd1 Bf4 36. Kd4 Ke7 37. b5 Kf6 38. Bf3 Bd7 39. b6 Bg3 40. Bd1 Bh4 41. Ke3 Ke5 42. Bf3 Bf2+ 43. Kd3 Bxc5 44. Kc3 Bxb6}
-\end{flushleft}
+\hidemoves{1. e4 e5 2. f4 exf4 3. Nf3 g5 4. Bc4 Bg7 5. h4}\mainline{5...  h6 6. hxg5 hxg5 7. Rxh8 Bxh8 8. d4 g4 9. Bxf4 gxf3 10. Qxf3 Qe7 11. c3 Nf6 12. Nd2 d5 13. Bd3 dxe4 14. Nxe4 Nxe4 15. Qxe4 Qxe4+ 16. Bxe4 c6 17. Kd2 Be6 18. b3 Nd7 19. Rh1 Bf6 20. Kc2 O-O-O 21. Bd6 Nb6 22. Bc5 Kc7 23. Rh7 Rh8 24. c4 Rxh7 25. Bxh7 Nd7 26. Kd3 Nxc5+ 27. dxc5 Be7 28. b4 a6 29. a3 f5 30. Bg6 Kd7 31. Bh5 Bg5 32. Bd1 Bc1 33. Ba4 Bxa3 34. Kc3 Bc1 35. Bd1 Bf4 36. Kd4 Ke7 37. b5 Kf6 38. Bf3 Bd7 39. b6 Bg3 40. Bd1 Bh4 41. Ke3 Ke5 42. Bf3 Bf2+ 43. Kd3 Bxc5 44. Kc3 Bxb6}
+
 \begin{center}
 \begin{tabular}{C{60mm}}
 \xskakset{moveid=\xskakgetgame{lastmoveid}}
@@ -43,33 +51,20 @@
 0-1
 \end{tabular}
 \end{center}
-
-% Game's Opening ECO data
-\subsubsection{C38 -- KGA: Philidor Gambit}
-\begin{flushleft}
-\newchessgame[id=eco]
-\longmoves
-\mainline{1. e4 e5 2. f4 exf4 3. Nf3 g5 4. Bc4 Bg7 5. h4}
 \end{flushleft}
-\begin{center}
-\begin{tabular}{C{60mm}}
-\chessboard[setfen={rnbqk1nr/pppp1pbp/8/6p1/2B1Pp1P/5N2/PPPP2P1/RNBQK2R b KQkq - 0 5},
-             pgfstyle=border,
-             color=YellowGreen,
-             markfields={h2,h4}]
-\newline
-\xskakset{moveid=\xskakgetgame{lastmoveid}}
-\printmovercolor{\xskakgetgame{lastplayer}}
-\end{tabular}
-\end{center}
 \end{multicols*}
 \pagebreak
 % Game's diagrams
 \newchessgame
 \hidemoves{1. e4 e5 2. f4 exf4 3. Nf3 g5 4. Bc4 Bg7 5. h4 h6 6. hxg5 hxg5 7. Rxh8 Bxh8 8. d4 g4 9. Bxf4 gxf3 10. Qxf3 Qe7 11. c3 Nf6 12. Nd2 d5 13. Bd3 dxe4 14. Nxe4 Nxe4 15. Qxe4 Qxe4+ 16. Bxe4 c6 17. Kd2 Be6 18. b3 Nd7 19. Rh1 Bf6 20. Kc2 O-O-O 21. Bd6 Nb6 22. Bc5 Kc7 23. Rh7 Rh8 24. c4 Rxh7 25. Bxh7 Nd7 26. Kd3 Nxc5+ 27. dxc5 Be7 28. b4 a6 29. a3 f5 30. Bg6 Kd7 31. Bh5 Bg5 32. Bd1 Bc1 33. Ba4 Bxa3 34. Kc3 Bc1 35. Bd1 Bf4 36. Kd4 Ke7 37. b5 Kf6 38. Bf3 Bd7 39. b6 Bg3 40. Bd1 Bh4 41. Ke3 Ke5 42. Bf3 Bf2+ 43. Kd3 Bxc5 44. Kc3 Bxb6}
 
-\setlength\LTleft{-5mm}
-\begin{longtable}{C{53mm} C{53mm}}
+\setlength\LTleft{0mm}
+\begin{longtable}{C{53mm} C{53mm} | R{51mm}}
+\hline
+Von Bruehl, Hans Moritz & Philidor, Francois Andre Dani & Your Comment \\ 
+\hline
+\endhead
+
 % 1. e2-e4 ... 
 \xskakset{moveid=1w}
 \chessboard[setfen=\xskakget{nextfen},

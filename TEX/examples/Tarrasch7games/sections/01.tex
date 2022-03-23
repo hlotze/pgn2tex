@@ -2,34 +2,42 @@
 
 \begin{document}
 
+\index{Players ! Tarrasch, Siegbert $\square$}
+\index{Players ! Mendelsohn, J. $\blacksquare$}
 \subsection{Tarrasch, Siegbert vs. Mendelsohn, J. -- 1-0 -- C49}
 \begin{multicols*}{2}
 
-% PGN tags
+% Game's Opening ECO data
+\index{Openings ! C49 -- Four Knights: 4.Bb5 Bb4}
+\subsubsection{C49 -- Four Knights: 4.Bb5 Bb4}
 \begin{flushleft}
-[Event] "Breslau"
-
-[Site] "Breslau"
-
-[Date] "1879.??.??"
-
-[White] "Tarrasch, Siegbert"
-
-[Black] "Mendelsohn, J."
-
-[Result] "1-0"
-
-[ECO] "C49"
-
-\end{flushleft}
-\parindent 0mm
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk2r/pppp1ppp/2n2n2/1B2p3/1b2P3/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 6 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f8,b4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Breslau, Breslau}}\\ 
+\multicolumn{2}{l}{1879.??.??}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Tarrasch, Siegbert} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Mendelsohn, J.} & \textbf{0}\\ 
+\end{tabular}
 
 % Game's final diagram and result
-\begin{flushleft}
 \newchessgame[id=overview]
 \longmoves
-\mainline{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4 5. Nd5 Nxd5 6. exd5 Nd4 7. Ba4 b5 8. Nxd4 bxa4 9. Nf3 O-O 10. O-O d6 11. c3 Bc5 12. d4 exd4 13. Nxd4 Ba6 14. Re1 Bc4 15. Nc6 Qf6 16. Be3 Rfe8 17. Bxc5 Rxe1+ 18. Qxe1 dxc5 19. Qe4 Bb5 20. d6 Kf8 21. Ne7 Re8 22. Qxh7 Qxd6 23. Re1 Be2 24. Nf5}
-\end{flushleft}
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4}\mainline{5. Nd5 Nxd5 6. exd5 Nd4 7. Ba4 b5 8. Nxd4 bxa4 9. Nf3 O-O 10. O-O d6 11. c3 Bc5 12. d4 exd4 13. Nxd4 Ba6 14. Re1 Bc4 15. Nc6 Qf6 16. Be3 Rfe8 17. Bxc5 Rxe1+ 18. Qxe1 dxc5 19. Qe4 Bb5 20. d6 Kf8 21. Ne7 Re8 22. Qxh7 Qxd6 23. Re1 Be2 24. Nf5 }
+
 \begin{center}
 \begin{tabular}{C{60mm}}
 \xskakset{moveid=\xskakgetgame{lastmoveid}}
@@ -43,33 +51,20 @@
 1-0
 \end{tabular}
 \end{center}
-
-% Game's Opening ECO data
-\subsubsection{C49 -- Four Knights: 4.Bb5 Bb4}
-\begin{flushleft}
-\newchessgame[id=eco]
-\longmoves
-\mainline{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4}
 \end{flushleft}
-\begin{center}
-\begin{tabular}{C{60mm}}
-\chessboard[setfen={r1bqk2r/pppp1ppp/2n2n2/1B2p3/1b2P3/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 6 5},
-             pgfstyle=border,
-             color=YellowGreen,
-             markfields={f8,b4}]
-\newline
-\xskakset{moveid=\xskakgetgame{lastmoveid}}
-\printmovercolor{\xskakgetgame{lastplayer}}
-\end{tabular}
-\end{center}
 \end{multicols*}
 \pagebreak
 % Game's diagrams
 \newchessgame
 \hidemoves{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4 5. Nd5 Nxd5 6. exd5 Nd4 7. Ba4 b5 8. Nxd4 bxa4 9. Nf3 O-O 10. O-O d6 11. c3 Bc5 12. d4 exd4 13. Nxd4 Ba6 14. Re1 Bc4 15. Nc6 Qf6 16. Be3 Rfe8 17. Bxc5 Rxe1+ 18. Qxe1 dxc5 19. Qe4 Bb5 20. d6 Kf8 21. Ne7 Re8 22. Qxh7 Qxd6 23. Re1 Be2 24. Nf5}
 
-\setlength\LTleft{-5mm}
-\begin{longtable}{C{53mm} C{53mm}}
+\setlength\LTleft{0mm}
+\begin{longtable}{C{53mm} C{53mm} | R{51mm}}
+\hline
+Tarrasch, Siegbert & Mendelsohn, J. & Your Comment \\ 
+\hline
+\endhead
+
 % 1. e2-e4 ... 
 \xskakset{moveid=1w}
 \chessboard[setfen=\xskakget{nextfen},

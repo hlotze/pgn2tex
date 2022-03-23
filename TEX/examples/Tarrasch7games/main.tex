@@ -1,5 +1,6 @@
 % exarticle, if needed to allow 9pt font size
 \documentclass[11pt]{article}
+\usepackage{import}
 
 \usepackage{geometry}
 \geometry{
@@ -12,6 +13,7 @@
 
 % fonts
 \usepackage{mathptmx}
+\usepackage{amssymb}
 
 % hyperlinks at toc and PDF outline
 \usepackage{hyperref}
@@ -34,7 +36,9 @@
 \setcounter{LTchunksize}{1000}
 % table cell width used with centering
 \usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\ \arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\ \arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\ \arraybackslash\hspace{0pt}}m{#1}}
 
 % colors
 \usepackage[dvipsnames]{xcolor}
@@ -56,12 +60,18 @@
 \usepackage{titleps}
 \newpagestyle{mypage}{%
    \headrule
-   \sethead{\subsectiontitle}{}{}
+   \sethead{}{}{\subsectiontitle}
    \footrule
    \setfoot{\sectiontitle}{}{\thepage\ of \zpageref{LastPage}}
 }
 \settitlemarks{section,subsection,subsubsection}
 \pagestyle{mypage}
+
+% index
+\usepackage{makeidx}
+\makeindex
+\renewcommand{\indexname}{Index}
+\usepackage[totoc]{idxlayout}
 
 % check if lastmove was w_hite or b_lack
 \usepackage{ifthen}
@@ -106,6 +116,10 @@
 %\end{center}
 
 \tableofcontents
+\pagebreak[4]
+
+% put index page here
+\printindex
 \pagebreak[4]
 
 \section{1879.??.??: Breslau -- Breslau}
