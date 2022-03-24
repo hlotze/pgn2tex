@@ -40,25 +40,25 @@ class TestEco(unittest.TestCase):
     # NEW eco
     #######################
         # Test 2
-    def test_new_get_eco_data_for__correct_eco(self):
+    def test_get_eco_data_for__correct_eco(self):
         """test the eco classification function of a given eco + pgn"""
-        res = eco.new_get_eco_data_for(eco='A01', pgn='1. b3')
+        res = eco.get_eco_data_for(eco='A01', pgn='1. b3')
         self.assertTrue(bool(res['eco'] == 'A01' and res['pgn'] == '1. b3'))
 
     # Test 3
     # find correct classification for
     # wrong given ECO
-    def test_new_get_eco_data_for__wrong_eco(self):
+    def test_get_eco_data_for__wrong_eco(self):
         """test the eco classification function of a given wrong eco + pgn"""
-        res = eco.new_get_eco_data_for(eco='B01', pgn='1. b3')
+        res = eco.get_eco_data_for(eco='B01', pgn='1. b3')
         self.assertTrue(bool(res['eco'] == 'A01' and res['pgn'] == '1. b3'))
 
     # Test 4
     # find correct classification
     # if only PGN is given
-    def test_new_get_eco_data_for__pgn_only(self):
+    def test_get_eco_data_for__pgn_only(self):
         """test the eco classification function of a given pgn only"""
-        res = eco.new_get_eco_data_for(pgn='1. b3')
+        res = eco.get_eco_data_for(pgn='1. b3')
         self.assertTrue(bool(res['eco'] == 'A01' and res['pgn'] == '1. b3'))
 
 

@@ -1,24 +1,24 @@
 \contentsline {section}{Index}{2}{section*.2}%
 \contentsline {section}{2001.01.05: Troll Masters -- Gausdal NOR}{3}{section*.3}%
-\contentsline {subsection}{Edvardsen,R vs. Carlsen,Magnus -- 1/2-1/2 -- D12}{3}{section*.4}%
+\contentsline {subsection}{Edvardsen, R vs. Carlsen, Magnus -- 1/2-1/2 -- D12}{3}{section*.4}%
 \contentsline {subsubsection}{A46 -- Indian: 2.Nf3}{3}{section*.5}%
 \contentsline {section}{2001.01.06: Troll Masters -- Gausdal NOR}{10}{section*.6}%
-\contentsline {subsection}{Carlsen,Magnus vs. Brameld,A -- 0-1 -- B05}{10}{section*.7}%
+\contentsline {subsection}{Carlsen, Magnus vs. Brameld, A -- 0-1 -- B05}{10}{section*.7}%
 \contentsline {subsubsection}{B05 -- Alekhine: Modern, 4...Bg4}{10}{section*.8}%
 \contentsline {section}{2001.01.07: Troll Masters -- Gausdal NOR}{20}{section*.9}%
-\contentsline {subsection}{Carlsen,Magnus vs. Fant,G -- 1-0 -- C16}{20}{section*.10}%
+\contentsline {subsection}{Carlsen, Magnus vs. Fant, G -- 1-0 -- C16}{20}{section*.10}%
 \contentsline {subsubsection}{C16 -- French: Winawer, Advance, 4...Ne7 5.a3 Bxc3+ 6.bxc3 b6 7.Qg4}{20}{section*.11}%
 \contentsline {section}{2001.01.08: Troll Masters -- Gausdal NOR}{28}{section*.12}%
-\contentsline {subsection}{Tallaksen,G vs. Carlsen,Magnus -- 1/2-1/2 -- D35}{28}{section*.13}%
+\contentsline {subsection}{Tallaksen, G vs. Carlsen, Magnus -- 1/2-1/2 -- D35}{28}{section*.13}%
 \contentsline {subsubsection}{D35 -- QGD: 3.Nc3 Nf6 4.e3}{28}{section*.14}%
-\contentsline {subsection}{Carlsen,Magnus vs. Nilssen,J -- 0-1 -- B32}{37}{section*.15}%
+\contentsline {subsection}{Carlsen, Magnus vs. Nilssen, J -- 0-1 -- B32}{37}{section*.15}%
 \contentsline {subsubsection}{B32 -- Sicilian: Lowenthal, Kalashnikov, 6.N1c3 a6 7.Na3 b5 8.Nd5 Nge7}{37}{section*.16}%
 \contentsline {section}{2001.01.09: Troll Masters -- Gausdal NOR}{44}{section*.17}%
-\contentsline {subsection}{Grubert,C vs. Carlsen,Magnus -- 1-0 -- C42}{44}{section*.18}%
+\contentsline {subsection}{Grubert, C vs. Carlsen, Magnus -- 1-0 -- C42}{44}{section*.18}%
 \contentsline {subsubsection}{C42 -- Russian Game: Classical, Marshall, 8.c4 c6}{44}{section*.19}%
 \contentsline {section}{2001.01.10: Troll Masters -- Gausdal NOR}{51}{section*.20}%
-\contentsline {subsection}{Carlsen,Magnus vs. Johansen,KR -- 1-0 -- B06}{51}{section*.21}%
+\contentsline {subsection}{Carlsen, Magnus vs. Johansen, KR -- 1-0 -- B06}{51}{section*.21}%
 \contentsline {subsubsection}{B06 -- Modern: Pseudo-Austrian Attack, 1.e4 g6 2.d4 Bg7 3.Nc3 d6 4.f4}{51}{section*.22}%
 \contentsline {section}{2001.01.11: Troll Masters -- Gausdal NOR}{60}{section*.23}%
-\contentsline {subsection}{Sorensen,H vs. Carlsen,Magnus -- 1-0 -- D48}{60}{section*.24}%
+\contentsline {subsection}{Sorensen, H vs. Carlsen, Magnus -- 1-0 -- D48}{60}{section*.24}%
 \contentsline {subsubsection}{D10 -- Slav: 3.Nc3 Nf6}{60}{section*.25}%

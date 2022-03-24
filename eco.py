@@ -59,7 +59,7 @@ NEW_ECO_DF = pd.read_csv(NEW_ECO_FILENAME,
                                   "fen"])
 
 
-def new_get_eco_data_for(eco=None, pgn=None) -> dict:
+def get_eco_data_for(eco=None, pgn=None) -> dict:
     """Return the ECO data for the given ECO and PGN, even if ECO is wrong or missing"""
     if eco is None:
         eco = ''
@@ -126,7 +126,7 @@ def main():
     # print(res_dict)
 
     print('\nNEW complete ECO data for that PGN')
-    res_dict = new_get_eco_data_for(
+    res_dict = get_eco_data_for(
         eco=ECO_TEST_DATA_DICT['eco'], pgn=ECO_TEST_DATA_DICT['pgn'])
     print(res_dict)
 

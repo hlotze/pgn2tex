@@ -50,11 +50,11 @@ def main():
             if pgn_available == True:
                 try:
                     if 'ECO' in one_game_dict.keys():
-                        eco_result_dict = eco.new_get_eco_data_for(
+                        eco_result_dict = eco.get_eco_data_for(
                             eco=one_game_dict['ECO'],
                             pgn=one_game_dict['pgn'])
                     else:
-                        eco_result_dict = eco.new_get_eco_data_for(
+                        eco_result_dict = eco.get_eco_data_for(
                             eco='',
                             pgn=one_game_dict['pgn'])
                 except AttributeError as err:
@@ -67,7 +67,7 @@ def main():
 
             chessboard_pgn_df = pgn.prep_game_data_from_pgn(one_game_dict['pgn'])
 
-            tex_data = tex.new_gen_tex_data(one_game_dict,
+            tex_data = tex.gen_tex_data(one_game_dict,
                                         eco_result_dict,
                                         pgn_available,
                                         chessboard_pgn_df)

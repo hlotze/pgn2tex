@@ -63,6 +63,11 @@ def get_games_from_pgnfile(file_name: str) -> pd.DataFrame:
 
             game_dict['file'] = file_name
 
+            # white & black names adjustments
+            # "Carsen,Magnus" -->  "Carsen, Magnus"
+            game_dict['White'] = ', '.join(game_dict['White'].split(','))
+            game_dict['Black'] = ', '.join(game_dict['Black'].split(','))
+            
             games_df = games_df.append(game_dict, ignore_index=True)
     # change in case of missing pgn,
     # all tags with value pd.NaN to ''
