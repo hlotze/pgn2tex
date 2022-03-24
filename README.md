@@ -32,20 +32,21 @@ That project allows me to play with all that free tools, we have today: Linux OS
 
 - install a python3 (e.g. 3.9.5 or better)
 - clone / download that code from the repo
-- run the Python script `run_pgn2tex.py`; its will generate TeX files only
+- run the Python script `run_pgn2tex.py`; its will generate TeX files only at subdir `TEX/<pgn_filename>/`
 - install a TeX Live with its editor's TeX Maker or TeX Works
 - use your prefered TeX editor (TeX Maker, TeX Works, others) and generate the PDF file from a TeX file
-- or use batch mode aka 'hatless' command `latexmk --gg -pdf` within your `TEX/` folder at the console prompt
+- or use batch mode aka 'hatless' command `latexmk --g -pdf` within your `TEX/<pgn_filename>/sections/` folder at the console prompt
 
 ## Open item
 - [x] add ECO Opening diagram to each game's TeX
 - [x] collect all games' TeX files to multiple TeX file(s) using TeX `\subfile{}` machanism, so that we got one PDF 
   - [x] add a TOC
-  - [x] add PDF outline headline at \section (= Date, Event, Site), \subsection (= Players, Result, ECO)
+  - [x] add index about Playser and Openings
+  - [x] add PDF outline headline at `\section` (= Date, Event, Site), \subsection (= Players, Result, ECO)
 - [ ] complete testing
 - [ ] documentation, e.g. wiki 
-- [ ] to fix/optimize: some Openings code and wording does not match to given ECO's code or wording, seen there are multiple versions of ECO
-- [x] layout enhancements, in most cases 1st page shows the game moves in figurine long notation and the Opening, 2nd page give all halfmoves diagrams
+- [x] add different Openings `csv` to chose by renaming; only `eco.scv` will be used
+- [x] layout enhancements, in most cases 1st page shows the opening and the game moves after the opening in figurine long notation and the Opening, 2nd page give all game halfmoves' diagrams
 
 ## Contact
 [@hlotze](https://github.com/hlotze)
