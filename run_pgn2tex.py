@@ -33,6 +33,8 @@ def main():
         # start to get the games out of one pgn file
         games_df = pgn.get_games_from_pgnfile(fname)
 
+        print(str(len(games_df)) + ' games read at ' + fname)
+
         section_subfile_list = []
         for game_nr, row in games_df.iterrows():
             one_game_dict = row.to_dict()
@@ -89,6 +91,16 @@ def main():
         # generate the master tex file
         ret_dict = tex.generate_master_tex(fname, 'TEX/', section_subfile_list)
         print('stored:', ret_dict['file_name'], '\n')
+
+        if len(games_df) > 250:
+            print(fname + ' has ' + str(len(games_df)) + ' > 250')
+            print('each tex-file will compile to a pdf-file, but')
+            print('main.tex compilation may fail with standard')
+            print('sizing in Tex live env using latexmk --g -pdf\n')
+        else:
+            print('goto [TEX/<subdir of the pgn-file_name>/sections/] and')
+            print('e.g. start TEX to PDF processing in hatless mode by')
+            print('latexmk --g -pdf (see latexmk --help)\n')
 
 
 if __name__ == '__main__':

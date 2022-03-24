@@ -266,7 +266,11 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
     if 'BlackElo' in pgn_dict.keys():
         if pgn_dict['BlackElo'] != '':
             out += ' (' + pgn_dict['BlackElo'] + ') '
-    out += ' & \\textbf{' + pgn_dict['Result'].split('-')[1] + '}\\\\ \n'
+    
+    if pgn_dict['Result'] not in ['', ' ', '*']:
+        out += ' & \\textbf{' + pgn_dict['Result'].split('-')[1] + '}\\\\ \n'
+    else:
+        out += ' & \\textbf{' + pgn_dict['Result'] + '}\\\\ \n'
     out += '\\end{tabular}\n' + \
         '\n'
 
