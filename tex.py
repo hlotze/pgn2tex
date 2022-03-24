@@ -320,7 +320,10 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
             '\\end{flushleft}\n' + \
             '\\end{multicols*}\n' + \
             '\\pagebreak\n'
-
+    else:
+        out +='\\end{multicols*}\n' + \
+            '\\pagebreak\n'
+            
     # all games will start with 1. move
     # if this does not exist in pgn
     # the game was not played, and
