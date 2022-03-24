@@ -1,0 +1,335 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Karjakin,  Sergey $\square$}
+\index{Players ! Giri,  Anish $\blacksquare$}
+\subsection{Karjakin,  Sergey vs. Giri,  Anish -- 1/2-1/2 -- D85}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D85 -- Grünfeld: Modern Exchange, 8.Be3 Qa5}
+\subsubsection{D85 -- Grünfeld: Modern Exchange, 8.Be3 Qa5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Nf3 c5 8. Be3 Qa5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnb1k2r/pp2ppbp/6p1/q1p5/3PP3/2P1BN2/P4PPP/R2QKB1R w KQkq - 2 9},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d8,a5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{84th Tata Steel Masters, Wijk aan Zee NED}}\\ 
+\multicolumn{2}{l}{2022.01.18 Round 4.6}\\[3mm]
+\textbf{$\square$ \hspace{2mm}  GM Karjakin,  Sergey} (2743)  & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm}  GM Giri,  Anish} (2772)  & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Nf3 c5 8. Be3 Qa5}\mainline{9. Nd2 O-O 10. Nb3 Qxc3+ 11. Bd2 Qb2 12. Bc1 Qc3+ 13. Bd2 Qb2 14. Bc1 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d2,c1}]
+\newline
+14.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\pagebreak
+% Game's diagrams
+\newchessgame
+\hidemoves{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Nf3 c5 8. Be3 Qa5 9. Nd2 O-O 10. Nb3 Qxc3+ 11. Bd2 Qb2 12. Bc1 Qc3+ 13. Bd2 Qb2 14. Bc1}
+
+\setlength\LTleft{0mm}
+\begin{longtable}{C{53mm} C{53mm} | R{51mm}}
+\hline
+$\square$ \hspace{2mm} Karjakin,  Sergey & $\blacksquare$ \hspace{2mm} Giri,  Anish & Your Comment \\ 
+\hline
+\endhead
+
+% 1. d2-d4 ... 
+\xskakset{moveid=1w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d2,d4}]
+\newline
+1.\,\xskakget{lan} ...
+& 
+% 1.  ... Ng8-f6
+\xskakset{moveid=1b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6}]
+\newline
+1. ...\,\xskakget{lan}
+\\ 
+
+% 2. c2-c4 ... 
+\xskakset{moveid=2w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c2,c4}]
+\newline
+2.\,\xskakget{lan} ...
+& 
+% 2.  ... g7-g6
+\xskakset{moveid=2b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g7,g6}]
+\newline
+2. ...\,\xskakget{lan}
+\\ 
+
+% 3. Nb1-c3 ... 
+\xskakset{moveid=3w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b1,c3}]
+\newline
+3.\,\xskakget{lan} ...
+& 
+% 3.  ... d7-d5
+\xskakset{moveid=3b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d7,d5}]
+\newline
+3. ...\,\xskakget{lan}
+\\ 
+
+% 4. c4xd5 ... 
+\xskakset{moveid=4w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c4,d5}]
+\newline
+4.\,\xskakget{lan} ...
+& 
+% 4.  ... Nf6xd5
+\xskakset{moveid=4b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f6,d5}]
+\newline
+4. ...\,\xskakget{lan}
+\\ 
+
+% 5. e2-e4 ... 
+\xskakset{moveid=5w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e2,e4}]
+\newline
+5.\,\xskakget{lan} ...
+& 
+% 5.  ... Nd5xc3
+\xskakset{moveid=5b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d5,c3}]
+\newline
+5. ...\,\xskakget{lan}
+\\ 
+
+% 6. b2xc3 ... 
+\xskakset{moveid=6w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b2,c3}]
+\newline
+6.\,\xskakget{lan} ...
+& 
+% 6.  ... Bf8-g7
+\xskakset{moveid=6b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f8,g7}]
+\newline
+6. ...\,\xskakget{lan}
+\\ 
+
+% 7. Ng1-f3 ... 
+\xskakset{moveid=7w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g1,f3}]
+\newline
+7.\,\xskakget{lan} ...
+& 
+% 7.  ... c7-c5
+\xskakset{moveid=7b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c5}]
+\newline
+7. ...\,\xskakget{lan}
+\\ 
+
+% 8. Bc1-e3 ... 
+\xskakset{moveid=8w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c1,e3}]
+\newline
+8.\,\xskakget{lan} ...
+& 
+% 8.  ... Qd8-a5
+\xskakset{moveid=8b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d8,a5}]
+\newline
+8. ...\,\xskakget{lan}
+\\ 
+
+% 9. Nf3-d2 ... 
+\xskakset{moveid=9w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f3,d2}]
+\newline
+9.\,\xskakget{lan} ...
+& 
+% 9.  ... O-O
+\xskakset{moveid=9b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e8,g8}]
+\newline
+9. ...\,\xskakget{lan}
+\\ 
+
+% 10. Nd2-b3 ... 
+\xskakset{moveid=10w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d2,b3}]
+\newline
+10.\,\xskakget{lan} ...
+& 
+% 10.  ... Qa5xc3+
+\xskakset{moveid=10b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={a5,c3},
+             pgfstyle=circle,
+             color=BrickRed,
+             markfield={e1}]
+\newline
+10. ...\,\xskakget{lan}
+\\ 
+
+% 11. Be3-d2 ... 
+\xskakset{moveid=11w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e3,d2}]
+\newline
+11.\,\xskakget{lan} ...
+& 
+% 11.  ... Qc3-b2
+\xskakset{moveid=11b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c3,b2}]
+\newline
+11. ...\,\xskakget{lan}
+\\ 
+
+% 12. Bd2-c1 ... 
+\xskakset{moveid=12w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d2,c1}]
+\newline
+12.\,\xskakget{lan} ...
+& 
+% 12.  ... Qb2-c3+
+\xskakset{moveid=12b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b2,c3},
+             pgfstyle=circle,
+             color=BrickRed,
+             markfield={e1}]
+\newline
+12. ...\,\xskakget{lan}
+\\ 
+
+% 13. Bc1-d2 ... 
+\xskakset{moveid=13w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c1,d2}]
+\newline
+13.\,\xskakget{lan} ...
+& 
+% 13.  ... Qc3-b2
+\xskakset{moveid=13b}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c3,b2}]
+\newline
+13. ...\,\xskakget{lan}
+\\ 
+
+% 14. Bd2-c1 ... 
+\xskakset{moveid=14w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d2,c1}]
+\newline
+14.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+& 
+\\ 
+
+\end{longtable}
+\end{document}
