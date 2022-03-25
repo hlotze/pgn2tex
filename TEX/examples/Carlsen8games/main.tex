@@ -1,5 +1,5 @@
 % exarticle, if needed to allow 9pt font size
-\documentclass[11pt]{article}
+\documentclass[11pt, twoside]{article}
 \usepackage{import}
 
 \usepackage{geometry}
@@ -9,6 +9,11 @@
    bottom=20mm,
    left=20mm,
    right=20mm
+}
+
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
 }
 
 % fonts
@@ -114,43 +119,44 @@
 %\begin{center}
 %\includegraphics[width=15cm]{}
 %\end{center}
+\newpage
 
 \tableofcontents
-\pagebreak[4]
+\newpage
 
 % put index page here
 \printindex
-\pagebreak[4]
+\cleartoleftpage
 
-\section{2001.01.05: Troll Masters -- Gausdal NOR}
+\section{2001.01.05: Troll Masters, Gausdal NOR, Round: 1}
 \subfile{sections/01}
-\pagebreak[4]
+\cleartoleftpage
 
-\section{2001.01.06: Troll Masters -- Gausdal NOR}
+\section{2001.01.06: Troll Masters, Gausdal NOR, Round: 2}
 \subfile{sections/02}
-\pagebreak[4]
+\cleartoleftpage
 
-\section{2001.01.07: Troll Masters -- Gausdal NOR}
+\section{2001.01.07: Troll Masters, Gausdal NOR, Round: 3}
 \subfile{sections/03}
-\pagebreak[4]
+\cleartoleftpage
 
-\section{2001.01.08: Troll Masters -- Gausdal NOR}
+\section{2001.01.08: Troll Masters, Gausdal NOR, Round: 4}
 \subfile{sections/04}
-\pagebreak[4]
+\cleartoleftpage
 
+\section{2001.01.08: Troll Masters, Gausdal NOR, Round: 5}
 \subfile{sections/05}
-\pagebreak[4]
+\cleartoleftpage
 
-\section{2001.01.09: Troll Masters -- Gausdal NOR}
+\section{2001.01.09: Troll Masters, Gausdal NOR, Round: 6}
 \subfile{sections/06}
-\pagebreak[4]
+\cleartoleftpage
 
-\section{2001.01.10: Troll Masters -- Gausdal NOR}
+\section{2001.01.10: Troll Masters, Gausdal NOR, Round: 7}
 \subfile{sections/07}
-\pagebreak[4]
+\cleartoleftpage
 
-\section{2001.01.11: Troll Masters -- Gausdal NOR}
+\section{2001.01.11: Troll Masters, Gausdal NOR, Round: 8}
 \subfile{sections/08}
-\pagebreak[4]
 
 \end{document}

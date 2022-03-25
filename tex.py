@@ -319,10 +319,10 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
             '\\end{center}\n' + \
             '\\end{flushleft}\n' + \
             '\\end{multicols*}\n' + \
-            '\\pagebreak\n'
+            '\\newpage\n'
     else:
         out +='\\end{multicols*}\n' + \
-            '\\pagebreak\n'
+            '\\newpage\n'
             
     # all games will start with 1. move
     # if this does not exist in pgn
@@ -412,6 +412,11 @@ def init_preamble(pgn_fn : str) -> str:
         '   bottom=20mm,\n' + \
         '   left=20mm,\n' + \
         '   right=20mm\n' + \
+        '}\n' + \
+        '\n' + \
+        '\\newcommand*\\cleartoleftpage{%\n' + \
+        '   \\clearpage\n' + \
+        '   \\ifodd\\value{page}\\hbox{}\\newpage\\fi\n' + \
         '}\n' + \
         '\n' + \
         '% fonts\n' + \
@@ -520,14 +525,15 @@ def init_preamble(pgn_fn : str) -> str:
         '%\\begin{center}\n' + \
         '%\\includegraphics[width=15cm]{}\n' + \
         '%\\end{center}\n' + \
+        '\\newpage\n' + \
         '\n' + \
         '\\tableofcontents\n' + \
-        '\\pagebreak[4]\n' + \
+        '\\newpage\n' + \
         '\n' + \
         '% put index page here\n' + \
         '\\printindex\n' + \
-        '\\pagebreak[4]\n' + \
-        '\n'
+        '\n' + \
+        '\\cleartoleftpage\n'
     return preamble    
 
 
@@ -547,7 +553,8 @@ def generate_master_tex(pgn_fname : str, tex_path : str, section_subfile_list : 
         name = item_dict['subfile'].split('/')[-1]
         subfile_name = 'sections/' + name.split('.')[0]
         tex_doc += '\\subfile{' + subfile_name + '}\n' + \
-            '\\pagebreak[4]\n' + \
+            '\n' + \
+            '\\cleartoleftpage\n' + \
             '\n'
 
     tex_doc += '\\end{document}\n'

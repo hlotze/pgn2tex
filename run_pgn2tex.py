@@ -40,8 +40,10 @@ def main():
             one_game_dict = row.to_dict()
 
             section_heading = one_game_dict['Date'] + ': ' + \
-                one_game_dict['Event'] + ' -- ' + \
+                one_game_dict['Event'] + ', ' + \
                 one_game_dict['Site']
+            if one_game_dict['Round'] not in ['', ' ', '?', '*']:
+                section_heading += ', Round: ' + one_game_dict['Round']
 
             if one_game_dict['pgn'] == '':
                 pgn_available = False

@@ -11,6 +11,11 @@
    right=20mm
 }
 
+\newcommand*\cleartoleftpage{%
+   \clearpage
+   \ifodd\value{page}\hbox{}\newpage\fi
+}
+
 % fonts
 \usepackage{mathptmx}
 \usepackage{amssymb}
@@ -114,34 +119,42 @@
 %\begin{center}
 %\includegraphics[width=15cm]{}
 %\end{center}
+\newpage
 
 \tableofcontents
-\pagebreak[4]
+\newpage
 
 % put index page here
 \printindex
-\pagebreak[4]
 
-\section{1879.??.??: Breslau -- Breslau}
+\cleartoleftpage
+\section{1879.??.??: Breslau, Breslau}
 \subfile{sections/01}
-\pagebreak[4]
+
+\cleartoleftpage
 
 \subfile{sections/02}
-\pagebreak[4]
+
+\cleartoleftpage
 
 \subfile{sections/03}
-\pagebreak[4]
+
+\cleartoleftpage
 
 \subfile{sections/04}
-\pagebreak[4]
+
+\cleartoleftpage
 
 \subfile{sections/05}
-\pagebreak[4]
+
+\cleartoleftpage
 
 \subfile{sections/06}
-\pagebreak[4]
+
+\cleartoleftpage
 
 \subfile{sections/07}
-\pagebreak[4]
+
+\cleartoleftpage
 
 \end{document}
