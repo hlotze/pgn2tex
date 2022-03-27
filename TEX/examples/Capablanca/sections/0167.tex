@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Chajes, Oscar $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Chajes, Oscar -- 1-0 -- C10}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C10 -- French: 1.e4 e6 2.d4 d5 3.Nc3}
+\subsubsection{C10 -- French: 1.e4 e6 2.d4 d5 3.Nc3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e6 2. d4 d5 3. Nc3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/ppp2ppp/4p3/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 1 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b1,c3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b1-c3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1918}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Chajes, Oscar} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e6 2. d4 d5 3. Nc3}\mainline{3...  Nf6 4. Bd3 dxe4 5. Nxe4 Nbd7 6. Nxf6+ Nxf6 7. Nf3 Be7 8. Qe2 O-O 9. Bg5 h6 10. Bxf6 Bxf6 11. Qe4 g6 12. h4 e5 13. dxe5 Bf5 14. Qf4 Bxd3 15. O-O-O Bg7 16. Rxd3 Qe7 17. Qc4 Rad8 18. Rhd1 Rxd3 19. Rxd3 Re8 20. c3 c6 21. Re3 c5 22. Kc2 b6 23. a4 Qd7 24. Rd3 Qc8 25. Qe4 Qe6 26. Rd5 Kf8 27. c4 Kg8 28. b3 Kf8 29. Kd3 Kg8 30. Rd6 Qc8 31. Rd5 Qe6 32. g4 Kf8 33. Qf4 Kg8 34. Qe4 Kf8 35. Ke2 Kg8 36. Kf1 Kf8 37. Kg2 Kg8 38. Kg3 Kf8 39. h5 gxh5 40. gxh5 Qe7 41. Qf5 Kg8 42. Rd7 Bxe5+ 43. Kg4 Qf6 44. Nxe5 Qg7+ 45. Kf4 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g4,f4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g4-f4}]
+\newline
+45.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

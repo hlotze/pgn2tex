@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Sergeant, Edward G $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Sergeant, Edward G vs. Capablanca, Jose Raul -- 1/2-1/2 -- C90}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C77 -- Spanish: Anderssen, 5...d6 6.c3}
+\subsubsection{C77 -- Spanish: Anderssen, 5...d6 6.c3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. d3 d6 6. c3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkb1r/1pp2ppp/p1np1n2/4p3/B3P3/2PP1N2/PP3PPP/RNBQK2R b KQkq - 0 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c2,c3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c2-c3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Margate, Margate}}\\ 
+\multicolumn{2}{l}{1939 Round 4}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Sergeant, Edward G} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. d3 d6 6. c3}\mainline{6...  Be7 7. Nbd2 O-O 8. O-O b5 9. Bb3 Na5 10. Bc2 c5 11. Re1 Nc6 12. Nf1 Re8 13. Ne3 Bf8 14. h3 g6 15. Bb3 Be6 16. Bxe6 fxe6 17. Ng4 Nxg4 18. hxg4 d5 19. Bg5 Qd6 20. Bf6 Bg7 21. Bxg7 Kxg7 22. g5 Rad8 23. Qd2 d4 24. Rad1 Rh8 25. g3 h5 26. gxh6+ Rxh6 27. Kg2 dxc3 28. bxc3 b4 29. cxb4 cxb4 30. Rc1 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d1,c1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d1-c1}]
+\newline
+30.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

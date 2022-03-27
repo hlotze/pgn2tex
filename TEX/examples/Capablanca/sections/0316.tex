@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Spielmann, Rudolf $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Spielmann, Rudolf -- 1/2-1/2 -- D38}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D02 -- Queen's Pawn: 2.Nf3 e6}
+\subsubsection{D02 -- Queen's Pawn: 2.Nf3 e6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. Nf3 e6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/ppp2ppp/4p3/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e7,e6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e7-e6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1927 Round 1}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Spielmann, Rudolf} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. Nf3 e6}\mainline{3. c4 Nd7 4. cxd5 exd5 5. Nc3 Ngf6 6. Bg5 Bb4 7. Qb3 c5 8. a3 Bxc3+ 9. Qxc3 c4 10. Qe3+ Qe7 11. Qxe7+ Kxe7 12. Nd2 h6 13. Bh4 b5 14. e4 g5 15. Bg3 Nxe4 16. Nxe4 dxe4 17. a4 Ba6 18. axb5 Bxb5 19. b3 Rhc8 20. h4 a6 21. bxc4 Bxc4 22. hxg5 hxg5 23. Rh6 Nf6 24. Ra5 Bb5 25. Bxb5 axb5 26. Rxb5 Ra1+ 27. Kd2 Ra2+ 28. Kd1 Ra1+}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={a2,a1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a2-a1},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={d1}]
+\newline
+28. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

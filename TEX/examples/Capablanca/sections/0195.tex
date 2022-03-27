@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Kostic, Boris $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Kostic, Boris vs. Capablanca, Jose Raul -- 1/2-1/2 -- D64}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D02 -- Queen's Pawn: 2.Nf3 Nf6}
+\subsubsection{D02 -- Queen's Pawn: 2.Nf3 Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. Nf3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/ppp1pppp/5n2/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings}}\\ 
+\multicolumn{2}{l}{1919 Round 9}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Kostic, Boris} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. Nf3 Nf6}\mainline{3. c4 e6 4. Nc3 Nbd7 5. Bg5 Be7 6. e3 O-O 7. Rc1 c6 8. Qc2 dxc4 9. Bxc4 Nd5 10. Bxe7 Qxe7 11. O-O Nxc3 12. Qxc3 b6 13. e4 Bb7 14. Rfe1 Rfd8 15. Rcd1 Rac8 16. h3 Nf8 17. b4 Ra8 18. Rb1 Qc7 19. Bb3 a5 20. b5 Rac8 21. bxc6 Bxc6 22. d5 exd5 23. exd5 Bxd5 24. Qxc7 Rxc7 25. Bxd5 Rxd5 26. Rxb6 f6 27. a4 Nd7 28. Rb5 Rxb5 29. axb5 Rc5 30. Re7 Rd5 31. Re8+ Kf7 32. Ra8 Rxb5 33. Nd4 Rb1+ 34. Kh2 Rb4 35. Nc6 Rf4 36. Kg3 g5 37. Rxa5 h5 38. Rd5 Nb6 39. Rd2 Nc4 40. Re2 Nd6 41. Kh2 Rc4 42. Nd8+ Kg6 43. Ne6 h4 44. Nf8+ Kf7 45. Nd7 Rc6 46. Nb8 Rc7 47. Na6 Rc4 48. Nb8 Nf5 49. Nd7 Rc6 50. Rb2 Ne7 51. Nb6 Kf8 52. Na4 Rc4 53. Nb6 Rc6 54. Na4 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b6,a4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b6-a4}]
+\newline
+54.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

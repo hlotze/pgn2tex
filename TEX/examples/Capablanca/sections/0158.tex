@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Fox, Albert Whiting $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Fox, Albert Whiting vs. Capablanca, Jose Raul -- 0-1 -- C68}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C68 -- Spanish: Exchange, Alekhine Variation}
+\subsubsection{C68 -- Spanish: Exchange, Alekhine Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. d4 exd4 6. Qxd4 Qxd4 7. Nxd4 Bd7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r3kbnr/1ppb1ppp/p1p5/8/3NP3/8/PPP2PPP/RNB1K2R w KQkq - 1 8},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c8,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c8-d7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York Rice prel}}\\ 
+\multicolumn{2}{l}{1916 Round 5}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Fox, Albert Whiting} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. d4 exd4 6. Qxd4 Qxd4 7. Nxd4 Bd7}\mainline{8. O-O O-O-O 9. Nc3 Bd6 10. Be3 Nf6 11. f3 Rhe8 12. Rfe1 Bb4 13. Nb3 Bxc3 14. bxc3 b6 15. Rad1 c5 16. Kf2 Re6 17. Rd2 Rde8 18. Red1 Bc6 19. c4 Bxe4 20. fxe4 Nxe4+ 21. Kf1 Nxd2+ 22. Bxd2 Re4 23. Re1 R8e6 24. Rxe4 Rxe4 25. c3 Kd7 26. Nc1 Rxc4 27. Ke2 h5 28. Kd3 Ra4 29. Kc2 f6 30. Kb3 Rg4 31. g3 h4 32. Ne2 g5 33. Kc2 Ra4 34. Nc1 Ke6 35. Kd3 Kf5 36. Ke3 hxg3 37. hxg3 Kg4 38. Kf2 Ra3 39. Be1 f5 40. Kg2 c4 41. Kf2 Ra5 42. Ke3 Re5+ 43. Kf2 c5 44. Ne2 Rd5 45. Ke3 Rd3+ 46. Kf2 f4 47. gxf4 gxf4 48. a4 b5 49. axb5 axb5 50. Nc1 Rd1 51. Ne2 f3 52. Ng1 Rxe1 53. Kxe1 Kg3}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g4,g3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g4-g3}]
+\newline
+53. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

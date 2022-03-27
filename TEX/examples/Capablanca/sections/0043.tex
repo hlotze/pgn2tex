@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Morris, WR. $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Morris, WR. -- 1-0 -- B40}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! B40 -- Sicilian: 2...e6 3.Nc3}
+\subsubsection{B40 -- Sicilian: 2...e6 3.Nc3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c5 2. Nf3 e6 3. Nc3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/pp1p1ppp/4p3/2p5/4P3/2N2N2/PPPP1PPP/R1BQKB1R b KQkq - 1 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b1,c3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b1-c3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1911 Round 2}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Morris, WR.} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 c5 2. Nf3 e6 3. Nc3}\mainline{3...  d5 4. exd5 exd5 5. d4 Nf6 6. Bg5 Be6 7. Bxf6 gxf6 8. dxc5 Bxc5 9. Bb5+ Nc6 10. O-O O-O 11. Qd3 Qd6 12. Bxc6 bxc6 13. Na4 Bb6 14. Nxb6 axb6 15. Rfe1 c5 16. Re3 Qf4 17. c3 Rfd8 18. a3 Bf5 19. Qb5 Qd6 20. Rd1 Rac8 21. Qa4 c4 22. Rd4 b5 23. Qd1 Kh8 24. Rh4 Rg8 25. Nd4 Qd7 26. Re7 Qxe7 27. Nxf5 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d4,f5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d4-f5}]
+\newline
+27.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

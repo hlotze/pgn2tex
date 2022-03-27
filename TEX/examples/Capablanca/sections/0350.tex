@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Tartakower, Saviely $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Tartakower, Saviely -- 1/2-1/2 -- C01}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A40 -- Queen's Pawn: 1...e6}
+\subsubsection{A40 -- Queen's Pawn: 1...e6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 e6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/pppp1ppp/4p3/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e7,e6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e7-e6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Berlin, Berlin Tageblatt}}\\ 
+\multicolumn{2}{l}{1928}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Tartakower, Saviely} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 e6}\mainline{2. e4 d5 3. exd5 exd5 4. Bd3 Bd6 5. Nf3 Qe7+ 6. Qe2 Qxe2+ 7. Kxe2 Ne7 8. Re1 O-O 9. Kf1 Bf5 10. Bxf5 Nxf5 11. Nc3 c6 12. Bd2 Nd7 13. Re2 Rfe8 14. Rae1 Kf8 15. Rxe8+ Rxe8 16. Rxe8+ Kxe8}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f8,e8},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f8-e8}]
+\newline
+16. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

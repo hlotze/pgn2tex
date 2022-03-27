@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Olland, Adolf Georg $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Olland, Adolf Georg -- 1-0 -- D34}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D30 -- QGD: Tarrasch without Nc3}
+\subsubsection{D30 -- QGD: Tarrasch without Nc3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nf3 c5 4. cxd5 exd5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/pp3ppp/8/2pp4/3P4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e6,d5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e6-d5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings}}\\ 
+\multicolumn{2}{l}{1919}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Olland, Adolf Georg} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nf3 c5 4. cxd5 exd5}\mainline{5. Nc3 Nf6 6. g3 Be6 7. Bg2 Nc6 8. O-O Be7 9. dxc5 Bxc5 10. Bg5 Be7 11. Nd4 O-O 12. Rc1 h6 13. Bf4 Qd7 14. Nxe6 fxe6 15. Bh3 g5 16. Bd2 d4 17. Na4 Ne4 18. Be1 Qd5 19. Bg2 Qe5 20. Qd3 Nd6 21. Qg6+ Qg7 22. Qxe6+ Kh8 23. Bxc6 bxc6 24. Rxc6 Nf5 25. g4 Rf6 26. Qe4 Rxc6 27. Qxc6 Rd8 28. gxf5 Bd6 29. Qe4 Bb8 30. Ba5 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e1,a5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e1-a5}]
+\newline
+30.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

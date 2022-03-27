@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Menchik, Vera $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Menchik, Vera vs. Capablanca, Jose Raul -- 0-1 -- A47}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A47 -- Neo-Queen's Indian: Marienbad System}
+\subsubsection{A47 -- Neo-Queen's Indian: Marienbad System}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3 b6 3. g3 Bb7 4. Bg2 c5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rn1qkb1r/pb1ppppp/1p3n2/2p5/3P4/5NP1/PPP1PPBP/RNBQK2R w KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c7-c5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Karlsbad, Karlsbad}}\\ 
+\multicolumn{2}{l}{1929}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Menchik, Vera} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3 b6 3. g3 Bb7 4. Bg2 c5}\mainline{5. c4 cxd4 6. O-O Qc7 7. Qxd4 Nc6 8. Qf4 e5 9. Qd2 e4 10. Ng5 Ne5 11. Nc3 Nxc4 12. Qd4 d5 13. b3 Bc5 14. Nb5 Qc6 15. Qc3 Qxb5 16. bxc4 Qxc4 17. Qe5+ Kf8 18. Bf4 Qa4 19. Rfd1 Qe8 20. Qb2 h6 21. Nh3 Ng4 22. Rac1 Bc6 23. e3 Kg8 24. Qe2 f5 25. f3 Nf6 26. g4 exf3 27. Bxf3 fxg4 28. Bxg4 Qg6 29. Nf2 h5}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h6,h5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h6-h5}]
+\newline
+29. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

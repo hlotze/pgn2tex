@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Golombek, Harry $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Golombek, Harry -- 1-0 -- D35}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E35 -- Nimzo-Indian: Classical, Noa, Exchange, 6.Bg5}
+\subsubsection{E35 -- Nimzo-Indian: Classical, Noa, Exchange, 6.Bg5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 d5 5. cxd5 exd5 6. Bg5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/ppp2ppp/5n2/3p2B1/1b1P4/2N5/PPQ1PPPP/R3KBNR b KQkq - 1 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c1,g5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c1-g5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Margate, Margate}}\\ 
+\multicolumn{2}{l}{1939 Round 7}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Golombek, Harry} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 d5 5. cxd5 exd5 6. Bg5}\mainline{6...  c6 7. e3 Nbd7 8. Bd3 h6 9. Bh4 O-O 10. Nf3 Re8 11. O-O Be7 12. Bg3 Nf8 13. h3 Be6 14. Rab1 Nh5 15. Bh2 g6 16. Ne5 Ng7 17. b4 Bf5 18. Na4 Bxd3 19. Qxd3 Nd7 20. Rfc1 Nxe5 21. Bxe5 Bd6 22. Bxd6 Qxd6 23. b5 cxb5 24. Qxb5 Ne6 25. Nc3 Red8 26. Qxb7 Qa3 27. Nxd5 Qxa2 28. Nb4 Qa4 29. Nc6 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b4,c6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b4-c6}]
+\newline
+29.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

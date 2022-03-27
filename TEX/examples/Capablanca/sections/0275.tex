@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Maroczy, Geza $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Maroczy, Geza vs. Capablanca, Jose Raul -- 0-1 -- B13}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! B13 -- Caro-Kann: Exchange, Rubinstein, 6...Bg4}
+\subsubsection{B13 -- Caro-Kann: Exchange, Rubinstein, 6...Bg4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nc6 5. c3 Nf6 6. Bf4 Bg4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r2qkb1r/pp2pppp/2n2n2/3p4/3P1Bb1/2PB4/PP3PPP/RN1QK1NR w KQkq - 3 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c8,g4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c8-g4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Lake Hopatcong, Lake Hopatcong}}\\ 
+\multicolumn{2}{l}{1926 Round 5}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Maroczy, Geza} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nc6 5. c3 Nf6 6. Bf4 Bg4}\mainline{7. Qb3 Na5 8. Qa4+ Bd7 9. Qc2 Qb6 10. Nf3 e6 11. O-O Bb5 12. Nbd2 Bxd3 13. Qxd3 Rc8 14. Rab1 Be7 15. h3 O-O 16. Rfe1 Nc4 17. Nxc4 Rxc4 18. Ne5 Rcc8 19. Bg5 Qd8 20. Bxf6 gxf6 21. Ng4 Kh8 22. f4 f5 23. Ne5 Bd6 24. Qf3 Bxe5 25. Rxe5 Rg8 26. Re2 Qh4 27. Kh2 Rg6 28. g3 Qf6 29. Rg1 Kg7 30. Qd3 a6 31. Rc1 h5 32. h4 Kh6 33. c4 dxc4 34. Rxc4 Rxg3 35. Qxg3 Rxc4 36. Rd2 Qg6 37. Qg5+ Qxg5 38. hxg5+ Kg6 39. Kg3 Rc6 40. Kf3 Rd6 41. Kg3 f6 42. gxf6 Kxf6 43. Kf3 h4 44. Rh2 Rxd4 45. Rxh4 b5 46. Rh6+ Ke7 47. Rh7+ Kd6 48. Ra7 Ra4 49. a3 Kd5}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d6,d5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d6-d5}]
+\newline
+49. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

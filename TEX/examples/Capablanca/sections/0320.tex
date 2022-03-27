@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Vidmar, Milan Sr $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Vidmar, Milan Sr vs. Capablanca, Jose Raul -- 1/2-1/2 -- D30}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A46 -- Indian: 2.Nf3 e6}
+\subsubsection{A46 -- Indian: 2.Nf3 e6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3 e6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppp1ppp/4pn2/8/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e7,e6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e7-e6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1927 Round 2}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Vidmar, Milan Sr} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3 e6}\mainline{3. c4 d5 4. e3 Nbd7 5. Bd3 dxc4 6. Bxc4 c5 7. O-O Nb6 8. Bd3 Bd7 9. Nc3 Rc8 10. Qe2 cxd4 11. Nxd4 Bb4 12. e4 e5 13. Nc2 Bxc3 14. bxc3 O-O 15. Ne3 Na4 16. c4 Nc5 17. Nd5 Nxd5 18. cxd5 Qa5 19. Rd1 Nxd3 20. Qxd3 Qc3 21. Be3 Qxd3 22. Rxd3 a5 23. a4 Rc4 24. f3 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f2,f3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f2-f3}]
+\newline
+24.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Monticelli, Mario $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Monticelli, Mario vs. Capablanca, Jose Raul -- 0-1 -- A47}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A47 -- Neo-Queen's Indian: Marienbad System}
+\subsubsection{A47 -- Neo-Queen's Indian: Marienbad System}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3 b6 3. g3 Bb7 4. Bg2 c5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rn1qkb1r/pb1ppppp/1p3n2/2p5/3P4/5NP1/PPP1PPBP/RNBQK2R w KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c7-c5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Barcelona, Barcelona}}\\ 
+\multicolumn{2}{l}{1929 Round 6}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Monticelli, Mario} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3 b6 3. g3 Bb7 4. Bg2 c5}\mainline{5. dxc5 bxc5 6. c4 g6 7. b3 Bg7 8. Bb2 O-O 9. O-O d6 10. Nc3 Ne4 11. Qc1 Nxc3 12. Bxc3 Bxc3 13. Qxc3 a5 14. Rfd1 Nd7 15. Qe3 Kg7 16. h3 Nf6 17. g4 h6 18. Ne1 Qc7 19. Nd3 Bxg2 20. Kxg2 a4 21. Nf4 Rfb8 22. f3 axb3 23. axb3 Rxa1 24. Rxa1 e5 25. Nd5 Nxd5 26. cxd5 Rb4 27. Qd3 Qb7 28. Qa6 Qxd5 29. Qc8 Qb7 30. Qd8 Qb8 31. Qd7 Rb7 32. Qc6 Rxb3 33. Ra6 Rb2}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b3,b2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b3-b2}]
+\newline
+33. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

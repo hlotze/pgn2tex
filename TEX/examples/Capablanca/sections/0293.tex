@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Alekhine, Alexander $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Alekhine, Alexander vs. Capablanca, Jose Raul -- 1/2-1/2 -- D65}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D30 -- QGD: 3.Nf3 Nbd7 (Westphalia)}
+\subsubsection{D30 -- QGD: 3.Nf3 Nbd7 (Westphalia)}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nf3 Nd7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkbnr/pppn1ppp/4p3/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b8,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b8-d7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Buenos Aires, World Championship 13th}}\\ 
+\multicolumn{2}{l}{1927 Round 14}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Alekhine, Alexander} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nf3 Nd7}\mainline{4. Nc3 Ngf6 5. Bg5 Be7 6. e3 O-O 7. Rc1 c6 8. Qc2 a6 9. a3 h6 10. Bh4 Re8 11. cxd5 exd5 12. Bd3 Nh5 13. Bxe7 Rxe7 14. O-O Nhf6 15. h3 Ne8 16. Ne2 Nd6 17. Ng3 Nf8 18. Ne5 f6 19. Ng6 Nxg6 20. Bxg6 Be6 21. Ne2 Qd7 22. Nf4 Bf5 23. Bxf5 Qxf5 24. Qxf5 Nxf5 25. Nd3 Nd6}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f5,d6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f5-d6}]
+\newline
+25. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

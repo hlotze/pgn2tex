@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Euwe, Max $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Euwe, Max -- 1-0 -- E35}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E35 -- Nimzo-Indian: Classical, Noa, Exchange, 6.Bg5}
+\subsubsection{E35 -- Nimzo-Indian: Classical, Noa, Exchange, 6.Bg5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 d5 5. cxd5 exd5 6. Bg5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/ppp2ppp/5n2/3p2B1/1b1P4/2N5/PPQ1PPPP/R3KBNR b KQkq - 1 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c1,g5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c1-g5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Amsterdam, Amsterdam m3}}\\ 
+\multicolumn{2}{l}{1931 Round 3}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Euwe, Max} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 d5 5. cxd5 exd5 6. Bg5}\mainline{6...  Qd6 7. e3 Ne4 8. Bf4 Qg6 9. a3 Bxc3+ 10. bxc3 Bf5 11. Qb3 O-O 12. f3 Nd6 13. g4 Bd3 14. Qxd5 Bxf1 15. Kxf1 Qd3+ 16. Ne2 Nc4 17. Kf2 Nxe3 18. Qxb7 Na6 19. Qb1 Qxb1 20. Raxb1 Nc4 21. a4 Rab8 22. Rb5 Rb6 23. Rhb1 Re8 24. Ng3 Rf6 25. Rf5 Rb6 26. Rxb6 axb6 27. Ne4 f6 28. h4 c6 29. h5 Kf7 30. Bc1 Re6 31. Ng5+ }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e4,g5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e4-g5},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={f7}]
+\newline
+31.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

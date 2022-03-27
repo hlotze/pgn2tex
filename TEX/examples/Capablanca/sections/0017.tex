@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Marshall, Frank James $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Marshall, Frank James vs. Capablanca, Jose Raul -- 1/2-1/2 -- D53}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D53 -- QGD: 4.Bg5 Be7 5.Nf3}
+\subsubsection{D53 -- QGD: 4.Bg5 Be7 5.Nf3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. Nf3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N2N2/PP2PPPP/R2QKB1R b KQkq - 5 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g1,f3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g1-f3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, USA m}}\\ 
+\multicolumn{2}{l}{1909 Round 3}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Marshall, Frank James} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. Nf3}\mainline{5...  Nbd7 6. e3 Ne4 7. Bxe7 Qxe7 8. cxd5 Nxc3 9. bxc3 exd5 10. Qb3 c6 11. Bd3 O-O 12. O-O Nf6 13. Rab1 b6 14. Ne5 c5 15. Qa3 Re8 16. Bb5 c4 17. Qa4 Rf8 18. Bc6 Bb7 19. Qc2 Bxc6 20. Nxc6 Qd6 21. Ne5 a6 22. a4 Rfb8 23. Rb4 b5 24. axb5 Rxb5 25. Rxb5 axb5 26. Rb1 Ra5 27. f3 Qa6 28. Qb2 Qd6 29. Qc2 g6 30. h3 Kg7 31. e4 Qa6 32. Ng4 Ra2 33. Qc1 Nxg4 34. hxg4 dxe4 35. fxe4 Re2 36. Qf4 Rxg2+}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e2,g2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e2-g2},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={g1}]
+\newline
+36. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

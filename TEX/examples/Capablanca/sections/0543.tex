@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Petrovs, Vladimirs $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Petrovs, Vladimirs vs. Capablanca, Jose Raul -- 1/2-1/2 -- D17}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D17 -- Slav: Central, 6.Ne5 Nbd7}
+\subsubsection{D17 -- Slav: Central, 6.Ne5 Nbd7}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 dxc4 5. a4 Bf5 6. Ne5 Nbd7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r2qkb1r/pp1npppp/2p2n2/4Nb2/P1pP4/2N5/1P2PPPP/R1BQKB1R w KQkq - 3 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b8,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b8-d7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Semmering, Semmering/Baden}}\\ 
+\multicolumn{2}{l}{1937 Round 2}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Petrovs, Vladimirs} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 dxc4 5. a4 Bf5 6. Ne5 Nbd7}\mainline{7. Nxc4 Qc7 8. Qb3 e5 9. dxe5 Nc5 10. Qa2 Na6 11. e4 Nxe4 12. Nxe4 Bxe4 13. Nd6+ Bxd6 14. exd6 Qxd6 15. Bxa6 bxa6 16. O-O O-O 17. Qa3 Qg6 18. f3 Bd5 19. Bf4 Rfe8 20. Rfe1 h6 21. a5 Rad8 22. Qc3 Kh7 23. Bg3 Rxe1+ 24. Rxe1 Rd7 25. b4 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b2,b4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b2-b4}]
+\newline
+25.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

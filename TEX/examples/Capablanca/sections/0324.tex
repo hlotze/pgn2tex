@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Vidmar, Milan Sr $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Vidmar, Milan Sr -- 1-0 -- C98}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C88 -- Spanish: Closed 7...d6 8.c3 Na5}
+\subsubsection{C88 -- Spanish: Closed 7...d6 8.c3 Na5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 Na5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk2r/2p1bppp/p2p1n2/np2p3/4P3/1BP2N2/PP1P1PPP/RNBQR1K1 w kq - 1 9},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c6,a5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c6-a5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1927 Round 3}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Vidmar, Milan Sr} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 Na5}\mainline{9. Bc2 c5 10. d4 Qc7 11. Nbd2 O-O 12. h3 Nc6 13. d5 Nd8 14. a4 b4 15. Nc4 a5 16. Nfxe5 Ba6 17. Bb3 dxe5 18. d6 Bxd6 19. Qxd6 Qxd6 20. Nxd6 Nb7 21. Nxb7 Bxb7 22. cxb4 cxb4 23. f3 Rfd8 24. Be3 h6 25. Red1 Bc6 26. Rac1 Be8 27. Kf2 Rxd1 28. Rxd1 Rc8 29. g4 Bd7 30. Bb6 Be6 31. Bxe6 fxe6 32. Rd8+ Rxd8 33. Bxd8 Nd7 34. Bxa5 Nc5 35. b3 Nxb3 36. Bxb4 Nd4 37. a5 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={a4,a5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a4-a5}]
+\newline
+37.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

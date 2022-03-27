@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Ilyin Zhenevsky, Alexander $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Ilyin Zhenevsky, Alexander -- 0-1 -- B25}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! B24 -- Sicilian: Closed, 3.g3 g6 4.Bg2 Bg7 5.Nge2}
+\subsubsection{B24 -- Sicilian: Closed, 3.g3 g6 4.Bg2 Bg7 5.Nge2}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c5 2. Nc3 Nc6 3. g3 g6 4. Bg2 Bg7 5. Nge2}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk1nr/pp1pppbp/2n3p1/2p5/4P3/2N3P1/PPPPNPBP/R1BQK2R b KQkq - 3 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g1,e2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g1-e2}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1925}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Ilyin Zhenevsky, Alexander} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 c5 2. Nc3 Nc6 3. g3 g6 4. Bg2 Bg7 5. Nge2}\mainline{5...  d6 6. d3 Nf6 7. O-O O-O 8. h3 a6 9. Be3 Bd7 10. Qd2 Re8 11. Nd1 Rc8 12. c3 Qa5 13. g4 Red8 14. f4 Be8 15. g5 Nd7 16. f5 b5 17. Nf4 b4 18. f6 Bf8 19. Nf2 bxc3 20. bxc3 e6 21. h4 Rb8 22. h5 Rb6 23. hxg6 hxg6 24. Nd1 Nde5 25. Qf2 Ng4 26. Qh4 Nce5 27. d4 Nxe3 28. Nxe3 Qxc3 29. dxe5 Qxe3+ 30. Kh1 dxe5 31. Rf3 exf4 32. Rxe3 fxe3 33. Qe1 Rb2 34. Qxe3 Rdd2 35. Bf3 c4 36. a3 Bd6 37. Qa7 c3}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c4,c3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c4-c3}]
+\newline
+37. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Becker, Albert $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Becker, Albert -- 1-0 -- D37}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D30 -- QGD: 3.Nf3 Nbd7 (Westphalia)}
+\subsubsection{D30 -- QGD: 3.Nf3 Nbd7 (Westphalia)}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nf3 Nd7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkbnr/pppn1ppp/4p3/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b8,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b8-d7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Karlsbad, Karlsbad}}\\ 
+\multicolumn{2}{l}{1929}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Becker, Albert} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nf3 Nd7}\mainline{4. Nc3 Ngf6 5. Bf4 dxc4 6. e3 Nd5 7. Bxc4 Nxf4 8. exf4 Bd6 9. g3 Nf6 10. O-O O-O 11. Qe2 b6 12. Rfd1 Bb7 13. Rac1 a6 14. Bd3 Bb4 15. Ne4 Qd5 16. Nfg5 Ne8 17. Nxh7 f5 18. Nhg5 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h7,g5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h7-g5}]
+\newline
+18.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

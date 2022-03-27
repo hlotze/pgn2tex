@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Marshall, Frank James $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Marshall, Frank James vs. Capablanca, Jose Raul -- 0-1 -- E16}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A05 -- Reti Opening: 1...Nf6}
+\subsubsection{A05 -- Reti Opening: 1...Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. Nf3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppppppp/5n2/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 2 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1931 Round 9}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Marshall, Frank James} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. Nf3 Nf6}\mainline{2. d4 e6 3. c4 b6 4. g3 Bb7 5. Bg2 Bb4+ 6. Bd2 Bxd2+ 7. Nbxd2 O-O 8. O-O c5 9. dxc5 bxc5 10. Rc1 Qc7 11. Nb3 d6 12. Qd2 Nc6 13. Rfd1 Rfd8 14. Nh4 a5 15. a4 Rab8 16. Rc3 Ba8 17. h3 Nb4 18. Bxa8 Rxa8 19. Qf4 Qc6 20. Rf3 Rd7 21. g4 Qxa4 22. Rxd6 Nbd5 23. Qe5 Rxd6 24. Qxd6 Ne4 25. Qe5 Qxc4 26. Rd3 a4 27. f3 Nef6 28. Nd2 Qc1+ 29. Kf2 h6 30. f4 c4 31. Rd4 c3 32. bxc3 a3 33. g5 a2 34. Nb3 Qxc3 35. gxf6 Qxb3 36. Rd1 Qxd1}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b3,d1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b3-d1}]
+\newline
+36. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

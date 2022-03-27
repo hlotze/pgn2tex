@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Alekhine, Alexander $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Alekhine, Alexander -- 1-0 -- D52}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D37 -- QGD: Westphalia without Bg5}
+\subsubsection{D37 -- QGD: Westphalia without Bg5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 Nbd7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkb1r/pppn1ppp/4pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 4 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b8,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b8-d7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Buenos Aires, World Championship 13th}}\\ 
+\multicolumn{2}{l}{1927 Round 7}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Alekhine, Alexander} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 Nbd7}\mainline{5. Bg5 c6 6. e3 Qa5 7. Nd2 Bb4 8. Qc2 O-O 9. Bh4 c5 10. Nb3 Qa4 11. Bxf6 Nxf6 12. dxc5 Ne4 13. cxd5 Bxc3+ 14. bxc3 Nxc5 15. Rd1 exd5 16. Rxd5 Nxb3 17. axb3 Qc6 18. Rd4 Re8 19. Bd3 Qxg2 20. Bxh7+ Kf8 21. Be4 Qh3 22. Qd2 Be6 23. c4 a5 24. Rg1 Qxh2 25. Rh1 Qc7 26. Qb2 Qc5 27. Bd5 Ra6 28. Re4 Rd6 29. Rh7 Ke7 30. Qxg7 Kd8 31. Bxe6 fxe6 32. Qxb7 Qb4+ 33. Qxb4 axb4 34. c5 Rc6 35. Rxb4 Rxc5 36. Ra7 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h7,a7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h7-a7}]
+\newline
+36.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

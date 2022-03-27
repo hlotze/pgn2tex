@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Alekhine, Alexander $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Alekhine, Alexander vs. Capablanca, Jose Raul -- 0-1 -- E15}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E15 -- Queen's Indian: Rubinstein Variation}
+\subsubsection{E15 -- Queen's Indian: Rubinstein Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb7 5. Bg2 c5 6. d5 exd5 7. Nh4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rn1qkb1r/pb1p1ppp/1p3n2/2pp4/2P4N/6P1/PP2PPBP/RNBQK2R b KQkq - 1 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f3,h4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f3-h4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1927 Round 1}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Alekhine, Alexander} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb7 5. Bg2 c5 6. d5 exd5 7. Nh4}\mainline{7...  g6 8. Nc3 Bg7 9. O-O O-O 10. Bf4 d6 11. cxd5 Nh5 12. Bd2 Nd7 13. f4 a6 14. Bf3 Nhf6 15. a4 c4 16. Be3 Qc7 17. g4 Nc5 18. g5 Nfd7 19. f5 Rfe8 20. Bf4 Be5 21. Bg4 Nb3 22. fxg6 hxg6 23. Rb1 Bxc3 24. bxc3 Qc5+ 25. e3 Ne5 26. Bf3 Nd3 27. Kh1 Bxd5 28. Rxb3 Nxf4 29. Rb1 Rxe3 30. Ng2 Rxf3 31. Rxf3 Nxg2 32. Kxg2 Re8 33. Kf1 Bxf3 34. Qxf3 Qxg5 35. Re1 Rxe1+ 36. Kxe1 Qg1+ 37. Kd2 Qxh2+ 38. Kc1 Qe5 39. Kb2 Kg7 40. Qf2 b5 41. Qb6 bxa4 42. Qxa6 Qe2+}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e5,e2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e5-e2},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={b2}]
+\newline
+42. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

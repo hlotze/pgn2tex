@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Spielmann, Rudolf $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Spielmann, Rudolf vs. Capablanca, Jose Raul -- 1/2-1/2 -- B15}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! B15 -- Caro-Kann: 4.Nxe4 Nf6 5.Ng3}
+\subsubsection{B15 -- Caro-Kann: 4.Nxe4 Nf6 5.Ng3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Ng3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pp2pppp/2p2n2/8/3P4/6N1/PPP2PPP/R1BQKBNR b KQkq - 2 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e4,g3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e4-g3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1927 Round 2}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Spielmann, Rudolf} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Ng3}\mainline{5...  Bg4 6. Qd3 Nbd7 7. h3 Bh5 8. Nxh5 Nxh5 9. Nf3 e6 10. g3 Bd6 11. Bg2 O-O 12. O-O Qc7 13. b3 Nhf6 14. Bb2 e5 15. dxe5 Nxe5 16. Qf5 Rfe8 17. Rfe1 Nxf3+ 18. Bxf3 Rxe1+ 19. Rxe1 Re8 20. Rxe8+ Nxe8 21. Bg4 Qe7 22. Kf1 Bb4 23. c3 Nd6 24. Qd3 Ba5 25. Ba3 Bc7 26. c4 Qe5 27. Qe2 Qxe2+ 28. Kxe2 b6}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b7,b6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b7-b6}]
+\newline
+28. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

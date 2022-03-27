@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Corzo y Prinzipe, Juan $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Corzo y Prinzipe, Juan -- 1-0 -- C80}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C80 -- Spanish: Open, 8...Be6 9.a4}
+\subsubsection{C80 -- Spanish: Open, 8...Be6 9.a4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Nxe4 6. d4 b5 7. Bb3 d5 8. dxe5 Be6 9. a4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r2qkb1r/2p2ppp/p1n1b3/1p1pP3/P3n3/1B3N2/1PP2PPP/RNBQ1RK1 b kq - 0 9},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={a2,a4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a2-a4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Havana, Havana}}\\ 
+\multicolumn{2}{l}{1913}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Corzo y Prinzipe, Juan} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Nxe4 6. d4 b5 7. Bb3 d5 8. dxe5 Be6 9. a4}\mainline{9...  Rb8 10. axb5 axb5 11. c3 Be7 12. Nd4 Nxe5 13. Bf4 Qd6 14. Nxe6 Qxe6 15. Bxd5 Qf5 16. Bxe5 Qxe5 17. Re1 f5 18. Bc6+ Kf8 19. Qf3 Bf6 20. Bxe4 fxe4 21. Rxe4 Qd5 22. c4 bxc4 23. Nc3 Qb7 24. Rae1 Qa8 25. g4 h6 26. h4 Kg8 27. Nd5 Rf8 28. Nxf6+ gxf6 29. Qf5 Rh7 30. Re7 Rg7 31. Qd7 Rxe7 32. Rxe7 Qa1+ 33. Kg2 Qb1 34. Qd5+ Kh8 35. Qh5 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d5,h5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d5-h5}]
+\newline
+35.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,2884 @@
+% exarticle, if needed to allow 9pt font size
+\documentclass[11pt]{article}
+\usepackage{import}
+
+\usepackage{geometry}
+\geometry{
+   a4paper,
+   top=20mm,
+   bottom=20mm,
+   left=20mm,
+   right=20mm
+}
+
+\newcommand*\cleartoleftpage{%
+   \clearpage
+   \ifodd\value{page}\hbox{}\newpage\fi
+}
+
+% fonts
+\usepackage{mathptmx}
+\usepackage{amssymb}
+
+% hyperlinks at toc and PDF outline
+\usepackage{hyperref}
+\hypersetup{
+   colorlinks=true,
+   linkcolor=blue,
+   filecolor=magenta,
+   urlcolor=cyan}
+\urlstyle{same}
+
+% do not like the counters before the titles
+\setcounter{secnumdepth}{0}
+
+% two columns on frist page
+\usepackage{multicol}
+\setlength{\columnsep}{32pt}
+
+% for table that can span more then one page
+\usepackage{longtable}
+\setcounter{LTchunksize}{1000}
+% table cell width used with centering
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\ \arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\ \arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\ \arraybackslash\hspace{0pt}}m{#1}}
+
+% colors
+\usepackage[dvipsnames]{xcolor}
+
+% chessboards
+\usepackage{xskak}
+\usepackage{chessboard}
+\setchessboard{smallboard, showmover=false}
+\styleC % for tabular pgn notation
+
+% if you want to add any graphics manually
+\usepackage{graphicx} % use graphics in png format
+\graphicspath{ {images/} } % images dir is TEX/<pgn>/images/
+
+% last page number
+\usepackage[lastpage,user]{zref}
+
+% header and footer
+\usepackage{titleps}
+\newpagestyle{mypage}{%
+   \headrule
+   \sethead{}{}{\subsectiontitle}
+   \footrule
+   \setfoot{\sectiontitle}{}{\thepage\ of \zpageref{LastPage}}
+}
+\settitlemarks{section,subsection,subsubsection}
+\pagestyle{mypage}
+
+% index
+\usepackage{makeidx}
+\makeindex
+\renewcommand{\indexname}{Index}
+\usepackage[totoc]{idxlayout}
+
+% check if lastmove was w_hite or b_lack
+\usepackage{ifthen}
+\newcommand{\printmovercolor}[1]
+{
+   \ifthenelse{\equal{#1}{w}}
+   { % True case - w_hite
+       \xskakgetgame{lastmovenr}.\,\xskakget{lan} ...
+   }
+   { % False case - b_lack
+       \xskakgetgame{lastmovenr}. ... \,\xskakget{lan}
+   }
+}
+
+\usepackage{subfiles} % Best loaded last in the preamble
+
+% TODO: fill \href{ ... } with the link where you got the pgn from
+%  e.g. \href{https://theweekinchess.com/assets/files/pgn/tatamast22.pgn}
+%\title{\href{}{Capablanca.pgn}}
+\title{Capablanca.pgn}
+
+% TODO: fill the \date{ ... }
+%  e.g. \date{18.01.2022}
+%\date{}
+
+% TODO: fill \href{ ... } with the home link of the site
+%  e.g. \href{https://theweekinchess.com}
+%  and  the site name you want to emphazie \emph{ ... }
+%  e.g. \emph{The Week in Chess}
+%\author{downloaded from \href{}{\emph{}}}
+
+\begin{document}
+
+\maketitle
+
+% TODO: fill \includegraphics[width=15cm]{ ... }
+%       with png image name without extention .png
+%       the png image shall be stored at TEX/<png>/images/
+%  e.g. \includegraphics[width=15cm]{participants}
+%\begin{center}
+%\includegraphics[width=15cm]{}
+%\end{center}
+\newpage
+
+\tableofcontents
+\newpage
+
+% put index page here
+\printindex
+
+\cleartoleftpage
+\section{Havana, Havana m, Round 1 (1901)}
+\subfile{sections/0001}
+
+\clearpage
+
+\section{Havana, Havana m, Round 2 (1901)}
+\subfile{sections/0002}
+
+\clearpage
+
+\section{Havana, Havana m, Round 3 (1901)}
+\subfile{sections/0003}
+
+\clearpage
+
+\section{Havana, Havana m, Round 4 (1901)}
+\subfile{sections/0004}
+
+\clearpage
+
+\section{Havana, Havana m, Round 5 (1901)}
+\subfile{sections/0005}
+
+\clearpage
+
+\section{Havana, Havana m, Round 6 (1901)}
+\subfile{sections/0006}
+
+\clearpage
+
+\section{Havana, Havana m, Round 7 (1901)}
+\subfile{sections/0007}
+
+\clearpage
+
+\section{Havana, Havana m, Round 8 (1901)}
+\subfile{sections/0008}
+
+\clearpage
+
+\section{Havana, Havana m, Round 9 (1901)}
+\subfile{sections/0009}
+
+\clearpage
+
+\section{Havana, Havana m, Round 10 (1901)}
+\subfile{sections/0010}
+
+\clearpage
+
+\section{Havana, Havana m, Round 11 (1901)}
+\subfile{sections/0011}
+
+\clearpage
+
+\section{Havana, Havana m, Round 12 (1901)}
+\subfile{sections/0012}
+
+\clearpage
+
+\section{Havana, Havana m, Round 13 (1901)}
+\subfile{sections/0013}
+
+\clearpage
+
+\section{New York, New York (1906)}
+\subfile{sections/0014}
+
+\clearpage
+
+\section{New York, USA m, Round 1 (1909)}
+\subfile{sections/0015}
+
+\clearpage
+
+\section{New York, USA m, Round 2 (1909)}
+\subfile{sections/0016}
+
+\clearpage
+
+\section{New York, USA m, Round 3 (1909)}
+\subfile{sections/0017}
+
+\clearpage
+
+\section{New York, USA m, Round 4 (1909)}
+\subfile{sections/0018}
+
+\clearpage
+
+\section{New York, USA m, Round 5 (1909)}
+\subfile{sections/0019}
+
+\clearpage
+
+\section{New York, USA m, Round 6 (1909)}
+\subfile{sections/0020}
+
+\clearpage
+
+\section{New York, USA m, Round 7 (1909)}
+\subfile{sections/0021}
+
+\clearpage
+
+\section{New York, USA m, Round 8 (1909)}
+\subfile{sections/0022}
+
+\clearpage
+
+\section{New York, USA m, Round 9 (1909)}
+\subfile{sections/0023}
+
+\clearpage
+
+\section{New York, USA m, Round 10 (1909)}
+\subfile{sections/0024}
+
+\clearpage
+
+\section{New York, USA m, Round 11 (1909)}
+\subfile{sections/0025}
+
+\clearpage
+
+\section{New York, USA m, Round 12 (1909)}
+\subfile{sections/0026}
+
+\clearpage
+
+\section{New York, USA m, Round 13 (1909)}
+\subfile{sections/0027}
+
+\clearpage
+
+\section{New York, USA m, Round 14 (1909)}
+\subfile{sections/0028}
+
+\clearpage
+
+\section{New York, USA m, Round 15 (1909)}
+\subfile{sections/0029}
+
+\clearpage
+
+\section{New York, USA m, Round 16 (1909)}
+\subfile{sections/0030}
+
+\clearpage
+
+\section{New York, USA m, Round 17 (1909)}
+\subfile{sections/0031}
+
+\clearpage
+
+\section{New York, USA m, Round 18 (1909)}
+\subfile{sections/0032}
+
+\clearpage
+
+\section{New York, USA m, Round 19 (1909)}
+\subfile{sections/0033}
+
+\clearpage
+
+\section{New York, USA m, Round 20 (1909)}
+\subfile{sections/0034}
+
+\clearpage
+
+\section{New York, USA m, Round 21 (1909)}
+\subfile{sections/0035}
+
+\clearpage
+
+\section{New York, USA m, Round 22 (1909)}
+\subfile{sections/0036}
+
+\clearpage
+
+\section{New York, USA m, Round 23 (1909)}
+\subfile{sections/0037}
+
+\clearpage
+
+\section{New York, New York (1910)}
+\subfile{sections/0038}
+
+\clearpage
+
+\subfile{sections/0039}
+
+\clearpage
+
+\section{Montevideo, Montevideo sim (1911)}
+\subfile{sections/0040}
+
+\clearpage
+
+\subfile{sections/0041}
+
+\clearpage
+
+\subfile{sections/0042}
+
+\clearpage
+
+\section{New York, New York, Round 2 (1911)}
+\subfile{sections/0043}
+
+\clearpage
+
+\section{New York, New York, Round 3 (1911)}
+\subfile{sections/0044}
+
+\clearpage
+
+\section{New York, New York, Round 4 (1911)}
+\subfile{sections/0045}
+
+\clearpage
+
+\section{New York, New York, Round 5 (1911)}
+\subfile{sections/0046}
+
+\clearpage
+
+\section{New York, New York, Round 6 (1911)}
+\subfile{sections/0047}
+
+\clearpage
+
+\section{New York, New York, Round 7 (1911)}
+\subfile{sections/0048}
+
+\clearpage
+
+\section{New York, New York, Round 8 (1911)}
+\subfile{sections/0049}
+
+\clearpage
+
+\section{New York, New York, Round 9 (1911)}
+\subfile{sections/0050}
+
+\clearpage
+
+\section{New York, New York, Round 10 (1911)}
+\subfile{sections/0051}
+
+\clearpage
+
+\section{New York, New York, Round 11 (1911)}
+\subfile{sections/0052}
+
+\clearpage
+
+\section{New York, New York, Round 12 (1911)}
+\subfile{sections/0053}
+
+\clearpage
+
+\section{New York, New York, Round 13 (1911)}
+\subfile{sections/0054}
+
+\clearpage
+
+\section{Prague, Prague sim (1911)}
+\subfile{sections/0055}
+
+\clearpage
+
+\subfile{sections/0056}
+
+\clearpage
+
+\subfile{sections/0057}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 1 (1911)}
+\subfile{sections/0058}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 2 (1911)}
+\subfile{sections/0059}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 3 (1911)}
+\subfile{sections/0060}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 4 (1911)}
+\subfile{sections/0061}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 5 (1911)}
+\subfile{sections/0062}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 6 (1911)}
+\subfile{sections/0063}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 7 (1911)}
+\subfile{sections/0064}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 8 (1911)}
+\subfile{sections/0065}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 9 (1911)}
+\subfile{sections/0066}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 10 (1911)}
+\subfile{sections/0067}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 12 (1911)}
+\subfile{sections/0068}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 13 (1911)}
+\subfile{sections/0069}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 14 (1911)}
+\subfile{sections/0070}
+
+\clearpage
+
+\section{San Sebastian, San Sebastian, Round 15 (1911)}
+\subfile{sections/0071}
+
+\clearpage
+
+\section{Havana, Havana (1913)}
+\subfile{sections/0072}
+
+\clearpage
+
+\subfile{sections/0073}
+
+\clearpage
+
+\subfile{sections/0074}
+
+\clearpage
+
+\subfile{sections/0075}
+
+\clearpage
+
+\subfile{sections/0076}
+
+\clearpage
+
+\subfile{sections/0077}
+
+\clearpage
+
+\subfile{sections/0078}
+
+\clearpage
+
+\subfile{sections/0079}
+
+\clearpage
+
+\subfile{sections/0080}
+
+\clearpage
+
+\subfile{sections/0081}
+
+\clearpage
+
+\subfile{sections/0082}
+
+\clearpage
+
+\subfile{sections/0083}
+
+\clearpage
+
+\subfile{sections/0084}
+
+\clearpage
+
+\subfile{sections/0085}
+
+\clearpage
+
+\section{New York, New York National, Round 1 (1913)}
+\subfile{sections/0095}
+
+\clearpage
+
+\section{New York, New York National, Round 2 (1913)}
+\subfile{sections/0096}
+
+\clearpage
+
+\section{New York, New York National, Round 3 (1913)}
+\subfile{sections/0097}
+
+\clearpage
+
+\section{New York, New York National, Round 4 (1913)}
+\subfile{sections/0098}
+
+\clearpage
+
+\section{New York, New York National, Round 5 (1913)}
+\subfile{sections/0099}
+
+\clearpage
+
+\section{New York, New York National, Round 6 (1913)}
+\subfile{sections/0100}
+
+\clearpage
+
+\section{New York, New York National, Round 7 (1913)}
+\subfile{sections/0101}
+
+\clearpage
+
+\section{New York, New York National, Round 8 (1913)}
+\subfile{sections/0102}
+
+\clearpage
+
+\section{New York, New York National, Round 9 (1913)}
+\subfile{sections/0103}
+
+\clearpage
+
+\section{New York, New York National, Round 10 (1913)}
+\subfile{sections/0104}
+
+\clearpage
+
+\section{New York, New York National, Round 11 (1913)}
+\subfile{sections/0105}
+
+\clearpage
+
+\section{New York, New York National, Round 12 (1913)}
+\subfile{sections/0106}
+
+\clearpage
+
+\section{New York, New York National, Round 13 (1913)}
+\subfile{sections/0107}
+
+\clearpage
+
+\section{New York, New York Rice (1913)}
+\subfile{sections/0086}
+
+\clearpage
+
+\subfile{sections/0087}
+
+\clearpage
+
+\subfile{sections/0088}
+
+\clearpage
+
+\subfile{sections/0089}
+
+\clearpage
+
+\subfile{sections/0090}
+
+\clearpage
+
+\subfile{sections/0091}
+
+\clearpage
+
+\subfile{sections/0092}
+
+\clearpage
+
+\subfile{sections/0093}
+
+\clearpage
+
+\subfile{sections/0094}
+
+\clearpage
+
+\section{St Petersburg, St Petersburg exhibition (1913)}
+\subfile{sections/0108}
+
+\clearpage
+
+\subfile{sections/0109}
+
+\clearpage
+
+\subfile{sections/0110}
+
+\clearpage
+
+\subfile{sections/0111}
+
+\clearpage
+
+\subfile{sections/0112}
+
+\clearpage
+
+\subfile{sections/0113}
+
+\clearpage
+
+\section{St Petersburg, St Petersburg f (1914)}
+\subfile{sections/0121}
+
+\clearpage
+
+\subfile{sections/0125}
+
+\clearpage
+
+\subfile{sections/0126}
+
+\clearpage
+
+\subfile{sections/0127}
+
+\clearpage
+
+\subfile{sections/0128}
+
+\clearpage
+
+\subfile{sections/0129}
+
+\clearpage
+
+\subfile{sections/0130}
+
+\clearpage
+
+\subfile{sections/0131}
+
+\clearpage
+
+\section{St Petersburg, St Petersburg prel (1914)}
+\subfile{sections/0114}
+
+\clearpage
+
+\subfile{sections/0115}
+
+\clearpage
+
+\subfile{sections/0116}
+
+\clearpage
+
+\subfile{sections/0117}
+
+\clearpage
+
+\subfile{sections/0118}
+
+\clearpage
+
+\subfile{sections/0119}
+
+\clearpage
+
+\subfile{sections/0120}
+
+\clearpage
+
+\subfile{sections/0122}
+
+\clearpage
+
+\subfile{sections/0123}
+
+\clearpage
+
+\subfile{sections/0124}
+
+\clearpage
+
+\section{Vienna, Vienna (1914)}
+\subfile{sections/0132}
+
+\clearpage
+
+\subfile{sections/0133}
+
+\clearpage
+
+\section{Vienna, Vienna exhibition (1914)}
+\subfile{sections/0134}
+
+\clearpage
+
+\subfile{sections/0135}
+
+\clearpage
+
+\section{New York, New York, Round 1 (1915)}
+\subfile{sections/0136}
+
+\clearpage
+
+\section{New York, New York, Round 2 (1915)}
+\subfile{sections/0137}
+
+\clearpage
+
+\section{New York, New York, Round 3 (1915)}
+\subfile{sections/0138}
+
+\clearpage
+
+\section{New York, New York, Round 4 (1915)}
+\subfile{sections/0139}
+
+\clearpage
+
+\section{New York, New York, Round 5 (1915)}
+\subfile{sections/0140}
+
+\clearpage
+
+\section{New York, New York, Round 6 (1915)}
+\subfile{sections/0141}
+
+\clearpage
+
+\section{New York, New York, Round 7 (1915)}
+\subfile{sections/0142}
+
+\clearpage
+
+\section{New York, New York, Round 8 (1915)}
+\subfile{sections/0143}
+
+\clearpage
+
+\section{New York, New York, Round 9 (1915)}
+\subfile{sections/0144}
+
+\clearpage
+
+\section{New York, New York, Round 10 (1915)}
+\subfile{sections/0145}
+
+\clearpage
+
+\section{New York, New York, Round 11 (1915)}
+\subfile{sections/0146}
+
+\clearpage
+
+\section{New York, New York, Round 12 (1915)}
+\subfile{sections/0147}
+
+\clearpage
+
+\section{New York, New York, Round 13 (1915)}
+\subfile{sections/0148}
+
+\clearpage
+
+\section{New York, New York, Round 14 (1915)}
+\subfile{sections/0149}
+
+\clearpage
+
+\section{New York, New York Rice f, Round 1 (1916)}
+\subfile{sections/0151}
+
+\clearpage
+
+\section{New York, New York Rice f, Round 2 (1916)}
+\subfile{sections/0152}
+
+\clearpage
+
+\section{New York, New York Rice f, Round 3 (1916)}
+\subfile{sections/0155}
+
+\clearpage
+
+\section{New York, New York Rice f, Round 4 (1916)}
+\subfile{sections/0156}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 1 (1916)}
+\subfile{sections/0150}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 2 (1916)}
+\subfile{sections/0153}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 3 (1916)}
+\subfile{sections/0154}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 4 (1916)}
+\subfile{sections/0157}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 5 (1916)}
+\subfile{sections/0158}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 6 (1916)}
+\subfile{sections/0159}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 7 (1916)}
+\subfile{sections/0160}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 8 (1916)}
+\subfile{sections/0161}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 9 (1916)}
+\subfile{sections/0162}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 10 (1916)}
+\subfile{sections/0163}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 11 (1916)}
+\subfile{sections/0164}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 12 (1916)}
+\subfile{sections/0165}
+
+\clearpage
+
+\section{New York, New York Rice prel, Round 13 (1916)}
+\subfile{sections/0166}
+
+\clearpage
+
+\section{New York, New York (1918)}
+\subfile{sections/0167}
+
+\clearpage
+
+\subfile{sections/0168}
+
+\clearpage
+
+\subfile{sections/0169}
+
+\clearpage
+
+\subfile{sections/0170}
+
+\clearpage
+
+\subfile{sections/0171}
+
+\clearpage
+
+\subfile{sections/0172}
+
+\clearpage
+
+\subfile{sections/0173}
+
+\clearpage
+
+\subfile{sections/0174}
+
+\clearpage
+
+\subfile{sections/0175}
+
+\clearpage
+
+\subfile{sections/0176}
+
+\clearpage
+
+\subfile{sections/0177}
+
+\clearpage
+
+\subfile{sections/0178}
+
+\clearpage
+
+\section{Bradford, Bradford sim (1919)}
+\subfile{sections/0179}
+
+\clearpage
+
+\subfile{sections/0180}
+
+\clearpage
+
+\subfile{sections/0181}
+
+\clearpage
+
+\subfile{sections/0182}
+
+\clearpage
+
+\subfile{sections/0183}
+
+\clearpage
+
+\subfile{sections/0184}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 1 (1919)}
+\subfile{sections/0191}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 2 (1919)}
+\subfile{sections/0192}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 3 (1919)}
+\subfile{sections/0193}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 7 (1919)}
+\subfile{sections/0194}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 9 (1919)}
+\subfile{sections/0195}
+
+\clearpage
+
+\section{Hastings, Hastings (1919)}
+\subfile{sections/0185}
+
+\clearpage
+
+\subfile{sections/0186}
+
+\clearpage
+
+\subfile{sections/0187}
+
+\clearpage
+
+\subfile{sections/0188}
+
+\clearpage
+
+\subfile{sections/0189}
+
+\clearpage
+
+\subfile{sections/0190}
+
+\clearpage
+
+\section{Havana, Havana m, Round 1 (1919)}
+\subfile{sections/0196}
+
+\clearpage
+
+\section{Havana, Havana m, Round 2 (1919)}
+\subfile{sections/0197}
+
+\clearpage
+
+\section{Havana, Havana m, Round 3 (1919)}
+\subfile{sections/0198}
+
+\clearpage
+
+\section{Havana, Havana m, Round 4 (1919)}
+\subfile{sections/0199}
+
+\clearpage
+
+\section{Havana, Havana m, Round 5 (1919)}
+\subfile{sections/0200}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 1 (1921)}
+\subfile{sections/0201}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 2 (1921)}
+\subfile{sections/0202}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 3 (1921)}
+\subfile{sections/0203}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 4 (1921)}
+\subfile{sections/0204}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 5 (1921)}
+\subfile{sections/0205}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 6 (1921)}
+\subfile{sections/0206}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 7 (1921)}
+\subfile{sections/0207}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 8 (1921)}
+\subfile{sections/0208}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 9 (1921)}
+\subfile{sections/0209}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 10 (1921)}
+\subfile{sections/0210}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 11 (1921)}
+\subfile{sections/0211}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 12 (1921)}
+\subfile{sections/0212}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 13 (1921)}
+\subfile{sections/0213}
+
+\clearpage
+
+\section{Havana, World Championship 12th, Round 14 (1921)}
+\subfile{sections/0214}
+
+\clearpage
+
+\section{London, London, Round 1 (1922)}
+\subfile{sections/0215}
+
+\clearpage
+
+\section{London, London, Round 2 (1922)}
+\subfile{sections/0216}
+
+\clearpage
+
+\section{London, London, Round 3 (1922)}
+\subfile{sections/0217}
+
+\clearpage
+
+\section{London, London, Round 4 (1922)}
+\subfile{sections/0218}
+
+\clearpage
+
+\section{London, London, Round 5 (1922)}
+\subfile{sections/0219}
+
+\clearpage
+
+\section{London, London, Round 6 (1922)}
+\subfile{sections/0220}
+
+\clearpage
+
+\section{London, London, Round 7 (1922)}
+\subfile{sections/0221}
+
+\clearpage
+
+\section{London, London, Round 8 (1922)}
+\subfile{sections/0222}
+
+\clearpage
+
+\section{London, London, Round 9 (1922)}
+\subfile{sections/0223}
+
+\clearpage
+
+\section{London, London, Round 10 (1922)}
+\subfile{sections/0224}
+
+\clearpage
+
+\section{London, London, Round 11 (1922)}
+\subfile{sections/0225}
+
+\clearpage
+
+\section{London, London, Round 12 (1922)}
+\subfile{sections/0226}
+
+\clearpage
+
+\section{London, London, Round 13 (1922)}
+\subfile{sections/0227}
+
+\clearpage
+
+\section{London, London, Round 14 (1922)}
+\subfile{sections/0228}
+
+\clearpage
+
+\section{London, London, Round 15 (1922)}
+\subfile{sections/0229}
+
+\clearpage
+
+\section{New York, New York (1924)}
+\subfile{sections/0230}
+
+\clearpage
+
+\subfile{sections/0231}
+
+\clearpage
+
+\subfile{sections/0232}
+
+\clearpage
+
+\subfile{sections/0233}
+
+\clearpage
+
+\subfile{sections/0234}
+
+\clearpage
+
+\subfile{sections/0235}
+
+\clearpage
+
+\subfile{sections/0236}
+
+\clearpage
+
+\subfile{sections/0237}
+
+\clearpage
+
+\subfile{sections/0238}
+
+\clearpage
+
+\subfile{sections/0239}
+
+\clearpage
+
+\subfile{sections/0240}
+
+\clearpage
+
+\subfile{sections/0241}
+
+\clearpage
+
+\subfile{sections/0242}
+
+\clearpage
+
+\subfile{sections/0243}
+
+\clearpage
+
+\subfile{sections/0244}
+
+\clearpage
+
+\subfile{sections/0245}
+
+\clearpage
+
+\subfile{sections/0246}
+
+\clearpage
+
+\subfile{sections/0247}
+
+\clearpage
+
+\subfile{sections/0248}
+
+\clearpage
+
+\subfile{sections/0249}
+
+\clearpage
+
+\section{Moscow, Moscow (1925)}
+\subfile{sections/0250}
+
+\clearpage
+
+\subfile{sections/0251}
+
+\clearpage
+
+\subfile{sections/0252}
+
+\clearpage
+
+\subfile{sections/0253}
+
+\clearpage
+
+\subfile{sections/0254}
+
+\clearpage
+
+\subfile{sections/0255}
+
+\clearpage
+
+\subfile{sections/0256}
+
+\clearpage
+
+\subfile{sections/0257}
+
+\clearpage
+
+\subfile{sections/0258}
+
+\clearpage
+
+\subfile{sections/0259}
+
+\clearpage
+
+\subfile{sections/0260}
+
+\clearpage
+
+\subfile{sections/0261}
+
+\clearpage
+
+\subfile{sections/0262}
+
+\clearpage
+
+\subfile{sections/0263}
+
+\clearpage
+
+\subfile{sections/0264}
+
+\clearpage
+
+\subfile{sections/0265}
+
+\clearpage
+
+\subfile{sections/0266}
+
+\clearpage
+
+\subfile{sections/0267}
+
+\clearpage
+
+\subfile{sections/0268}
+
+\clearpage
+
+\subfile{sections/0269}
+
+\clearpage
+
+\section{Chicago, Chicago (1926)}
+\subfile{sections/0270}
+
+\clearpage
+
+\subfile{sections/0271}
+
+\clearpage
+
+\section{Lake Hopatcong, Lake Hopatcong, Round 1 (1926)}
+\subfile{sections/0272}
+
+\clearpage
+
+\section{Lake Hopatcong, Lake Hopatcong, Round 2 (1926)}
+\subfile{sections/0273}
+
+\clearpage
+
+\section{Lake Hopatcong, Lake Hopatcong, Round 4 (1926)}
+\subfile{sections/0274}
+
+\clearpage
+
+\section{Lake Hopatcong, Lake Hopatcong, Round 5 (1926)}
+\subfile{sections/0275}
+
+\clearpage
+
+\section{Lake Hopatcong, Lake Hopatcong, Round 6 (1926)}
+\subfile{sections/0276}
+
+\clearpage
+
+\section{Lake Hopatcong, Lake Hopatcong, Round 7 (1926)}
+\subfile{sections/0277}
+
+\clearpage
+
+\section{Lake Hopatcong, Lake Hopatcong, Round 9 (1926)}
+\subfile{sections/0278}
+
+\clearpage
+
+\section{Lake Hopatcong, Lake Hopatcong, Round 10 (1926)}
+\subfile{sections/0279}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 1 (1927)}
+\subfile{sections/0280}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 2 (1927)}
+\subfile{sections/0281}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 3 (1927)}
+\subfile{sections/0282}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 4 (1927)}
+\subfile{sections/0283}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 5 (1927)}
+\subfile{sections/0284}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 6 (1927)}
+\subfile{sections/0285}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 7 (1927)}
+\subfile{sections/0286}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 8 (1927)}
+\subfile{sections/0287}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 9 (1927)}
+\subfile{sections/0288}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 10 (1927)}
+\subfile{sections/0289}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 11 (1927)}
+\subfile{sections/0290}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 12 (1927)}
+\subfile{sections/0291}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 13 (1927)}
+\subfile{sections/0292}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 14 (1927)}
+\subfile{sections/0293}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 15 (1927)}
+\subfile{sections/0294}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 16 (1927)}
+\subfile{sections/0295}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 17 (1927)}
+\subfile{sections/0296}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 18 (1927)}
+\subfile{sections/0297}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 19 (1927)}
+\subfile{sections/0298}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 20 (1927)}
+\subfile{sections/0299}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 21 (1927)}
+\subfile{sections/0300}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 22 (1927)}
+\subfile{sections/0301}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 23 (1927)}
+\subfile{sections/0302}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 24 (1927)}
+\subfile{sections/0303}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 25 (1927)}
+\subfile{sections/0304}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 26 (1927)}
+\subfile{sections/0305}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 27 (1927)}
+\subfile{sections/0306}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 28 (1927)}
+\subfile{sections/0307}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 29 (1927)}
+\subfile{sections/0308}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 30 (1927)}
+\subfile{sections/0309}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 31 (1927)}
+\subfile{sections/0310}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 32 (1927)}
+\subfile{sections/0311}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 33 (1927)}
+\subfile{sections/0312}
+
+\clearpage
+
+\section{Buenos Aires, World Championship 13th, Round 34 (1927)}
+\subfile{sections/0313}
+
+\clearpage
+
+\section{New York, New York, Round 1 (1927)}
+\subfile{sections/0314}
+
+\clearpage
+
+\subfile{sections/0315}
+
+\clearpage
+
+\subfile{sections/0316}
+
+\clearpage
+
+\subfile{sections/0317}
+
+\clearpage
+
+\subfile{sections/0318}
+
+\clearpage
+
+\section{New York, New York, Round 2 (1927)}
+\subfile{sections/0319}
+
+\clearpage
+
+\subfile{sections/0320}
+
+\clearpage
+
+\subfile{sections/0321}
+
+\clearpage
+
+\subfile{sections/0322}
+
+\clearpage
+
+\subfile{sections/0323}
+
+\clearpage
+
+\section{New York, New York, Round 3 (1927)}
+\subfile{sections/0324}
+
+\clearpage
+
+\subfile{sections/0325}
+
+\clearpage
+
+\subfile{sections/0326}
+
+\clearpage
+
+\subfile{sections/0327}
+
+\clearpage
+
+\subfile{sections/0328}
+
+\clearpage
+
+\section{New York, New York, Round 4 (1927)}
+\subfile{sections/0329}
+
+\clearpage
+
+\subfile{sections/0330}
+
+\clearpage
+
+\subfile{sections/0331}
+
+\clearpage
+
+\subfile{sections/0332}
+
+\clearpage
+
+\subfile{sections/0333}
+
+\clearpage
+
+\section{Bad Kissingen, Bad Kissingen, Round 1 (1928)}
+\subfile{sections/0334}
+
+\clearpage
+
+\section{Bad Kissingen, Bad Kissingen, Round 2 (1928)}
+\subfile{sections/0335}
+
+\clearpage
+
+\section{Bad Kissingen, Bad Kissingen, Round 3 (1928)}
+\subfile{sections/0336}
+
+\clearpage
+
+\section{Bad Kissingen, Bad Kissingen, Round 4 (1928)}
+\subfile{sections/0337}
+
+\clearpage
+
+\section{Bad Kissingen, Bad Kissingen, Round 5 (1928)}
+\subfile{sections/0338}
+
+\clearpage
+
+\section{Bad Kissingen, Bad Kissingen, Round 6 (1928)}
+\subfile{sections/0339}
+
+\clearpage
+
+\section{Bad Kissingen, Bad Kissingen, Round 7 (1928)}
+\subfile{sections/0340}
+
+\clearpage
+
+\section{Bad Kissingen, Bad Kissingen, Round 8 (1928)}
+\subfile{sections/0341}
+
+\clearpage
+
+\section{Bad Kissingen, Bad Kissingen, Round 9 (1928)}
+\subfile{sections/0342}
+
+\clearpage
+
+\section{Bad Kissingen, Bad Kissingen, Round 10 (1928)}
+\subfile{sections/0343}
+
+\clearpage
+
+\section{Bad Kissingen, Bad Kissingen, Round 11 (1928)}
+\subfile{sections/0344}
+
+\clearpage
+
+\section{Berlin, Berlin Tageblatt (1928)}
+\subfile{sections/0345}
+
+\clearpage
+
+\subfile{sections/0346}
+
+\clearpage
+
+\subfile{sections/0347}
+
+\clearpage
+
+\subfile{sections/0348}
+
+\clearpage
+
+\subfile{sections/0349}
+
+\clearpage
+
+\subfile{sections/0350}
+
+\clearpage
+
+\subfile{sections/0351}
+
+\clearpage
+
+\subfile{sections/0352}
+
+\clearpage
+
+\subfile{sections/0353}
+
+\clearpage
+
+\subfile{sections/0354}
+
+\clearpage
+
+\subfile{sections/0355}
+
+\clearpage
+
+\subfile{sections/0357}
+
+\clearpage
+
+\section{Berlin, Berlin Tageblatt+ (1928)}
+\subfile{sections/0356}
+
+\clearpage
+
+\section{Budapest, Budapest (1928)}
+\subfile{sections/0358}
+
+\clearpage
+
+\subfile{sections/0359}
+
+\clearpage
+
+\subfile{sections/0360}
+
+\clearpage
+
+\subfile{sections/0361}
+
+\clearpage
+
+\subfile{sections/0362}
+
+\clearpage
+
+\subfile{sections/0363}
+
+\clearpage
+
+\subfile{sections/0364}
+
+\clearpage
+
+\subfile{sections/0365}
+
+\clearpage
+
+\subfile{sections/0366}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 1 (1929)}
+\subfile{sections/0367}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 2 (1929)}
+\subfile{sections/0368}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 3 (1929)}
+\subfile{sections/0369}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 4 (1929)}
+\subfile{sections/0370}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 5 (1929)}
+\subfile{sections/0371}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 6 (1929)}
+\subfile{sections/0372}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 7 (1929)}
+\subfile{sections/0373}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 8 (1929)}
+\subfile{sections/0374}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 9 (1929)}
+\subfile{sections/0375}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 10 (1929)}
+\subfile{sections/0376}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 11 (1929)}
+\subfile{sections/0377}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 12 (1929)}
+\subfile{sections/0378}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 13 (1929)}
+\subfile{sections/0379}
+
+\clearpage
+
+\section{Barcelona, Barcelona, Round 14 (1929)}
+\subfile{sections/0380}
+
+\clearpage
+
+\section{Budapest, Budapest (1929)}
+\subfile{sections/0381}
+
+\clearpage
+
+\subfile{sections/0382}
+
+\clearpage
+
+\subfile{sections/0383}
+
+\clearpage
+
+\subfile{sections/0384}
+
+\clearpage
+
+\subfile{sections/0385}
+
+\clearpage
+
+\subfile{sections/0386}
+
+\clearpage
+
+\subfile{sections/0387}
+
+\clearpage
+
+\subfile{sections/0388}
+
+\clearpage
+
+\subfile{sections/0389}
+
+\clearpage
+
+\subfile{sections/0390}
+
+\clearpage
+
+\subfile{sections/0391}
+
+\clearpage
+
+\subfile{sections/0392}
+
+\clearpage
+
+\subfile{sections/0393}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 1 (1929)}
+\subfile{sections/0395}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 3 (1929)}
+\subfile{sections/0396}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 4 (1929)}
+\subfile{sections/0397}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 5 (1929)}
+\subfile{sections/0398}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 6 (1929)}
+\subfile{sections/0399}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 7 (1929)}
+\subfile{sections/0400}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 8 (1929)}
+\subfile{sections/0401}
+
+\clearpage
+
+\section{Hastings, Hastings, Round 9 (1929)}
+\subfile{sections/0402}
+
+\clearpage
+
+\section{Hastings, Hastings (1929)}
+\subfile{sections/0394}
+
+\clearpage
+
+\section{Karlsbad, Karlsbad (1929)}
+\subfile{sections/0403}
+
+\clearpage
+
+\subfile{sections/0404}
+
+\clearpage
+
+\subfile{sections/0405}
+
+\clearpage
+
+\subfile{sections/0406}
+
+\clearpage
+
+\subfile{sections/0407}
+
+\clearpage
+
+\subfile{sections/0408}
+
+\clearpage
+
+\subfile{sections/0409}
+
+\clearpage
+
+\subfile{sections/0410}
+
+\clearpage
+
+\subfile{sections/0411}
+
+\clearpage
+
+\subfile{sections/0412}
+
+\clearpage
+
+\subfile{sections/0413}
+
+\clearpage
+
+\subfile{sections/0414}
+
+\clearpage
+
+\subfile{sections/0415}
+
+\clearpage
+
+\subfile{sections/0416}
+
+\clearpage
+
+\subfile{sections/0417}
+
+\clearpage
+
+\subfile{sections/0418}
+
+\clearpage
+
+\subfile{sections/0419}
+
+\clearpage
+
+\subfile{sections/0420}
+
+\clearpage
+
+\subfile{sections/0421}
+
+\clearpage
+
+\subfile{sections/0422}
+
+\clearpage
+
+\subfile{sections/0423}
+
+\clearpage
+
+\section{Ramsgate, Ramsgate schev, Round 1 (1929)}
+\subfile{sections/0424}
+
+\clearpage
+
+\section{Ramsgate, Ramsgate schev, Round 2 (1929)}
+\subfile{sections/0425}
+
+\clearpage
+
+\section{Ramsgate, Ramsgate schev, Round 3 (1929)}
+\subfile{sections/0426}
+
+\clearpage
+
+\section{Ramsgate, Ramsgate schev, Round 4 (1929)}
+\subfile{sections/0427}
+
+\clearpage
+
+\section{Ramsgate, Ramsgate schev, Round 5 (1929)}
+\subfile{sections/0428}
+
+\clearpage
+
+\section{Ramsgate, Ramsgate schev, Round 6 (1929)}
+\subfile{sections/0429}
+
+\clearpage
+
+\section{Ramsgate, Ramsgate schev, Round 7 (1929)}
+\subfile{sections/0430}
+
+\clearpage
+
+\section{Hastings, Hastings 3031, Round 1 (1930)}
+\subfile{sections/0431}
+
+\clearpage
+
+\section{Hastings, Hastings 3031, Round 2 (1930)}
+\subfile{sections/0432}
+
+\clearpage
+
+\section{Hastings, Hastings 3031, Round 3 (1930)}
+\subfile{sections/0433}
+
+\clearpage
+
+\section{Hastings, Hastings 3031, Round 4 (1930)}
+\subfile{sections/0434}
+
+\clearpage
+
+\section{Hastings, Hastings 3031, Round 5 (1930)}
+\subfile{sections/0435}
+
+\clearpage
+
+\section{Hastings, Hastings 3031, Round 6 (1930)}
+\subfile{sections/0436}
+
+\clearpage
+
+\section{Hastings, Hastings 3031, Round 7 (1930)}
+\subfile{sections/0437}
+
+\clearpage
+
+\section{Hastings, Hastings 3031, Round 8 (1930)}
+\subfile{sections/0438}
+
+\clearpage
+
+\section{Hastings, Hastings 3031, Round 9 (1930)}
+\subfile{sections/0439}
+
+\clearpage
+
+\section{Amsterdam, Amsterdam m3, Round 1 (1931)}
+\subfile{sections/0440}
+
+\clearpage
+
+\section{Amsterdam, Amsterdam m3, Round 2 (1931)}
+\subfile{sections/0441}
+
+\clearpage
+
+\section{Amsterdam, Amsterdam m3, Round 3 (1931)}
+\subfile{sections/0442}
+
+\clearpage
+
+\section{Amsterdam, Amsterdam m3, Round 4 (1931)}
+\subfile{sections/0443}
+
+\clearpage
+
+\section{Amsterdam, Amsterdam m3, Round 5 (1931)}
+\subfile{sections/0444}
+
+\clearpage
+
+\section{Amsterdam, Amsterdam m3, Round 6 (1931)}
+\subfile{sections/0445}
+
+\clearpage
+
+\section{Amsterdam, Amsterdam m3, Round 7 (1931)}
+\subfile{sections/0446}
+
+\clearpage
+
+\section{Amsterdam, Amsterdam m3, Round 8 (1931)}
+\subfile{sections/0447}
+
+\clearpage
+
+\section{Amsterdam, Amsterdam m3, Round 9 (1931)}
+\subfile{sections/0448}
+
+\clearpage
+
+\section{Amsterdam, Amsterdam m3, Round 10 (1931)}
+\subfile{sections/0449}
+
+\clearpage
+
+\section{New York, New York, Round 1 (1931)}
+\subfile{sections/0450}
+
+\clearpage
+
+\section{New York, New York, Round 2 (1931)}
+\subfile{sections/0451}
+
+\clearpage
+
+\section{New York, New York, Round 3 (1931)}
+\subfile{sections/0452}
+
+\clearpage
+
+\section{New York, New York, Round 4 (1931)}
+\subfile{sections/0453}
+
+\clearpage
+
+\section{New York, New York, Round 5 (1931)}
+\subfile{sections/0454}
+
+\clearpage
+
+\section{New York, New York, Round 6 (1931)}
+\subfile{sections/0455}
+
+\clearpage
+
+\section{New York, New York, Round 7 (1931)}
+\subfile{sections/0456}
+
+\clearpage
+
+\section{New York, New York, Round 8 (1931)}
+\subfile{sections/0457}
+
+\clearpage
+
+\section{New York, New York, Round 9 (1931)}
+\subfile{sections/0458}
+
+\clearpage
+
+\section{New York, New York, Round 10 (1931)}
+\subfile{sections/0459}
+
+\clearpage
+
+\section{New York, New York, Round 11 (1931)}
+\subfile{sections/0460}
+
+\clearpage
+
+\section{Los Angeles, Los Angeles (1933)}
+\subfile{sections/0461}
+
+\clearpage
+
+\section{Panama, Panama sim (1933)}
+\subfile{sections/0462}
+
+\clearpage
+
+\subfile{sections/0463}
+
+\clearpage
+
+\section{Hastings, Hastings3435 (1934)}
+\subfile{sections/0464}
+
+\clearpage
+
+\subfile{sections/0465}
+
+\clearpage
+
+\subfile{sections/0466}
+
+\clearpage
+
+\subfile{sections/0467}
+
+\clearpage
+
+\subfile{sections/0468}
+
+\clearpage
+
+\subfile{sections/0469}
+
+\clearpage
+
+\subfile{sections/0470}
+
+\clearpage
+
+\subfile{sections/0471}
+
+\clearpage
+
+\subfile{sections/0472}
+
+\clearpage
+
+\section{Margate, Margate, Round 1 (1935)}
+\subfile{sections/0473}
+
+\clearpage
+
+\section{Margate, Margate, Round 2 (1935)}
+\subfile{sections/0474}
+
+\clearpage
+
+\section{Margate, Margate, Round 3 (1935)}
+\subfile{sections/0475}
+
+\clearpage
+
+\section{Margate, Margate, Round 4 (1935)}
+\subfile{sections/0476}
+
+\clearpage
+
+\section{Margate, Margate, Round 5 (1935)}
+\subfile{sections/0477}
+
+\clearpage
+
+\section{Margate, Margate, Round 6 (1935)}
+\subfile{sections/0478}
+
+\clearpage
+
+\section{Margate, Margate, Round 7 (1935)}
+\subfile{sections/0479}
+
+\clearpage
+
+\section{Margate, Margate, Round 8 (1935)}
+\subfile{sections/0480}
+
+\clearpage
+
+\section{Margate, Margate, Round 9 (1935)}
+\subfile{sections/0481}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 1 (1935)}
+\subfile{sections/0482}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 2 (1935)}
+\subfile{sections/0483}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 3 (1935)}
+\subfile{sections/0484}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 4 (1935)}
+\subfile{sections/0485}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 5 (1935)}
+\subfile{sections/0486}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 6 (1935)}
+\subfile{sections/0487}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 7 (1935)}
+\subfile{sections/0488}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 8 (1935)}
+\subfile{sections/0489}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 9 (1935)}
+\subfile{sections/0490}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 10 (1935)}
+\subfile{sections/0491}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 11 (1935)}
+\subfile{sections/0492}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 12 (1935)}
+\subfile{sections/0493}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 13 (1935)}
+\subfile{sections/0494}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 14 (1935)}
+\subfile{sections/0495}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 15 (1935)}
+\subfile{sections/0496}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 16 (1935)}
+\subfile{sections/0497}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 17 (1935)}
+\subfile{sections/0498}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 18 (1935)}
+\subfile{sections/0499}
+
+\clearpage
+
+\section{Moscow, Moscow, Round 19 (1935)}
+\subfile{sections/0500}
+
+\clearpage
+
+\section{Margate, Margate, Round 2 (1936)}
+\subfile{sections/0504}
+
+\clearpage
+
+\section{Margate, Margate, Round 5 (1936)}
+\subfile{sections/0505}
+
+\clearpage
+
+\section{Margate, Margate, Round 7 (1936)}
+\subfile{sections/0506}
+
+\clearpage
+
+\section{Margate, Margate, Round 8 (1936)}
+\subfile{sections/0507}
+
+\clearpage
+
+\section{Margate, Margate, Round 9 (1936)}
+\subfile{sections/0508}
+
+\clearpage
+
+\subfile{sections/0509}
+
+\clearpage
+
+\section{Margate, Margate (1936)}
+\subfile{sections/0501}
+
+\clearpage
+
+\subfile{sections/0502}
+
+\clearpage
+
+\subfile{sections/0503}
+
+\clearpage
+
+\section{Moscow, Moscow (1936)}
+\subfile{sections/0510}
+
+\clearpage
+
+\subfile{sections/0511}
+
+\clearpage
+
+\subfile{sections/0512}
+
+\clearpage
+
+\subfile{sections/0513}
+
+\clearpage
+
+\subfile{sections/0514}
+
+\clearpage
+
+\subfile{sections/0515}
+
+\clearpage
+
+\subfile{sections/0516}
+
+\clearpage
+
+\subfile{sections/0517}
+
+\clearpage
+
+\subfile{sections/0518}
+
+\clearpage
+
+\subfile{sections/0519}
+
+\clearpage
+
+\subfile{sections/0520}
+
+\clearpage
+
+\subfile{sections/0521}
+
+\clearpage
+
+\subfile{sections/0522}
+
+\clearpage
+
+\subfile{sections/0523}
+
+\clearpage
+
+\subfile{sections/0524}
+
+\clearpage
+
+\subfile{sections/0525}
+
+\clearpage
+
+\subfile{sections/0526}
+
+\clearpage
+
+\subfile{sections/0527}
+
+\clearpage
+
+\section{Nottingham, Nottingham (1936)}
+\subfile{sections/0528}
+
+\clearpage
+
+\subfile{sections/0529}
+
+\clearpage
+
+\subfile{sections/0530}
+
+\clearpage
+
+\subfile{sections/0531}
+
+\clearpage
+
+\subfile{sections/0532}
+
+\clearpage
+
+\subfile{sections/0533}
+
+\clearpage
+
+\subfile{sections/0534}
+
+\clearpage
+
+\subfile{sections/0535}
+
+\clearpage
+
+\subfile{sections/0536}
+
+\clearpage
+
+\subfile{sections/0537}
+
+\clearpage
+
+\subfile{sections/0538}
+
+\clearpage
+
+\subfile{sections/0539}
+
+\clearpage
+
+\subfile{sections/0540}
+
+\clearpage
+
+\subfile{sections/0541}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 1 (1937)}
+\subfile{sections/0542}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 2 (1937)}
+\subfile{sections/0543}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 3 (1937)}
+\subfile{sections/0544}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 4 (1937)}
+\subfile{sections/0545}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 5 (1937)}
+\subfile{sections/0546}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 6 (1937)}
+\subfile{sections/0547}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 7 (1937)}
+\subfile{sections/0548}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 8 (1937)}
+\subfile{sections/0549}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 9 (1937)}
+\subfile{sections/0550}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 10 (1937)}
+\subfile{sections/0551}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 11 (1937)}
+\subfile{sections/0552}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 12 (1937)}
+\subfile{sections/0553}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 13 (1937)}
+\subfile{sections/0554}
+
+\clearpage
+
+\section{Semmering, Semmering/Baden, Round 14 (1937)}
+\subfile{sections/0555}
+
+\clearpage
+
+\section{Amsterdam, AVRO (1938)}
+\subfile{sections/0556}
+
+\clearpage
+
+\section{Holland, AVRO (1938)}
+\subfile{sections/0557}
+
+\clearpage
+
+\subfile{sections/0558}
+
+\clearpage
+
+\subfile{sections/0559}
+
+\clearpage
+
+\subfile{sections/0560}
+
+\clearpage
+
+\subfile{sections/0561}
+
+\clearpage
+
+\subfile{sections/0562}
+
+\clearpage
+
+\subfile{sections/0563}
+
+\clearpage
+
+\subfile{sections/0564}
+
+\clearpage
+
+\subfile{sections/0565}
+
+\clearpage
+
+\subfile{sections/0566}
+
+\clearpage
+
+\subfile{sections/0567}
+
+\clearpage
+
+\subfile{sections/0568}
+
+\clearpage
+
+\subfile{sections/0569}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol f-A, Round 1 (1939)}
+\subfile{sections/0570}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol f-A, Round 2 (1939)}
+\subfile{sections/0572}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol f-A, Round 3 (1939)}
+\subfile{sections/0574}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol f-A, Round 4 (1939)}
+\subfile{sections/0576}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol f-A, Round 5 (1939)}
+\subfile{sections/0578}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol f-A, Round 7 (1939)}
+\subfile{sections/0580}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol f-A, Round 8 (1939)}
+\subfile{sections/0581}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol f-A, Round 9 (1939)}
+\subfile{sections/0582}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol f-A, Round 11 (1939)}
+\subfile{sections/0583}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol f-A, Round 14 (1939)}
+\subfile{sections/0584}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol f-A, Round 15 (1939)}
+\subfile{sections/0585}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol prel-D, Round 1 (1939)}
+\subfile{sections/0571}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol prel-D, Round 2 (1939)}
+\subfile{sections/0573}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol prel-D, Round 3 (1939)}
+\subfile{sections/0575}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol prel-D, Round 4 (1939)}
+\subfile{sections/0577}
+
+\clearpage
+
+\section{Buenos Aires, Buenos Aires ol prel-D, Round 5 (1939)}
+\subfile{sections/0579}
+
+\clearpage
+
+\section{Margate, Margate, Round 1 (1939)}
+\subfile{sections/0586}
+
+\clearpage
+
+\section{Margate, Margate, Round 2 (1939)}
+\subfile{sections/0587}
+
+\clearpage
+
+\section{Margate, Margate, Round 3 (1939)}
+\subfile{sections/0588}
+
+\clearpage
+
+\section{Margate, Margate, Round 4 (1939)}
+\subfile{sections/0589}
+
+\clearpage
+
+\section{Margate, Margate, Round 5 (1939)}
+\subfile{sections/0590}
+
+\clearpage
+
+\section{Margate, Margate, Round 6 (1939)}
+\subfile{sections/0591}
+
+\clearpage
+
+\section{Margate, Margate, Round 7 (1939)}
+\subfile{sections/0592}
+
+\clearpage
+
+\section{Margate, Margate, Round 8 (1939)}
+\subfile{sections/0593}
+
+\clearpage
+
+\section{Margate, Margate, Round 9 (1939)}
+\subfile{sections/0594}
+
+\clearpage
+
+\section{New York, New York (1941)}
+\subfile{sections/0595}
+
+\clearpage
+
+\subfile{sections/0596}
+
+\clearpage
+
+\subfile{sections/0597}
+
+\clearpage
+
+\end{document}

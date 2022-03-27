@@ -65,8 +65,8 @@ def get_games_from_pgnfile(file_name: str) -> pd.DataFrame:
 
             # white & black names adjustments
             # "Carsen,Magnus" -->  "Carsen, Magnus"
-            game_dict['White'] = ', '.join(game_dict['White'].split(','))
-            game_dict['Black'] = ', '.join(game_dict['Black'].split(','))
+            game_dict['White'] = ', '.join(game_dict['White'].split(',')).replace('  ',' ')
+            game_dict['Black'] = ', '.join(game_dict['Black'].split(',')).replace('  ',' ')
             
             games_df = games_df.append(game_dict, ignore_index=True)
     # change in case of missing pgn,

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Chajes, Oscar $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Chajes, Oscar -- 1-0 -- C84}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C78 -- Spanish: 5.O-O b5 6.Bb3 Be7}
+\subsubsection{C78 -- Spanish: 5.O-O b5 6.Bb3 Be7}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O b5 6. Bb3 Be7 7. d4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk2r/2ppbppp/p1n2n2/1p2p3/3PP3/1B3N2/PPP2PPP/RNBQ1RK1 b kq - 0 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d2,d4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d2-d4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York Rice}}\\ 
+\multicolumn{2}{l}{1913}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Chajes, Oscar} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O b5 6. Bb3 Be7 7. d4}\mainline{7...  d6 8. c3 Bg4 9. Be3 O-O 10. Nbd2 Na5 11. Bc2 Re8 12. b4 exd4 13. cxd4 Nc6 14. a3 Bf8 15. Rc1 Ne7 16. e5 dxe5 17. dxe5 Bxf3 18. Qxf3 Nd7 19. Qh3 Ng6 20. f4 Nb6 21. Nf3 Nc4 22. Ng5 h6 23. Nxf7 Kxf7 24. Qf5+ Kg8 25. Qxg6 Nxe3 26. Qh7+ Kf7 27. Bb3+ Nc4 28. Rfd1 Qb8 29. Rxc4 bxc4 30. Bxc4+ Ke7 31. Qf5 Qb6+ 32. Kf1 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g1,f1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g1-f1}]
+\newline
+32.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

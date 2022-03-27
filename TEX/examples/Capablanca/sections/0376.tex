@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Tartakower, Saviely $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Tartakower, Saviely vs. Capablanca, Jose Raul -- 1/2-1/2 -- C75}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C75 -- Spanish: Modern Steinitz, 5.c3 Bd7}
+\subsubsection{C75 -- Spanish: Modern Steinitz, 5.c3 Bd7}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. c3 Bd7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r2qkbnr/1ppb1ppp/p1np4/4p3/B3P3/2P2N2/PP1P1PPP/RNBQK2R w KQkq - 1 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c8,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c8-d7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Barcelona, Barcelona}}\\ 
+\multicolumn{2}{l}{1929 Round 10}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Tartakower, Saviely} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. c3 Bd7}\mainline{6. d3 g6 7. Bg5 f6 8. Be3 Bg7 9. b4 Qe7 10. Qd2 f5 11. Bg5 Bf6 12. Bb3 h6 13. Bxf6 Nxf6 14. Qe2 g5 15. Na3 f4 16. Nc2 a5 17. a3 Be6 18. Nd2 Bxb3 19. Nxb3 Qf7 20. Nd2 axb4 21. axb4 Rxa1+ 22. Nxa1 Qa2 23. Ndb3 Qb1+ 24. Qd1 Qxd1+ 25. Kxd1 Kd7 26. f3 Ra8 27. Nc2 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={a1,c2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a1-c2}]
+\newline
+27.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Flohr, Salo $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Flohr, Salo vs. Capablanca, Jose Raul -- 1/2-1/2 -- D28}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D28 -- QGA: Classical, 7.Qe2 Nc6}
+\subsubsection{D28 -- QGA: Classical, 7.Qe2 Nc6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 dxc4 3. Nf3 Nf6 4. e3 e6 5. Bxc4 c5 6. O-O a6 7. Qe2 Nc6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkb1r/1p3ppp/p1n1pn2/2p5/2BP4/4PN2/PP2QPPP/RNB2RK1 w kq - 2 8},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b8,c6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b8-c6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Semmering, Semmering/Baden}}\\ 
+\multicolumn{2}{l}{1937 Round 13}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Flohr, Salo} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 dxc4 3. Nf3 Nf6 4. e3 e6 5. Bxc4 c5 6. O-O a6 7. Qe2 Nc6}\mainline{8. Rd1 Qc7 9. Nc3 Be7 10. a3 b5 11. Ba2 b4 12. Na4 cxd4 13. exd4 Bd7 14. axb4 Nxb4 15. Nc3 Bb5 16. Qe5 Qb7 17. Bb3 Nd3 18. Qg3 Nxc1 19. Raxc1 Bd7 20. Bc4 Rc8 21. b3 O-O 22. Ne5 Bb5 23. Qd3 Bxc4 24. bxc4 Rfd8 25. Qe2 Qa7 26. c5 Nd5 27. Nxd5 Rxd5 28. Ra1 a5 29. Qb5 Bxc5 30. dxc5 Rxe5 31. Rxa5 Qe7}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={a7,e7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a7-e7}]
+\newline
+31. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

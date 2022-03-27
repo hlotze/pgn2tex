@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Stahlberg, Gideon $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Stahlberg, Gideon vs. Capablanca, Jose Raul -- 1/2-1/2 -- D66}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E00 -- Queen's Pawn: Neo-Indian}
+\subsubsection{E00 -- Queen's Pawn: Neo-Indian}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppp1ppp/4pn2/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b1,c3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b1-c3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Margate, Margate}}\\ 
+\multicolumn{2}{l}{1936 Round 8}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Stahlberg, Gideon} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3}\mainline{3...  d5 4. Nf3 Nbd7 5. Bg5 Be7 6. e3 O-O 7. Rc1 c6 8. Bd3 h6 9. Bh4 dxc4 10. Bxc4 b5 11. Bd3 a6 12. a4 bxa4 13. Nxa4 Qa5+ 14. Nd2 Bb4 15. Nc3 c5 16. Nb3 Qb6 17. dxc5 Bxc5 18. Nxc5 Qxc5 19. Bg3 Bb7 20. O-O Rfd8 21. Nb5 Qb4 22. Nd6 Bd5 23. e4 e5 24. exd5 Qxd6 25. Rc6 Qxd5 26. Rxa6 Rab8 27. Rd6 Qb7 28. Bf5 Qb5 29. Re1 Rb7 30. h3 Re8}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d8,e8},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d8-e8}]
+\newline
+30. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

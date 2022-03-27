@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Yates, Frederick $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Yates, Frederick -- 1-0 -- C90}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C88 -- Spanish: Closed 7...d6 8.c3 Na5}
+\subsubsection{C88 -- Spanish: Closed 7...d6 8.c3 Na5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 Na5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk2r/2p1bppp/p2p1n2/np2p3/4P3/1BP2N2/PP1P1PPP/RNBQR1K1 w kq - 1 9},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c6,a5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c6-a5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings}}\\ 
+\multicolumn{2}{l}{1919 Round 1}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Yates, Frederick} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 Na5}\mainline{9. Bc2 c5 10. d4 Qc7 11. Nbd2 Bg4 12. d5 g5 13. Nf1 h6 14. Ng3 Rd8 15. a4 b4 16. cxb4 cxb4 17. Bd3 Bc8 18. Be3 Ng4 19. Rc1 Qb8 20. Bd2 Qb6 21. Qe2 Nb3 22. Rc6 Qa5 23. Bxa6 Bd7 24. Bb5 Bxc6 25. Bxc6+ Kf8 26. Qc4 Nxd2 27. Nxd2 Qa7 28. Qe2 h5 29. Nf5 Bf6 30. Nc4 Qc5 31. b3 Nh6 32. Nxh6 Rxh6 33. Qe3 Rc8 34. Rc1 Bd8 35. Qxc5 dxc5 36. Nxe5 Ke7 37. Rxc5 f5 38. Rc4 Ba5 39. Bb5 Rxc4 40. Nxc4 Bc7 41. e5 Bb8 42. Ne3 Rh7 43. Nxf5+ Kf7 44. e6+ Kf6 45. e7 Rxe7 46. Nxe7 Kxe7 47. g3 Bc7 48. Kg2 Kd6 49. Be8 h4 50. Bf7 Ke5 51. Kh3 Bd8 52. Kg4 hxg3 53. fxg3 Kf6 54. Be6 Kg6 55. d6 Kf6 56. Bf5 Bb6 57. d7 Bd8 58. h4 gxh4 59. gxh4 Bc7 60. h5 Kg7 61. Be4 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f5,e4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f5-e4}]
+\newline
+61.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

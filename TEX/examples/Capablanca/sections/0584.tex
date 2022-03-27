@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Enevoldsen, Jens $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Enevoldsen, Jens vs. Capablanca, Jose Raul -- 0-1 -- E32}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E32 -- Nimzo-Indian: Classical, 4...O-O 5.a3, 6...d6}
+\subsubsection{E32 -- Nimzo-Indian: Classical, 4...O-O 5.a3, 6...d6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. a3 Bxc3+ 6. Qxc3 d6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbq1rk1/ppp2ppp/3ppn2/8/2PP4/P1Q5/1P2PPPP/R1B1KBNR w KQ - 0 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d7,d6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d7-d6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Buenos Aires, Buenos Aires ol f-A}}\\ 
+\multicolumn{2}{l}{1939 Round 14}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Enevoldsen, Jens} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. a3 Bxc3+ 6. Qxc3 d6}\mainline{7. g3 Qe7 8. Bg2 e5 9. d5 a5 10. b3 Nbd7 11. Nf3 Nc5 12. Nd2 Bf5 13. O-O Nfe4 14. Nxe4 Bxe4 15. f3 Bg6 16. Be3 b6 17. b4 Nd7 18. Rfc1 axb4 19. axb4 f5 20. f4 exf4 21. gxf4 Nf6 22. h3 Rxa1 23. Rxa1 Re8 24. Ra3 Bh5 25. Qc2 Ne4 26. Bd4 Qh4 27. e3 Qe1+ 28. Kh2 Bf3 29. Ra2 Re7 30. Qa4 Kf7 31. Qa8 Nd2 32. Bxf3 Qf2+ 33. Kh1 Qf1+ 34. Kh2 Nxf3+ 35. Kg3 Nxd4}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f3,d4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f3-d4}]
+\newline
+35. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

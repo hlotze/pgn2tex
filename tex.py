@@ -20,9 +20,20 @@ import pandas as pd
 
 import eco
 import pgn
+import config
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
+def prep_round4sort(val: str) -> str:
+    """Return a val that can be sorted easy"""
+    return ('0000000' + val)[-7:]
+
+def prep_date(val: str) -> str:
+    """Return a date val w/o ?"""
+    if '?' in val:
+        return ''.join(val.replace('?','').split('.'))
+    else:
+        return val
 
 def get_num_of_rows(length: int, cols: int) -> int:
     """Return the number of rows needed for a list with given length
@@ -50,8 +61,6 @@ def gen_digram_table(white: str,
                      game_data_df: pd.DataFrame,
                      result: str) -> str:
     """Return the game's diagrams and lan into a table"""
-    move_arrows = False
-    #move_arrows = True
 
     out = ''
     out += '\setlength\LTleft{0mm}\n'
@@ -89,7 +98,7 @@ def gen_digram_table(white: str,
         # arrows that shows the moves 
         # are in most cases to much at 
         # the diagrams
-        if move_arrows == True:
+        if config.move_arrows == True:
             cb_arr[cnt] += ',\n' + \
                 '             pgfstyle=straightmove,\n' + \
                 '             color=YellowGreen,\n' + \
@@ -222,6 +231,16 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
             '             markfields={' + \
             eco_dict['sq_from'] + ',' + eco_dict['sq_to'] + '}'
 
+        # arrows that shows the moves 
+        # are in most cases to much at 
+        # the diagrams
+        if config.move_arrows == True:
+            out += ',\n' + \
+                '             pgfstyle=straightmove,\n' + \
+                '             color=YellowGreen,\n' + \
+                '             markmoves={' + \
+                eco_dict['sq_from'] + '-' + eco_dict['sq_to'] + '}'
+
         if eco_dict['sq_check'] != '':
             out += ',\n' + \
             '             pgfstyle=circle,\n' + \
@@ -239,8 +258,11 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
     # PGN TAGS
     out += '% PGN tags\n' + \
         '\\begin{tabular}{L{60mm} R{10mm}}\n' + \
-        '\\multicolumn{2}{l}{\\textbf{' + \
-        pgn_dict['Event'] + ', ' + pgn_dict['Site'] + '}}\\\\ \n' + \
+        '\\multicolumn{2}{l}{\\textbf{'
+    site_event = pgn_dict['Site'] + ', ' + pgn_dict['Event']
+    if '?' in site_event:
+        site_event = site_event.replace('?', '').replace(',', '')
+    out += site_event.strip() + '}}\\\\ \n' + \
         '\multicolumn{2}{l}{' + \
         pgn_dict['Date']
 
@@ -257,7 +279,11 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
     if 'WhiteElo' in pgn_dict.keys():
         if pgn_dict['WhiteElo'] != '':
             out += ' (' + pgn_dict['WhiteElo'] + ') '
-    out += ' & \\textbf{' + pgn_dict['Result'].split('-')[0] + '}\\\\ \n'
+    if len(pgn_dict['Result']) > 1:
+        out += ' & \\textbf{' + pgn_dict['Result'].split('-')[0] + '}\\\\ \n'
+    else:
+        out += ' & \\textbf{' + pgn_dict['Result'] + '}\\\\ \n'
+    
     # Black player
     out += '\\textbf{$\\blacksquare$ \\hspace{2mm} '
     if 'BlackTitle' in pgn_dict.keys():
@@ -266,11 +292,11 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
     if 'BlackElo' in pgn_dict.keys():
         if pgn_dict['BlackElo'] != '':
             out += ' (' + pgn_dict['BlackElo'] + ') '
-    
-    if pgn_dict['Result'] not in ['', ' ', '*']:
+    if len(pgn_dict['Result']) > 1:
         out += ' & \\textbf{' + pgn_dict['Result'].split('-')[1] + '}\\\\ \n'
     else:
         out += ' & \\textbf{' + pgn_dict['Result'] + '}\\\\ \n'
+
     out += '\\end{tabular}\n' + \
         '\n'
 
@@ -294,6 +320,16 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
             '       color=YellowGreen,\n' + \
             '       markfields={' + \
             game_data_dict['sq_from'] + ',' + game_data_dict['sq_to'] + '}'
+
+        # arrows that shows the moves 
+        # are in most cases to much at 
+        # the diagrams
+        if config.move_arrows == True:
+            out += ',\n' + \
+                '             pgfstyle=straightmove,\n' + \
+                '             color=YellowGreen,\n' + \
+                '             markmoves={' + \
+                game_data_dict['sq_from'] + '-' + game_data_dict['sq_to'] + '}'
 
         if game_data_dict['sq_check'] != '':
             out += ',\n' + \
@@ -324,21 +360,18 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
         out +='\\end{multicols*}\n' + \
             '\\newpage\n'
             
-    # all games will start with 1. move
-    # if this does not exist in pgn
-    # the game was not played, and
-    # no game diagrams can be shown
-    if pgn_available == True:
-        out += "% Game's diagrams\n" + \
-            '\\newchessgame\n' + \
-            '\\hidemoves{' + pgn_dict['pgn'] + '}\n' + \
-            '\n'
+    if config.print_detailed_moves == True:
+        if pgn_available == True:
+            out += "% Game's diagrams\n" + \
+                '\\newchessgame\n' + \
+                '\\hidemoves{' + pgn_dict['pgn'] + '}\n' + \
+                '\n'
 
-        out += gen_digram_table(pgn_dict['White'], 
-                                pgn_dict['Black'], 
-                                2, # define num of cols 2 or 4
-                                game_data_df,
-                                pgn_dict['Result'])
+            out += gen_digram_table(pgn_dict['White'], 
+                                    pgn_dict['Black'], 
+                                    2, # define num of cols 2 or 4
+                                    game_data_df,
+                                    pgn_dict['Result'])
 
     out += '\\end{document}\n'
 
@@ -552,10 +585,16 @@ def generate_master_tex(pgn_fname : str, tex_path : str, section_subfile_list : 
 
         name = item_dict['subfile'].split('/')[-1]
         subfile_name = 'sections/' + name.split('.')[0]
-        tex_doc += '\\subfile{' + subfile_name + '}\n' + \
-            '\n' + \
-            '\\cleartoleftpage\n' + \
-            '\n'
+        if config.print_detailed_moves == True:
+            tex_doc += '\\subfile{' + subfile_name + '}\n' + \
+                '\n' + \
+                '\\cleartoleftpage\n' + \
+                '\n'
+        else:
+            tex_doc += '\\subfile{' + subfile_name + '}\n' + \
+                '\n' + \
+                '\\clearpage\n' + \
+                '\n'
 
     tex_doc += '\\end{document}\n'
     return store_tex_document(tex_doc, tex_master_fn)

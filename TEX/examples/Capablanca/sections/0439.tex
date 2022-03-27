@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Menchik, Vera $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Menchik, Vera vs. Capablanca, Jose Raul -- 0-1 -- A47}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A47 -- Neo-Queen's Indian: 2..b6 3.e3 Bb7 4.Bd3}
+\subsubsection{A47 -- Neo-Queen's Indian: 2..b6 3.e3 Bb7 4.Bd3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3 b6 3. e3 Bb7 4. Bd3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rn1qkb1r/pbpppppp/1p3n2/8/3P4/3BPN2/PPP2PPP/RNBQK2R b KQkq - 2 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f1,d3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f1-d3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings 3031}}\\ 
+\multicolumn{2}{l}{1930 Round 9}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Menchik, Vera} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3 b6 3. e3 Bb7 4. Bd3}\mainline{4...  c5 5. O-O Nc6 6. c3 e6 7. Ne5 d6 8. Nxc6 Bxc6 9. Qe2 Be7 10. Bb5 Qd7 11. Bxc6 Qxc6 12. Nd2 O-O 13. dxc5 dxc5 14. e4 Rad8 15. e5 Nd5 16. Nf3 Rd7 17. Rd1 Rfd8 18. Bd2 b5 19. Kf1 Nb6 20. Bf4 h6 21. Rxd7 Rxd7 22. Rd1 Rxd1+ 23. Qxd1 Qe4 24. Bg3 Qc4+ 25. Qe2 Qxe2+ 26. Kxe2 Na4 27. Kd2 Nxb2 28. Kc2 Nc4 29. Nd2 Nxd2 30. Kxd2 c4 31. Bf4 a6 32. Be3 Kf8 33. Bb6 Ke8 34. Ke3 Kd7 35. Kd4 Kc6 36. Ba7 f5 37. a4 g6 38. f4 h5 39. axb5+ Kxb5 40. g3 a5 41. Ke3 Bc5+ 42. Bxc5 Kxc5}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b5,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b5-c5}]
+\newline
+42. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

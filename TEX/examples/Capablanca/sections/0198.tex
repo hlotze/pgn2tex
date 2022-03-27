@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Kostic, Boris $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Kostic, Boris -- 1-0 -- C42}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C42 -- Russian Game: Classical, Berger Variation}
+\subsubsection{C42 -- Russian Game: Classical, Berger Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nc6 8. Re1 Bg4 9. c3 f5 10. Nbd2}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r2qk2r/ppp1b1pp/2n5/3p1p2/3Pn1b1/2PB1N2/PP1N1PPP/R1BQR1K1 b kq - 1 10},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b1,d2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b1-d2}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Havana, Havana m}}\\ 
+\multicolumn{2}{l}{1919 Round 3}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Kostic, Boris} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nc6 8. Re1 Bg4 9. c3 f5 10. Nbd2}\mainline{10...  O-O 11. Qb3 Kh8 12. Nf1 Qd7 13. N3d2 Nxd2 14. Bxd2 f4 15. f3 Bf5 16. Bxf5 Rxf5 17. Qxb7 Rg8 18. Qb5 Bh4 19. Re2 h5 20. Qd3 Be7 21. Rae1 Bd6 22. b3 Nd8 23. c4 c5 24. dxc5 Bxc5+ 25. Kh1 Nc6 26. cxd5 Rxd5 27. Qc4 Rf8 28. Bxf4 Bb4 29. Re8 Rd4 30. Rxf8+ Bxf8 31. Qe6 Qxe6 32. Rxe6 Rd1 33. Kg1 Bc5+ 34. Be3 Bxe3+ 35. Rxe3 Ra1 36. Re6 Nb4 37. Re5 g6 38. Re8+ Kg7 39. Re7+ Kf6 40. Rxa7 Rxa2 41. Rxa2 Nxa2 42. Kf2 Ke5 43. Ke3 Kd5 44. Kf4 Ke6 45. Kg5 Kf7 46. Nd2 Nb4 47. Nc4 Nd3 48. b4 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b3,b4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b3-b4}]
+\newline
+48.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

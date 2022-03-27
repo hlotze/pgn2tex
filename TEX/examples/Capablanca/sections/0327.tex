@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Nimzowitsch, Aaron  $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Nimzowitsch, Aaron  vs. Capablanca, Jose Raul -- 0-1 -- B12}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! B12 -- Caro-Kann: Advance, 4.Bd3}
+\subsubsection{B12 -- Caro-Kann: Advance, 4.Bd3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c6 2. d4 d5 3. e5 Bf5 4. Bd3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/3B4/PPP2PPP/RNBQK1NR b KQkq - 2 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f1,d3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f1-d3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1927 Round 3}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Nimzowitsch, Aaron } & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 c6 2. d4 d5 3. e5 Bf5 4. Bd3}\mainline{4...  Bxd3 5. Qxd3 e6 6. Nc3 Qb6 7. Nge2 c5 8. dxc5 Bxc5 9. O-O Ne7 10. Na4 Qc6 11. Nxc5 Qxc5 12. Be3 Qc7 13. f4 Nf5 14. c3 Nc6 15. Rad1 g6 16. g4 Nxe3 17. Qxe3 h5 18. g5 O-O 19. Nd4 Qb6 20. Rf2 Rfc8 21. a3 Rc7 22. Rd3 Na5 23. Re2 Re8 24. Kg2 Nc6 25. Red2 Rec8 26. Re2 Ne7 27. Red2 Rc4 28. Qh3 Kg7 29. Rf2 a5 30. Re2 Nf5 31. Nxf5+ gxf5 32. Qf3 Kg6 33. Red2 Re4 34. Rd4 Rc4 35. Qf2 Qb5 36. Kg3 Rcxd4 37. cxd4 Qc4 38. Kg2 b5 39. Kg1 b4 40. axb4 axb4 41. Kg2 Qc1 42. Kg3 Qh1 43. Rd3 Re1 44. Rf3 Rd1 45. b3 Rc1 46. Re3 Rf1}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c1,f1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c1-f1}]
+\newline
+46. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

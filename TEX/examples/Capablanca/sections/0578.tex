@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Van Scheltinga, Theo D $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Van Scheltinga, Theo D -- 1-0 -- E32}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E32 -- Nimzo-Indian: Classical, 4...O-O 5.a3, 6...d6}
+\subsubsection{E32 -- Nimzo-Indian: Classical, 4...O-O 5.a3, 6...d6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. a3 Bxc3+ 6. Qxc3 d6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbq1rk1/ppp2ppp/3ppn2/8/2PP4/P1Q5/1P2PPPP/R1B1KBNR w KQ - 0 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d7,d6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d7-d6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Buenos Aires, Buenos Aires ol f-A}}\\ 
+\multicolumn{2}{l}{1939 Round 5}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Van Scheltinga, Theo D} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. a3 Bxc3+ 6. Qxc3 d6}\mainline{7. g3 Qe7 8. Bg2 e5 9. d5 a5 10. b4 axb4 11. axb4 Rxa1 12. Qxa1 Na6 13. Ba3 Ng4 14. h3 Nh6 15. Nf3 f5 16. b5 e4 17. bxa6 exf3 18. Bxf3 bxa6 19. c5 f4 20. cxd6 cxd6 21. gxf4 Rxf4 22. Rg1 Rf6 23. Bh5 Nf7 24. Rg3 Ne5 25. Re3 g6 26. Bg4 Bxg4 27. hxg4 Qd7 28. f3 Qa4 29. Bb2 Qb4+ 30. Bc3 Qb5 31. Bxe5 dxe5 32. Qxe5 Rf7 33. Rc3 Qb1+ 34. Kf2 Qb6+ 35. Kg2 Qd8 36. Qe6 Kg7 37. Rc8 Qg5 38. d6 h5 39. Rc7 Rxc7 40. dxc7 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d6,c7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d6-c7}]
+\newline
+40.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

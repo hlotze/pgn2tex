@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Botvinnik, Mikhail $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Botvinnik, Mikhail -- 1/2-1/2 -- D93}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D93 -- Grünfeld: 5.Bf4 O-O 6.e3 c5}
+\subsubsection{D93 -- Grünfeld: 5.Bf4 O-O 6.e3 c5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. Bf4 O-O 6. e3 c5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbq1rk1/pp2ppbp/5np1/2pp4/2PP1B2/2N1PN2/PP3PPP/R2QKB1R w KQ - 0 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c7-c5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Holland, AVRO}}\\ 
+\multicolumn{2}{l}{1938}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Botvinnik, Mikhail} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. Bf4 O-O 6. e3 c5}\mainline{7. Qb3 cxd4 8. Nxd4 dxc4 9. Bxc4 Nbd7 10. Bg3 Nh5 11. Rd1 Nxg3 12. hxg3 Qa5 13. O-O Nb6 14. Bd5 Rb8 15. a3 e6 16. Bf3 a6 17. Nde2 Nd7 18. Ne4 Ne5 19. Rc1 Bd7 20. Nd4 Ba4 21. Qc3 Qxc3 22. Nxc3 Nxf3+ 23. gxf3 Bd7 24. Rfd1 Rfd8 25. f4 Be8 26. Ne4 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c3,e4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c3-e4}]
+\newline
+26.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

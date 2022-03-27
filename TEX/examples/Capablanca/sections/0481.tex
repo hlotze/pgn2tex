@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Thomas, George Alan $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Thomas, George Alan -- 1-0 -- E16}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E11 -- Bogo-Indian: Nimzowitsch, 5.g3}
+\subsubsection{E11 -- Bogo-Indian: Nimzowitsch, 5.g3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nf3 Bb4+ 4. Bd2 Qe7 5. g3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnb1k2r/ppppqppp/4pn2/8/1bPP4/5NP1/PP1BPP1P/RN1QKB1R b KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g2,g3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g2-g3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Margate, Margate}}\\ 
+\multicolumn{2}{l}{1935 Round 9}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Thomas, George Alan} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nf3 Bb4+ 4. Bd2 Qe7 5. g3}\mainline{5...  b6 6. Bg2 Bb7 7. O-O Bxd2 8. Nbxd2 d6 9. Qa4+ c6 10. e4 O-O 11. e5 Ne8 12. Rfe1 c5 13. exd6 Nxd6 14. dxc5 bxc5 15. Qa5 Nd7 16. b3 Rfd8 17. Rad1 Rac8 18. Nf1 a6 19. Ne3 Nb8 20. Nd5 Qf8 21. Nb6 Rc7 22. Na4 Rdc8 23. Ne5 Bxg2 24. Kxg2 Nf5 25. Nd3 Qd6 26. Ndxc5 Qc6+ 27. Kg1 h5 28. Nd3 h4 29. Ne5 Qb7 30. Qb6 hxg3 31. hxg3 Qa8 32. Rd8+ Rxd8 33. Qxc7 Rf8 34. Nb6 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={a4,b6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a4-b6}]
+\newline
+34.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

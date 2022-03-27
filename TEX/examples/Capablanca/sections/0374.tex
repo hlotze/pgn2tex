@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Ribera, Angel $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Ribera, Angel vs. Capablanca, Jose Raul -- 0-1 -- E12}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A46 -- Indian: 2.Nf3 e6}
+\subsubsection{A46 -- Indian: 2.Nf3 e6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3 e6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppp1ppp/4pn2/8/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e7,e6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e7-e6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Barcelona, Barcelona}}\\ 
+\multicolumn{2}{l}{1929 Round 8}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Ribera, Angel} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3 e6}\mainline{3. c4 b6 4. Nc3 Bb7 5. Bg5 Be7 6. e3 Ne4 7. Bxe7 Qxe7 8. Nxe4 Bxe4 9. Bd3 Bb7 10. O-O d6 11. Re1 Nd7 12. e4 O-O 13. e5 Rad8 14. Qe2 dxe5 15. dxe5 Nc5 16. Bc2 Bxf3 17. Qxf3 Rd2 18. Qc3 Rfd8 19. Rad1 Ne4 20. Qe3 Rxc2 21. Qxe4 Rxb2 22. a3 Rbd2 23. Rxd2 Rxd2 24. h3 c5 25. Re3 Rd4 26. Qa8+ Rd8 27. Qf3 Qd7 28. Kh2 Qd4 29. Re4 Qd3 30. Qg4 h6 31. Re3 Qd4 32. Qe2 Qd1 33. Qb2 Qd2 34. Qc3 Qxf2}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d2,f2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d2-f2}]
+\newline
+34. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Euwe, Max $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Euwe, Max vs. Capablanca, Jose Raul -- 1/2-1/2 -- E16}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E16 -- Queen's Indian: Capablanca, 6...Bxd2+ 7.Qxd2 O-O 8.Nc3}
+\subsubsection{E16 -- Queen's Indian: Capablanca, 6...Bxd2+ 7.Qxd2 O-O 8.Nc3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb7 5. Bg2 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 O-O 8. Nc3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rn1q1rk1/pbpp1ppp/1p2pn2/8/2PP4/2N2NP1/PP1QPPBP/R3K2R b KQ - 2 8},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b1,c3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b1-c3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Amsterdam, Amsterdam m3}}\\ 
+\multicolumn{2}{l}{1931 Round 10}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Euwe, Max} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb7 5. Bg2 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 O-O 8. Nc3}\mainline{8...  Ne4 9. Qc2 Nxc3 10. Ng5 Ne4 11. Bxe4 Bxe4 12. Qxe4 Qxg5 13. Qxa8 Nc6 14. Qb7 Nxd4 15. Rd1 c5 16. e3 Nc2+ 17. Kd2 Qf5 18. Qg2 Nb4 19. e4 Qf6 20. Kc1 Nxa2+ 21. Kb1 Nb4 22. Rxd7 Nc6 23. f4 e5 24. Rhd1 Nd4 25. Rxa7 exf4 26. gxf4 Qxf4 27. Re1 Nf3 28. Re2 Nd4 29. Re1 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e2,e1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e2-e1}]
+\newline
+29.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

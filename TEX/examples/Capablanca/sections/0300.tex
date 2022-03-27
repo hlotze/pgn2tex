@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Alekhine, Alexander $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Alekhine, Alexander -- 0-1 -- D63}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D51 -- QGD: 4.Bg5 Nbd7 5.e3}
+\subsubsection{D51 -- QGD: 4.Bg5 Nbd7 5.e3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Nbd7 5. e3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkb1r/pppn1ppp/4pn2/3p2B1/2PP4/2N1P3/PP3PPP/R2QKBNR b KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e2,e3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e2-e3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Buenos Aires, World Championship 13th}}\\ 
+\multicolumn{2}{l}{1927 Round 21}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Alekhine, Alexander} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Nbd7 5. e3}\mainline{5...  Be7 6. Nf3 O-O 7. Rc1 a6 8. a3 h6 9. Bh4 dxc4 10. Bxc4 b5 11. Be2 Bb7 12. O-O c5 13. dxc5 Nxc5 14. Nd4 Rc8 15. b4 Ncd7 16. Bg3 Nb6 17. Qb3 Nfd5 18. Bf3 Rc4 19. Ne4 Qc8 20. Rxc4 Nxc4 21. Rc1 Qa8 22. Nc3 Rc8 23. Nxd5 Bxd5 24. Bxd5 Qxd5 25. a4 Bf6 26. Nf3 Bb2 27. Re1 Rd8 28. axb5 axb5 29. h3 e5 30. Rb1 e4 31. Nd4 Bxd4 32. Rd1 Nxe3}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c4,e3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c4-e3}]
+\newline
+32. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

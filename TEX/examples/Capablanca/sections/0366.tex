@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Balla, Zoltan $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Balla, Zoltan -- 1-0 -- E38}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E38 -- Nimzo-Indian: Classical, 4...c5 5.dxc5 Nc6}
+\subsubsection{E38 -- Nimzo-Indian: Classical, 4...c5 5.dxc5 Nc6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 c5 5. dxc5 Nc6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk2r/pp1p1ppp/2n1pn2/2P5/1bP5/2N5/PPQ1PPPP/R1B1KBNR w KQkq - 1 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b8,c6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b8-c6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Budapest, Budapest}}\\ 
+\multicolumn{2}{l}{1928}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Balla, Zoltan} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 c5 5. dxc5 Nc6}\mainline{6. a3 Bxc5 7. b4 Be7 8. Nf3 Qc7 9. g3 b6 10. Bg2 Bb7 11. Bf4 d6 12. Nb5 Qb8 13. c5 e5 14. cxd6 Bxd6 15. Rd1 O-O 16. Nxd6 exf4 17. Nh4 Nd8 18. Nxb7 Nxb7 19. Qc6 fxg3 20. hxg3 Qe5 21. Qxb7 Qc3+ 22. Kf1 Rad8 23. Re1 Qxa3 24. Nf5 Rd7 25. Qf3 Qxb4 26. Rh4 Qb2 27. Qf4 Rfd8 28. Bc6 Rd2 29. Qg5 g6 30. Ne3 Qc3 31. Rc4 Qb2 32. Rf4 Nh5 33. Nc4 f6 34. Qg4 Qa2 35. Qe6+ Kh8 36. Re4 Rd1 37. Rxd1 Rxd1+ 38. Kg2 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f1,g2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f1-g2}]
+\newline
+38.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

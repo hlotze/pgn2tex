@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Torres, Cristian $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Torres, Cristian -- 1-0 -- A31}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A05 -- Reti Opening: 1...Nf6}
+\subsubsection{A05 -- Reti Opening: 1...Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. Nf3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppppppp/5n2/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 2 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Barcelona, Barcelona}}\\ 
+\multicolumn{2}{l}{1929 Round 11}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Torres, Cristian} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. Nf3 Nf6}\mainline{2. c4 c5 3. d4 cxd4 4. Nxd4 e5 5. Nb5 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 O-O 8. N1c3 Na6 9. g3 Nc5 10. Bg2 a6 11. Nd6 Qa5 12. O-O Rb8 13. Rfd1 b5 14. cxb5 axb5 15. Qg5 Na4 16. Nf5 Ne8 17. Nh6+ Kh8 18. Qe7 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g5,e7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g5-e7}]
+\newline
+18.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

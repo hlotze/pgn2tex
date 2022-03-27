@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Blanco Estera, Rafael $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Blanco Estera, Rafael vs. Capablanca, Jose Raul -- 0-1 -- C52}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C52 -- Evans Gambit: 5...Ba5 6.d4}
+\subsubsection{C52 -- Evans Gambit: 5...Ba5 6.d4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk1nr/pppp1ppp/2n5/b3p3/2BPP3/2P2N2/P4PPP/RNBQK2R b KQkq - 0 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d2,d4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d2-d4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Havana, Havana}}\\ 
+\multicolumn{2}{l}{1913}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Blanco Estera, Rafael} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4}\mainline{6...  Bb6 7. dxe5 Nge7 8. O-O O-O 9. Ba3 h6 10. Nbd2 Re8 11. Nb3 Ng6 12. Bxf7+ Kxf7 13. Qd5+ Re6 14. Nfd4 Nf4 15. Nxe6 dxe6 16. Qxd8 Nxd8 17. Nd4 Nc6 18. g3 Nxd4 19. cxd4 Ne2+ 20. Kg2 Nxd4 21. Rad1 Ke8 22. f4 Bd7 23. Bb2 Nc2 24. Rxd7 Kxd7 25. Rd1+ Ke8 26. Rd2 Ne3+ 27. Kf3 Nc4 28. Rc2 Nxb2 29. Rxb2 Rd8 30. f5 Ke7 31. a4 Rd4 32. a5 Bxa5 33. Rxb7 Bb6 34. Rb8 a5 35. Rg8 Kf7 36. Ra8 h5 37. Rh8 a4 38. Rxh5 a3}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={a4,a3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a4-a3}]
+\newline
+38. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

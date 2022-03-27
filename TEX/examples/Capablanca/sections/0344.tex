@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Reti, Richard $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Reti, Richard vs. Capablanca, Jose Raul -- 1/2-1/2 -- E16}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E16 -- Queen's Indian: Capablanca, 6.Nbd2}
+\subsubsection{E16 -- Queen's Indian: Capablanca, 6.Nbd2}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb7 5. Bg2 Bb4+ 6. Nbd2}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rn1qk2r/pbpp1ppp/1p2pn2/8/1bPP4/5NP1/PP1NPPBP/R1BQK2R b KQkq - 4 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b1,d2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b1-d2}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Bad Kissingen, Bad Kissingen}}\\ 
+\multicolumn{2}{l}{1928 Round 11}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Reti, Richard} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb7 5. Bg2 Bb4+ 6. Nbd2}\mainline{6...  Ne4 7. O-O Nxd2 8. Bxd2 Bxd2 9. Qxd2 d6 10. Rfd1 O-O 11. Rac1 Qe7 12. Ne1 Bxg2 13. Nxg2 Nd7 14. e4 Rfd8 15. Ne3 g6 16. f3 h5 17. h4 Rac8 18. Kg2 c5 19. Qc2 Nf6 20. d5 e5 21. Rh1 Kg7 22. Rh2 Rh8 23. Rg1 Rb8 24. Kh1 a6 25. Qg2 Rh7 26. Rf1 b5 27. b3 b4 28. g4 Kg8 29. g5 Nd7 30. Rh3 a5 31. Nd1 Rf8 32. Rg3 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h3,g3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h3-g3}]
+\newline
+32.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

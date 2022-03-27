@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Botvinnik, Mikhail $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Botvinnik, Mikhail -- 1/2-1/2 -- D90}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D90 -- Grünfeld: Three Knights Exchange, Romanishin Variation}
+\subsubsection{D90 -- Grünfeld: Three Knights Exchange, Romanishin Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. cxd5 Nxd5 6. Qb3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/ppp1ppbp/6p1/3n4/3P4/1QN2N2/PP2PPPP/R1B1KB1R b KQkq - 1 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d1,b3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d1-b3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1935 Round 2}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Botvinnik, Mikhail} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. cxd5 Nxd5 6. Qb3}\mainline{6...  Nxc3 7. bxc3 c5 8. e3 O-O 9. Be2 Nd7 10. O-O Qc7 11. a4 b6 12. a5 bxa5 13. Qa3 Bb7 14. Qxa5 Rfc8 15. Qxc7 Rxc7 16. Ra5 e5 17. Rd1 cxd4 18. cxd4 Rac8 19. Rxa7 Bxf3 20. Rxc7 Rxc7 21. gxf3 exd4 22. exd4 Bxd4 23. Bf4 Be5 24. Rxd7 Bxf4}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e5,f4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e5-f4}]
+\newline
+24. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

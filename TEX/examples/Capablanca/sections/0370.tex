@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Marin y Llovet, Valentin $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Marin y Llovet, Valentin vs. Capablanca, Jose Raul -- 0-1 -- C46}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C46 -- Three Knights: Steinitz Variation}
+\subsubsection{C46 -- Three Knights: Steinitz Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Nc3 g6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkbnr/pppp1p1p/2n3p1/4p3/4P3/2N2N2/PPPP1PPP/R1BQKB1R w KQkq - 0 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g7,g6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g7-g6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Barcelona, Barcelona}}\\ 
+\multicolumn{2}{l}{1929 Round 4}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Marin y Llovet, Valentin} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Nc3 g6}\mainline{4. Bb5 Bg7 5. O-O Nge7 6. d3 O-O 7. Bc4 Na5 8. Bb3 Nxb3 9. axb3 d5 10. h3 d4 11. Ne2 f5 12. exf5 Nxf5 13. Ng3 Qd5 14. Ne4 Nd6 15. Qe2 b6 16. Nh2 Nxe4 17. Qxe4 Qxe4 18. dxe4 a5 19. b4 Ba6 20. Re1 axb4 21. f3 c5 22. Bd2 Bb5 23. Ng4 h5 24. Nf2 Kf7 25. Nd3 b3}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b4,b3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b4-b3}]
+\newline
+25. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

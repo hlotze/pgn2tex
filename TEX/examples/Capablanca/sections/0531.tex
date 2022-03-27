@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Tartakower, Saviely $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Tartakower, Saviely vs. Capablanca, Jose Raul -- 1/2-1/2 -- D03}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D03 -- Torre Attack: 3...e6 4.e3 c5}
+\subsubsection{D03 -- Torre Attack: 3...e6 4.e3 c5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. Nf3 Nf6 3. Bg5 e6 4. e3 c5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pp3ppp/4pn2/2pp2B1/3P4/4PN2/PPP2PPP/RN1QKB1R w KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c7-c5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Nottingham, Nottingham}}\\ 
+\multicolumn{2}{l}{1936}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Tartakower, Saviely} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. Nf3 Nf6 3. Bg5 e6 4. e3 c5}\mainline{5. c3 Be7 6. Nbd2 Nbd7 7. Bd3 O-O 8. O-O Qc7 9. Qe2 b6 10. e4 dxe4 11. Nxe4 Bb7 12. dxc5 Nxc5 13. Nxc5 Qxc5 14. Bxf6 Bxf6 15. Be4 Bxe4 16. Qxe4 Qb5 17. Qc2 Rfd8 18. Rfd1 g6 19. h3 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h2,h3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h2-h3}]
+\newline
+19.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

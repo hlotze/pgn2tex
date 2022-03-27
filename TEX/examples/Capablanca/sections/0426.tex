@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Sergeant, Edward G $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Sergeant, Edward G -- 1-0 -- D30}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A13 -- English: 1...e6 2.Nf3 d5}
+\subsubsection{A13 -- English: 1...e6 2.Nf3 d5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. c4 e6 2. Nf3 d5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/ppp2ppp/4p3/3p4/2P5/5N2/PP1PPPPP/RNBQKB1R w KQkq - 0 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d7,d5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d7-d5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Ramsgate, Ramsgate schev}}\\ 
+\multicolumn{2}{l}{1929 Round 3}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Sergeant, Edward G} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. c4 e6 2. Nf3 d5}\mainline{3. d4 Nf6 4. Bg5 Be7 5. e3 Nbd7 6. Nbd2 O-O 7. Rc1 b6 8. cxd5 Nxd5 9. Bxe7 Nxe7 10. Bd3 Bb7 11. Qc2 c5 12. Bxh7+ Kh8 13. Be4 Nd5 14. O-O Rc8 15. Qa4 Bc6 16. Qa3 f5 17. Bxd5 Bxd5 18. Rfd1 c4 19. Re1 Qc7 20. e4 fxe4 21. Ng5 Nf6 22. Qh3+ Kg8 23. Ndxe4 Qf4 24. Nxe6 Bxe6 25. Qxe6+ Kh8 26. Rc3 Rce8 27. Nxf6 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e4,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e4-f6}]
+\newline
+27.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

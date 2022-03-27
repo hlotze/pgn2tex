@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Corzo y Prinzipe, Juan $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Corzo y Prinzipe, Juan vs. Capablanca, Jose Raul -- 1-0 -- C52}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C52 -- Evans Gambit: 5...Ba5 6.d4 exd4}
+\subsubsection{C52 -- Evans Gambit: 5...Ba5 6.d4 exd4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4 exd4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk1nr/pppp1ppp/2n5/b7/2BpP3/2P2N2/P4PPP/RNBQK2R w KQkq - 0 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e5,d4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e5-d4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Havana, Havana m}}\\ 
+\multicolumn{2}{l}{1901 Round 2}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Corzo y Prinzipe, Juan} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4 exd4}\mainline{7. O-O d6 8. Qb3 Qe7 9. e5 dxe5 10. Ba3 Qf6 11. Nbd2 Bb6 12. Rae1 Nge7 13. Ne4 Qg6 14. Bxe7 Kxe7 15. Neg5 f6 16. Qa3+ Nb4 17. Qxb4+ c5 18. Qb3 h6 19. Nf7 Bh3 20. g3 Bxf1 21. Nxh8 Rxh8 22. Bxf1 Qf7 23. Nxe5 fxe5 24. Rxe5+ Kf8 25. Bc4 Qc7 26. cxd4 cxd4 27. Qf3+ }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b3,f3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b3-f3},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={f8}]
+\newline
+27.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

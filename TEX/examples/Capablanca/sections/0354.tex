@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Nimzowitsch, Aaron  $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Nimzowitsch, Aaron  -- 1/2-1/2 -- E34}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E34 -- Nimzo-Indian: Classical, Noa, 5.e3}
+\subsubsection{E34 -- Nimzo-Indian: Classical, Noa, 5.e3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 d5 5. e3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/ppp2ppp/4pn2/3p4/1bPP4/2N1P3/PPQ2PPP/R1B1KBNR b KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e2,e3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e2-e3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Berlin, Berlin Tageblatt}}\\ 
+\multicolumn{2}{l}{1928}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Nimzowitsch, Aaron } & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 d5 5. e3}\mainline{5...  c5 6. Nf3 Nc6 7. a3 Bxc3+ 8. bxc3 O-O 9. a4 cxd4 10. cxd4 Ne4 11. Be2 Qa5+ 12. Bd2 Nxd2 13. Qxd2 dxc4 14. Bxc4 b6 15. Bb5 Qxd2+ 16. Nxd2 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f3,d2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f3-d2}]
+\newline
+16.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

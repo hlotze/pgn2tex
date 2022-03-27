@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Flohr, Salo $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Flohr, Salo -- 1-0 -- D93}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D96 -- Grünfeld: Russian, 5...c6 6.Bf4}
+\subsubsection{D96 -- Grünfeld: Russian, 5...c6 6.Bf4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. Qb3 c6 6. Bf4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/pp2ppbp/2p2np1/3p4/2PP1B2/1QN2N2/PP2PPPP/R3KB1R b KQkq - 1 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c1,f4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c1-f4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Semmering, Semmering/Baden}}\\ 
+\multicolumn{2}{l}{1937 Round 6}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Flohr, Salo} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. Qb3 c6 6. Bf4}\mainline{6...  O-O 7. e3 dxc4 8. Bxc4 Nbd7 9. O-O Nb6 10. Be2 Be6 11. Qc2 Nbd5 12. Be5 Bf5 13. Qb3 Qb6 14. Nd2 Qxb3 15. Nxb3 Rad8 16. Bf3 Bc8 17. Na5 e6 18. a3 Nd7 19. Nxd5 exd5 20. Bc7 Bf6 21. Bxd8 Bxd8 22. Nb3 Nb6 23. Nd2 Be6 24. Rfc1 Nc8 25. Nb3 Nd6 26. Nc5 Bc8 27. b4 Be7 28. Be2 Re8 29. a4 b6 30. Nd3 Nc4 31. b5 Bd7 32. bxc6 Bxc6 33. Nf4 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d3,f4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d3-f4}]
+\newline
+33.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

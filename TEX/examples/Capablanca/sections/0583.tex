@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Petrovs, Vladimirs $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Petrovs, Vladimirs -- 1/2-1/2 -- D75}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D90 -- Grünfeld: Three Knights, 5.g3}
+\subsubsection{D90 -- Grünfeld: Three Knights, 5.g3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. g3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/ppp1ppbp/5np1/3p4/2PP4/2N2NP1/PP2PP1P/R1BQKB1R b KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g2,g3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g2-g3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Buenos Aires, Buenos Aires ol f-A}}\\ 
+\multicolumn{2}{l}{1939 Round 11}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Petrovs, Vladimirs} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. g3}\mainline{5...  O-O 6. cxd5 Nxd5 7. Bg2 c5 8. O-O cxd4 9. Nxd4 Nxc3 10. bxc3 Nc6 11. Nxc6 bxc6 12. Be3 Bxc3 13. Rc1 Qa5 14. Qb3 Bd2 15. Bxd2 Qxd2 16. Rxc6 Bf5 17. Rc7 Rab8 18. Qa3 Rb2 19. Rxa7 Qxe2 20. Rxe7 Rxa2 21. Rxe2 Rxa3 22. h3 Bd3 23. Re3 Bxf1 24. Rxa3 Bxg2 25. Kxg2 Kg7 26. g4 Re8 27. Kg3 Re4 28. Ra7 Re8 29. f3 g5 30. Ra5 h6}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h7,h6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h7-h6}]
+\newline
+30. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

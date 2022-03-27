@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Marshall, Frank James $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Marshall, Frank James -- 1/2-1/2 -- C49}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C49 -- Four Knights: Janowski Variation}
+\subsubsection{C49 -- Four Knights: Janowski Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4 5. O-O O-O 6. d3 Bxc3 7. bxc3 d6 8. Re1}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bq1rk1/ppp2ppp/2np1n2/1B2p3/4P3/2PP1N2/P1P2PPP/R1BQR1K1 b - - 1 8},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f1,e1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f1-e1}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, USA m}}\\ 
+\multicolumn{2}{l}{1909 Round 16}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Marshall, Frank James} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4 5. O-O O-O 6. d3 Bxc3 7. bxc3 d6 8. Re1}\mainline{8...  Ne7 9. d4 c6 10. dxe5 dxe5 11. Ba3 cxb5 12. Qxd8 Rxd8 13. Bxe7 Re8 14. Bd6 Nd7 15. Red1 f6 16. Rab1 a6 17. Nd2 Nb6 18. c4 Na4 19. Re1 Rd8 20. c5 Nxc5 21. Bxc5 Rxd2 22. Rb2 Be6 23. Be3 Rd7 24. f3 Rc8 25. Rc1 Rc3 26. Kf2 Rdc7 27. Bd2 Ra3 28. Ra1 Rc4 29. Bb4 Ra4 30. Bd2 f5 31. exf5 Bxf5 32. c3 e4 33. fxe4 Bxe4 34. a3 Bc6 35. Rb4 Rc5 36. Rxa4 bxa4 37. Rb1 Rf5+ 38. Kg1 Rd5 39. Rb2 Rd3 40. Kf2 Bd5 41. Be1 Kf7 42. Rd2 Rxd2+ 43. Bxd2 Ke6 44. g3 Ba2 45. Bf4 Kd5 46. Ke3 Kc4 47. Kd2 Kb3 48. Bd6 Bb1 49. h4 Bf5 50. Bf8 b5 51. Bd6 a5 52. Bf8 g6 53. Be7 b4 54. cxb4 Kxa3 55. bxa5+ Kb3 56. a6 Kc4}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b3,c4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b3-c4}]
+\newline
+56. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

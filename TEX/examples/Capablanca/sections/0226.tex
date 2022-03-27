@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Watson, Charles Gilbert $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Watson, Charles Gilbert vs. Capablanca, Jose Raul -- 0-1 -- D02}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A05 -- Reti Opening: 1...Nf6}
+\subsubsection{A05 -- Reti Opening: 1...Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. Nf3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppppppp/5n2/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 2 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{London, London}}\\ 
+\multicolumn{2}{l}{1922 Round 12}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Watson, Charles Gilbert} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. Nf3 Nf6}\mainline{2. d4 d5 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qc1 Bf5 7. Nh4 Be4 8. Nd2 e6 9. f3 Bg6 10. Nxg6 hxg6 11. Nb3 c4 12. Nd2 Nh5 13. Be2 Nxf4 14. exf4 Bd6 15. g3 g5 16. Qc2 gxf4 17. O-O-O Qa5 18. Bxc4 dxc4 19. Nxc4 Qd5 20. Qb3 O-O-O 21. Nxd6+ Qxd6 22. g4 Rh3 23. Rhf1 Rxh2 24. Qa4 Rdh8 25. Qb5 Qd5 26. Qa4 Rg2 27. Qa3 Rhh2 28. Rd3 Rc2+ 29. Kd1 Qc4 30. Qf8+ Kc7 31. Qxf7+ Kb6 32. Qg6 Qxa2}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c4,a2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c4-a2}]
+\newline
+32. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

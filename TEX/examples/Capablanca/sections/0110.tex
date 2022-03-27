@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Dus Chotimirsky, Fedor Ivanovich $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Dus Chotimirsky, Fedor Ivanovich -- 1-0 -- C90}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C88 -- Spanish: Closed 7...d6 8.c3 Na5}
+\subsubsection{C88 -- Spanish: Closed 7...d6 8.c3 Na5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 Na5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk2r/2p1bppp/p2p1n2/np2p3/4P3/1BP2N2/PP1P1PPP/RNBQR1K1 w kq - 1 9},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c6,a5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c6-a5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{St Petersburg, St Petersburg exhibition}}\\ 
+\multicolumn{2}{l}{1913}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Dus Chotimirsky, Fedor Ivanovich} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 Na5}\mainline{9. Bc2 c5 10. d4 Qc7 11. Nbd2 Nc6 12. Nf1 cxd4 13. cxd4 Bg4 14. d5 Nd4 15. Bd3 O-O 16. Be3 Rac8 17. Bxd4 exd4 18. a4 Qb6 19. axb5 axb5 20. h3 Bxf3 21. Qxf3 Nd7 22. Rec1 Nc5 23. b4 Na4 24. Rxc8 Rxc8 25. e5 g6 26. e6 Rf8 27. Ng3 Qb7 28. Nf5 fxe6 29. dxe6 Qc7 30. Qc6 Qd8 31. Bxb5 Nc3 32. Nxe7+ Qxe7 33. Qd7 Qxd7 34. Bxd7 Rb8 35. e7 Kf7 36. Re1 Re8 37. Bxe8+ Kxe8 38. Re6 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e1,e6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e1-e6}]
+\newline
+38.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Black, Roy Turnbull $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Black, Roy Turnbull vs. Capablanca, Jose Raul -- 1/2-1/2 -- C76}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C72 -- Spanish: Modern Steinitz, 5.O-O Bd7}
+\subsubsection{C72 -- Spanish: Modern Steinitz, 5.O-O Bd7}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. O-O Bd7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r2qkbnr/1ppb1ppp/p1np4/4p3/B3P3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 2 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c8,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c8-d7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1918}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Black, Roy Turnbull} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. O-O Bd7}\mainline{6. c3 g6 7. d4 Bg7 8. Bg5 Nge7 9. Re1 h6 10. Be3 O-O 11. Nbd2 b6 12. Nf1 Qe8 13. Bc2 Bg4 14. Qd2 Bxf3 15. gxf3 g5 16. Ng3 Ng6 17. Nf5 Nce7 18. Qd3 Qb5 19. Nxe7+ Nxe7 20. Qxb5 axb5 21. h4 exd4 22. cxd4 gxh4 23. f4 c5 24. e5 cxd4 25. Bxd4 Nc6 26. Bxb6 dxe5 27. Be4 Ra6 28. Bc5 Rd8 29. fxe5 Nxe5 30. Rad1 Rxd1 31. Rxd1 Bf6 32. Bb1 Nf3+ 33. Kg2 Ng5 34. Rd6 h3+ 35. Kh1 Rxd6 36. Bxd6 Bxb2 37. Bd3 Kg7 38. f4 Ne6 39. Bxb5 Kf6 40. Bd3 Bc1 41. Be5+ Ke7 42. f5 Nc5 43. Bc2 Nd7 44. Bg3 Ba3}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c1,a3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c1-a3}]
+\newline
+44. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

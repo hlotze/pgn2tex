@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Marshall, Frank James $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Marshall, Frank James -- 1-0 -- A14}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A05 -- Reti Opening: 1...Nf6}
+\subsubsection{A05 -- Reti Opening: 1...Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. Nf3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppppppp/5n2/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 2 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1925}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Marshall, Frank James} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. Nf3 Nf6}\mainline{2. c4 e6 3. g3 d5 4. b3 c5 5. Bg2 Nc6 6. O-O Be7 7. d3 O-O 8. Bb2 d4 9. e4 dxe3 10. fxe3 Ng4 11. Qe2 Bf6 12. Nc3 Qa5 13. Rac1 Rd8 14. h3 Nge5 15. Ne4 Qxa2 16. Nxf6+ gxf6 17. Nxe5 Nxe5 18. Be4 Bd7 19. Ra1 Qxb3 20. Rfb1 Qb4 21. Bxe5 fxe5 22. Rxb4 cxb4 23. Bxb7 Rab8 24. Rxa7 b3 25. Qb2 Ba4 26. Qxe5 Bc6 27. Qg5+ Kf8 28. Bxc6 b2 29. Qe7+ }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g5,e7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g5-e7},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={f8}]
+\newline
+29.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Fox, Maurice $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Fox, Maurice -- 0-1 -- C26}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C25 -- Vienna: 2...Bc5 3.Bc4}
+\subsubsection{C25 -- Vienna: 2...Bc5 3.Bc4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nc3 Bc5 3. Bc4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk1nr/pppp1ppp/8/2b1p3/2B1P3/2N5/PPPP1PPP/R1BQK1NR b KQkq - 3 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f1,c4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f1-c4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Bradford, Bradford sim}}\\ 
+\multicolumn{2}{l}{1919}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Fox, Maurice} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nc3 Bc5 3. Bc4}\mainline{3...  d6 4. d3 Nf6 5. Bg5 Nc6 6. Nd5 Be6 7. c3 Bxd5 8. Bxd5 O-O 9. Qf3 Qe7 10. Ne2 Nd8 11. Ng3 Ne6 12. Nf5 Qd8 13. Nh6+ Kh8 14. Bxf6 gxf6 15. Nxf7+ Rxf7 16. Bxe6 Rg7 17. h4 Qe7 18. Bb3 c6 19. O-O-O a5 20. a3 b5 21. d4 exd4 22. cxd4 Bb6 23. h5 Re8 24. h6 Rg5 25. Rh4 a4 26. Ba2 c5 27. dxc5 Rxc5+ 28. Kb1 Rec8 29. Rg4 f5 30. Rg7 Qh4 31. Qe3 Rd5 32. Rc1 Rd1 33. Rxd1 Bxe3 34. fxe3 Qxh6 35. Rd7 Qxe3 36. exf5 b4 37. axb4 a3 38. bxa3 Qe4+ 39. Ka1 Qe5+}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e4,e5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e4-e5},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={a1}]
+\newline
+39. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

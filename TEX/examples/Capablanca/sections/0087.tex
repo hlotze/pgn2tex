@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Marder, A. $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Marder, A. vs. Capablanca, Jose Raul -- 0-1 -- C90}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C88 -- Spanish: Closed 7...d6 8.c3 Na5}
+\subsubsection{C88 -- Spanish: Closed 7...d6 8.c3 Na5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 Na5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk2r/2p1bppp/p2p1n2/np2p3/4P3/1BP2N2/PP1P1PPP/RNBQR1K1 w kq - 1 9},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c6,a5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c6-a5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York Rice}}\\ 
+\multicolumn{2}{l}{1913}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Marder, A.} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 Na5}\mainline{9. Bc2 c5 10. d3 Nc6 11. Nbd2 O-O 12. Nf1 Be6 13. Bg5 Nh5 14. Bxe7 Qxe7 15. d4 cxd4 16. cxd4 Bg4 17. Ne3 Bxf3 18. Qxf3 Nf4 19. Nf5 Qf6 20. Red1 Rfd8 21. Bb3 Rac8 22. Kh1 Ne6 23. dxe5 dxe5 24. Bxe6 fxe6 25. Ne3 Qxf3 26. gxf3 Rxd1+ 27. Rxd1 Nd4 28. Kg2 a5 29. Rd3 b4 30. h4 Kf7 31. Rd2 Kf6 32. Kg3 g5 33. hxg5+ Kxg5 34. Ng2 Rc1 35. Rd3 Ne2+ 36. Kh2 Rf1 37. Rd2 Rxf2 38. a3 b3 39. a4 h5}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h7,h5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h7-h5}]
+\newline
+39. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

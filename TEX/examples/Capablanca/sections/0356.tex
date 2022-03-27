@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Tarrasch, Siegbert $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Tarrasch, Siegbert vs. Capablanca, Jose Raul -- 0-1 -- C71}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C71 -- Spanish: Modern Steinitz, 5.d4}
+\subsubsection{C71 -- Spanish: Modern Steinitz, 5.d4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. d4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkbnr/1pp2ppp/p1np4/4p3/B2PP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d2,d4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d2-d4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Berlin, Berlin Tageblatt+}}\\ 
+\multicolumn{2}{l}{1928}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Tarrasch, Siegbert} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. d4}\mainline{5...  Bd7 6. dxe5 Nxe5 7. Bxd7+ Nxd7 8. O-O Be7 9. Nc3 Ngf6 10. Nd4 O-O 11. Nf5 g6 12. Nxe7+ Qxe7 13. Bh6 Rfe8 14. Re1 Qe5 15. Qd2 Nc5 16. f3 Ne6 17. Be3 Rad8 18. Nd5 Nd7 19. c3 c6 20. Nf4 Ndf8 21. Rad1 Qa5 22. a3 d5 23. exd5 Nxf4 24. Bxf4 Rxe1+ 25. Qxe1 Rxd5 26. Rxd5 Qxd5 27. Qe5 Qxe5 28. Bxe5 Nd7 29. Bd6 f6 30. Kf2 Kf7 31. c4 Ke6 32. Bf4 g5 33. Be3 Ne5 34. b3 g4 35. Ke2 gxf3+ 36. gxf3 Kf5 37. Bd4 Nd7 38. Kf2 c5 39. Be3 Ne5 40. Ke2 b6 41. Bd2 a5 42. Bc1 a4 43. bxa4 Nxc4 44. Kd3 Ne5+ 45. Ke2 Ke6 46. f4 Nc4 47. Kd3 Kd5 48. f5 Ne5+}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c4,e5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c4-e5},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={d3}]
+\newline
+48. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

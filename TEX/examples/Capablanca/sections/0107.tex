@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Marshall, Frank James $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Marshall, Frank James -- 1/2-1/2 -- C01}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C01 -- French: Exchange, 4.Bd3}
+\subsubsection{C01 -- French: Exchange, 4.Bd3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e6 2. d4 d5 3. exd5 exd5 4. Bd3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/ppp2ppp/8/3p4/3P4/3B4/PPP2PPP/RNBQK1NR b KQkq - 1 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f1,d3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f1-d3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York National}}\\ 
+\multicolumn{2}{l}{1913 Round 13}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Marshall, Frank James} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e6 2. d4 d5 3. exd5 exd5 4. Bd3}\mainline{4...  Nf6 5. Nf3 Bd6 6. O-O O-O 7. Bg5 Bg4 8. Nbd2 Nbd7 9. c3 c6 10. Qc2 Qc7 11. Rae1 Rae8 12. h3 Bh5 13. Rxe8 Rxe8 14. Re1 Rxe1+ 15. Nxe1 Bh2+ 16. Kf1 Bf4 17. Bxf4 Qxf4 18. g3 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g2,g3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g2-g3}]
+\newline
+18.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

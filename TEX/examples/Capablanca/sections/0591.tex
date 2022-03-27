@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Milner Barry, Philip Stuart $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Milner Barry, Philip Stuart vs. Capablanca, Jose Raul -- 1/2-1/2 -- B74}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! B70 -- Sicilian: Dragon, 6.Be2 Bg7}
+\subsubsection{B70 -- Sicilian: Dragon, 6.Be2 Bg7}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be2 Bg7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/pp2ppbp/3p1np1/8/3NP3/2N5/PPP1BPPP/R1BQK2R w KQkq - 2 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f8,g7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f8-g7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Margate, Margate}}\\ 
+\multicolumn{2}{l}{1939 Round 6}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Milner Barry, Philip Stuart} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be2 Bg7}\mainline{7. Be3 Nc6 8. O-O O-O 9. Nb3 Be6 10. f4 Na5 11. f5 Bc4 12. Nxa5 Bxe2 13. Qxe2 Qxa5 14. g4 Nd7 15. Nd5 e6 16. f6 exd5 17. fxg7 Kxg7 18. Rad1 dxe4 19. Rxd6 Rad8 20. Qf2 Kg8 21. Bh6 e3 22. Qxe3 Rfe8 23. Qf4 Qc5+ 24. Kh1 f6 25. Rfd1 Qxc2 26. Qd2 Qe4+ 27. Qg2 Qe1+ 28. Qg1 Qe4+ 29. Qg2 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g1,g2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g1-g2}]
+\newline
+29.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

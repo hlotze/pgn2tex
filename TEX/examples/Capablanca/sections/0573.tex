@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Vassaux, G. $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Vassaux, G. -- 1-0 -- D47}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A06 -- Reti Opening: 1...d5 2.e3}
+\subsubsection{A06 -- Reti Opening: 1...d5 2.e3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. Nf3 d5 2. e3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/ppp1pppp/8/3p4/8/4PN2/PPPP1PPP/RNBQKB1R b KQkq - 0 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e2,e3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e2-e3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Buenos Aires, Buenos Aires ol prel-D}}\\ 
+\multicolumn{2}{l}{1939 Round 2}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Vassaux, G.} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. Nf3 d5 2. e3}\mainline{2...  Nf6 3. c4 c6 4. Nc3 e6 5. d4 Nbd7 6. Bd3 dxc4 7. Bxc4 Bb4 8. O-O O-O 9. Qe2 Qe7 10. Ne5 c5 11. f4 Nb6 12. Bb3 Nbd5 13. Bd2 Bxc3 14. bxc3 Ne4 15. Be1 f6 16. Qd3 f5 17. a4 Kh8 18. g4 Ndf6 19. Bh4 Bd7 20. Rf3 Be8 21. Rh3 Qd6 22. gxf5 exf5 23. Rd1 cxd4 24. exd4 Qa3 25. Be6 g6 26. Bg5 Nxg5 27. fxg5 Ne4 28. Rxh7+ Kxh7 29. Qh3+ Kg7 30. Qh6# }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h3,h6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h3-h6},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={g7}]
+\newline
+30.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

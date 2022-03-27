@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Vidmar, Milan Sr $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Vidmar, Milan Sr vs. Capablanca, Jose Raul -- 1/2-1/2 -- D67}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D67 -- QGD: Orthodox, Main Line, Capablanca Variation}
+\subsubsection{D67 -- QGD: Orthodox, Main Line, Capablanca Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 Nbd7 7. Rc1 c6 8. Bd3 dxc4 9. Bxc4 Nd5 10. Bxe7 Qxe7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1b2rk1/pp1nqppp/2p1p3/3n4/2BP4/2N1PN2/PP3PPP/2RQK2R w K - 0 11},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d8,e7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d8-e7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings}}\\ 
+\multicolumn{2}{l}{1929 Round 7}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Vidmar, Milan Sr} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 Nbd7 7. Rc1 c6 8. Bd3 dxc4 9. Bxc4 Nd5 10. Bxe7 Qxe7}\mainline{11. Qc2 Nxc3 12. Qxc3 b6 13. O-O Bb7 14. Qd3 Rfd8 15. Qe2 c5 16. dxc5 Nxc5 17. Rfd1 Rxd1+ 18. Rxd1 Rd8 19. h3 Rxd1+ 20. Qxd1 Qd7 21. Qxd7 Nxd7}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c5,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c5-d7}]
+\newline
+21. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

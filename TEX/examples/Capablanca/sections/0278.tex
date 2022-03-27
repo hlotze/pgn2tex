@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Marshall, Frank James $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Marshall, Frank James vs. Capablanca, Jose Raul -- 1/2-1/2 -- C44}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C21 -- Danish Gambit: Sörensen Defence, 1.e4 e5 2.d4 exd4 3.c3 d5}
+\subsubsection{C21 -- Danish Gambit: Sörensen Defence, 1.e4 e5 2.d4 exd4 3.c3 d5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. d4 exd4 3. c3 d5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/ppp2ppp/8/3p4/3pP3/2P5/PP3PPP/RNBQKBNR w KQkq - 0 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d7,d5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d7-d5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Lake Hopatcong, Lake Hopatcong}}\\ 
+\multicolumn{2}{l}{1926 Round 9}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Marshall, Frank James} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. d4 exd4 3. c3 d5}\mainline{4. exd5 Qxd5 5. cxd4 Nc6 6. Nf3 Bb4+ 7. Nc3 Bg4 8. Be2 Bxf3 9. Bxf3 Qc4 10. Be3 Bxc3+ 11. bxc3 Qxc3+ 12. Kf1 Qc4+ 13. Kg1 Nge7 14. Rc1 Qxa2 15. Ra1 Qc4 16. Rc1 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={a1,c1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a1-c1}]
+\newline
+16.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

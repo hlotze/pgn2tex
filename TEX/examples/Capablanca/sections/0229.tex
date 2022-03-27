@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Marotti, Davide $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Marotti, Davide -- 1-0 -- B38}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! B34 -- Sicilian: Accelerated Fianchetto, 5.Be3}
+\subsubsection{B34 -- Sicilian: Accelerated Fianchetto, 5.Be3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. Be3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkbnr/pp1ppp1p/2n3p1/8/3NP3/4B3/PPP2PPP/RN1QKB1R b KQkq - 1 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c1,e3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c1-e3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{London, London}}\\ 
+\multicolumn{2}{l}{1922 Round 15}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Marotti, Davide} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. Be3}\mainline{5...  Bg7 6. c4 d6 7. Nc3 Nf6 8. Be2 Bd7 9. O-O O-O 10. f4 Ng4 11. Bxg4 Bxg4 12. Nxc6 Qd7 13. Nxe7+ Kh8 14. Qd3 Qxe7 15. Nd5 Qd7 16. f5 gxf5 17. exf5 Be5 18. h3 Bh5 19. Nf4 Bxf4 20. Bxf4 f6 21. Rae1 Rad8 22. g4 Qc6 23. Qd4 Rd7 24. Bh6 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f4,h6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f4-h6}]
+\newline
+24.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

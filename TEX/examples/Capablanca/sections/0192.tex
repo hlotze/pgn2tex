@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Marchand, Max $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Marchand, Max vs. Capablanca, Jose Raul -- 0-1 -- C62}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C48 -- Four Knights: Spanish, 4...d6 5.d4}
+\subsubsection{C48 -- Four Knights: Spanish, 4...d6 5.d4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 d6 5. d4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkb1r/ppp2ppp/2np1n2/1B2p3/3PP3/2N2N2/PPP2PPP/R1BQK2R b KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d2,d4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d2-d4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings}}\\ 
+\multicolumn{2}{l}{1919 Round 2}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Marchand, Max} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 d6 5. d4}\mainline{5...  exd4 6. Qxd4 Bd7 7. Bxc6 Bxc6 8. Bg5 Be7 9. O-O O-O 10. Rfe1 h6 11. Bh4 Nd7 12. Bxe7 Qxe7 13. Nd5 Qd8 14. c4 Re8 15. Rad1 Nf8 16. Nd2 Ne6 17. Qe3 a6 18. Qg3 Nc5 19. Re3 Bxd5}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c6,d5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c6-d5}]
+\newline
+19. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

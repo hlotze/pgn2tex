@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Romanovsky, Peter Arsenievich $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Romanovsky, Peter Arsenievich vs. Capablanca, Jose Raul -- 1/2-1/2 -- C47}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C45 -- Scotch: 4.Nxd4 Nf6}
+\subsubsection{C45 -- Scotch: 4.Nxd4 Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkb1r/pppp1ppp/2n2n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1925}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Romanovsky, Peter Arsenievich} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6}\mainline{5. Nc3 Bb4 6. Nxc6 bxc6 7. Bd3 d5 8. exd5 cxd5 9. O-O O-O 10. Bg5 c6 11. Qf3 Be7 12. Rfe1 Rb8 13. Rab1 h6 14. Bxh6 gxh6 15. Qe3 Bd6 16. Qxh6 Rb4}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b8,b4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b8-b4}]
+\newline
+16. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

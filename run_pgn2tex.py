@@ -33,17 +33,27 @@ def main():
         # start to get the games out of one pgn file
         games_df = pgn.get_games_from_pgnfile(fname)
 
+        games_df['Round4sort'] = games_df['Round'].apply(tex.prep_round4sort)
+        games_df['Date'] = games_df['Date'].apply(tex.prep_date)
+        games_df.sort_values(by=['Date', 'Site', 'Event', 'Round4sort'], inplace=True)
+
         print(str(len(games_df)) + ' games read at ' + fname)
 
         section_subfile_list = []
         for game_nr, row in games_df.iterrows():
             one_game_dict = row.to_dict()
 
-            section_heading = one_game_dict['Date'] + ': ' + \
-                one_game_dict['Event'] + ', ' + \
-                one_game_dict['Site']
+            section_heading = ''
+            if one_game_dict['Site'] not in ['', ' ', '?', '*']:
+                section_heading = one_game_dict['Site'] + ', '
+            
             if one_game_dict['Round'] not in ['', ' ', '?', '*']:
-                section_heading += ', Round: ' + one_game_dict['Round']
+                section_heading += one_game_dict['Event'] + ', Round ' + \
+                    one_game_dict['Round'] + ' (' + \
+                    one_game_dict['Date'] + ')'
+            else:
+                section_heading += one_game_dict['Event'] + ' (' + \
+                    one_game_dict['Date'] + ')'
 
             if one_game_dict['pgn'] == '':
                 pgn_available = False

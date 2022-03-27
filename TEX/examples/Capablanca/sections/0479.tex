@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Milner Barry, Philip Stuart $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Milner Barry, Philip Stuart -- 1-0 -- C78}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C78 -- Spanish: Müller Defence, 6.c3}
+\subsubsection{C78 -- Spanish: Müller Defence, 6.c3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Bc5 6. c3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk2r/1ppp1ppp/p1n2n2/2b1p3/B3P3/2P2N2/PP1P1PPP/RNBQ1RK1 b kq - 0 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c2,c3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c2-c3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Margate, Margate}}\\ 
+\multicolumn{2}{l}{1935 Round 7}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Milner Barry, Philip Stuart} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Bc5 6. c3}\mainline{6...  Ba7 7. d4 Nxe4 8. Re1 f5 9. Nbd2 O-O 10. Nxe4 fxe4 11. Bg5 Qe8 12. Rxe4 d6 13. dxe5 Qg6 14. Rf4 Rxf4 15. Bxf4 Bg4 16. Qb3+ Qf7 17. Ng5 Qxb3 18. Bxb3+ }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={a4,b3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a4-b3},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={g8}]
+\newline
+18.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

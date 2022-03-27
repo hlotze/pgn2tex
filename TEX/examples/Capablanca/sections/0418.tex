@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Rubinstein, Akiba $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Rubinstein, Akiba vs. Capablanca, Jose Raul -- 1/2-1/2 -- A46}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A46 -- Indian: 1.d4 Nf6 2.Nf3 e6 3.e3 c5}
+\subsubsection{A46 -- Indian: 1.d4 Nf6 2.Nf3 e6 3.e3 c5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3 e6 3. e3 c5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pp1p1ppp/4pn2/2p5/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c7-c5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Karlsbad, Karlsbad}}\\ 
+\multicolumn{2}{l}{1929}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Rubinstein, Akiba} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3 e6 3. e3 c5}\mainline{4. b3 Nc6 5. Bb2 b6 6. Nbd2 Bb7 7. Bd3 cxd4 8. exd4 Nb4 9. Bf1 Rc8 10. c4 Nc6 11. Bd3 d5 12. O-O Bd6 13. a3 O-O 14. Re1 dxc4 15. bxc4 Bf4 16. Nf1 Na5 17. Qe2 Qc7 18. d5 Nxc4 19. Bxf6 gxf6 20. dxe6 fxe6 21. Nd4 Bd5 22. Nxe6 Bxe6 23. Qxe6+ Kh8 24. Re4 Ne5 25. Ba6 Rce8 26. Qf5 Bh6 27. Rae1 Rd8 28. Rh4 Qg7 29. Rh3 Rd4 30. Qh5 Rg4 31. Ng3 Bf4 32. Rd1 Bxg3 33. Rxg3 Rxg3 34. hxg3 Qe7 35. Qf5 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h5,f5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h5-f5}]
+\newline
+35.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

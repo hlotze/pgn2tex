@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Berasain, Jose $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Berasain, Jose vs. Capablanca, Jose Raul -- 1/2-1/2 -- C84}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C77 -- Spanish: Centre Attack, 5...exd4}
+\subsubsection{C77 -- Spanish: Centre Attack, 5...exd4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. d4 exd4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkb1r/1ppp1ppp/p1n2n2/8/B2pP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e5,d4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e5-d4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Montevideo, Montevideo sim}}\\ 
+\multicolumn{2}{l}{1911}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Berasain, Jose} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. d4 exd4}\mainline{6. O-O b5 7. Bb3 Be7 8. e5 Ne4 9. Bd5 Nc5 10. Nxd4 Bb7 11. Nf5 O-O 12. Qg4 g6 13. Bxc6 dxc6 14. Bh6 Re8 15. Ng7 Rf8 16. Nf5 Re8 17. Ng7 Rf8}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e8,f8},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e8-f8}]
+\newline
+17. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

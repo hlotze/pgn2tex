@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Spielmann, Rudolf $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Spielmann, Rudolf -- 0-1 -- D15}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D10 -- Slav: 3.Nc3 Nf6}
+\subsubsection{D10 -- Slav: 3.Nc3 Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 c6 3. Nc3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Bad Kissingen, Bad Kissingen}}\\ 
+\multicolumn{2}{l}{1928 Round 6}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Spielmann, Rudolf} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 c6 3. Nc3 Nf6}\mainline{4. Nf3 dxc4 5. e3 b5 6. a4 b4 7. Na2 e6 8. Bxc4 Be7 9. O-O O-O 10. b3 c5 11. Bb2 Bb7 12. Nc1 Nc6 13. dxc5 Na5 14. Ne5 Nxc4 15. Nxc4 Bxc5 16. Nd3 Qd5 17. Nf4 Qg5 18. Bxf6 Qxf6 19. Rc1 Rfd8 20. Qh5 Rac8 21. Rfd1 g6 22. Rxd8+ Qxd8 23. Qe5 Be7 24. h3 Rc5 25. Qa1 Bf6 26. Rd1 Rd5 27. Rxd5 exd5 28. Ne5 Qd6 29. Nfd3 Ba6 30. Qe1 Bxe5 31. Nxe5 Qxe5 32. Qxb4 Bd3 33. Qc5 Qb8 34. b4 Qb7 35. b5 h5 36. Qc3 Bc4 37. e4 Qe7 38. exd5 Bxd5 39. a5 Qe4}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e7,e4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e7-e4}]
+\newline
+39. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

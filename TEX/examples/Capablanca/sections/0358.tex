@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Vajda, Arpad $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Vajda, Arpad vs. Capablanca, Jose Raul -- 1/2-1/2 -- C49}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C49 -- Four Knights: Symmetrical, Metger unpin}
+\subsubsection{C49 -- Four Knights: Symmetrical, Metger unpin}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4 5. O-O O-O 6. d3 d6 7. Bg5 Bxc3 8. bxc3 Qe7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1b2rk1/ppp1qppp/2np1n2/1B2p1B1/4P3/2PP1N2/P1P2PPP/R2Q1RK1 w - - 1 9},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d8,e7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d8-e7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Budapest, Budapest}}\\ 
+\multicolumn{2}{l}{1928}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Vajda, Arpad} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4 5. O-O O-O 6. d3 d6 7. Bg5 Bxc3 8. bxc3 Qe7}\mainline{9. Bxc6 bxc6 10. Rb1 h6 11. Bxf6 Qxf6 12. Nd2 Be6 13. Rb7 Rfb8 14. Qb1 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d1,b1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d1-b1}]
+\newline
+14.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

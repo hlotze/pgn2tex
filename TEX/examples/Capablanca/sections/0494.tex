@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Flohr, Salo $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Flohr, Salo vs. Capablanca, Jose Raul -- 1/2-1/2 -- D62}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D37 -- QGD: Westphalia without Bg5}
+\subsubsection{D37 -- QGD: Westphalia without Bg5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 Nbd7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkb1r/pppn1ppp/4pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 4 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b8,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b8-d7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1935 Round 13}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Flohr, Salo} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 Nbd7}\mainline{5. Bg5 Be7 6. e3 O-O 7. Qc2 c5 8. cxd5 Nxd5 9. Bxe7 Qxe7 10. Nxd5 exd5 11. Bd3 cxd4 12. Nxd4 Qb4+ 13. Qd2 Nc5 14. Bb5 Qxd2+ 15. Kxd2 a6 16. Bd3 Be6 17. Rac1 Rfc8 18. Rc2 Nxd3 19. Kxd3 Rxc2 20. Kxc2 Kf8 21. Kd2 Rc8 22. Rc1 Rxc1 23. Kxc1 Ke7 24. Kd2 Kd6 25. Kc3 b6 26. f4 Bd7 27. Nf3 f6 28. Kd4 a5 29. Nd2 Bc8 30. Nb1 Be6 31. Nc3 Kc6 32. a3 h6 33. g3 h5 34. b4 axb4 35. axb4 Kd6 36. b5 g6 37. Na4 Kc7 38. Nc3 Kd6 39. f5 gxf5 40. Ne2 Bd7 41. Nf4 Be8 42. Nxd5 Bxb5 43. Nxb6 Bc6 44. Nc4+ Ke6 45. Nb2 Bb5 46. Nd1 Be2 47. Nf2 Bf1 48. Nd3 Bxd3 49. Kxd3 Ke5 50. Ke2 Ke4 51. h3 Kd5 52. Kf3 Ke5}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d5,e5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d5-e5}]
+\newline
+52. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Morrison, John Stuart $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Morrison, John Stuart vs. Capablanca, Jose Raul -- 0-1 -- A41}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A46 -- Indian: 2.Nf3 d6}
+\subsubsection{A46 -- Indian: 2.Nf3 d6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3 d6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/ppp1pppp/3p1n2/8/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d7,d6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d7-d6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York National}}\\ 
+\multicolumn{2}{l}{1913 Round 4}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Morrison, John Stuart} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3 d6}\mainline{3. e3 Bg4 4. Be2 Nbd7 5. O-O e5 6. dxe5 dxe5 7. Nc3 c6 8. h3 Bh5 9. Nh2 Bxe2 10. Qxe2 Bb4 11. e4 Bxc3 12. bxc3 Qa5 13. Bg5 Qxc3 14. Rab1 b5 15. Rfd1 h6 16. Bc1 O-O-O 17. Nf3 Qc4 18. Qe3 Nb6 19. Ba3 Rxd1+ 20. Rxd1 Nfd7 21. Bd6 Re8 22. a3 Re6 23. Qe1 c5 24. Nd2 Qc3}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c4,c3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c4-c3}]
+\newline
+24. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

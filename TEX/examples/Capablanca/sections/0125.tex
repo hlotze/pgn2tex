@@ -1,0 +1,69 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Alekhine, Alexander $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Alekhine, Alexander vs. Capablanca, Jose Raul -- 1/2-1/2 -- C48}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C48 -- Four Knights: Rubinstein, Exchange Variation, 8...Qe5+}
+\subsubsection{C48 -- Four Knights: Rubinstein, Exchange Variation, 8...Qe5+}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Nd4 5. Nxd4 exd4 6. e5 dxc3 7. exf6 Qxf6 8. dxc3 Qe5+}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1b1kb1r/pppp1ppp/8/1B2q3/8/2P5/PPP2PPP/R1BQK2R w KQkq - 1 9},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f6,e5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f6-e5},
+             pgfstyle=circle,
+             color=BrickRed,
+             markfield={e1}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{St Petersburg, St Petersburg f}}\\ 
+\multicolumn{2}{l}{1914}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Alekhine, Alexander} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Nd4 5. Nxd4 exd4 6. e5 dxc3 7. exf6 Qxf6 8. dxc3 Qe5+}\mainline{9. Qe2 Qxe2+ 10. Bxe2 d5 11. Bf4 c6 12. c4 Be6 13. cxd5 Bxd5 14. O-O Bc5 15. Rfe1 O-O 16. Bd3 Rfe8 17. a3 f6 18. Kf1 g6 19. f3 Kf7 20. Rxe8 Rxe8 21. Re1 Rxe1+ 22. Kxe1 Ke7 23. Ke2 Bd6 24. Ke3 Bc5+ 25. Ke2 Bd6 26. Ke3 Bc5+}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d6,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d6-c5},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={e3}]
+\newline
+26. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

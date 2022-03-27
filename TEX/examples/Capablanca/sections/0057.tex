@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Koksal, J. $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Koksal, J. -- 0-1 -- C41}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C41 -- Philidor: 3...exd4 4.Nxd4}
+\subsubsection{C41 -- Philidor: 3...exd4 4.Nxd4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 d6 3. d4 exd4 4. Nxd4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/ppp2ppp/3p4/8/3NP3/8/PPP2PPP/RNBQKB1R b KQkq - 0 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f3,d4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f3-d4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Prague, Prague sim}}\\ 
+\multicolumn{2}{l}{1911}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Koksal, J.} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 d6 3. d4 exd4 4. Nxd4}\mainline{4...  Be7 5. Nc3 Nf6 6. Bd3 Bd7 7. h3 Nc6 8. Nxc6 Bxc6 9. O-O O-O 10. f4 Re8 11. f5 d5 12. e5 Bc5+ 13. Kh1 Rxe5 14. Bf4 Re8 15. Qd2 Ne4 16. Nxe4 dxe4 17. Be2 e3 18. Qc3 Qd2 19. Qxd2 exd2 20. Bd3 Rad8 21. Rfd1 Rd4 22. Bxd2 Rxd3 23. cxd3 Re2 24. d4 Bxg2+ 25. Kh2 Bc6+ 26. Kg1 Bxd4+ 27. Kf1 Bb5 28. Bc3 Rxb2+}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e2,b2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e2-b2},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={f1}]
+\newline
+28. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

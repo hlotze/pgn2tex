@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Maroczy, Geza $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Maroczy, Geza -- 1/2-1/2 -- C01}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C01 -- French: Exchange, 4.Nf3 Bd6 5.Bd3 Nf6}
+\subsubsection{C01 -- French: Exchange, 4.Nf3 Bd6 5.Bd3 Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e6 2. d4 d5 3. exd5 exd5 4. Bd3 Bd6 5. Nf3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/ppp2ppp/3b1n2/3p4/3P4/3B1N2/PPP2PPP/RNBQK2R w KQkq - 4 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Lake Hopatcong, Lake Hopatcong}}\\ 
+\multicolumn{2}{l}{1926 Round 10}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Maroczy, Geza} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e6 2. d4 d5 3. exd5 exd5 4. Bd3 Bd6 5. Nf3 Nf6}\mainline{6. O-O O-O 7. Bg5 Bg4 8. Re1 Nbd7 9. Nbd2 c6 10. c3 Qc7 11. Qc2 Rfe8 12. Bh4 Bh5 13. Bg3 Bxg3 14. hxg3 Bg6 15. Rxe8+ Rxe8 16. Bxg6 hxg6 17. Re1 Rxe1+ 18. Nxe1 Ne8 19. Nd3 Nd6 20. Qb3 a6 21. Kf1 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g1,f1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g1-f1}]
+\newline
+21.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

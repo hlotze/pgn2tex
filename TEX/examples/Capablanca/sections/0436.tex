@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Tylor, Theodore $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Tylor, Theodore -- 1-0 -- D30}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D30 -- QGD: 3.Nf3 Nf6 4.Bg5}
+\subsubsection{D30 -- QGD: 3.Nf3 Nf6 4.Bg5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nf3 Nf6 4. Bg5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/ppp2ppp/4pn2/3p2B1/2PP4/5N2/PP2PPPP/RN1QKB1R b KQkq - 3 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c1,g5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c1-g5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings 3031}}\\ 
+\multicolumn{2}{l}{1930 Round 6}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Tylor, Theodore} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nf3 Nf6 4. Bg5}\mainline{4...  c6 5. Nbd2 Nbd7 6. e3 Be7 7. Bd3 O-O 8. O-O dxc4 9. Nxc4 Nd5 10. Bxe7 Nxe7 11. Rc1 Ng6 12. Bxg6 hxg6 13. e4 Nb6 14. Nce5 Bd7 15. Qd2 Be8 16. Qb4 f6 17. Nd3 g5 18. Nc5 Qe7 19. h3 Bh5 20. Qb3 Rfe8 21. Rfe1 Rad8 22. g4 Bg6 23. a4 Rb8 24. Qe3 Nd7 25. Nd3 Rbd8 26. Kg2 Nf8 27. Rh1 Qd6 28. Rcd1 f5 29. Nde5 fxe4 30. Nxg5 c5 31. Qf4 cxd4 32. Nxg6 Qxf4 33. Nxf4 e5 34. Ne2 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f4,e2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f4-e2}]
+\newline
+34.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

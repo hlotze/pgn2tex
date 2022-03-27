@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Botvinnik, Mikhail $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Botvinnik, Mikhail -- 1/2-1/2 -- A91}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A40 -- Queen's Pawn: 1...e6 2.c4}
+\subsubsection{A40 -- Queen's Pawn: 1...e6 2.c4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 e6 2. c4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/pppp1ppp/4p3/8/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c2,c4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c2-c4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings3435}}\\ 
+\multicolumn{2}{l}{1934}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Botvinnik, Mikhail} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 e6 2. c4}\mainline{2...  f5 3. g3 Nf6 4. Bg2 Be7 5. Nc3 d5 6. Nh3 c6 7. Qb3 O-O 8. O-O Na6 9. Nf4 Kh8 10. Nd3 Nc7 11. Bf4 Nce8 12. c5 Nd7 13. e3 Bf6 14. Ne2 Qe7 15. Qc3 g5 16. Be5 Nxe5 17. dxe5 Bg7 18. f4 Nc7 19. a4 Bd7 20. Nd4 Rg8 21. Kf2 Be8 22. Qb4 Na6 23. Qa5 Bd7 24. Rfc1 Rgc8 25. Bf1 Bf8 26. Qc3 Qg7 27. b4 Be7 28. Nf3 Nc7 29. Nxg5 Bxg5 30. fxg5 Qxg5 31. Qd4 Rg8 32. Be2 Raf8 33. Nf4 Qh6 34. h4 Be8 35. Rg1 a6 36. Bf3 Rg7 37. Rg2 Rfg8 38. Rag1 Rf8 39. Rh1 Kg8 40. h5 Rg5}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g7,g5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g7-g5}]
+\newline
+40. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Pirc, Vasja $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Pirc, Vasja vs. Capablanca, Jose Raul -- 1/2-1/2 -- A00}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A00 -- Van Kruij's Opening}
+\subsubsection{A00 -- Van Kruij's Opening}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e2,e3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e2-e3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1935 Round 7}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Pirc, Vasja} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e3}\mainline{1...  Nf6 2. f4 g6 3. c4 d5 4. Nc3 Bg7 5. Nf3 O-O 6. d4 c6 7. Be2 Bf5 8. O-O Nbd7 9. Ne5 Nxe5 10. fxe5 Ne4 11. cxd5 cxd5 12. Qb3 Nxc3 13. bxc3 Qd7 14. c4 Be4 15. Bf3 Bxf3 16. Rxf3 dxc4 17. Qxc4 Rac8 18. Qb3 Rc6 19. Ba3 Re6 20. Raf1 f6 21. Bc5 b6 22. Ba3 Kh8 23. Bb2 Rd8 24. e4 fxe5 25. d5 Rf6 26. Bxe5 Rxf3 27. Bxg7+ Kxg7 28. Qxf3 Qd6}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d7,d6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d7-d6}]
+\newline
+28. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

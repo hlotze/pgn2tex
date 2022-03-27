@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Ellison $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Ellison -- 1/2-1/2 -- E12}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E12 -- Queen's Indian: 4.Bg5}
+\subsubsection{E12 -- Queen's Indian: 4.Bg5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. Bg5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/p1pp1ppp/1p2pn2/6B1/2PP4/5N2/PP2PPPP/RN1QKB1R b KQkq - 1 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c1,g5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c1-g5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Chicago, Chicago}}\\ 
+\multicolumn{2}{l}{1926}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Ellison} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. Bg5}\mainline{4...  Bb7 5. Nbd2 h6 6. Bh4 Be7 7. Qc2 O-O 8. e3 d6 9. Bd3 Nc6 10. a3 Nd7 11. Bxe7 Qxe7 12. b4 e5 13. O-O Nf6 14. d5 Nb8 15. Nh4 Bc8 16. Nf5 Qd7 17. e4 g6 18. Ng3 Nh5 19. c5 bxc5 20. bxc5 Na6 21. Nb3 Qa4 22. Rfc1 Rb8 23. Bxa6 Bxa6 24. Nd2 Qd4 25. Nf3 Qd3 26. Ne1 Qd4 27. Nf3 Qd3}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d4,d3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d4-d3}]
+\newline
+27. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

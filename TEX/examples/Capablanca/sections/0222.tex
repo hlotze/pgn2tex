@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Tartakower, Saviely $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Tartakower, Saviely -- 1/2-1/2 -- D58}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A46 -- Indian: 2.Nf3}
+\subsubsection{A46 -- Indian: 2.Nf3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppppppp/5n2/8/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 2 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g1,f3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g1-f3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{London, London}}\\ 
+\multicolumn{2}{l}{1922 Round 8}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Tartakower, Saviely} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3}\mainline{2...  d5 3. c4 e6 4. Nc3 Be7 5. Bg5 O-O 6. e3 h6 7. Bh4 b6 8. cxd5 exd5 9. Qb3 Be6 10. Rd1 c6 11. Qc2 Ne4 12. Bxe7 Qxe7 13. Nxe4 dxe4 14. Qxe4 Qb4+ 15. Nd2 Qxb2 16. Bd3 g6 17. Qf4 Kg7 18. h4 Nd7 19. Ne4 Qxa2 20. h5 g5 21. Qg3 Qa5+ 22. Ke2 f5 23. Nxg5 hxg5 24. Qxg5+ Kf7 25. h6 Rg8 26. Qh5+ Ke7 27. h7 Rxg2 28. Kf1 Qd5 29. h8=Q Rxh8 30. Qxh8 Qf3 31. Rd2 Bd5 32. Ke1 Rg8 33. Qh4+ Kd6 34. Rf1 Be6 35. Rc2 a5 36. Qh2+ Ke7 37. Be2 Qe4 38. Kd2 c5 39. Bd3 Qg2 40. Qh4+ Qg5 41. Qxg5+ Rxg5 42. Rb1 f4}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f5,f4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f5-f4}]
+\newline
+42. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! White $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. White -- * -- A52}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A52 -- Budapest Defence: Adler, 4...Bc5}
+\subsubsection{A52 -- Budapest Defence: Adler, 4...Bc5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e5 3. dxe5 Ng4 4. Nf3 Bc5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/pppp1ppp/8/2b1P3/2P3n1/5N2/PP2PPPP/RNBQKB1R w KQkq - 3 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f8,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f8-c5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Bradford, Bradford sim}}\\ 
+\multicolumn{2}{l}{1919}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{*}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} White} & \textbf{*}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e5 3. dxe5 Ng4 4. Nf3 Bc5}\mainline{5. e3 Nc6 6. Bd2 O-O 7. Bc3 Re8 8. Be2 d6 9. exd6 Bxe3 10. fxe3 Nxe3 11. Qd2 Nxc4 12. Qg5 f6 13. Qd5+ Be6 14. Qd3 Nxd6}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c4,d6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c4-d6}]
+\newline
+14. ...\,\xskakget{lan}
+\newline
+*
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

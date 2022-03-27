@@ -1,0 +1,82 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Hodges $\square$}
+\index{Players ! Wellman $\blacksquare$}
+\subsection{Hodges vs. Wellman -- 1-0 -- A00}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A40 -- Queen's Pawn Game}
+\subsubsection{A40 -- Queen's Pawn Game}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d2,d4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{London, London PT}}\\ 
+\multicolumn{2}{l}{1851 Round 4}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Hodges} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Wellman} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4}\mainline{1.  }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d2,d4}]
+\newline
+1.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+% Game's diagrams
+\newchessgame
+\hidemoves{1. d4}
+
+\setlength\LTleft{0mm}
+\begin{longtable}{C{53mm} C{53mm} | R{51mm}}
+\hline
+$\square$ \hspace{2mm} Hodges & $\blacksquare$ \hspace{2mm} Wellman & Your Comment \\ 
+\hline
+\endhead
+
+% 1. d2-d4 ... 
+\xskakset{moveid=1w}
+\chessboard[setfen=\xskakget{nextfen},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d2,d4}]
+\newline
+1.\,\xskakget{lan} ...
+\newline
+1-0
+& 
+\\ 
+
+\end{longtable}
+\end{document}

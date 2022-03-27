@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Mikenas, Vladas $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Mikenas, Vladas -- 1-0 -- E33}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E33 -- Nimzo-Indian: Classical, 4...Nc6 5.Nf3 d5}
+\subsubsection{E33 -- Nimzo-Indian: Classical, 4...Nc6 5.Nf3 d5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 Nc6 5. Nf3 d5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk2r/ppp2ppp/2n1pn2/3p4/1bPP4/2N2N2/PPQ1PPPP/R1B1KB1R w KQkq - 0 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d7,d5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d7-d5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Buenos Aires, Buenos Aires ol f-A}}\\ 
+\multicolumn{2}{l}{1939 Round 7}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Mikenas, Vladas} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 Nc6 5. Nf3 d5}\mainline{6. a3 Bxc3+ 7. Qxc3 a5 8. b3 O-O 9. Bg5 h6 10. Bxf6 Qxf6 11. e3 Bd7 12. Bd3 Rfc8 13. O-O a4 14. b4 dxc4 15. Bxc4 Na7 16. Ne5 Be8 17. f4 b6 18. Qd3 Rd8 19. f5 b5 20. fxe6 bxc4 21. Rxf6 cxd3 22. exf7+ Bxf7 23. Rxf7 Nb5 24. Rf2 Rd5 25. Nxd3 Re8 26. Rf3 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f2,f3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f2-f3}]
+\newline
+26.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

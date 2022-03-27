@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Chajes, Oscar $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Chajes, Oscar vs. Capablanca, Jose Raul -- 1/2-1/2 -- A46}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A46 -- Indian: 2.Nf3 d6}
+\subsubsection{A46 -- Indian: 2.Nf3 d6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3 d6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/ppp1pppp/3p1n2/8/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d7,d6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d7-d6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York National}}\\ 
+\multicolumn{2}{l}{1913 Round 12}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Chajes, Oscar} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3 d6}\mainline{3. Qd3 Nbd7 4. e4 e5 5. g3 exd4 6. Qxd4 Qe7 7. Nc3 Nc5 8. Nd2 g6 9. Bg2 Bg7 10. O-O O-O 11. Qe3 Bd7 12. Nb3 Nxb3 13. axb3 Bc6 14. Nd5 Bxd5 15. exd5 Qxe3 16. Bxe3 Ng4 17. Bc1 Rfe8 18. h3 Nf6 19. Be3 a5 20. c3 Ne4 21. Kh2 f5 22. Rfd1 b5}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b7,b5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b7-b5}]
+\newline
+22. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

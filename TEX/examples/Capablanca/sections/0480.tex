@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Klein, Ernst Ludwig $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Klein, Ernst Ludwig vs. Capablanca, Jose Raul -- 1/2-1/2 -- D17}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A50 -- Indian: Slav-Indian, 1.d4 Nf6 2.c4 c6 3.Nc3 3.Nc3}
+\subsubsection{A50 -- Indian: Slav-Indian, 1.d4 Nf6 2.c4 c6 3.Nc3 3.Nc3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 c6 3. Nc3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pp1ppppp/2p2n2/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b1,c3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b1-c3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Margate, Margate}}\\ 
+\multicolumn{2}{l}{1935 Round 8}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Klein, Ernst Ludwig} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 c6 3. Nc3}\mainline{3...  d5 4. Nf3 dxc4 5. a4 Bf5 6. Ne5 Nbd7 7. Nxc4 Qc7 8. g3 e5 9. dxe5 Nxe5 10. Bf4 Nfd7 11. Bg2 f6 12. O-O Be6 13. Nxe5 fxe5 14. Be3 Bc5 15. Qc1 Bxe3 16. Qxe3 Qb6 17. a5 Qxe3 18. fxe3 a6 19. Ne4 Ke7 20. Ra4 Rhf8 21. Rc1 Bf5 22. Nd2 Rab8 23. Rb4 Rfd8 24. Be4 g6 25. Bxf5 gxf5 26. Nf3 Rg8 27. Rh4 Rg7 28. Rh5 Rf8 29. Rc4 e4 30. Nd4 Rgf7 31. Rc1 c5 32. Nb3 Rc8 33. Nd4 Rcf8 34. Nb3 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d4,b3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d4-b3}]
+\newline
+34.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

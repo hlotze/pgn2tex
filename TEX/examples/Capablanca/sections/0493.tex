@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Lilienthal, Andor $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Lilienthal, Andor -- 1/2-1/2 -- D94}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D11 -- Slav: 4.e3 g6}
+\subsubsection{D11 -- Slav: 4.e3 g6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. e3 g6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pp2pp1p/2p2np1/3p4/2PP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g7,g6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g7-g6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1935 Round 12}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Lilienthal, Andor} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. e3 g6}\mainline{5. Nc3 Bg7 6. Bd3 O-O 7. O-O Nbd7 8. cxd5 cxd5 9. Qb3 Nb8 10. Ne5 Nc6 11. f4 e6 12. Bd2 Nd7 13. Nf3 Nb6 14. Na4 Nxa4 15. Qxa4 Bd7 16. Qb3 Qb6 17. Qxb6 axb6 18. Rfc1 Rfc8 19. Bb5 Ne5 20. Bxd7 Nxd7 21. a4 Nf6 22. Rxc8+ Rxc8 23. Rc1 Rxc1+ 24. Bxc1 Ne4 25. Nd2 Nxd2 26. Bxd2 Kf8 27. Kf2 Ke8 28. Bb4 Kd7}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e8,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e8-d7}]
+\newline
+28. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

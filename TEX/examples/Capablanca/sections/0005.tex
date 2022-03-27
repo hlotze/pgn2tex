@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Corzo y Prinzipe, Juan $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Corzo y Prinzipe, Juan -- 1/2-1/2 -- D00}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D00 -- Queen's Pawn: Stonewall Attack}
+\subsubsection{D00 -- Queen's Pawn: Stonewall Attack}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. e3 Nf6 3. Bd3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/ppp1pppp/5n2/3p4/3P4/3BP3/PPP2PPP/RNBQK1NR b KQkq - 2 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f1,d3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f1-d3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Havana, Havana m}}\\ 
+\multicolumn{2}{l}{1901 Round 5}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Corzo y Prinzipe, Juan} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. e3 Nf6 3. Bd3}\mainline{3...  c5 4. b3 Nc6 5. Bb2 e6 6. Nf3 Qb6 7. Nbd2 c4 8. Be2 cxb3 9. axb3 Bd6 10. O-O O-O 11. c4 Bb4 12. Bd3 Bd7 13. Qc2 Rac8 14. Ne5 Bxd2 15. Qxd2 Qxb3 16. c5 Rfd8 17. Bc2 Ne4 18. Qc1 Qb4 19. f3 Nxe5 20. Ba3 Qd2 21. fxe4 Qxc1 22. Bxc1 Nc6 23. exd5 exd5 24. Ba4 a6 25. Bd2 Nb8 26. Rfb1 Bxa4 27. Rxa4 Rd7 28. Rab4 Rcc7 29. Rb6 Nc6 30. Kf2 f5 31. h4 Rf7 32. Kf3 f4 33. Bc3 fxe3+ 34. Kxe3 Ne7 35. Ba5 Nf5+ 36. Kd3 Nxh4 37. Rxa6 Rc8 38. Ra7 Nxg2 39. Rbxb7 Nf4+ 40. Ke3 Re8+ 41. Kf3 Rxb7 42. Rxb7 Ne6 43. Bc3 Rc8 44. Rd7 Rd8 45. Re7 Ng5+ 46. Kg4 Kf8 47. Rb7 Ne4 48. Bb4 Rc8 49. c6+ }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c5,c6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c5-c6},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={f8}]
+\newline
+49.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Nimzowitsch, Aaron  $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Nimzowitsch, Aaron  -- 1/2-1/2 -- A46}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A46 -- Torre Attack: 3...h6 4.Bh4}
+\subsubsection{A46 -- Torre Attack: 3...h6 4.Bh4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3 e6 3. Bg5 h6 4. Bh4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppp1pp1/4pn1p/8/3P3B/5N2/PPP1PPPP/RN1QKB1R b KQkq - 1 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g5,h4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g5-h4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1927 Round 2}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Nimzowitsch, Aaron } & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3 e6 3. Bg5 h6 4. Bh4}\mainline{4...  b6 5. Nbd2 Bb7 6. e3 Be7 7. Bd3 d6 8. c3 O-O 9. h3 c5 10. O-O Nc6 11. Qe2 Nh5 12. Bxe7 Qxe7 13. Ba6 Nf6 14. Rfd1 Rfd8 15. e4 Bxa6 16. Qxa6 Qc7 17. Rac1 Rd7 18. b4 Rad8 19. Qe2 Ne7 20. Re1 Ng6 21. g3 Rc8 22. bxc5 dxc5 23. Nb3 cxd4 24. cxd4 Qb7 25. Rxc8+ Qxc8 26. Rc1 Rc7 27. Rxc7 Qxc7 28. Nfd2 Qc3 29. Qa6 Qc7 30. Qe2 Qc3 31. Qa6 Qc7}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c3,c7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c3-c7}]
+\newline
+31. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

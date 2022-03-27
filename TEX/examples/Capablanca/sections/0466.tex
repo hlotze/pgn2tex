@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Milner Barry, Philip Stuart $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Milner Barry, Philip Stuart -- 1-0 -- E33}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E33 -- Nimzo-Indian: Classical, Milner-Barry (Zurich), 6.Bd2}
+\subsubsection{E33 -- Nimzo-Indian: Classical, Milner-Barry (Zurich), 6.Bd2}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 Nc6 5. Nf3 d6 6. Bd2}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk2r/ppp2ppp/2nppn2/8/1bPP4/2N2N2/PPQBPPPP/R3KB1R b KQkq - 1 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c1,d2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c1-d2}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings3435}}\\ 
+\multicolumn{2}{l}{1934}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Milner Barry, Philip Stuart} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 Nc6 5. Nf3 d6 6. Bd2}\mainline{6...  e5 7. a3 Bxc3 8. Bxc3 Qe7 9. e3 O-O 10. dxe5 Nxe5 11. Be2 Bg4 12. Rd1 Rad8 13. b4 Rfe8 14. h3 Bh5 15. O-O Bg6 16. Qb2 Ned7 17. Ne1 Qf8 18. Nd3 Bxd3 19. Bxd3 Ne5 20. Be2 Ne4 21. c5 Nxc3 22. Qxc3 d5 23. Rd4 c6 24. Rfd1 Qe7 25. Qc2 a6 26. Bf1 Qg5 27. Kh1 Qg6 28. Qxg6 Nxg6 29. e4 Nf4 30. exd5 Nxd5 31. Bc4 Re5 32. f4 Rh5 33. Kh2 Kf8 34. g4 Rh6 35. Bxd5 cxd5 36. Rxd5 Re8 37. R1d3 Rhe6 38. f5 Re2+ 39. Kg3 R2e3+ 40. Kf2 Re2+ 41. Kf3 Rh2 42. Kg3 Rhe2 43. Rd7 R8e7 44. Rd8+ Re8 45. Kh4 Ra2 46. R8d6 f6 47. c6 bxc6 48. Rxc6 g5+ 49. fxg6 hxg6 50. Rxf6+ Kg7 51. Rxa6 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f6,a6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f6-a6}]
+\newline
+51.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

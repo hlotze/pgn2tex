@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Lasker, Emanuel $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Lasker, Emanuel -- 1/2-1/2 -- D34}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D02 -- Queen's Pawn: 2.Nf3 e6}
+\subsubsection{D02 -- Queen's Pawn: 2.Nf3 e6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. Nf3 e6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/ppp2ppp/4p3/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e7,e6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e7-e6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Havana, World Championship 12th}}\\ 
+\multicolumn{2}{l}{1921 Round 9}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Lasker, Emanuel} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. Nf3 e6}\mainline{3. c4 c5 4. cxd5 exd5 5. Nc3 Nc6 6. g3 Nf6 7. Bg2 Be6 8. O-O Be7 9. dxc5 Bxc5 10. Bg5 d4 11. Ne4 Be7 12. Nxf6+ Bxf6 13. Bxf6 Qxf6 14. Qa4 O-O 15. Qb5 Rab8 16. Rfd1 h6 17. Ne1 Rfe8 18. Rd2 Bg4 19. Rc1 Re5 20. Qd3 Rbe8 21. Bf3 Bxf3}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g4,f3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g4-f3}]
+\newline
+21. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

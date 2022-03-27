@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Lilienthal, Andor $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Lilienthal, Andor vs. Capablanca, Jose Raul -- 1-0 -- E24}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E24 -- Nimzo-Indian: Sämisch, 5...b6 6.f3}
+\subsubsection{E24 -- Nimzo-Indian: Sämisch, 5...b6 6.f3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. a3 Bxc3+ 5. bxc3 b6 6. f3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/p1pp1ppp/1p2pn2/8/2PP4/P1P2P2/4P1PP/R1BQKBNR b KQkq - 0 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f2,f3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f2-f3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings3435}}\\ 
+\multicolumn{2}{l}{1934}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Lilienthal, Andor} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. a3 Bxc3+ 5. bxc3 b6 6. f3}\mainline{6...  d5 7. Bg5 h6 8. Bh4 Ba6 9. e4 Bxc4 10. Bxc4 dxc4 11. Qa4+ Qd7 12. Qxc4 Qc6 13. Qd3 Nbd7 14. Ne2 Rd8 15. O-O a5 16. Qc2 Qc4 17. f4 Rc8 18. f5 e5 19. dxe5 Qxe4 20. exf6 Qxc2 21. fxg7 Rg8 22. Nd4 Qe4 23. Rae1 Nc5 24. Rxe4+ Nxe4 25. Re1 Rxg7 26. Rxe4+ }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e1,e4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e1-e4},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={e8}]
+\newline
+26.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

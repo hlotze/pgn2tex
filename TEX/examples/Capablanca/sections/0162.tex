@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Rosenthal, Jacob Carl $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Rosenthal, Jacob Carl vs. Capablanca, Jose Raul -- 1/2-1/2 -- D37}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D02 -- Queen's Pawn: 2.Nf3 Nf6}
+\subsubsection{D02 -- Queen's Pawn: 2.Nf3 Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. Nf3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/ppp1pppp/5n2/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York Rice prel}}\\ 
+\multicolumn{2}{l}{1916 Round 9}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Rosenthal, Jacob Carl} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. Nf3 Nf6}\mainline{3. c4 e6 4. Nc3 Nbd7 5. e3 Bd6 6. c5 Be7 7. b4 c6 8. a3 Qc7 9. Bb2 O-O 10. Bd3 e5 11. dxe5 Nxe5 12. Nxe5 Qxe5 13. Qc2 Qh5 14. Ne2 Ne8 15. O-O-O a5 16. h4 axb4 17. axb4 Bf6 18. Nd4 Nc7 19. f3 Qh6 20. Qd2 Re8 21. Rde1 Ra7 22. Bb1 Bxd4 23. Qxd4 Ra4 24. Bc2 Ra8 25. g4 Nb5 26. Qd3 Rf8 27. Reg1 Re8 28. Re1 Bd7 29. h5 f5 30. gxf5 d4 31. Kb1 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c1,b1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c1-b1}]
+\newline
+31.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

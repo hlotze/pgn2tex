@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Vidmar, Milan Sr $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Vidmar, Milan Sr vs. Capablanca, Jose Raul -- 1/2-1/2 -- C48}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C48 -- Four Knights: Rubinstein, Exchange Variation, 8...Qe5+}
+\subsubsection{C48 -- Four Knights: Rubinstein, Exchange Variation, 8...Qe5+}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Nd4 5. Nxd4 exd4 6. e5 dxc3 7. exf6 Qxf6 8. dxc3 Qe5+}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1b1kb1r/pppp1ppp/8/1B2q3/8/2P5/PPP2PPP/R1BQK2R w KQkq - 1 9},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f6,e5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f6-e5},
+             pgfstyle=circle,
+             color=BrickRed,
+             markfield={e1}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1927 Round 4}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Vidmar, Milan Sr} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Nd4 5. Nxd4 exd4 6. e5 dxc3 7. exf6 Qxf6 8. dxc3 Qe5+}\mainline{9. Qe2 Qxe2+ 10. Bxe2 d5 11. O-O Bf5 12. Bb5+ c6 13. Re1+ Kd7 14. Bd3 Bxd3 15. cxd3 Bd6 16. d4 Rhe8 17. Bd2 f5 18. g3 g6 19. Kg2 Re4 20. f3 Rxe1 21. Rxe1 b5}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b7,b5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b7-b5}]
+\newline
+21. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

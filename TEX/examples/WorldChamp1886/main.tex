@@ -1,0 +1,231 @@
+% exarticle, if needed to allow 9pt font size
+\documentclass[11pt]{article}
+\usepackage{import}
+
+\usepackage{geometry}
+\geometry{
+   a4paper,
+   top=20mm,
+   bottom=20mm,
+   left=20mm,
+   right=20mm
+}
+
+\newcommand*\cleartoleftpage{%
+   \clearpage
+   \ifodd\value{page}\hbox{}\newpage\fi
+}
+
+% fonts
+\usepackage{mathptmx}
+\usepackage{amssymb}
+
+% hyperlinks at toc and PDF outline
+\usepackage{hyperref}
+\hypersetup{
+   colorlinks=true,
+   linkcolor=blue,
+   filecolor=magenta,
+   urlcolor=cyan}
+\urlstyle{same}
+
+% do not like the counters before the titles
+\setcounter{secnumdepth}{0}
+
+% two columns on frist page
+\usepackage{multicol}
+\setlength{\columnsep}{32pt}
+
+% for table that can span more then one page
+\usepackage{longtable}
+\setcounter{LTchunksize}{1000}
+% table cell width used with centering
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\ \arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\ \arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\ \arraybackslash\hspace{0pt}}m{#1}}
+
+% colors
+\usepackage[dvipsnames]{xcolor}
+
+% chessboards
+\usepackage{xskak}
+\usepackage{chessboard}
+\setchessboard{smallboard, showmover=false}
+\styleC % for tabular pgn notation
+
+% if you want to add any graphics manually
+\usepackage{graphicx} % use graphics in png format
+\graphicspath{ {images/} } % images dir is TEX/<pgn>/images/
+
+% last page number
+\usepackage[lastpage,user]{zref}
+
+% header and footer
+\usepackage{titleps}
+\newpagestyle{mypage}{%
+   \headrule
+   \sethead{}{}{\subsectiontitle}
+   \footrule
+   \setfoot{\sectiontitle}{}{\thepage\ of \zpageref{LastPage}}
+}
+\settitlemarks{section,subsection,subsubsection}
+\pagestyle{mypage}
+
+% index
+\usepackage{makeidx}
+\makeindex
+\renewcommand{\indexname}{Index}
+\usepackage[totoc]{idxlayout}
+
+% check if lastmove was w_hite or b_lack
+\usepackage{ifthen}
+\newcommand{\printmovercolor}[1]
+{
+   \ifthenelse{\equal{#1}{w}}
+   { % True case - w_hite
+       \xskakgetgame{lastmovenr}.\,\xskakget{lan} ...
+   }
+   { % False case - b_lack
+       \xskakgetgame{lastmovenr}. ... \,\xskakget{lan}
+   }
+}
+
+\usepackage{subfiles} % Best loaded last in the preamble
+
+% TODO: fill \href{ ... } with the link where you got the pgn from
+%  e.g. \href{https://theweekinchess.com/assets/files/pgn/tatamast22.pgn}
+%\title{\href{}{WorldChamp1886.pgn}}
+\title{WorldChamp1886.pgn}
+
+% TODO: fill the \date{ ... }
+%  e.g. \date{18.01.2022}
+%\date{}
+
+% TODO: fill \href{ ... } with the home link of the site
+%  e.g. \href{https://theweekinchess.com}
+%  and  the site name you want to emphazie \emph{ ... }
+%  e.g. \emph{The Week in Chess}
+%\author{downloaded from \href{}{\emph{}}}
+
+\begin{document}
+
+\maketitle
+
+% TODO: fill \includegraphics[width=15cm]{ ... }
+%       with png image name without extention .png
+%       the png image shall be stored at TEX/<png>/images/
+%  e.g. \includegraphics[width=15cm]{participants}
+%\begin{center}
+%\includegraphics[width=15cm]{}
+%\end{center}
+\newpage
+
+\tableofcontents
+\newpage
+
+% put index page here
+\printindex
+
+\cleartoleftpage
+\section{USA, World Championship 1st, Round 1 (1886)}
+\subfile{sections/001}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 2 (1886)}
+\subfile{sections/002}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 3 (1886)}
+\subfile{sections/003}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 4 (1886)}
+\subfile{sections/004}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 5 (1886)}
+\subfile{sections/005}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 6 (1886)}
+\subfile{sections/006}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 7 (1886)}
+\subfile{sections/007}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 8 (1886)}
+\subfile{sections/008}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 9 (1886)}
+\subfile{sections/009}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 10 (1886)}
+\subfile{sections/010}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 11 (1886)}
+\subfile{sections/011}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 12 (1886)}
+\subfile{sections/012}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 13 (1886)}
+\subfile{sections/013}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 14 (1886)}
+\subfile{sections/014}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 15 (1886)}
+\subfile{sections/015}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 16 (1886)}
+\subfile{sections/016}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 17 (1886)}
+\subfile{sections/017}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 18 (1886)}
+\subfile{sections/018}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 19 (1886)}
+\subfile{sections/019}
+
+\cleartoleftpage
+
+\section{USA, World Championship 1st, Round 20 (1886)}
+\subfile{sections/020}
+
+\cleartoleftpage
+
+\end{document}

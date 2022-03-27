@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Keres, Paul $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Keres, Paul -- 1/2-1/2 -- D18}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A11 -- English: Caro-Kann Defence}
+\subsubsection{A11 -- English: Caro-Kann Defence}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. c4 c6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/pp1ppppp/2p5/8/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c7-c6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Semmering, Semmering/Baden}}\\ 
+\multicolumn{2}{l}{1937 Round 14}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Keres, Paul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. c4 c6}\mainline{2. d4 d5 3. Nf3 Nf6 4. Nc3 dxc4 5. a4 Bf5 6. e3 e6 7. Bxc4 Nbd7 8. Qe2 Bb4 9. O-O Ne4 10. Nxe4 Bxe4 11. Bd3 Nc5 12. Bxe4 Nxe4 13. Qc2 Qd5 14. Ne5 O-O 15. f3 Nc5 16. Nc4 b5 17. axb5 cxb5 18. Bd2 Bxd2 19. Nxd2 Na4 20. Rfe1 h6 21. b3 Nb6}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={a4,b6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a4-b6}]
+\newline
+21. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

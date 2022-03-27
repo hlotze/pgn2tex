@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Vidmar, Milan Sr $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Vidmar, Milan Sr vs. Capablanca, Jose Raul -- 1/2-1/2 -- D40}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D32 -- QGD Tarrasch: 4.e3}
+\subsubsection{D32 -- QGD Tarrasch: 4.e3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nc3 c5 4. e3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/pp3ppp/4p3/2pp4/2PP4/2N1P3/PP3PPP/R1BQKBNR b KQkq - 0 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e2,e3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e2-e3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{San Sebastian, San Sebastian}}\\ 
+\multicolumn{2}{l}{1911 Round 15}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Vidmar, Milan Sr} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nc3 c5 4. e3}\mainline{4...  Nf6 5. Nf3 Nc6 6. Bd3 dxc4 7. Bxc4 Be7 8. O-O O-O 9. dxc5 Qxd1 10. Rxd1 Bxc5 11. a3 b6 12. b4 Be7 13. e4 Rd8 14. Bf4 Bb7 15. e5 Ne8 16. Bd3 Rac8 17. Nb5 Rd5 18. Nd6 Nxd6 19. exd6 Bxd6 20. Bxd6 Rd8}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c8,d8},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c8-d8}]
+\newline
+20. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

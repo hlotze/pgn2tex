@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Clough $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Clough -- 0-1 -- C64}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C64 -- Spanish: Classical, 4.c3 Qf6}
+\subsubsection{C64 -- Spanish: Classical, 4.c3 Qf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 Bc5 4. c3 Qf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1b1k1nr/pppp1ppp/2n2q2/1Bb1p3/4P3/2P2N2/PP1P1PPP/RNBQK2R w KQkq - 1 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Bradford, Bradford sim}}\\ 
+\multicolumn{2}{l}{1919}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Clough} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 Bc5 4. c3 Qf6}\mainline{5. O-O Nge7 6. Re1 O-O 7. d4 exd4 8. e5 Qg6 9. cxd4 Bb6 10. d5 Nb4 11. d6 cxd6 12. exd6 Nf5 13. Bf4 Bc5 14. Re5 Bxd6 15. Rxf5 Qxf5 16. Bxd6 Qxb5 17. Bxf8 Kxf8 18. Qd6+ Kg8 19. Nc3 Qb6 20. Qe7 h6 21. Qe8+ Kh7 22. Qxf7 d5 23. Re1 Nd3 24. Re7 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e1,e7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e1-e7}]
+\newline
+24.\,\xskakget{lan} ...
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

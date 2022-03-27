@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Corzo y Prinzipe, Juan $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Corzo y Prinzipe, Juan -- 1/2-1/2 -- A83}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A83 -- Dutch: Staunton Gambit, Chigorin Variation}
+\subsubsection{A83 -- Dutch: Staunton Gambit, Chigorin Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 f5 2. e4 fxe4 3. Nc3 Nf6 4. Bg5 c6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pp1pp1pp/2p2n2/6B1/3Pp3/2N5/PPP2PPP/R2QKBNR w KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c7-c6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Havana, Havana m}}\\ 
+\multicolumn{2}{l}{1901 Round 7}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Corzo y Prinzipe, Juan} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 f5 2. e4 fxe4 3. Nc3 Nf6 4. Bg5 c6}\mainline{5. Bxf6 exf6 6. Nxe4 d5 7. Ng3 Bd6 8. Bd3 Be6 9. Qe2 Kd7 10. O-O-O g6 11. h4 f5 12. h5 f4 13. Re1 fxg3 14. Qxe6+ Kc7 15. fxg3 Nd7 16. hxg6 hxg6 17. Rxh8 Qg5+ 18. Qe3 Qxe3+ 19. Rxe3 Rxh8 20. Nh3 Nf8 21. Kd2 Rg8 22. Ng5 Kd7 23. Ke2 Rg7 24. Rf3 Ne6 25. Nxe6 Kxe6 26. g4 Be7 27. Re3+ Kd6 28. g3 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g2,g3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g2-g3}]
+\newline
+28.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

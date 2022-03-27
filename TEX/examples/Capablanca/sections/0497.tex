@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Stahlberg, Gideon $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Stahlberg, Gideon vs. Capablanca, Jose Raul -- 1/2-1/2 -- D61}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D30 -- QGD: 3.Nf3 Nf6}
+\subsubsection{D30 -- QGD: 3.Nf3 Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nf3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1935 Round 16}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Stahlberg, Gideon} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nf3 Nf6}\mainline{4. Nc3 Be7 5. Bg5 O-O 6. e3 Nbd7 7. Qc2 h6 8. Bh4 c5 9. Rd1 Qa5 10. Bd3 cxd4 11. exd4 dxc4 12. Bxc4 Nb6 13. Bb3 Bd7 14. O-O Bc6 15. Ne5 Bd5 16. Nxd5 Nbxd5 17. Qe2 Rad8 18. f4 Ne8 19. Bxe7 Nxe7 20. f5 Nxf5 21. Nxf7 Rxf7 22. Qxe6 Ned6 23. g4 Kh8 24. Qe5 Qxe5 25. dxe5 Ne3 26. Bxf7 Nxd1 27. exd6 Rxd6}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d8,d6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d8-d6}]
+\newline
+27. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Gruenfeld, Ernst $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Gruenfeld, Ernst -- 1/2-1/2 -- D27}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D31 -- QGD: 3.Nc3}
+\subsubsection{D31 -- QGD: 3.Nc3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nc3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b1,c3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b1-c3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1925}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Gruenfeld, Ernst} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nc3}\mainline{3...  dxc4 4. e3 a6 5. Bxc4 c5 6. Nf3 Nf6 7. O-O b5 8. Be2 Nc6 9. dxc5 Qxd1 10. Rxd1 Bxc5 11. a3 Bb7 12. b4 Be7 13. Bb2 O-O 14. Nd2 Rfd8 15. Nb3 Rxd1+ 16. Rxd1 Rd8 17. Rxd8+ Nxd8 18. f4 Kf8 19. Kf2 Ke8 20. Bf3 Bxf3 21. Kxf3 Nb7 22. e4 Nd7}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f6,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f6-d7}]
+\newline
+22. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

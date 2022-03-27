@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Menchik, Vera $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Menchik, Vera -- 1-0 -- E85}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E85 -- King's Indian: Sämisch, Orthodox, 7.Nge2}
+\subsubsection{E85 -- King's Indian: Sämisch, Orthodox, 7.Nge2}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 e5 7. Nge2}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbq1rk1/ppp2pbp/3p1np1/4p3/2PPP3/2N1BP2/PP2N1PP/R2QKB1R b KQ - 1 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g1,e2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g1-e2}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1935 Round 17}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Menchik, Vera} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 e5 7. Nge2}\mainline{7...  a6 8. Qd2 Bd7 9. d5 Ne8 10. g4 h6 11. h4 Kh7 12. Ng3 c5 13. Bd3 Qa5 14. Qe2 Rh8 15. a3 Qd8 16. b4 b6 17. Qb2 Bc8 18. Ke2 Nd7 19. Rag1 Rb8 20. b5 a5 21. Kd1 Kg8 22. Qd2 Nf8 23. Kc2 f6 24. g5 fxg5 25. hxg5 h5 26. Nf5 Kf7 27. Nh4 Qe7 28. Qh2 Nc7 29. Rf1 Ke8 30. f4 exf4 31. Bxf4 Kd7 32. Bxd6 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f4,d6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f4-d6}]
+\newline
+32.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

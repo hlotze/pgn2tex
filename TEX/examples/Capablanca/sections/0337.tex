@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Tarrasch, Siegbert $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Tarrasch, Siegbert vs. Capablanca, Jose Raul -- 1/2-1/2 -- B19}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! B19 -- Caro-Kann: Classical, 7.Nf3 Nd7}
+\subsubsection{B19 -- Caro-Kann: Classical, 7.Nf3 Nd7}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6 7. Nf3 Nd7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r2qkbnr/pp1nppp1/2p3bp/8/3P3P/5NN1/PPP2PP1/R1BQKB1R w KQkq - 2 8},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b8,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b8-d7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Bad Kissingen, Bad Kissingen}}\\ 
+\multicolumn{2}{l}{1928 Round 4}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Tarrasch, Siegbert} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6 7. Nf3 Nd7}\mainline{8. Bd3 Bxd3 9. Qxd3 Ngf6 10. Bd2 e6 11. O-O-O Bd6 12. Rhe1 Bxg3 13. fxg3 O-O 14. Bb4 Re8 15. Ne5 Nxe5 16. dxe5 Qxd3 17. Rxd3 Nd5 18. Bd6 b5 19. g4 Red8 20. Re4 f6 21. c4 fxe5 22. Bxe5 Nb4 23. Rxd8+ Rxd8 24. cxb5 Nd3+ 25. Kc2 cxb5 26. Bc7 Rd7 27. Rxe6 Nxb2 28. Kxb2 Rxc7 29. Re8+ Kh7 30. Re4 Rc5 31. a4 a5 32. axb5 Rxb5+ 33. Kc3 Rc5+ 34. Kd3 Rc8 35. Ra4 Ra8 36. Ke4 Kg6 37. Ke5 Ra6 38. g3 Ra7 39. Ke6 Ra8 40. Ke5 Ra6 41. Kd5 Kf6 42. Rf4+ Ke7 43. Re4+ Kd7 44. Ra4 Kc7 45. Kc5 Re6 46. Kd5 Ra6 47. Kc5 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d5,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d5-c5}]
+\newline
+47.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

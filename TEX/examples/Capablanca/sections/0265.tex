@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Zubarev, Nikolay $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Zubarev, Nikolay -- 1-0 -- D21}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D30 -- QGD: 3.Nf3}
+\subsubsection{D30 -- QGD: 3.Nf3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nf3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g1,f3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g1-f3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1925}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Zubarev, Nikolay} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nf3}\mainline{3...  dxc4 4. e4 c5 5. d5 exd5 6. exd5 Nf6 7. Bxc4 Bd6 8. O-O O-O 9. Bg5 Bg4 10. Nc3 Nbd7 11. Ne4 Qc7 12. Bxf6 Nxf6 13. Nxf6+ gxf6 14. h3 Bh5 15. Re1 Rfe8 16. Qb3 a6 17. a4 Bg6 18. Bd3 Qd7 19. Nd2 Re7 20. Bxg6 fxg6 21. Ne4 Kg7 22. Qc3 Be5 23. Qxc5 Bxb2 24. Ng5 Rae8 25. Ne6+ Kf7 26. Rab1 Be5 27. Qc4 Rc8 28. Qb3 Bb8 29. g3 Qd6 30. Nf4 Rce8 31. Re6 Qd7 32. Rxe7+ Kxe7 33. Qxb7 Bxf4 34. Re1+ Be5 35. d6+ Ke6 36. Qb3+ Kf5 37. Qd3+ Kg5 38. Qe3+ Kf5 39. Qe4+ Ke6 40. Qc4+ Kxd6 41. Rd1+ Ke7 42. Rxd7+ Kxd7 43. Qxa6 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c4,a6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c4-a6}]
+\newline
+43.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

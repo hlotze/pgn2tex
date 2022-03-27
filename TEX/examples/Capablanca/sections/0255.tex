@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Saemisch, Fritz $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Saemisch, Fritz vs. Capablanca, Jose Raul -- 0-1 -- D27}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A05 -- Reti Opening: 1...Nf6}
+\subsubsection{A05 -- Reti Opening: 1...Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. Nf3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppppppp/5n2/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 2 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1925}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Saemisch, Fritz} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. Nf3 Nf6}\mainline{2. d4 e6 3. c4 d5 4. Nc3 c6 5. e3 Nbd7 6. Bd3 a6 7. O-O dxc4 8. Bxc4 b5 9. Bd3 c5 10. Qe2 Bb7 11. Rd1 Qc7 12. e4 cxd4 13. Nxd4 Bc5 14. Nb3 Bd6 15. h3 b4 16. Nb1 Ne5 17. Bf4 O-O 18. Bxe5 Bxe5 19. N1d2 Bxb2 20. Rab1 Bc3 21. Nc4 a5 22. e5 Nd7 23. Bxh7+ Kxh7 24. Qd3+ Kg8 25. Qxd7 Qxc4 26. Qxb7 a4 27. Nd2 Qxa2 28. Nf3 Qe2}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={a2,e2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a2-e2}]
+\newline
+28. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

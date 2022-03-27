@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Scott, R. $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Scott, R. -- 1-0 -- D46}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D11 -- Slav: 4.e3}
+\subsubsection{D11 -- Slav: 4.e3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. e3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e2,e3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e2-e3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings}}\\ 
+\multicolumn{2}{l}{1919}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Scott, R.} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. e3}\mainline{4...  e6 5. Nbd2 Nbd7 6. Bd3 Bd6 7. O-O O-O 8. e4 dxe4 9. Nxe4 Nxe4 10. Bxe4 Nf6 11. Bc2 b6 12. Qd3 h6 13. b3 Qe7 14. Bb2 Rd8 15. Rad1 Bb7 16. Rfe1 Rac8 17. Nh4 Bb8 18. g3 Kf8 19. Qf3 Kg8 20. Nf5 Qc7 21. Nxh6+ Kf8 22. d5 cxd5 23. Bxf6 gxf6 24. Qxf6 Ke8 25. Rxe6+ fxe6 26. Qxe6+ Kf8 27. Qf6+ }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e6,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e6-f6},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={f8}]
+\newline
+27.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

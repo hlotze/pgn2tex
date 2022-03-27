@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Janowsky, Dawid Markelowicz $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Janowsky, Dawid Markelowicz vs. Capablanca, Jose Raul -- 1/2-1/2 -- D67}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A46 -- Indian: 2.Nf3}
+\subsubsection{A46 -- Indian: 2.Nf3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppppppp/5n2/8/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 2 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g1,f3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g1-f3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1924}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Janowsky, Dawid Markelowicz} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3}\mainline{2...  d5 3. c4 e6 4. Nc3 Be7 5. Bg5 O-O 6. e3 Nbd7 7. Rc1 c6 8. Bd3 dxc4 9. Bxc4 Nd5 10. h4 f6 11. Bf4 Nxf4 12. exf4 Nb6 13. Bb3 Nd5 14. g3 Qe8 15. Qd3 Qh5 16. Bd1 Bb4 17. O-O Bxc3 18. bxc3 Nxf4 19. gxf4 Qg4+ 20. Kh1 Qh3+ 21. Kg1 Qg4+}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h3,g4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h3-g4},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={g1}]
+\newline
+21. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

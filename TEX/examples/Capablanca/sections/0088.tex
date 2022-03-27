@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Adair, G. $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Adair, G. -- 1-0 -- D00}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D00 -- Queen's Pawn: Stonewall Attack}
+\subsubsection{D00 -- Queen's Pawn: Stonewall Attack}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. e3 Nf6 3. Bd3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/ppp1pppp/5n2/3p4/3P4/3BP3/PPP2PPP/RNBQK1NR b KQkq - 2 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f1,d3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f1-d3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York Rice}}\\ 
+\multicolumn{2}{l}{1913}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Adair, G.} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. e3 Nf6 3. Bd3}\mainline{3...  c5 4. b3 Nc6 5. Bb2 Bg4 6. f3 Bh5 7. Ne2 cxd4 8. exd4 e6 9. O-O Bd6 10. c4 Bg6 11. c5 Bc7 12. Nbc3 Rc8 13. a3 Nh5 14. g3 Nf6 15. b4 h5 16. Bxg6 fxg6 17. Qd3 h4 18. Qxg6+ Kf8 19. g4 Rh6 20. Qd3 Kf7 21. Nb5 Bb8 22. Bc1 Rh8 23. Bf4 a6 24. Bxb8 axb5 25. Be5 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b8,e5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b8-e5}]
+\newline
+25.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

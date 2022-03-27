@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Yates, Frederick $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Yates, Frederick vs. Capablanca, Jose Raul -- 1/2-1/2 -- C91}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C88 -- Spanish: Closed 7...d6 8.c3}
+\subsubsection{C88 -- Spanish: Closed 7...d6 8.c3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqk2r/2p1bppp/p1np1n2/1p2p3/4P3/1BP2N2/PP1P1PPP/RNBQR1K1 b kq - 0 8},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c2,c3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c2-c3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1924}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Yates, Frederick} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3}\mainline{8...  O-O 9. d4 Bg4 10. Be3 exd4 11. cxd4 Na5 12. Bc2 Nc4 13. Nbd2 Nxe3 14. Rxe3 c5 15. Qe1 Nd7 16. h3 Bh5 17. dxc5 Nxc5 18. Rd1 Rc8 19. e5 Bg5 20. Rc3 b4 21. Rc4 d5 22. Rxb4 Qe7 23. Nxg5 Bxd1 24. Bxh7+ Kh8 25. Rh4 Qxg5 26. f4 Qe7 27. Bc2+ Kg8 28. Bh7+ Kh8 29. Bc2+ }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h7,c2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h7-c2},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={h8}]
+\newline
+29.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

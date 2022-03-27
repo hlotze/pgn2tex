@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Rubinstein, Solomon $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Rubinstein, Solomon vs. Capablanca, Jose Raul -- 0-1 -- A55}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A53 -- Old Indian: 3.Nc3 Nbd7 4.e4 e5}
+\subsubsection{A53 -- Old Indian: 3.Nc3 Nbd7 4.e4 e5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 d6 3. Nc3 Nbd7 4. e4 e5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkb1r/pppn1ppp/3p1n2/4p3/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e7,e5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e7-e5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York National}}\\ 
+\multicolumn{2}{l}{1913 Round 6}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Rubinstein, Solomon} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 d6 3. Nc3 Nbd7 4. e4 e5}\mainline{5. Nf3 c6 6. Be2 Be7 7. O-O O-O 8. b3 Re8 9. Re1 Qc7 10. Bb2 Nf8 11. Bd3 Ng6 12. Ne2 Nh5 13. Rc1 Bg4 14. Ng3 Nhf4 15. Nf5 Bf6 16. h3 Bxf3 17. Qxf3 exd4 18. Bxd4 Bxd4 19. Nxd4 Ne5 20. Qxf4 Nxd3 21. Qg4 Nxc1 22. Nf5 g6 23. Rxc1 h5 24. Qg5 Rxe4 25. f4 Qd8 26. Qh6 gxf5 27. Rc3 h4 28. Rd3 Re6 29. Qh5 Qf6 30. Kh2 Kg7 31. Qd1 Rh8}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={a8,h8},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a8-h8}]
+\newline
+31. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

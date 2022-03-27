@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Corzo y Prinzipe, Juan $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Corzo y Prinzipe, Juan -- 0-1 -- A80}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A80 -- Dutch}
+\subsubsection{A80 -- Dutch}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 f5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/ppppp1pp/8/5p2/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f7,f5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f7-f5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Havana, Havana m}}\\ 
+\multicolumn{2}{l}{1901 Round 13}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Corzo y Prinzipe, Juan} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 f5}\mainline{2. e3 Nf6 3. Nf3 b6 4. b3 Bb7 5. Nbd2 e6 6. Bb2 a5 7. a3 Be7 8. Bd3 O-O 9. O-O d5 10. Ne5 Nbd7 11. Ndf3 Bd6 12. Qe2 Ne4 13. Nxd7 Qxd7 14. Ne5 Bxe5 15. dxe5 Nc5 16. f4 Nxd3 17. cxd3 c5 18. Rfc1 Rfc8 19. d4 Ba6 20. Qe1 c4 21. bxc4 Bxc4 22. Bc3 Qa4 23. Qd2 Rc6 24. h3 Rac8 25. Kh2 Ba6 26. Qb2 Bd3 27. Bd2 Bc2 28. Kg3 Qc4 29. Kf2 Qd3 30. Ke1 h5 31. a4 Bxa4 32. Rxc6 Rxc6 33. Ra3 Rc2 34. Rxd3 Rxb2 35. Ra3 Bb3 36. g3 a4 37. Ra1 b5 38. h4 Bc2 39. Bc1 Rb3 40. Kd2 Be4 41. Ra3 Rb1 42. Ra2 Kf7 43. Ra3 Ke8 44. Ra2 Kd7 45. Ra3 Kc6 46. Ra2 Kb6}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c6,b6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c6-b6}]
+\newline
+46. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

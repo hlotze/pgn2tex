@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Keres, Paul $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Keres, Paul vs. Capablanca, Jose Raul -- 1/2-1/2 -- C90}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C88 -- Spanish: Closed, Balla Variation}
+\subsubsection{C88 -- Spanish: Closed, Balla Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 Na5 9. Bc2 c5 10. d4 Qc7 11. a4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1b1k2r/2q1bppp/p2p1n2/npp1p3/P2PP3/2P2N2/1PB2PPP/RNBQR1K1 b kq - 0 11},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={a2,a4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a2-a4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Margate, Margate}}\\ 
+\multicolumn{2}{l}{1939 Round 2}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Keres, Paul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 Na5 9. Bc2 c5 10. d4 Qc7 11. a4}\mainline{11..  b4 12. cxb4 cxb4 13. Nbd2 Bb7 14. Nf1 O-O 15. Bg5 h6 16. Bh4 Rfc8 17. Bd3 Nh5 18. Bxe7 Qxe7 19. g3 Nf6 20. Ne3 g6 21. Nd5 Nxd5 22. exd5 Bxd5 23. dxe5 Bxf3 24. Qxf3 dxe5 25. Qe3 Kg7}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g8,g7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-g7}]
+\newline
+25. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

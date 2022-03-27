@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Nimzowitsch, Aaron  $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Nimzowitsch, Aaron  vs. Capablanca, Jose Raul -- 1/2-1/2 -- B37}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A16 -- English: Anglo-Indian, 2.Nc3}
+\subsubsection{A16 -- English: Anglo-Indian, 2.Nc3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. c4 Nf6 2. Nc3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppppppp/5n2/8/2P5/2N5/PP1PPPPP/R1BQKBNR b KQkq - 2 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b1,c3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b1-c3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Karlsbad, Karlsbad}}\\ 
+\multicolumn{2}{l}{1929}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Nimzowitsch, Aaron } & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. c4 Nf6 2. Nc3}\mainline{2...  c5 3. Nf3 Nc6 4. d4 cxd4 5. Nxd4 g6 6. e4 Bg7 7. Nc2 O-O 8. Be2 d6 9. O-O Nd7 10. Be3 Nc5 11. Nd4 Bd7 12. Qd2 Rc8 13. Rad1 Re8 14. Kh1 Qa5 15. f3 Ne6 16. Nb3 Qb4 17. Qc2 Na5 18. Nxa5 Qxa5 19. Rd5 Nc5 20. Bd2 Qc7 21. Be1 Ne6 22. b3 Nd4 23. Qd2 Nxe2 24. Qxe2 a6 25. a4 b5 26. axb5 Bxc3 27. Bxc3 axb5 28. Qd2 bxc4 29. Qh6 f6 30. Rg5 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d5,g5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d5-g5}]
+\newline
+30.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

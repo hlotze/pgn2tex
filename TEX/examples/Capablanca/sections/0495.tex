@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Rabinovich, Ilya Leontievich $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Rabinovich, Ilya Leontievich -- 1/2-1/2 -- D20}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D20 -- QGA: 3.Nc3 a6 4.a4}
+\subsubsection{D20 -- QGA: 3.Nc3 a6 4.a4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 dxc4 3. Nc3 a6 4. a4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/1pp1pppp/p7/8/P1pP4/2N5/1P2PPPP/R1BQKBNR b KQkq - 0 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={a2,a4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a2-a4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1935 Round 14}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Rabinovich, Ilya Leontievich} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 dxc4 3. Nc3 a6 4. a4}\mainline{4...  e5 5. dxe5 Qxd1+ 6. Kxd1 Be6 7. f4 Nc6 8. e4 O-O-O+ 9. Bd2 Nd4 10. Rc1 Nb3 11. Rc2 Nd4 12. Rc1 Nb3}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d4,b3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d4-b3}]
+\newline
+12. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

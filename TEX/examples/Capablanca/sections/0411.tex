@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Vidmar, Milan Sr $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Vidmar, Milan Sr -- 1/2-1/2 -- D17}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D17 -- Slav: Central, Carlsbad, Main Line}
+\subsubsection{D17 -- Slav: Central, Carlsbad, Main Line}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 dxc4 5. a4 Bf5 6. Ne5 Nbd7 7. Nxc4 Qc7 8. g3 e5 9. dxe5 Nxe5 10. Bf4 Nfd7 11. Bg2 f6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r3kb1r/ppqn2pp/2p2p2/4nb2/P1N2B2/2N3P1/1P2PPBP/R2QK2R w KQkq - 0 12},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f7,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f7-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Karlsbad, Karlsbad}}\\ 
+\multicolumn{2}{l}{1929}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Vidmar, Milan Sr} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 dxc4 5. a4 Bf5 6. Ne5 Nbd7 7. Nxc4 Qc7 8. g3 e5 9. dxe5 Nxe5 10. Bf4 Nfd7 11. Bg2 f6}\mainline{12. O-O Be6 13. Nxe5 fxe5 14. Be3 Bc5 15. Bxc5 Nxc5 16. b4 Nb3 17. Ra3 Rd8 18. Qc2 Nd4 19. Nb5 Nxc2 20. Nxc7+ Ke7 21. Nxe6 Nxa3 22. Nxd8 Rxd8}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h8,d8},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h8-d8}]
+\newline
+22. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Takacs, Sandor $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Takacs, Sandor vs. Capablanca, Jose Raul -- 1/2-1/2 -- A17}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A17 -- English: Anglo-Indian, 2.Nc3 e6}
+\subsubsection{A17 -- English: Anglo-Indian, 2.Nc3 e6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. c4 Nf6 2. Nc3 e6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppp1ppp/4pn2/8/2P5/2N5/PP1PPPPP/R1BQKBNR w KQkq - 0 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e7,e6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e7-e6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings}}\\ 
+\multicolumn{2}{l}{1929 Round 4}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Takacs, Sandor} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. c4 Nf6 2. Nc3 e6}\mainline{3. b3 Be7 4. Bb2 O-O 5. g3 d5 6. Bg2 c5 7. cxd5 Nxd5 8. Nf3 Nxc3 9. Bxc3 Nc6 10. O-O Bd7 11. Qb1 Bf6 12. Qb2 Rc8 13. Rfd1 Bxc3 14. dxc3 Qe7 15. Qd2 Rfd8 16. Qd6 Qxd6 17. Rxd6 Be8 18. Rad1 Rxd6 19. Rxd6 Rd8 20. Rxd8 Nxd8}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c6,d8},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c6-d8}]
+\newline
+20. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

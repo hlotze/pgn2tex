@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Riumin, Nikolay Nikolaevich $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Riumin, Nikolay Nikolaevich -- 1-0 -- A53}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A53 -- Old Indian: 3.Nc3 Nbd7 4.e4 e5 5.d5}
+\subsubsection{A53 -- Old Indian: 3.Nc3 Nbd7 4.e4 e5 5.d5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 d6 3. Nc3 Nbd7 4. e4 e5 5. d5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkb1r/pppn1ppp/3p1n2/3Pp3/2P1P3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d4,d5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d4-d5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1936}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Riumin, Nikolay Nikolaevich} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 d6 3. Nc3 Nbd7 4. e4 e5 5. d5}\mainline{5...  Nc5 6. f3 Be7 7. Be3 O-O 8. b4 Ncd7 9. Bd3 Ne8 10. Nge2 g6 11. O-O a5 12. a3 Ng7 13. Bh6 f6 14. Qb3 Kh8 15. Rac1 axb4 16. axb4 c5 17. Na4 cxb4 18. Qxb4 f5 19. exf5 gxf5 20. Ng3 Bg5 21. Bxg5 Qxg5 22. Rce1 Qh4 23. Rf2 Qd4 24. Bf1 Rf6 25. Nc3 Rh6 26. Nge2 Nc5 27. Nxd4 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e2,d4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e2-d4}]
+\newline
+27.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

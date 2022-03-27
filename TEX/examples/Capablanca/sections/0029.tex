@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Marshall, Frank James $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Marshall, Frank James vs. Capablanca, Jose Raul -- 1/2-1/2 -- D53}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D53 -- QGD: Early Lasker Variation}
+\subsubsection{D53 -- QGD: Early Lasker Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 Ne4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/ppp1bppp/4p3/3p2B1/2PPn3/2N1P3/PP3PPP/R2QKBNR w KQkq - 1 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f6,e4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f6-e4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, USA m}}\\ 
+\multicolumn{2}{l}{1909 Round 15}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Marshall, Frank James} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 Ne4}\mainline{6. Bxe7 Qxe7 7. Qb3 Nxc3 8. bxc3 dxc4 9. Bxc4 O-O 10. Nf3 Nd7 11. O-O b6 12. Rae1 Bb7 13. e4 Rfd8 14. Re3 Rac8 15. h3 Kf8 16. a4 Nf6 17. Rfe1 c5 18. d5 exd5 19. Bxd5 Bxd5 20. exd5 c4 21. Qb1 Qc5 22. Ng5 Kg8 23. Re7 Rc7 24. d6 Rxe7 25. dxe7 Re8 26. Ne4 Nxe4 27. Qxe4 Qc7 28. Rd1 g6 29. Rd8 Rxd8 30. exd8=Q+ Qxd8 31. Qxc4 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e4,c4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e4-c4}]
+\newline
+31.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

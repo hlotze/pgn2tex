@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Bohatirchuk, Fedor Parfenovich $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Bohatirchuk, Fedor Parfenovich vs. Capablanca, Jose Raul -- 0-1 -- B83}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! B33 -- Sicilian: Open, 1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6}
+\subsubsection{B33 -- Sicilian: Open, 1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkb1r/pp1ppppp/2n2n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1925}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Bohatirchuk, Fedor Parfenovich} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6}\mainline{5. Nc3 d6 6. Be2 e6 7. O-O Be7 8. Be3 O-O 9. f4 Bd7 10. Nb3 a6 11. a4 Na5 12. Qe1 Nxb3 13. cxb3 Bc6 14. Bf3 Qc7 15. Rc1 Rac8 16. Qg3 Qa5 17. Rfd1 d5 18. exd5 Bxd5 19. Bxd5 exd5 20. Bd4 Bc5 21. Qf2 Ng4 22. Qd2 Rfe8 23. Kh1 Qb4 24. Nxd5 Qxd4 25. Ne7+ Kf8 26. Qxd4 Bxd4 27. Nxc8 Nf2+ 28. Kg1 Nxd1+}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f2,d1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f2-d1},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={g1}]
+\newline
+28. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

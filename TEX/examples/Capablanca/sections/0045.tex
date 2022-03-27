@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Black, Roy Turnbull $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Black, Roy Turnbull -- 0-1 -- B20}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! B20 -- Sicilian: Wing Gambit, Carlsbad Variation, 1.e4 c5 2.b4 cxb4 3.a3 bxa3}
+\subsubsection{B20 -- Sicilian: Wing Gambit, Carlsbad Variation, 1.e4 c5 2.b4 cxb4 3.a3 bxa3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c5 2. b4 cxb4 3. a3 bxa3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/pp1ppppp/8/8/4P3/p7/2PP1PPP/RNBQKBNR w KQkq - 0 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b4,a3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b4-a3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1911 Round 4}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Black, Roy Turnbull} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 c5 2. b4 cxb4 3. a3 bxa3}\mainline{4. Bxa3 d6 5. Nf3 Nc6 6. d4 g6 7. h4 Bg4 8. c3 Bg7 9. Nbd2 Nf6 10. Qb3 Qb6 11. Qa2 Bxf3 12. gxf3 Nh5 13. Nc4 Qc7 14. Bc1 O-O 15. Rb1 Kh8 16. Bh3 b6 17. Bg4 Nf6 18. Ne3 h5 19. Bh3 Na5 20. Bd2 Bh6 21. Rc1 Kh7 22. c4 Nb7 23. Nf5 Ng8 24. Nxh6 Nxh6 25. Bxh6 Kxh6 26. Qd2+ Kh7 27. f4 e5 28. fxe5 dxe5 29. d5 Nc5 30. Qe2 Qe7 31. Bf5 Kg7 32. Rc3 Rh8 33. Rg3 Rh6 34. Qe3 Qf6 35. Rhg1 Kh7 36. Rg5 gxf5 37. Rxf5 Qe7 38. Qf3 f6 39. Rxh5 Nd3+ 40. Kd1 Nf4 41. Rxh6+ Kxh6 42. Qg3 Rc8 43. Qc3 Qc5}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e7,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e7-c5}]
+\newline
+43. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

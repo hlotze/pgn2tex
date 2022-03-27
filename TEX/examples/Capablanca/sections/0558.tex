@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Flohr, Salo $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Flohr, Salo vs. Capablanca, Jose Raul -- 1/2-1/2 -- D19}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D19 -- Slav: Dutch, 8...O-O 9.Qe2 Ne4}
+\subsubsection{D19 -- Slav: Dutch, 8...O-O 9.Qe2 Ne4}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 dxc4 5. a4 Bf5 6. e3 e6 7. Bxc4 Bb4 8. O-O O-O 9. Qe2 Ne4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rn1q1rk1/pp3ppp/2p1p3/5b2/PbBPn3/2N1PN2/1P2QPPP/R1B2RK1 w - - 5 10},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f6,e4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f6-e4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Holland, AVRO}}\\ 
+\multicolumn{2}{l}{1938}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Flohr, Salo} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 dxc4 5. a4 Bf5 6. e3 e6 7. Bxc4 Bb4 8. O-O O-O 9. Qe2 Ne4}\mainline{10. Na2 Be7 11. Bd3 Ng5 12. Ne1 Bxd3 13. Nxd3 Na6 14. Nc3 h6 15. Rd1 Nh7 16. Ne5 Qc7 17. e4 Rad8 18. Be3 Nb4 19. Rac1 Nf6 20. h3 Qa5 21. Qc4 Nd7 22. Nf3 Nb6 23. Qb3 Qa6 24. Ne5 Nd7 25. Nc4 Nb6 26. Nxb6 axb6 27. d5 exd5 28. exd5 Nd3 29. Rc2 Nc5 30. Bxc5 Bxc5 31. Ne4 Rxd5 32. Rxd5 cxd5 33. Nxc5 bxc5 34. Rxc5 d4 35. Rd5 Qe6 36. Qf3 Qb6 37. Rb5 Qa6 38. Qb3 Qd6 39. Rd5 Qe6 40. Qf3 Qc6 41. Rxd4 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d5,d4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d5-d4}]
+\newline
+41.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

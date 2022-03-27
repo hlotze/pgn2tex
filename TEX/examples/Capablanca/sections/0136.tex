@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Lasker, Edward $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Lasker, Edward vs. Capablanca, Jose Raul -- 0-1 -- D38}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D02 -- Queen's Pawn: 2.Nf3 Nf6}
+\subsubsection{D02 -- Queen's Pawn: 2.Nf3 Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. Nf3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/ppp1pppp/5n2/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1915 Round 1}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Lasker, Edward} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. Nf3 Nf6}\mainline{3. c4 e6 4. Nc3 Nbd7 5. Bg5 Bb4 6. e3 c5 7. Bd3 Qa5 8. Qb3 Ne4 9. O-O Nxg5 10. Nxg5 cxd4 11. Nb5 Nc5 12. Qc2 Nxd3 13. Qxd3 a6 14. Nxd4 dxc4 15. Qxc4 Bd7 16. Nb3 Qxg5 17. Qxb4 Bc6 18. e4 a5 19. Qd2 Qxd2 20. Nxd2 O-O-O 21. Nc4 Bxe4 22. Rfc1 Kb8 23. f3 Bd5 24. Nxa5 Rc8 25. b3 Rxc1+ 26. Rxc1 Rc8 27. Rxc8+ Kxc8 28. Kf2 Kc7 29. Ke3 Kb6 30. Nc4+ Bxc4 31. bxc4 Kc5 32. Kd3 e5 33. g4 f6 34. h4 g6 35. Ke4 Kd6 36. f4 exf4 37. Kxf4 Kc5 38. h5 Kxc4 39. Ke4 b5 40. a3 Kc5}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c4,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c4-c5}]
+\newline
+40. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

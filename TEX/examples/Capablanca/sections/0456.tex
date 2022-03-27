@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Steiner, Herman $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Steiner, Herman -- 1/2-1/2 -- C74}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C74 -- Spanish: Modern Steinitz, Siesta, 6.exf5}
+\subsubsection{C74 -- Spanish: Modern Steinitz, Siesta, 6.exf5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. c3 f5 6. exf5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkbnr/1pp3pp/p1np4/4pP2/B7/2P2N2/PP1P1PPP/RNBQK2R b KQkq - 0 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e4,f5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e4-f5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1931 Round 7}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Steiner, Herman} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. c3 f5 6. exf5}\mainline{6...  Bxf5 7. d4 e4 8. d5 exf3 9. dxc6 b5 10. Qxf3 Bxb1 11. Bb3 Bg6 12. O-O Nf6 13. Bg5 Be7 14. Rfe1 Kf8 15. Re3 h6 16. Bxf6 Bxf6 17. Qd5 h5 18. g3 Qc8 19. Re6 Qd8 20. Re3 Qc8 21. Re6 Qd8}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c8,d8},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c8-d8}]
+\newline
+21. ...\,\xskakget{lan}
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

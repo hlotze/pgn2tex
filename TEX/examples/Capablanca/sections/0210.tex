@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Lasker, Emanuel $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Lasker, Emanuel vs. Capablanca, Jose Raul -- 0-1 -- D61}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D61 -- QGD: Orthodox, Rubinstein, 7.Qc2 c5 8.Rd1}
+\subsubsection{D61 -- QGD: Orthodox, Rubinstein, 7.Qc2 c5 8.Rd1}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 Nbd7 7. Qc2 c5 8. Rd1}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bq1rk1/pp1nbppp/4pn2/2pp2B1/2PP4/2N1PN2/PPQ2PPP/3RKB1R b K - 1 8},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={a1,d1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a1-d1}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Havana, World Championship 12th}}\\ 
+\multicolumn{2}{l}{1921 Round 10}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Lasker, Emanuel} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 Nbd7 7. Qc2 c5 8. Rd1}\mainline{8...  Qa5 9. Bd3 h6 10. Bh4 cxd4 11. exd4 dxc4 12. Bxc4 Nb6 13. Bb3 Bd7 14. O-O Rac8 15. Ne5 Bb5 16. Rfe1 Nbd5 17. Bxd5 Nxd5 18. Bxe7 Nxe7 19. Qb3 Bc6 20. Nxc6 bxc6 21. Re5 Qb6 22. Qc2 Rfd8 23. Ne2 Rd5 24. Rxd5 cxd5 25. Qd2 Nf5 26. b3 h5 27. h3 h4 28. Qd3 Rc6 29. Kf1 g6 30. Qb1 Qb4 31. Kg1 a5 32. Qb2 a4 33. Qd2 Qxd2 34. Rxd2 axb3 35. axb3 Rb6 36. Rd3 Ra6 37. g4 hxg3 38. fxg3 Ra2 39. Nc3 Rc2 40. Nd1 Ne7 41. Nc3 Rc1+ 42. Kf2 Nc6 43. Nd1 Rb1 44. Ke2 Rxb3 45. Ke3 Rb4 46. Nc3 Ne7 47. Ne2 Nf5+ 48. Kf2 g5 49. g4 Nd6 50. Ng1 Ne4+ 51. Kf1 Rb1+ 52. Kg2 Rb2+ 53. Kf1 Rf2+ 54. Ke1 Ra2 55. Kf1 Kg7 56. Re3 Kg6 57. Rd3 f6 58. Re3 Kf7 59. Rd3 Ke7 60. Re3 Kd6 61. Rd3 Rf2+ 62. Ke1 Rg2 63. Kf1 Ra2 64. Re3 e5 65. Rd3 exd4 66. Rxd4 Kc5 67. Rd1 d4 68. Rc1+ Kd5}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c5,d5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c5-d5}]
+\newline
+68. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

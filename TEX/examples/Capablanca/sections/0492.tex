@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Chekhover, Vitaly $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Chekhover, Vitaly vs. Capablanca, Jose Raul -- 0-1 -- E16}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E16 -- Queen's Indian: Capablanca, 6...Bxd2+ 7.Qxd2 O-O 8.O-O}
+\subsubsection{E16 -- Queen's Indian: Capablanca, 6...Bxd2+ 7.Qxd2 O-O 8.O-O}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb7 5. Bg2 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 O-O 8. O-O}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rn1q1rk1/pbpp1ppp/1p2pn2/8/2PP4/5NP1/PP1QPPBP/RN3RK1 b - - 2 8},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e1,g1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e1-g1}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Moscow, Moscow}}\\ 
+\multicolumn{2}{l}{1935 Round 11}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Chekhover, Vitaly} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb7 5. Bg2 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 O-O 8. O-O}\mainline{8...  d6 9. Nc3 Nbd7 10. Qc2 a5 11. Rfe1 Re8 12. Rad1 Qe7 13. e4 Rab8 14. Qa4 Red8 15. Qa3 c5 16. d5 e5 17. b3 Nf8 18. Qc1 Bc8 19. h3 h6 20. Nh4 g5 21. Nf5 Bxf5 22. exf5 Qd7 23. g4 Kg7 24. a4 N8h7 25. f3 Rh8 26. Kf2 Rbg8 27. Rh1 h5 28. Rde1 Kf8 29. Qc2 Ke7 30. Qb2 Qd8 31. Nb5 Qb8 32. Qa1 Nd7 33. Qc1 Ndf6 34. Qa1 Kd7 35. Nc3 Kc8 36. Re2 Nf8 37. Ree1 N8d7 38. Qb1 Kb7 39. Ne4 Nxe4+ 40. fxe4 Nf6 41. Bf3 Rg7 42. Reg1 Qg8 43. Qc1 Kc7 44. Qe3 hxg4 45. hxg4 Rgh7 46. Qc1 Rh4 47. Rxh4 Rxh4 48. Rg2 Qg7 49. Ke2 Qh6 50. Kd3 Rh1 51. Qd2 Qh3 52. Qe2 Rb1 53. Kc3 Re1}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={b1,e1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b1-e1}]
+\newline
+53. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

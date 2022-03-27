@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Yates, Frederick $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Yates, Frederick -- 1-0 -- A05}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A05 -- Reti Opening: 1...Nf6}
+\subsubsection{A05 -- Reti Opening: 1...Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. Nf3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppppppp/5n2/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 2 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Barcelona, Barcelona}}\\ 
+\multicolumn{2}{l}{1929 Round 13}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Yates, Frederick} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. Nf3 Nf6}\mainline{2. c4 g6 3. b3 Bg7 4. Bb2 O-O 5. g3 d6 6. Bg2 Nc6 7. O-O e5 8. d4 Nd7 9. dxe5 Ndxe5 10. Nc3 Re8 11. Nxe5 Nxe5 12. Qd2 a5 13. Rac1 Rb8 14. h3 Bd7 15. Nd5 b6 16. f4 Nc6 17. Bxg7 Kxg7 18. Qb2+ f6 19. g4 Nb4 20. g5 Nxd5 21. cxd5 Rc8 22. e4 c6 23. dxc6 Rxc6 24. gxf6+ Kf7 25. e5 Rxc1 26. Rxc1 dxe5 27. fxe5 Qb8 28. Qd4 Bf5 29. Bd5+ Kf8 30. Qf4 Rxe5 31. Qh6+ Ke8 32. f7+ }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f6,f7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f6-f7},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={e8}]
+\newline
+32.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

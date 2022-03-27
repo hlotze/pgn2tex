@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Michell, Reginald Pryce $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Michell, Reginald Pryce vs. Capablanca, Jose Raul -- 1/2-1/2 -- B18}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! B18 -- Caro-Kann: Classical, 6.Nf3 Nd7}
+\subsubsection{B18 -- Caro-Kann: Classical, 6.Nf3 Nd7}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. Nf3 Nd7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r2qkbnr/pp1npppp/2p3b1/8/3P4/5NN1/PPP2PPP/R1BQKB1R w KQkq - 5 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={b8,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={b8-d7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Hastings, Hastings 3031}}\\ 
+\multicolumn{2}{l}{1930 Round 8}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Michell, Reginald Pryce} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. Nf3 Nd7}\mainline{7. Bc4 Ngf6 8. O-O e6 9. Qe2 Be7 10. Re1 O-O 11. Bb3 a5 12. Nh4 a4 13. Nxg6 hxg6 14. Bc4 Nb6 15. c3 Nxc4 16. Qxc4 Ra5 17. Qe2 Qb6 18. Nf1 Qc7 19. Bd2 Raa8 20. Rad1 b5 21. Qf3 Qd7 22. Ne3 Rfd8 23. Bc1 Nd5 24. a3 Nb6 25. g3 Nd5 26. Kg2 Rac8 27. h4 c5 28. dxc5 Rxc5 29. Nxd5 Rxd5 30. Rxd5 Qxd5 31. Qxd5 Rxd5 32. Be3 Kf8 33. Kf3 Bf6 34. Ke2 Ke7 35. Rc1 Rd7 36. Rc2 Rc7 37. Rd2 Rd7 38. Rc2 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d2,c2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d2-c2}]
+\newline
+38.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

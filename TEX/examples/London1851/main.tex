@@ -1,0 +1,1224 @@
+% exarticle, if needed to allow 9pt font size
+\documentclass[11pt]{article}
+\usepackage{import}
+
+\usepackage{geometry}
+\geometry{
+   a4paper,
+   top=20mm,
+   bottom=20mm,
+   left=20mm,
+   right=20mm
+}
+
+\newcommand*\cleartoleftpage{%
+   \clearpage
+   \ifodd\value{page}\hbox{}\newpage\fi
+}
+
+% fonts
+\usepackage{mathptmx}
+\usepackage{amssymb}
+
+% hyperlinks at toc and PDF outline
+\usepackage{hyperref}
+\hypersetup{
+   colorlinks=true,
+   linkcolor=blue,
+   filecolor=magenta,
+   urlcolor=cyan}
+\urlstyle{same}
+
+% do not like the counters before the titles
+\setcounter{secnumdepth}{0}
+
+% two columns on frist page
+\usepackage{multicol}
+\setlength{\columnsep}{32pt}
+
+% for table that can span more then one page
+\usepackage{longtable}
+\setcounter{LTchunksize}{1000}
+% table cell width used with centering
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\ \arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\ \arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\ \arraybackslash\hspace{0pt}}m{#1}}
+
+% colors
+\usepackage[dvipsnames]{xcolor}
+
+% chessboards
+\usepackage{xskak}
+\usepackage{chessboard}
+\setchessboard{smallboard, showmover=false}
+\styleC % for tabular pgn notation
+
+% if you want to add any graphics manually
+\usepackage{graphicx} % use graphics in png format
+\graphicspath{ {images/} } % images dir is TEX/<pgn>/images/
+
+% last page number
+\usepackage[lastpage,user]{zref}
+
+% header and footer
+\usepackage{titleps}
+\newpagestyle{mypage}{%
+   \headrule
+   \sethead{}{}{\subsectiontitle}
+   \footrule
+   \setfoot{\sectiontitle}{}{\thepage\ of \zpageref{LastPage}}
+}
+\settitlemarks{section,subsection,subsubsection}
+\pagestyle{mypage}
+
+% index
+\usepackage{makeidx}
+\makeindex
+\renewcommand{\indexname}{Index}
+\usepackage[totoc]{idxlayout}
+
+% check if lastmove was w_hite or b_lack
+\usepackage{ifthen}
+\newcommand{\printmovercolor}[1]
+{
+   \ifthenelse{\equal{#1}{w}}
+   { % True case - w_hite
+       \xskakgetgame{lastmovenr}.\,\xskakget{lan} ...
+   }
+   { % False case - b_lack
+       \xskakgetgame{lastmovenr}. ... \,\xskakget{lan}
+   }
+}
+
+\usepackage{subfiles} % Best loaded last in the preamble
+
+% TODO: fill \href{ ... } with the link where you got the pgn from
+%  e.g. \href{https://theweekinchess.com/assets/files/pgn/tatamast22.pgn}
+%\title{\href{}{London1851.pgn}}
+\title{London1851.pgn}
+
+% TODO: fill the \date{ ... }
+%  e.g. \date{18.01.2022}
+%\date{}
+
+% TODO: fill \href{ ... } with the home link of the site
+%  e.g. \href{https://theweekinchess.com}
+%  and  the site name you want to emphazie \emph{ ... }
+%  e.g. \emph{The Week in Chess}
+%\author{downloaded from \href{}{\emph{}}}
+
+\begin{document}
+
+\maketitle
+
+% TODO: fill \includegraphics[width=15cm]{ ... }
+%       with png image name without extention .png
+%       the png image shall be stored at TEX/<png>/images/
+%  e.g. \includegraphics[width=15cm]{participants}
+%\begin{center}
+%\includegraphics[width=15cm]{}
+%\end{center}
+\newpage
+
+\tableofcontents
+\newpage
+
+% put index page here
+\printindex
+
+\cleartoleftpage
+\section{London, London, Round 1 (1851)}
+\subfile{sections/0067}
+
+\cleartoleftpage
+
+\subfile{sections/0068}
+
+\cleartoleftpage
+
+\subfile{sections/0069}
+
+\cleartoleftpage
+
+\subfile{sections/0070}
+
+\cleartoleftpage
+
+\subfile{sections/0071}
+
+\cleartoleftpage
+
+\subfile{sections/0072}
+
+\cleartoleftpage
+
+\subfile{sections/0073}
+
+\cleartoleftpage
+
+\subfile{sections/0074}
+
+\cleartoleftpage
+
+\subfile{sections/0075}
+
+\cleartoleftpage
+
+\subfile{sections/0076}
+
+\cleartoleftpage
+
+\subfile{sections/0077}
+
+\cleartoleftpage
+
+\subfile{sections/0078}
+
+\cleartoleftpage
+
+\subfile{sections/0079}
+
+\cleartoleftpage
+
+\subfile{sections/0080}
+
+\cleartoleftpage
+
+\subfile{sections/0081}
+
+\cleartoleftpage
+
+\subfile{sections/0082}
+
+\cleartoleftpage
+
+\subfile{sections/0083}
+
+\cleartoleftpage
+
+\subfile{sections/0094}
+
+\cleartoleftpage
+
+\subfile{sections/0095}
+
+\cleartoleftpage
+
+\section{London, London, Round 2 (1851)}
+\subfile{sections/0106}
+
+\cleartoleftpage
+
+\subfile{sections/0108}
+
+\cleartoleftpage
+
+\subfile{sections/0109}
+
+\cleartoleftpage
+
+\subfile{sections/0110}
+
+\cleartoleftpage
+
+\subfile{sections/0111}
+
+\cleartoleftpage
+
+\subfile{sections/0113}
+
+\cleartoleftpage
+
+\subfile{sections/0115}
+
+\cleartoleftpage
+
+\subfile{sections/0116}
+
+\cleartoleftpage
+
+\subfile{sections/0117}
+
+\cleartoleftpage
+
+\subfile{sections/0118}
+
+\cleartoleftpage
+
+\subfile{sections/0119}
+
+\cleartoleftpage
+
+\subfile{sections/0121}
+
+\cleartoleftpage
+
+\subfile{sections/0122}
+
+\cleartoleftpage
+
+\subfile{sections/0123}
+
+\cleartoleftpage
+
+\subfile{sections/0124}
+
+\cleartoleftpage
+
+\subfile{sections/0125}
+
+\cleartoleftpage
+
+\subfile{sections/0128}
+
+\cleartoleftpage
+
+\subfile{sections/0130}
+
+\cleartoleftpage
+
+\subfile{sections/0131}
+
+\cleartoleftpage
+
+\section{London, London, Round 3 (1851)}
+\subfile{sections/0137}
+
+\cleartoleftpage
+
+\subfile{sections/0138}
+
+\cleartoleftpage
+
+\subfile{sections/0139}
+
+\cleartoleftpage
+
+\subfile{sections/0140}
+
+\cleartoleftpage
+
+\subfile{sections/0141}
+
+\cleartoleftpage
+
+\subfile{sections/0142}
+
+\cleartoleftpage
+
+\subfile{sections/0143}
+
+\cleartoleftpage
+
+\subfile{sections/0144}
+
+\cleartoleftpage
+
+\subfile{sections/0145}
+
+\cleartoleftpage
+
+\subfile{sections/0146}
+
+\cleartoleftpage
+
+\subfile{sections/0147}
+
+\cleartoleftpage
+
+\subfile{sections/0148}
+
+\cleartoleftpage
+
+\subfile{sections/0151}
+
+\cleartoleftpage
+
+\subfile{sections/0153}
+
+\cleartoleftpage
+
+\section{London, London, Round 4 (1851)}
+\subfile{sections/0167}
+
+\cleartoleftpage
+
+\subfile{sections/0169}
+
+\cleartoleftpage
+
+\subfile{sections/0170}
+
+\cleartoleftpage
+
+\subfile{sections/0171}
+
+\cleartoleftpage
+
+\subfile{sections/0172}
+
+\cleartoleftpage
+
+\subfile{sections/0173}
+
+\cleartoleftpage
+
+\subfile{sections/0174}
+
+\cleartoleftpage
+
+\subfile{sections/0175}
+
+\cleartoleftpage
+
+\subfile{sections/0177}
+
+\cleartoleftpage
+
+\subfile{sections/0182}
+
+\cleartoleftpage
+
+\subfile{sections/0183}
+
+\cleartoleftpage
+
+\subfile{sections/0184}
+
+\cleartoleftpage
+
+\section{London, London, Round 5 (1851)}
+\subfile{sections/0185}
+
+\cleartoleftpage
+
+\subfile{sections/0186}
+
+\cleartoleftpage
+
+\subfile{sections/0187}
+
+\cleartoleftpage
+
+\subfile{sections/0189}
+
+\cleartoleftpage
+
+\subfile{sections/0195}
+
+\cleartoleftpage
+
+\subfile{sections/0196}
+
+\cleartoleftpage
+
+\subfile{sections/0197}
+
+\cleartoleftpage
+
+\subfile{sections/0198}
+
+\cleartoleftpage
+
+\section{London, London, Round 6 (1851)}
+\subfile{sections/0203}
+
+\cleartoleftpage
+
+\subfile{sections/0205}
+
+\cleartoleftpage
+
+\subfile{sections/0206}
+
+\cleartoleftpage
+
+\subfile{sections/0207}
+
+\cleartoleftpage
+
+\subfile{sections/0208}
+
+\cleartoleftpage
+
+\subfile{sections/0210}
+
+\cleartoleftpage
+
+\section{London, London, Round 7 (1851)}
+\subfile{sections/0211}
+
+\cleartoleftpage
+
+\subfile{sections/0212}
+
+\cleartoleftpage
+
+\subfile{sections/0213}
+
+\cleartoleftpage
+
+\subfile{sections/0214}
+
+\cleartoleftpage
+
+\subfile{sections/0215}
+
+\cleartoleftpage
+
+\section{London, London, Round 8 (1851)}
+\subfile{sections/0224}
+
+\cleartoleftpage
+
+\subfile{sections/0228}
+
+\cleartoleftpage
+
+\section{London, London 'Immortal game' (1851)}
+\subfile{sections/0008}
+
+\cleartoleftpage
+
+\section{London, London PT, Round 1 (1851)}
+\subfile{sections/0084}
+
+\cleartoleftpage
+
+\subfile{sections/0085}
+
+\cleartoleftpage
+
+\subfile{sections/0086}
+
+\cleartoleftpage
+
+\subfile{sections/0087}
+
+\cleartoleftpage
+
+\subfile{sections/0088}
+
+\cleartoleftpage
+
+\subfile{sections/0089}
+
+\cleartoleftpage
+
+\subfile{sections/0090}
+
+\cleartoleftpage
+
+\subfile{sections/0091}
+
+\cleartoleftpage
+
+\subfile{sections/0092}
+
+\cleartoleftpage
+
+\subfile{sections/0093}
+
+\cleartoleftpage
+
+\section{London, London PT, Round 2 (1851)}
+\subfile{sections/0102}
+
+\cleartoleftpage
+
+\subfile{sections/0103}
+
+\cleartoleftpage
+
+\subfile{sections/0104}
+
+\cleartoleftpage
+
+\subfile{sections/0105}
+
+\cleartoleftpage
+
+\subfile{sections/0107}
+
+\cleartoleftpage
+
+\subfile{sections/0112}
+
+\cleartoleftpage
+
+\subfile{sections/0114}
+
+\cleartoleftpage
+
+\subfile{sections/0126}
+
+\cleartoleftpage
+
+\subfile{sections/0129}
+
+\cleartoleftpage
+
+\subfile{sections/0132}
+
+\cleartoleftpage
+
+\section{London, London PT, Round 3 (1851)}
+\subfile{sections/0150}
+
+\cleartoleftpage
+
+\subfile{sections/0154}
+
+\cleartoleftpage
+
+\subfile{sections/0155}
+
+\cleartoleftpage
+
+\subfile{sections/0156}
+
+\cleartoleftpage
+
+\subfile{sections/0157}
+
+\cleartoleftpage
+
+\subfile{sections/0158}
+
+\cleartoleftpage
+
+\section{London, London PT, Round 4 (1851)}
+\subfile{sections/0166}
+
+\cleartoleftpage
+
+\subfile{sections/0178}
+
+\cleartoleftpage
+
+\subfile{sections/0179}
+
+\cleartoleftpage
+
+\subfile{sections/0181}
+
+\cleartoleftpage
+
+\section{London, London Simpsons (1851)}
+\subfile{sections/0027}
+
+\cleartoleftpage
+
+\section{London, London m1, Round 1 (1851)}
+\subfile{sections/0101}
+
+\cleartoleftpage
+
+\section{London, London m1, Round 2 (1851)}
+\subfile{sections/0120}
+
+\cleartoleftpage
+
+\section{London, London m1, Round 3 (1851)}
+\subfile{sections/0159}
+
+\cleartoleftpage
+
+\section{London, London m1, Round 4 (1851)}
+\subfile{sections/0180}
+
+\cleartoleftpage
+
+\section{London, London m1, Round 5 (1851)}
+\subfile{sections/0192}
+
+\cleartoleftpage
+
+\section{London, London m1, Round 6 (1851)}
+\subfile{sections/0202}
+
+\cleartoleftpage
+
+\section{London, London m1, Round 7 (1851)}
+\subfile{sections/0220}
+
+\cleartoleftpage
+
+\section{London, London m1 (1851)}
+\subfile{sections/0023}
+
+\cleartoleftpage
+
+\subfile{sections/0024}
+
+\cleartoleftpage
+
+\subfile{sections/0025}
+
+\cleartoleftpage
+
+\subfile{sections/0026}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 1 (1851)}
+\subfile{sections/0099}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 2 (1851)}
+\subfile{sections/0127}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 3 (1851)}
+\subfile{sections/0160}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 4 (1851)}
+\subfile{sections/0176}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 5 (1851)}
+\subfile{sections/0194}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 6 (1851)}
+\subfile{sections/0204}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 7 (1851)}
+\subfile{sections/0218}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 8 (1851)}
+\subfile{sections/0223}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 9 (1851)}
+\subfile{sections/0230}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 10 (1851)}
+\subfile{sections/0235}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 11 (1851)}
+\subfile{sections/0239}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 12 (1851)}
+\subfile{sections/0243}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 13 (1851)}
+\subfile{sections/0245}
+
+\cleartoleftpage
+
+\section{London, London m2, Round 14 (1851)}
+\subfile{sections/0248}
+
+\cleartoleftpage
+
+\section{London, London m3, Round 1 (1851)}
+\subfile{sections/0100}
+
+\cleartoleftpage
+
+\section{London, London m3, Round 2 (1851)}
+\subfile{sections/0133}
+
+\cleartoleftpage
+
+\section{London, London m3, Round 3 (1851)}
+\subfile{sections/0149}
+
+\cleartoleftpage
+
+\section{London, London m3, Round 4 (1851)}
+\subfile{sections/0164}
+
+\cleartoleftpage
+
+\section{London, London m3, Round 5 (1851)}
+\subfile{sections/0190}
+
+\cleartoleftpage
+
+\section{London, London m3, Round 6 (1851)}
+\subfile{sections/0209}
+
+\cleartoleftpage
+
+\section{London, London m3, Round 7 (1851)}
+\subfile{sections/0216}
+
+\cleartoleftpage
+
+\section{London, London m3, Round 8 (1851)}
+\subfile{sections/0222}
+
+\cleartoleftpage
+
+\section{London, London m3, Round 9 (1851)}
+\subfile{sections/0229}
+
+\cleartoleftpage
+
+\section{London, London m3, Round 10 (1851)}
+\subfile{sections/0238}
+
+\cleartoleftpage
+
+\section{London, London m4, Round 1 (1851)}
+\subfile{sections/0096}
+
+\cleartoleftpage
+
+\section{London, London m4, Round 2 (1851)}
+\subfile{sections/0135}
+
+\cleartoleftpage
+
+\section{London, London m4, Round 3 (1851)}
+\subfile{sections/0152}
+
+\cleartoleftpage
+
+\section{London, London m4, Round 4 (1851)}
+\subfile{sections/0165}
+
+\cleartoleftpage
+
+\section{London, London m4, Round 5 (1851)}
+\subfile{sections/0193}
+
+\cleartoleftpage
+
+\section{London, London m4, Round 6 (1851)}
+\subfile{sections/0201}
+
+\cleartoleftpage
+
+\section{London, London m4, Round 7 (1851)}
+\subfile{sections/0217}
+
+\cleartoleftpage
+
+\section{London, London m4, Round 8 (1851)}
+\subfile{sections/0226}
+
+\cleartoleftpage
+
+\section{London, London m4, Round 9 (1851)}
+\subfile{sections/0233}
+
+\cleartoleftpage
+
+\section{London, London m4, Round 10 (1851)}
+\subfile{sections/0234}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 1 (1851)}
+\subfile{sections/0097}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 2 (1851)}
+\subfile{sections/0136}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 3 (1851)}
+\subfile{sections/0161}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 4 (1851)}
+\subfile{sections/0163}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 5 (1851)}
+\subfile{sections/0188}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 6 (1851)}
+\subfile{sections/0199}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 7 (1851)}
+\subfile{sections/0219}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 8 (1851)}
+\subfile{sections/0225}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 9 (1851)}
+\subfile{sections/0231}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 10 (1851)}
+\subfile{sections/0237}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 11 (1851)}
+\subfile{sections/0241}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 12 (1851)}
+\subfile{sections/0244}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 13 (1851)}
+\subfile{sections/0247}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 14 (1851)}
+\subfile{sections/0249}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 15 (1851)}
+\subfile{sections/0250}
+
+\cleartoleftpage
+
+\section{London, London m5, Round 16 (1851)}
+\subfile{sections/0251}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 1 (1851)}
+\subfile{sections/0098}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 2 (1851)}
+\subfile{sections/0134}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 3 (1851)}
+\subfile{sections/0162}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 4 (1851)}
+\subfile{sections/0168}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 5 (1851)}
+\subfile{sections/0191}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 6 (1851)}
+\subfile{sections/0200}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 7 (1851)}
+\subfile{sections/0221}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 8 (1851)}
+\subfile{sections/0227}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 9 (1851)}
+\subfile{sections/0232}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 10 (1851)}
+\subfile{sections/0236}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 11 (1851)}
+\subfile{sections/0240}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 12 (1851)}
+\subfile{sections/0242}
+
+\cleartoleftpage
+
+\section{London, London m6, Round 13 (1851)}
+\subfile{sections/0246}
+
+\cleartoleftpage
+
+\section{London, London m7 (1851)}
+\subfile{sections/0017}
+
+\cleartoleftpage
+
+\subfile{sections/0018}
+
+\cleartoleftpage
+
+\subfile{sections/0019}
+
+\cleartoleftpage
+
+\subfile{sections/0020}
+
+\cleartoleftpage
+
+\subfile{sections/0021}
+
+\cleartoleftpage
+
+\section{London, London m8 (1851)}
+\subfile{sections/0004}
+
+\cleartoleftpage
+
+\subfile{sections/0022}
+
+\cleartoleftpage
+
+\subfile{sections/0028}
+
+\cleartoleftpage
+
+\subfile{sections/0029}
+
+\cleartoleftpage
+
+\subfile{sections/0030}
+
+\cleartoleftpage
+
+\subfile{sections/0031}
+
+\cleartoleftpage
+
+\subfile{sections/0032}
+
+\cleartoleftpage
+
+\subfile{sections/0033}
+
+\cleartoleftpage
+
+\subfile{sections/0034}
+
+\cleartoleftpage
+
+\subfile{sections/0035}
+
+\cleartoleftpage
+
+\subfile{sections/0050}
+
+\cleartoleftpage
+
+\section{London, London m9 (1851)}
+\subfile{sections/0009}
+
+\cleartoleftpage
+
+\subfile{sections/0010}
+
+\cleartoleftpage
+
+\subfile{sections/0011}
+
+\cleartoleftpage
+
+\subfile{sections/0012}
+
+\cleartoleftpage
+
+\subfile{sections/0013}
+
+\cleartoleftpage
+
+\subfile{sections/0014}
+
+\cleartoleftpage
+
+\subfile{sections/0015}
+
+\cleartoleftpage
+
+\subfile{sections/0016}
+
+\cleartoleftpage
+
+\subfile{sections/0044}
+
+\cleartoleftpage
+
+\subfile{sections/0045}
+
+\cleartoleftpage
+
+\subfile{sections/0055}
+
+\cleartoleftpage
+
+\section{London, London2 (1851)}
+\subfile{sections/0001}
+
+\cleartoleftpage
+
+\subfile{sections/0002}
+
+\cleartoleftpage
+
+\subfile{sections/0003}
+
+\cleartoleftpage
+
+\subfile{sections/0005}
+
+\cleartoleftpage
+
+\subfile{sections/0006}
+
+\cleartoleftpage
+
+\subfile{sections/0007}
+
+\cleartoleftpage
+
+\subfile{sections/0036}
+
+\cleartoleftpage
+
+\subfile{sections/0037}
+
+\cleartoleftpage
+
+\subfile{sections/0038}
+
+\cleartoleftpage
+
+\subfile{sections/0039}
+
+\cleartoleftpage
+
+\subfile{sections/0040}
+
+\cleartoleftpage
+
+\subfile{sections/0041}
+
+\cleartoleftpage
+
+\subfile{sections/0042}
+
+\cleartoleftpage
+
+\subfile{sections/0043}
+
+\cleartoleftpage
+
+\subfile{sections/0046}
+
+\cleartoleftpage
+
+\subfile{sections/0047}
+
+\cleartoleftpage
+
+\subfile{sections/0048}
+
+\cleartoleftpage
+
+\subfile{sections/0049}
+
+\cleartoleftpage
+
+\subfile{sections/0051}
+
+\cleartoleftpage
+
+\subfile{sections/0052}
+
+\cleartoleftpage
+
+\subfile{sections/0053}
+
+\cleartoleftpage
+
+\subfile{sections/0054}
+
+\cleartoleftpage
+
+\subfile{sections/0056}
+
+\cleartoleftpage
+
+\subfile{sections/0057}
+
+\cleartoleftpage
+
+\subfile{sections/0058}
+
+\cleartoleftpage
+
+\subfile{sections/0059}
+
+\cleartoleftpage
+
+\subfile{sections/0060}
+
+\cleartoleftpage
+
+\subfile{sections/0061}
+
+\cleartoleftpage
+
+\subfile{sections/0062}
+
+\cleartoleftpage
+
+\subfile{sections/0063}
+
+\cleartoleftpage
+
+\subfile{sections/0064}
+
+\cleartoleftpage
+
+\subfile{sections/0065}
+
+\cleartoleftpage
+
+\subfile{sections/0066}
+
+\cleartoleftpage
+
+\end{document}

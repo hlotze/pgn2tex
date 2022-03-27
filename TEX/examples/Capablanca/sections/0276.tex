@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Lasker, Edward $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Lasker, Edward vs. Capablanca, Jose Raul -- 0-1 -- E01}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A46 -- Indian: 1.d4 Nf6 2.Nf3 e6 3.g3 c5}
+\subsubsection{A46 -- Indian: 1.d4 Nf6 2.Nf3 e6 3.g3 c5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3 e6 3. g3 c5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pp1p1ppp/4pn2/2p5/3P4/5NP1/PPP1PP1P/RNBQKB1R w KQkq - 0 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c7-c5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Lake Hopatcong, Lake Hopatcong}}\\ 
+\multicolumn{2}{l}{1926 Round 6}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Lasker, Edward} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3 e6 3. g3 c5}\mainline{4. c4 cxd4 5. Nxd4 d5 6. Bg2 e5 7. Nf3 e4 8. Nfd2 dxc4 9. Qa4+ Bd7 10. Qxc4 e3 11. fxe3 Bc6 12. O-O Bxg2 13. Kxg2 Be7 14. Nc3 O-O 15. Nf3 Nbd7 16. e4 Rc8 17. Qb5 a6 18. Qf5 Rc5 19. Qf4 Rc4 20. Be3 Bc5 21. Nd2 Rb4 22. b3 Qe7 23. a3 Bxe3 24. Qxe3 Rb6 25. Rad1 Re6 26. b4 Rc8 27. Qd4 Rd6 28. Nd5 Nxd5 29. exd5 Qxe2+ 30. Kg1 Nf6 31. Nb3 Rxd5 32. Qf2 Qxd1 33. Rxd1 Rxd1+ 34. Kg2 Ng4 35. Qb6 h5 36. Nc5 Re8}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c8,e8},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c8-e8}]
+\newline
+36. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

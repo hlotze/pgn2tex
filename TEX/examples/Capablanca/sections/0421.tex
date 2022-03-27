@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Tartakower, Saviely $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Tartakower, Saviely vs. Capablanca, Jose Raul -- 1/2-1/2 -- A03}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A03 -- Bird Opening: Lasker Variation}
+\subsubsection{A03 -- Bird Opening: Lasker Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. f4 d5 2. e3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/ppp1pppp/8/3p4/5P2/4P3/PPPP2PP/RNBQKBNR b KQkq - 0 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e2,e3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e2-e3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Karlsbad, Karlsbad}}\\ 
+\multicolumn{2}{l}{1929}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Tartakower, Saviely} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. f4 d5 2. e3}\mainline{2...  g6 3. c4 Nf6 4. Nc3 Bg7 5. Nf3 O-O 6. Qb3 dxc4 7. Bxc4 Nc6 8. Ne5 e6 9. Nxc6 bxc6 10. d4 Qd6 11. Bd2 c5 12. Na4 Ne4 13. Nxc5 Nxc5 14. dxc5 Qc6 15. Bc3 Bxc3+ 16. Qxc3 Rd8 17. O-O Bb7 18. Rf2 Qxc5 19. Rc1 Rd7 20. Bf1 Qb6 21. Rd2 Rad8 22. Rcd1 Rxd2 23. Rxd2 Rxd2 24. Qxd2 Bd5 25. a3 f6 26. Qd4 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d2,d4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d2-d4}]
+\newline
+26.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

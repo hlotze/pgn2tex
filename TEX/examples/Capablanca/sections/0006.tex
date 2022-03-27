@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Corzo y Prinzipe, Juan $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Corzo y Prinzipe, Juan vs. Capablanca, Jose Raul -- 1/2-1/2 -- C25}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C25 -- Vienna: Hamppe-Allgaier Gambit}
+\subsubsection{C25 -- Vienna: Hamppe-Allgaier Gambit}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nc3 Nc6 3. f4 exf4 4. Nf3 g5 5. h4}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkbnr/pppp1p1p/2n5/6p1/4Pp1P/2N2N2/PPPP2P1/R1BQKB1R b KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={h2,h4},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h2-h4}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Havana, Havana m}}\\ 
+\multicolumn{2}{l}{1901 Round 6}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Corzo y Prinzipe, Juan} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nc3 Nc6 3. f4 exf4 4. Nf3 g5 5. h4}\mainline{5...  g4 6. Ng5 h6 7. Nxf7 Kxf7 8. d4 d5 9. exd5 Qe7+ 10. Be2 f3 11. gxf3 gxf3 12. O-O Qxh4 13. Bxf3 Nf6 14. Bh5+ Ke7 15. Qe2+ Kd8 16. Rxf6 Rg8+ 17. Rg6 Rxg6+ 18. Bxg6 Qg3+ 19. Qg2 Qe1+ 20. Qf1 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g2,f1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g2-f1}]
+\newline
+20.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

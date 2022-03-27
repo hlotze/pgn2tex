@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Marshall, Frank James $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Marshall, Frank James vs. Capablanca, Jose Raul -- 0-1 -- E11}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A46 -- Indian: 2.Nf3 e6}
+\subsubsection{A46 -- Indian: 2.Nf3 e6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3 e6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppp1ppp/4pn2/8/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e7,e6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e7-e6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Berlin, Berlin Tageblatt}}\\ 
+\multicolumn{2}{l}{1928}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Marshall, Frank James} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3 e6}\mainline{3. c4 Bb4+ 4. Bd2 Qe7 5. Nc3 b6 6. e3 Bxc3 7. Bxc3 Ne4 8. Rc1 Bb7 9. Bd3 O-O 10. O-O d6 11. Nd2 Nxc3 12. Rxc3 c5 13. dxc5 dxc5 14. Qh5 h6 15. f4 Nd7 16. e4 e5 17. Nf3 Rae8 18. Nh4 exf4 19. Rxf4 Qg5 20. Qf3 Ne5 21. Qf2 Nxd3 22. Rxd3 Rxe4 23. Rxe4 Bxe4 24. Re3 f5 25. h3 Rd8 26. a3 Rd1+ 27. Kh2 Qf6 28. Qf4 g5 29. Rg3 Kf8 30. Qb8+ Rd8 31. Qe5 Qxe5 32. Ng6+ Kf7 33. Nxe5+ Kf6}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f7,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f7-f6}]
+\newline
+33. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

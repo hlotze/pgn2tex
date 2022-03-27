@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Euwe, Max $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Euwe, Max -- 1-0 -- D17}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A46 -- Indian: 2.Nf3}
+\subsubsection{A46 -- Indian: 2.Nf3}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppppppp/5n2/8/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 2 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g1,f3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g1-f3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Amsterdam, Amsterdam m3}}\\ 
+\multicolumn{2}{l}{1931 Round 9}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Euwe, Max} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3}\mainline{2...  d5 3. c4 c6 4. Nc3 dxc4 5. a4 Bf5 6. Ne5 Nbd7 7. Nxc4 Qc7 8. g3 e5 9. dxe5 Nxe5 10. Bf4 Nfd7 11. Bg2 Be6 12. Nxe5 Nxe5 13. O-O Qa5 14. Ne4 Rd8 15. Qc2 Be7 16. b4 Bxb4 17. Qb2 f6 18. Rfb1 O-O 19. Bxe5 fxe5 20. Ng5 Bc3 21. Qc2 Bf5 22. Be4 g6 23. Qa2+ Kg7 24. Rxb7+ Rd7 25. Rab1 Qa6 26. Qb3 Rxb7 27. Qxb7+ Qxb7 28. Rxb7+ Kg8 29. Bxc6 Rd8 30. Rxa7 Rd6 31. Be4 Bd7 32. h4 Bd4 33. Ra8+ Kg7 34. e3 Bc3 35. Bf3 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e4,f3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e4-f3}]
+\newline
+35.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

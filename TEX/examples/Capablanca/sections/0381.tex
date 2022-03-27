@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Colle, Edgar $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Colle, Edgar -- 1-0 -- E22}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E22 -- Nimzo-Indian: Spielmann Variation}
+\subsubsection{E22 -- Nimzo-Indian: Spielmann Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qb3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/pppp1ppp/4pn2/8/1bPP4/1QN5/PP2PPPP/R1B1KBNR b KQkq - 3 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d1,b3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d1-b3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Budapest, Budapest}}\\ 
+\multicolumn{2}{l}{1929}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Colle, Edgar} & \textbf{0}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qb3}\mainline{4...  Bxc3+ 5. Qxc3 Ne4 6. Qc2 d5 7. Nf3 O-O 8. e3 Nc6 9. Be2 Re8 10. O-O e5 11. cxd5 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c4,d5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c4-d5}]
+\newline
+11.\,\xskakget{lan} ...
+\newline
+1-0
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -2,6 +2,7 @@
 import unittest
 
 from context import tex
+from context import config
 
 
 class TestTex(unittest.TestCase):

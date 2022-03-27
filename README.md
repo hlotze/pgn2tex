@@ -15,10 +15,9 @@
 
 
 For online studies a good starting point learning chess is [lichess.org](https://lichess.org/) or others.
-This approach provides a printout in B/W with more contrast as the colored PDFs at [lichess_puzzles_to_pdf](https://github.com/hlotze/lichess_puzzles_to_pdf).
 
 
-I am not quite sure  even the bigger PDFs are usefull, as we have free online and offline tools that let us interactively play (incl. analysis; see SCID etc.) the PGN files.
+I am not quite sure even the bigger PDFs are usefull, as we have free online and offline chess tools that let us interactively play the PGN files, incl. analysis; see SCID etc.
 
 
 That project allows me to play with all that free tools, we have today: Linux OS (Debian, Ubuntu), Github, VScode, Python3 / Jupyter, LaTeX, LibreOffice etc.
@@ -33,20 +32,28 @@ That project allows me to play with all that free tools, we have today: Linux OS
 - install a python3 (e.g. 3.9.5 or better)
 - clone / download that code from the repo
 - run the Python script `run_pgn2tex.py`; its will generate TeX files only at subdir `TEX/<pgn_filename>/`
-- install a TeX Live with its editor's TeX Maker or TeX Works
-- use your prefered TeX editor (TeX Maker, TeX Works, others) and generate the PDF file from a TeX file
+- at Ubuntu: install a **TeX Live** with its editor's TeX Maker or TeX Works,
+  - same with a Mac, 
+  - on Windows **MiKTeX**
+- use your prefered TeX editor (TeX Maker, TeX Works, Kile others) and generate the PDF file from a TeX file
 - or use batch mode aka 'hatless' command `latexmk --g -pdf` within your `TEX/<pgn_filename>/sections/` folder at the console prompt
+- e.g.: 
+  - 1st start at `TEX/<pgn_filename>/sections/` generating all PDF subfiles and check them - you may like to make some changes at some `.tex` files. 
+  - 2nd go to `TEX/<pgn_filename>/` and generate the main.pdf that collects all the subfiles, TOC, Players and Openings Index.
 
 ## Open item
 - [x] add ECO Opening diagram to each game's TeX
-- [x] collect all games' TeX files to multiple TeX file(s) using TeX `\subfile{}` machanism, so that we got one PDF 
-  - [x] add a TOC
-  - [x] add index about Playser and Openings
-  - [x] add PDF outline headline at `\section` (= Date, Event, Site), \subsection (= Players, Result, ECO)
+- [x] collect all games' TeX files to multiple TeX file(s) using TeX `\subfile{}` machanism, so that we got one (main.tex) and in subfolder `sections/` one `.tex` for each game.
+- [x] add a TOC
+- [x] add index about Players and Openings
+ - [x] add PDF outline headline at `\section` level [ Site, Event, Round, (Date) ], and  `\subsection` level [ Players, Result, ECO ]
+- [x] allow some options; see `config.py`
+  - [x] move_arrows = False (default); see `PDF/examples` **True**: 'Tarrasch7games.pdf', **False**: 'Carlsen8games.pdf' 
+  - [x] print_detailed_moves = True (default); change to False for games' one-pagers only; see `PDF/examples` **True**: 'WorldChamps1886.pdf', **False**: 'Capablanca.pdf'
 - [ ] complete testing
 - [ ] documentation, e.g. wiki 
 - [x] add different Openings `csv` to chose by renaming; only `eco.scv` will be used
-- [x] layout enhancements, in most cases 1st page shows the opening and the game moves after the opening in figurine long notation and the Opening, 2nd page give all game halfmoves' diagrams
+- [x] layout enhancements, in most cases the game's 1st page shows the opening and the game moves after the opening in tabular figurine long notation and the Opening, 2nd page give all game halfmoves' diagrams
 
 ## Contact
 [@hlotze](https://github.com/hlotze)

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Vilardebo Picurena, Jose $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Vilardebo Picurena, Jose vs. Capablanca, Jose Raul -- 0-1 -- E12}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A46 -- Indian: 2.Nf3 e6}
+\subsubsection{A46 -- Indian: 2.Nf3 e6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. Nf3 e6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppp1ppp/4pn2/8/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e7,e6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e7-e6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Barcelona, Barcelona}}\\ 
+\multicolumn{2}{l}{1929 Round 12}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Vilardebo Picurena, Jose} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. Nf3 e6}\mainline{3. c4 b6 4. Bg5 Bb7 5. e3 Be7 6. Nc3 Ne4 7. Bxe7 Qxe7 8. Bd3 Nxc3 9. bxc3 d6 10. e4 Nd7 11. O-O e5 12. Nd2 c5 13. d5 g5 14. a4 a5 15. Nb1 h5 16. Na3 O-O-O 17. Rb1 Kc7 18. Rb2 Ba6 19. Nc2 f5 20. f3 f4 21. Na3 Rdg8 22. Nb5+ Kb7 23. Kh1 g4 24. Be2 Nf6 25. Qb1 Qd8 26. Qc2 Rh6 27. Rfb1 Nd7 28. Rb3 Rhg6 29. Qb2 Ka8 30. Qc1 R8g7 31. Na3 Bc8 32. R1b2 Qf6 33. Qb1 Kb8 34. Rb5 Kc7 35. R5b3 Kd8 36. Nb5 Bb7 37. Na7 Ke8 38. Nc6 Bc8 39. Rxb6 Nxb6 40. Rxb6 Qh4 41. Rb8 Rc7 42. Na7 Rxa7 43. Rxc8+ Kf7 44. Kg1 Qe7 45. Qb8 Rb7 46. Rf8+ Qxf8 47. Qxb7+ Qe7 48. Qc8 Kg7 49. fxg4 Qh4 50. Qd7+ Kh6 51. h3 Qe1+ 52. Kh2 Qg3+ 53. Kh1 f3 54. Bxf3 hxg4 55. hxg4 Qf4 56. Qc8 Kg5 57. Kg1 Qe3+ 58. Kf1 Kf4 59. Qh8 Qc1+ 60. Kf2 Qd2+ 61. Kg1 Qe1+ 62. Kh2 Qg3+ 63. Kg1 Ke3 64. Qh5 Rf6 65. Qg5+ Rf4 66. Qh6 Kd3 67. Kh1 Rf7 68. Qc1 Rh7+ 69. Kg1 Qh2+ 70. Kf2 Qh4+ 71. g3 Qh2+ 72. Kf1 Rf7}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={h7,f7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={h7-f7}]
+\newline
+72. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

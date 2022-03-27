@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Rubinstein, Akiba $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Rubinstein, Akiba -- 1/2-1/2 -- D20}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! D20 -- QGA: 3.e4 c5}
+\subsubsection{D20 -- QGA: 3.e4 c5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 d5 2. c4 dxc4 3. e4 c5 4. Nf3}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkbnr/pp2pppp/8/2p5/2pPP3/5N2/PP3PPP/RNBQKB1R b KQkq - 1 4},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g1,f3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g1-f3}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Bad Kissingen, Bad Kissingen}}\\ 
+\multicolumn{2}{l}{1928 Round 3}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Rubinstein, Akiba} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 d5 2. c4 dxc4 3. e4 c5 4. Nf3}\mainline{4...  cxd4 5. Qxd4 Qxd4 6. Nxd4 Bd7 7. Bxc4 a6 8. Nc3 e6 9. O-O Nc6 10. Be3 Rc8 11. Be2 Nf6 12. Rac1 Be7 13. Rfd1 Nxd4 14. Bxd4 Bc6 15. f3 O-O 16. Kf2 Rfd8 17. Bb6 Rxd1 18. Nxd1 Bd7 19. Rxc8+ Bxc8 20. Ne3 Nd7 21. Bd4 b5 22. a3 Kf8 23. Nc2 e5 24. Ba7 Bc5+ 25. Bxc5+ Nxc5 26. b4 Na4 27. Ke3 Be6 28. Kd2 Ke7 29. Ne3 Kd6 30. Bd3 f6 31. Bc2 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d3,c2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d3-c2}]
+\newline
+31.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

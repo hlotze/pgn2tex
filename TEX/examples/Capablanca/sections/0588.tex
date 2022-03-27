@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Najdorf, Miguel $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Najdorf, Miguel -- 1/2-1/2 -- E34}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E34 -- Nimzo-Indian: Classical, Noa, 5.cxd5 Qxd5 6.Nf3 c5}
+\subsubsection{E34 -- Nimzo-Indian: Classical, Noa, 5.cxd5 Qxd5 6.Nf3 c5}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 d5 5. cxd5 Qxd5 6. Nf3 c5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnb1k2r/pp3ppp/4pn2/2pq4/1b1P4/2N2N2/PPQ1PPPP/R1B1KB1R w KQkq - 0 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c7-c5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Margate, Margate}}\\ 
+\multicolumn{2}{l}{1939 Round 3}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Najdorf, Miguel} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 d5 5. cxd5 Qxd5 6. Nf3 c5}\mainline{7. Bd2 Bxc3 8. Bxc3 Nc6 9. Rd1 O-O 10. a3 cxd4 11. Nxd4 Nxd4 12. Rxd4 Qc6 13. e4 e5 14. Rc4 Qe6 15. Rc5 Nd7 16. Rd5 Qg6 17. f3 Nb6 18. Rxe5 Be6 19. f4 Qh6 20. g3 Nd7 21. Rb5 b6 22. Be2 Nc5 23. b4 a6 24. Rxb6 Bb3 25. Rxh6 Bxc2 26. Rh5 Nxe4 27. Ba1 f5 28. O-O Nd2 29. Rf2 Rfc8 30. Bd4 g6 31. Rh4 Ne4 32. g4 Nxf2 33. Kxf2 a5 34. Bc5 axb4 35. axb4 Bb3 36. gxf5 Ra2 37. fxg6 hxg6 38. Rh3 Bc4 39. Re3 Kf7 40. Kf3 Bxe2+ 41. Rxe2 Rxe2 42. Kxe2 Ke6 43. Kf3 Kf5 44. Ke3 Rh8 45. Kd4 Rxh2 46. Kd5 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={d4,d5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d4-d5}]
+\newline
+46.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

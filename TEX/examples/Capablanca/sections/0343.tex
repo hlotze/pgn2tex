@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Capablanca, Jose Raul $\square$}
+\index{Players ! Nimzowitsch, Aaron  $\blacksquare$}
+\subsection{Capablanca, Jose Raul vs. Nimzowitsch, Aaron  -- 1/2-1/2 -- E34}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! E34 -- Nimzo-Indian: Classical, Noa Variation}
+\subsubsection{E34 -- Nimzo-Indian: Classical, Noa Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 d5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/ppp2ppp/4pn2/3p4/1bPP4/2N5/PPQ1PPPP/R1B1KBNR w KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={d7,d5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={d7-d5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Bad Kissingen, Bad Kissingen}}\\ 
+\multicolumn{2}{l}{1928 Round 10}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Nimzowitsch, Aaron } & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 d5}\mainline{5. Bg5 dxc4 6. Nf3 b5 7. a4 c6 8. Bxf6 gxf6 9. g3 a6 10. Bg2 Ra7 11. O-O Rd7 12. Qc1 O-O 13. Qh6 Bxc3 14. bxc3 Kh8 15. Nd2 f5 16. Rfb1 e5 17. Nf3 Rd6 18. Qe3 e4 19. Nd2 Nd7 20. g4 Nf6 21. gxf5 Bxf5 22. Qf4 Qd7 23. Bxe4 Nxe4 24. Nxe4 Rg6+ 25. Ng3 Bxb1 26. Rxb1 f5 27. f3 Qg7 28. Kf2 Qf6 29. axb5 cxb5 30. Rd1 Kg8 31. d5 Qxc3 32. d6 Qf6 33. d7 c3 34. Nxf5 c2 35. Rd6 Qd8 36. Qe5 Rxf5 37. Rxg6+ hxg6 38. Qe8+ Rf8 39. Qxg6+ }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e8,g6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e8-g6},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={g8}]
+\newline
+39.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

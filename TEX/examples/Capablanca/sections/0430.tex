@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Yates, Frederick $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Yates, Frederick vs. Capablanca, Jose Raul -- 1/2-1/2 -- C76}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C72 -- Spanish: Modern Steinitz, 5.O-O Bd7}
+\subsubsection{C72 -- Spanish: Modern Steinitz, 5.O-O Bd7}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. O-O Bd7}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r2qkbnr/1ppb1ppp/p1np4/4p3/B3P3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 2 6},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c8,d7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c8-d7}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Ramsgate, Ramsgate schev}}\\ 
+\multicolumn{2}{l}{1929 Round 7}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Yates, Frederick} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. O-O Bd7}\mainline{6. c3 g6 7. d4 Bg7 8. Be3 Nge7 9. c4 exd4 10. Nxd4 O-O 11. Nc3 Nxd4 12. Bxd4 Bxa4 13. Nxa4 Bxd4 14. Qxd4 Nc6 15. Qd2 Qf6 16. Rad1 Qe6 17. Qe2 f5 18. Nc3 fxe4 19. Nxe4 b5 20. b3 bxc4 21. bxc4 Rab8 22. Rfe1 Rb4 23. a3 Ra4 24. Qb2 Ne5 25. Nc5 dxc5 26. Rxe5 Qf6 27. Qe2 Rxa3 28. Re1 Rb3 29. h3 Rb6 30. Qe3 Rb2 31. f3 Qf4 32. Qxf4 Rxf4 33. Rxc5 Rf7 34. Ra1 Rd7 35. Rxa6 Rdd2 36. Rxc7 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={c5,c7},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c5-c7}]
+\newline
+36.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

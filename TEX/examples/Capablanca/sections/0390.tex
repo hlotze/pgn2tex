@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Steiner, Endre $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Steiner, Endre vs. Capablanca, Jose Raul -- 0-1 -- C71}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C71 -- Spanish: Modern Steinitz, Noah's Ark Trap}
+\subsubsection{C71 -- Spanish: Modern Steinitz, Noah's Ark Trap}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. d4 b5 6. Bb3 Nxd4 7. Nxd4 exd4 8. Qxd4 c5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkbnr/5ppp/p2p4/1pp5/3QP3/1B6/PPP2PPP/RNB1K2R w KQkq - 0 9},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={c7,c5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={c7-c5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Budapest, Budapest}}\\ 
+\multicolumn{2}{l}{1929}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Steiner, Endre} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. d4 b5 6. Bb3 Nxd4 7. Nxd4 exd4 8. Qxd4 c5}\mainline{9. Qd5 Be6 10. Qc6+ Bd7 11. Qd5 c4 12. Bxc4 bxc4 13. Qxc4 Nf6 14. Nc3 Be7 15. O-O O-O 16. a4 Be6 17. Qd3 Qa5 18. Bd2 Qh5 19. h3 Rfc8 20. b3 d5 21. exd5 Rd8 22. Qg3 Nxd5 23. Ne4 Bh4 24. Qh2 Nf6 25. Nd6 Qg6 26. Ba5 Rd7 27. c4 Ne4 28. Qf4 Bxf2+ 29. Rxf2 Nxf2 30. Kxf2 Rxd6 31. Qxd6 Qf6+ 32. Kg3 Qxa1}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={f6,a1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f6-a1}]
+\newline
+32. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Thomas, George Alan $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Thomas, George Alan vs. Capablanca, Jose Raul -- 0-1 -- C73}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C73 -- Spanish: Modern Steinitz, Alapin Variation}
+\subsubsection{C73 -- Spanish: Modern Steinitz, Alapin Variation}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. Bxc6+ bxc6 6. d4 f6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={r1bqkbnr/2p3pp/p1pp1p2/4p3/3PP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 7},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f7,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f7-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Nottingham, Nottingham}}\\ 
+\multicolumn{2}{l}{1936}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Thomas, George Alan} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. Bxc6+ bxc6 6. d4 f6}\mainline{7. Be3 Ne7 8. Nc3 Ng6 9. Qd2 Be6 10. b3 d5 11. O-O dxe4 12. Nxe4 Bd5 13. Ng3 Bxf3 14. gxf3 Nh4 15. Qd3 Nxf3+ 16. Kh1 Nxd4 17. Qe4 Qd5 18. Qxd5 cxd5 19. Bxd4 exd4 20. Rad1 Bc5 21. Nf5 Kf7 22. Nxd4 Rhe8 23. c3 Re5 24. Rd3 Rae8 25. a4 Bxd4 26. Rxd4 c5 27. Rd2 Rb8 28. Rb1 a5 29. Kg2 Ke6 30. Rc2 Kd6 31. f3 g5 32. Kg3 h5 33. h4 gxh4+ 34. Kxh4 Re3 35. Kg3 c4 36. b4 axb4 37. cxb4 Rb3}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={e3,b3},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e3-b3}]
+\newline
+37. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

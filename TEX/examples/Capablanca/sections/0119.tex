@@ -1,0 +1,66 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Gunsberg, Isidor $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Gunsberg, Isidor vs. Capablanca, Jose Raul -- 0-1 -- C33}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! C33 -- KGA: Bishop's Gambit, Paulsen Attack}
+\subsubsection{C33 -- KGA: Bishop's Gambit, Paulsen Attack}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 e5 2. f4 exf4 3. Bc4 Nf6 4. Nc3 Bb4 5. e5}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqk2r/pppp1ppp/5n2/4P3/1bB2p2/2N5/PPPP2PP/R1BQK1NR b KQkq - 0 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={e4,e5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={e4-e5}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{St Petersburg, St Petersburg prel}}\\ 
+\multicolumn{2}{l}{1914}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Gunsberg, Isidor} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 e5 2. f4 exf4 3. Bc4 Nf6 4. Nc3 Bb4 5. e5}\mainline{5...  d5 6. Bb3 Ne4 7. Nf3 c6 8. Qe2 Bxc3 9. dxc3 g5 10. Nd2 Bf5 11. Nxe4 Bxe4 12. Bd2 Nd7 13. c4 Qe7 14. cxd5 cxd5 15. Bc3 O-O-O 16. e6 Nf6 17. exf7 Qxf7 18. O-O-O Rhe8 19. h4 h6 20. hxg5 hxg5 21. Rh6 Re6 22. Bxf6 Rxf6 23. Qg4+ Rf5 24. Rdh1 f3 25. Rh7 fxg2 26. R1h6 g1=Q+}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g2,g1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g2-g1},
+       pgfstyle=circle,
+       color=BrickRed,
+       markfield={c1}]
+\newline
+26. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

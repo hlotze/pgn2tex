@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Euwe, Max $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Euwe, Max vs. Capablanca, Jose Raul -- 1/2-1/2 -- A30}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! A05 -- Reti Opening: 1...Nf6}
+\subsubsection{A05 -- Reti Opening: 1...Nf6}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. Nf3 Nf6}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rnbqkb1r/pppppppp/5n2/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 2 2},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={g8,f6},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g8-f6}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{Bad Kissingen, Bad Kissingen}}\\ 
+\multicolumn{2}{l}{1928 Round 7}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Euwe, Max} & \textbf{1/2}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1/2}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. Nf3 Nf6}\mainline{2. c4 c5 3. g3 b6 4. Bg2 Bb7 5. O-O g6 6. d4 cxd4 7. Nxd4 Bxg2 8. Kxg2 Bg7 9. Nc3 O-O 10. Bg5 Nc6 11. Nxc6 dxc6 12. Qxd8 Rfxd8 13. Rad1 Kf8 14. Rxd8+ Rxd8 15. Bxf6 Bxf6 16. Rd1 Ke8 17. Rxd8+ Kxd8 18. Nd1 Kd7 19. Kf3 Kd6 20. Ke3 Kc5 21. Kd3 Kb4 22. f4 e5 23. e4 exf4 24. gxf4 Bg7 25. e5 Bh6 26. Ne3 Bxf4 27. Nc2+ Ka5 28. Ke4 Bxh2 29. Nd4 Kb4 30. Nxc6+ Kxc4 31. Nd8 Bxe5 32. Kxe5 Kd3 33. Nxf7 Kc2 34. b4 Kc3 35. b5 Kb4 36. Nd6 h5 37. Kf4 Kc5 38. Nc8 Kxb5 39. Nxa7+ Kb4 40. Nc8 b5 41. Ne7 Ka3 42. Nxg6 Kxa2 43. Ne5 }
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={g6,e5},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={g6-e5}]
+\newline
+43.\,\xskakget{lan} ...
+\newline
+1/2-1/2
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}

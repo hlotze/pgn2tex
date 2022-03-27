@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\index{Players ! Chajes, Oscar $\square$}
+\index{Players ! Capablanca, Jose Raul $\blacksquare$}
+\subsection{Chajes, Oscar vs. Capablanca, Jose Raul -- 0-1 -- B01}
+\begin{multicols*}{2}
+
+% Game's Opening ECO data
+\index{Openings ! B01 -- Scandinavian: Marshall, 4.Nf3 Bg4 5.Be2}
+\subsubsection{B01 -- Scandinavian: Marshall, 4.Nf3 Bg4 5.Be2}
+\begin{flushleft}
+\newchessgame[id=eco]
+\longmoves
+\mainline{1. e4 d5 2. exd5 Nf6 3. d4 Nxd5 4. Nf3 Bg4 5. Be2}
+\begin{center}
+\begin{tabular}{C{60mm}}
+\chessboard[setfen={rn1qkb1r/ppp1pppp/8/3n4/3P2b1/5N2/PPP1BPPP/RNBQK2R b KQkq - 3 5},
+             pgfstyle=border,
+             color=YellowGreen,
+             markfields={f1,e2},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={f1-e2}]
+\newline
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\printmovercolor{\xskakgetgame{lastplayer}}
+\end{tabular}
+\end{center}
+% PGN tags
+\begin{tabular}{L{60mm} R{10mm}}
+\multicolumn{2}{l}{\textbf{New York, New York}}\\ 
+\multicolumn{2}{l}{1915 Round 12}\\[3mm]
+\textbf{$\square$ \hspace{2mm} Chajes, Oscar} & \textbf{0}\\ 
+\textbf{$\blacksquare$ \hspace{2mm} Capablanca, Jose Raul} & \textbf{1}\\ 
+\end{tabular}
+
+% Game's final diagram and result
+\newchessgame[id=overview]
+\longmoves
+\hidemoves{1. e4 d5 2. exd5 Nf6 3. d4 Nxd5 4. Nf3 Bg4 5. Be2}\mainline{5...  c6 6. O-O e6 7. c4 Nf6 8. Nc3 Nbd7 9. h3 Bh5 10. Bf4 Nb6 11. Qd3 Be7 12. Rad1 O-O 13. Ne5 Bxe2 14. Qxe2 Nc8 15. Rd3 Qa5 16. a3 Nd6 17. Bg5 Rad8 18. Rfd1 Qa6 19. c5 Nf5 20. Qf3 Nd5 21. Nxd5 Rxd5 22. Bxe7 Nxe7 23. Qe4 Ng6 24. f4 Rfd8 25. Kh2 Nxe5 26. fxe5 b6 27. cxb6 axb6 28. Rg3 c5 29. Qh4 g6 30. Rf1 Qxf1}
+
+\begin{center}
+\begin{tabular}{C{60mm}}
+\xskakset{moveid=\xskakgetgame{lastmoveid}}
+\chessboard[setfen=\xskakget{nextfen},
+       pgfstyle=border,
+       color=YellowGreen,
+       markfields={a6,f1},
+             pgfstyle=straightmove,
+             color=YellowGreen,
+             markmoves={a6-f1}]
+\newline
+30. ...\,\xskakget{lan}
+\newline
+0-1
+\end{tabular}
+\end{center}
+\end{flushleft}
+\end{multicols*}
+\newpage
+\end{document}
