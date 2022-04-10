@@ -7,6 +7,7 @@ import pandas as pd
 import eco
 import pgn
 import tex
+import config
 
 def main():
     """Return the generated tex files"""
@@ -16,103 +17,106 @@ def main():
         sys.exit(1)
     file_names_list = pgn.get_pgnfile_names_from_dir(pgn_dir=pgn_dir)
 
-    for fname in file_names_list:
-        try:
-            # check if file exists
-            file_obj = open(fname, 'r')
-            file_obj.close()
+    if config.analyse_games == True:
+        pgn.process_pgns_analysis(file_names_list)
 
-        except IOError:
-            print("File not accessible: ", fname)
-            continue
-        finally:
-            file_obj.close()
+    if config.generate_games_tex == True:
+        for fname in file_names_list:
+            try:
+                # check if file exists
+                file_obj = open(fname, 'r')
+                file_obj.close()
 
-        tex.mk_subdirs(fname, 'TEX/')
+            except IOError:
+                print("File not accessible: ", fname)
+                continue
+            finally:
+                file_obj.close()
 
-        # start to get the games out of one pgn file
-        games_df = pgn.get_games_from_pgnfile(fname)
+            tex.mk_subdirs(fname, 'TEX/')
 
-        games_df['Round4sort'] = games_df['Round'].apply(tex.prep_round4sort)
-        games_df['Date'] = games_df['Date'].apply(tex.prep_date)
-        games_df.sort_values(by=['Date', 'Site', 'Event', 'Round4sort'], inplace=True)
+            # start to get the games out of one pgn file
+            games_df = pgn.get_games_from_pgnfile(fname)
 
-        print(str(len(games_df)) + ' games read at ' + fname)
+            games_df['Round4sort'] = games_df['Round'].apply(tex.prep_round4sort)
+            games_df['Date'] = games_df['Date'].apply(tex.prep_date)
+            games_df.sort_values(by=['Date', 'Site', 'Event', 'Round4sort'], inplace=True)
 
-        section_subfile_list = []
-        for game_nr, row in games_df.iterrows():
-            one_game_dict = row.to_dict()
+            print(str(len(games_df)) + ' games read at ' + fname)
 
-            section_heading = ''
-            if one_game_dict['Site'] not in ['', ' ', '?', '*']:
-                section_heading = one_game_dict['Site'] + ', '
-            
-            if one_game_dict['Round'] not in ['', ' ', '?', '*']:
-                section_heading += one_game_dict['Event'] + ', Round ' + \
-                    one_game_dict['Round'] + ' (' + \
-                    one_game_dict['Date'] + ')'
+            section_subfile_list = []
+            for game_nr, game_s in games_df.iterrows():
+
+                section_heading = ''
+                if game_s['Site'] not in ['', ' ', '?', '*']:
+                    section_heading = game_s['Site'] + ', '
+                
+                if game_s['Round'] not in ['', ' ', '?', '*']:
+                    section_heading += game_s['Event'] + ', Round ' + \
+                        game_s['Round'] + ' (' + \
+                        game_s['Date'] + ')'
+                else:
+                    section_heading += game_s['Event'] + ' (' + \
+                        game_s['Date'] + ')'
+
+                if game_s['pgn'] == '':
+                    pgn_available = False
+                else:
+                    pgn_available = True
+
+                eco_result_dict = {}
+                if pgn_available == True:
+                    try:
+                        if 'ECO' in game_s.keys():
+                            eco_result_dict = eco.get_eco_data_for(
+                                eco=game_s['ECO'],
+                                pgn=game_s['pgn'])
+                        else:
+                            eco_result_dict = eco.get_eco_data_for(
+                                eco='',
+                                pgn=game_s['pgn'])
+                    except AttributeError as err:
+                        eco_result_dict = {}
+                        # print(f"\nUnexpected {err=}, {type(err)=}")
+                        # print('no docx will be generated for game, as there is no pgn')
+                        # print(one_game_dict)
+                        # print('\n')
+                        # continue
+
+                chessboard_pgn_df = pgn.prep_game_data_from_pgn(game_s['pgn'])
+
+                tex_data = tex.gen_tex_data(game_s,
+                                            eco_result_dict,
+                                            pgn_available,
+                                            chessboard_pgn_df)
+
+                num_of_games = len(games_df)
+                str_len_num_of_games = len(str(num_of_games))
+                fn = str("0" * (str_len_num_of_games + 1)) + str(game_nr + 1)
+                fn = fn[((str_len_num_of_games + 1) * -1):]
+                tex_fn =  os.path.join(f'TEX/'+fname.split("/")[1].split(".")[0]+'/sections/', fn + '.tex')
+
+                ret_dict = tex.store_tex_document(tex_data, tex_fn)
+                print('stored:', ret_dict['file_name'])
+
+                section_subfile_list.append({
+                        'section' : section_heading,
+                        'subfile' : tex_fn
+                    })
+
+            # generate the master tex file
+            ret_dict = tex.generate_master_tex(fname, 'TEX/', section_subfile_list)
+            print('stored:', ret_dict['file_name'], '\n')
+
+            if len(games_df) > 250:
+                print(fname + ' has ' + str(len(games_df)) + ' > 250')
+                print('each tex-file will compile to a pdf-file, but')
+                print('main.tex compilation may fail with standard')
+                print('sizing in Tex live env using latexmk --g -pdf\n')
             else:
-                section_heading += one_game_dict['Event'] + ' (' + \
-                    one_game_dict['Date'] + ')'
-
-            if one_game_dict['pgn'] == '':
-                pgn_available = False
-            else:
-                pgn_available = True
-
-            eco_result_dict = {}
-            if pgn_available == True:
-                try:
-                    if 'ECO' in one_game_dict.keys():
-                        eco_result_dict = eco.get_eco_data_for(
-                            eco=one_game_dict['ECO'],
-                            pgn=one_game_dict['pgn'])
-                    else:
-                        eco_result_dict = eco.get_eco_data_for(
-                            eco='',
-                            pgn=one_game_dict['pgn'])
-                except AttributeError as err:
-                    eco_result_dict = {}
-                    # print(f"\nUnexpected {err=}, {type(err)=}")
-                    # print('no docx will be generated for game, as there is no pgn')
-                    # print(one_game_dict)
-                    # print('\n')
-                    # continue
-
-            chessboard_pgn_df = pgn.prep_game_data_from_pgn(one_game_dict['pgn'])
-
-            tex_data = tex.gen_tex_data(one_game_dict,
-                                        eco_result_dict,
-                                        pgn_available,
-                                        chessboard_pgn_df)
-
-            num_of_games = len(games_df)
-            str_len_num_of_games = len(str(num_of_games))
-            fn = str("0" * (str_len_num_of_games + 1)) + str(game_nr + 1)
-            fn = fn[((str_len_num_of_games + 1) * -1):]
-            tex_fn =  os.path.join(f'TEX/'+fname.split("/")[1].split(".")[0]+'/sections/', fn + '.tex')
-
-            ret_dict = tex.store_tex_document(tex_data, tex_fn)
-            print('stored:', ret_dict['file_name'])
-
-            section_subfile_list.append({
-                    'section' : section_heading,
-                    'subfile' : tex_fn
-                })
-
-        # generate the master tex file
-        ret_dict = tex.generate_master_tex(fname, 'TEX/', section_subfile_list)
-        print('stored:', ret_dict['file_name'], '\n')
-
-        if len(games_df) > 250:
-            print(fname + ' has ' + str(len(games_df)) + ' > 250')
-            print('each tex-file will compile to a pdf-file, but')
-            print('main.tex compilation may fail with standard')
-            print('sizing in Tex live env using latexmk --g -pdf\n')
-        else:
-            print('goto [TEX/<subdir of the pgn-file_name>/sections/] and')
-            print('e.g. start TEX to PDF processing in hatless mode by')
-            print('latexmk --g -pdf (see latexmk --help)\n')
+                print('goto [TEX/<subdir of the pgn-file_name>/sections/] and')
+                print('e.g. start TEX to PDF processing in hatless mode by')
+                print('latexmk --g -pdf (see latexmk --help)\n')
 
 
 if __name__ == '__main__':

@@ -9,11 +9,13 @@ import io
 import os
 import os.path
 import re
+import asyncio
 
 import warnings
 
 import chess
 import chess.pgn
+import chess.engine
 import numpy as np
 import pandas as pd
 
@@ -140,6 +142,37 @@ def prep_game_data_from_pgn(pgn_str: str) -> pd.DataFrame:
             half_moves_df = half_moves_df.append(move_dict, ignore_index=True)
 
         return half_moves_df
+
+
+def process_pgn_analysis(pgn: str):
+    """processes foreach halfmove to analysis"""
+    return()
+
+
+def process_pgns_analysis(fnames_list: list):
+    """Processes the pgns analysis"""
+    # see
+    #  https://python-chess.readthedocs.io/en/latest/engine.html
+    #
+    for fname in fnames_list:
+        try:
+            # check if file exists
+            file_obj = open(fname, 'r')
+            file_obj.close()
+
+        except IOError:
+            print("File not accessible: ", fname)
+            continue
+        finally:
+            file_obj.close()
+
+        # start to get the games out of one pgn file
+        games_df = get_games_from_pgnfile(fname)
+
+        for _, game_s in games_df.iterrows():
+            print(str(_), 'of', str(len(games_df)) , game_s['pgn'])
+            process_pgn_analysis(game_s['pgn'])  
+    return() 
 
 
 def main():

@@ -9,6 +9,7 @@ python-chess = "*"
 numpy = "*"
 chess = "*"
 jupyter = "*"
+matplotlib = "*"
 
 [dev-packages]
 autopep8 = "*"

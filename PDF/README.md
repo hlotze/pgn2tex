@@ -1,0 +1,1 @@
+PDF examples of the PGN examples, see subfolder `examples`

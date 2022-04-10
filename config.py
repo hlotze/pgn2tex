@@ -30,3 +30,18 @@ move_arrows = False # default
 print_detailed_moves = True # default
 #print_detailed_moves = False
 
+# not implemented, so let it False
+include_game_score = False # default
+#include_game_score = True
+
+
+# for future features
+# not implemented
+analyse_games = False
+generate_games_tex = True
+
+# generation of games details by TeX while
+# no King in check (sq_check) marked
+# no Game Result at last diagram
+#use_TeX_while_4_details = True
+use_TeX_while_4_details = False # default

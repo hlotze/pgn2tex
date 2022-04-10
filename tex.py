@@ -83,78 +83,110 @@ def gen_digram_table(white: str,
         out += '\\hline\n' + \
             '\\endhead\n\n'
 
-    cb_arr = gen_list(len(game_data_df), cols)
+    if config.use_TeX_while_4_details == True:
+        # games details by while at TeX file
+        # but not sq_check will be marked
+        out += '%init theGame start position\n' + \
+            '\\xskakset{id=theGame, moveid=\\xskakgetgame{initmoveid}}\n' + \
+            '\n' + \
+            '%as long as we have a moveid\n' + \
+            '\\whiledo{\\xskaktestmoveid{\\xskakget{movenr}}{\\xskakget{player}}}\n' + \
+            '{%begin block\n' + \
+            '	\\ifthenelse{\\equal{\\xskakget{player}}{w}}\n' + \
+            '	{% w_hite player\n' + \
+            '		\\chessboard[setfen=\\xskakget{nextfen},\n' + \
+            '					pgfstyle=border,\n' + \
+            '			        color=YellowGreen,\n' + \
+            '			        markfields={\\xskakget{movefrom},\\xskakget{moveto}}]\n' + \
+            '		\\newline\n' + \
+            '		\\xskakget{movenr}.\\,\\xskakget{lan} ... &\n' + \
+            '	}%\n' + \
+            '	{% b_lack player\n' + \
+            '		\\chessboard[setfen=\\xskakget{nextfen},\n' + \
+            '					pgfstyle=border,\n' + \
+            '			        color=YellowGreen,\n' + \
+            '			        markfields={\\xskakget{movefrom},\\xskakget{moveto}}]\n' + \
+            '		\\newline\n' + \
+            '		\\xskakget{movenr}. ... \\,\\xskakget{lan} \\\\ \n' + \
+            '	}%\n' + \
+            '	\\xskakset{stepmoveid}\n' + \
+            '}%end block\n'
 
-    for cnt, row_s in game_data_df.iterrows():
-        data = row_s.to_dict()
-        cb_arr[cnt] = '% ' + data['lan_str'] + '\n' + \
-               '\\xskakset{moveid=' + data['moveid'] + '}\n' + \
-               '\\chessboard[setfen=\\xskakget{nextfen},\n' + \
-               '             pgfstyle=border,\n' + \
-               '             color=YellowGreen,\n' + \
-               '             markfields={' + \
-               data['sq_from'] + ',' + data['sq_to'] + '}'
+    else:
+        # games details writen by python script to 
+        # TeX file
+        cb_arr = gen_list(len(game_data_df), cols)
 
-        # arrows that shows the moves 
-        # are in most cases to much at 
-        # the diagrams
-        if config.move_arrows == True:
-            cb_arr[cnt] += ',\n' + \
-                '             pgfstyle=straightmove,\n' + \
+        for cnt, row_s in game_data_df.iterrows():
+            data = row_s.to_dict()
+            cb_arr[cnt] = '% ' + data['lan_str'] + '\n' + \
+                '\\xskakset{moveid=' + data['moveid'] + '}\n' + \
+                '\\chessboard[setfen=\\xskakget{nextfen},\n' + \
+                '             pgfstyle=border,\n' + \
                 '             color=YellowGreen,\n' + \
-                '             markmoves={' + \
-                data['sq_from'] + '-' + data['sq_to'] + '}'
+                '             markfields={' + \
+                data['sq_from'] + ',' + data['sq_to'] + '}'
 
-        # but a king in check will 
-        # will mark
-        if data['sq_check'] != '':
-            cb_arr[cnt]  += ',\n' + \
-               '             pgfstyle=circle,\n' + \
-               '             color=BrickRed,\n' + \
-               '             markfield={' + data['sq_check'] + '}]\n'
-        else:
-            cb_arr[cnt] += ']\n'
+            # arrows that shows the moves 
+            # are in most cases to much at 
+            # the diagrams
+            if config.move_arrows == True:
+                cb_arr[cnt] += ',\n' + \
+                    '             pgfstyle=straightmove,\n' + \
+                    '             color=YellowGreen,\n' + \
+                    '             markmoves={' + \
+                    data['sq_from'] + '-' + data['sq_to'] + '}'
 
-        if (cnt + 1) % cols > 0:
-            if data['moveid'][-1] == 'w':
-                cb_arr[cnt] += '\\newline\n' + \
-                    data['moveid'][0:-1] + \
-                    '.\\,\\xskakget{lan} ...\n'
+            # but a king in check will 
+            # will mark
+            if data['sq_check'] != '':
+                cb_arr[cnt]  += ',\n' + \
+                '             pgfstyle=circle,\n' + \
+                '             color=BrickRed,\n' + \
+                '             markfield={' + data['sq_check'] + '}]\n'
             else:
-                cb_arr[cnt] += '\\newline\n' + \
-                    data['moveid'][0:-1] + \
-                    '. ...\\,\\xskakget{lan}\n'
-            if len(game_data_df) == cnt + 1:
-                cb_arr[cnt] += '\\newline\n' + \
-                    result + '\n'
-            cb_arr[cnt] += '& \n'
+                cb_arr[cnt] += ']\n'
 
-        else:
-            if data['moveid'][-1] == 'w':
-                cb_arr[cnt] += '\\newline\n' + \
-                    data['moveid'][0:-1] + \
-                    '.\\,\\xskakget{lan} ...\n'
-            else:
-                cb_arr[cnt] += '\\newline\n' + \
-                    data['moveid'][0:-1] + \
-                    '. ...\\,\\xskakget{lan}\n'
-            if len(game_data_df) == cnt + 1:
-                cb_arr[cnt] += '\\newline\n' + \
-                    result + '\n'
-            cb_arr[cnt] += '\\\\ \n\n'
-
-    # put arrays to out
-    rows = int(len(cb_arr)/cols)
-    cb_arr = np.reshape(cb_arr, (rows, cols))
-    for ze in range(rows):
-        for sp in range(cols):
-            if cb_arr[ze, sp] != '':            
-                out += cb_arr[ze, sp]
-            else:
-                if sp < cols -1:
-                    out += '& \n'
+            if (cnt + 1) % cols > 0:
+                if data['moveid'][-1] == 'w':
+                    cb_arr[cnt] += '\\newline\n' + \
+                        data['moveid'][0:-1] + \
+                        '.\\,\\xskakget{lan} ...\n'
                 else:
-                    out += '\\\\ \n'
+                    cb_arr[cnt] += '\\newline\n' + \
+                        data['moveid'][0:-1] + \
+                        '. ...\\,\\xskakget{lan}\n'
+                if len(game_data_df) == cnt + 1:
+                    cb_arr[cnt] += '\\newline\n' + \
+                        result + '\n'
+                cb_arr[cnt] += '& \n'
+
+            else:
+                if data['moveid'][-1] == 'w':
+                    cb_arr[cnt] += '\\newline\n' + \
+                        data['moveid'][0:-1] + \
+                        '.\\,\\xskakget{lan} ...\n'
+                else:
+                    cb_arr[cnt] += '\\newline\n' + \
+                        data['moveid'][0:-1] + \
+                        '. ...\\,\\xskakget{lan}\n'
+                if len(game_data_df) == cnt + 1:
+                    cb_arr[cnt] += '\\newline\n' + \
+                        result + '\n'
+                cb_arr[cnt] += '\\\\ \n\n'
+
+        # put arrays to out
+        rows = int(len(cb_arr)/cols)
+        cb_arr = np.reshape(cb_arr, (rows, cols))
+        for ze in range(rows):
+            for sp in range(cols):
+                if cb_arr[ze, sp] != '':            
+                    out += cb_arr[ze, sp]
+                else:
+                    if sp < cols -1:
+                        out += '& \n'
+                    else:
+                        out += '\\\\ \n'
 
     out += '\n\\end{longtable}\n'
 
@@ -363,7 +395,7 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
     if config.print_detailed_moves == True:
         if pgn_available == True:
             out += "% Game's diagrams\n" + \
-                '\\newchessgame\n' + \
+                '\\newchessgame[id=theGame]\n' + \
                 '\\hidemoves{' + pgn_dict['pgn'] + '}\n' + \
                 '\n'
 
