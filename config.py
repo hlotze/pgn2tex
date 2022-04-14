@@ -42,6 +42,5 @@ generate_games_tex = True
 
 # generation of games details by TeX while
 # no King in check (sq_check) marked
-# no Game Result at last diagram
-#use_TeX_while_4_details = True
+# use_TeX_while_4_details = True
 use_TeX_while_4_details = False # default

@@ -77,8 +77,8 @@ def gen_digram_table(white: str,
         out += '\\begin{longtable}{C{53mm} C{53mm} | R{51mm}}\n'
 
         out += '\\hline\n' + \
-            '$\\square$ \\hspace{2mm} ' + white + ' & ' + \
-            '$\\blacksquare$ \\hspace{2mm} ' +  black + \
+            '$\\square$ \\hspace{2mm} \\XskaktheGamewhite & ' + \
+            '$\\blacksquare$ \\hspace{2mm} \\XskaktheGameblack' + \
             ' & Your Comment \\\\ \n'
         out += '\\hline\n' + \
             '\\endhead\n\n'
@@ -87,7 +87,7 @@ def gen_digram_table(white: str,
         # games details by while at TeX file
         # but not sq_check will be marked
         out += '%init theGame start position\n' + \
-            '\\xskakset{id=theGame, moveid=\\xskakgetgame{initmoveid}}\n' + \
+            '\\xskakset{moveid=\\xskakgetgame{initmoveid}}\n' + \
             '\n' + \
             '%as long as we have a moveid\n' + \
             '\\whiledo{\\xskaktestmoveid{\\xskakget{movenr}}{\\xskakget{player}}}\n' + \
@@ -99,7 +99,9 @@ def gen_digram_table(white: str,
             '			        color=YellowGreen,\n' + \
             '			        markfields={\\xskakget{movefrom},\\xskakget{moveto}}]\n' + \
             '		\\newline\n' + \
-            '		\\xskakget{movenr}.\\,\\xskakget{lan} ... &\n' + \
+            '		\\xskakget{movenr}.\\,\\xskakget{lan} ... \n' + \
+            '       \\ifthenelse{\\equal{\\xskakget{moveid}}{\\finalmoveid}}\n' + \
+            '       {\\newline \\textbf{\\XskaktheGameresult}}{} &\n' + \
             '	}%\n' + \
             '	{% b_lack player\n' + \
             '		\\chessboard[setfen=\\xskakget{nextfen},\n' + \
@@ -107,7 +109,9 @@ def gen_digram_table(white: str,
             '			        color=YellowGreen,\n' + \
             '			        markfields={\\xskakget{movefrom},\\xskakget{moveto}}]\n' + \
             '		\\newline\n' + \
-            '		\\xskakget{movenr}. ... \\,\\xskakget{lan} \\\\ \n' + \
+            '		\\xskakget{movenr}. ... \\,\\xskakget{lan}\n' + \
+            '       \\ifthenelse{\\equal{\\xskakget{moveid}}{\\finalmoveid}}\n' + \
+            '       {\\newline \\textbf{\\XskaktheGameresult}}{} \\\\ \n' + \
             '	}%\n' + \
             '	\\xskakset{stepmoveid}\n' + \
             '}%end block\n'
@@ -228,8 +232,10 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
     """Return the tex data of a game; to be stored as a tex file"""
     out = '\\documentclass[../main.tex]{subfiles}\n' + \
         '\n' + \
-        '\\begin{document}\n' + \
-        '\n' + \
+        '\\begin{document}\n'
+    if config.use_TeX_while_4_details == True:
+        out += '\\newcommand\\finalmoveid{}\n'
+    out += '\n' + \
         '\\index{Players ! ' + pgn_dict['White'] + ' $\\square$' + '}\n' + \
         '\\index{Players ! ' + pgn_dict['Black'] + ' $\\blacksquare$' + '}\n' + \
         '\\subsection{' + pgn_dict['White'] + ' vs. ' + pgn_dict['Black'] + ' -- ' + \
@@ -394,8 +400,18 @@ def gen_tex_data(pgn_dict: dict, eco_dict: dict, pgn_available: bool, game_data_
             
     if config.print_detailed_moves == True:
         if pgn_available == True:
+            if config.use_TeX_while_4_details == True:
+                out += '% with the definition of the above \\newchessgame[id=overview]\n' + \
+                    '% we now have the \\finalmoveid as the \\xskakgetgame{lastmoveid}\n' + \
+                    '% which will be used below for putting the result\n' + \
+                    '% below the last diagramm\n' + \
+                    '\\renewcommand{\\finalmoveid}{\\xskakgetgame{lastmoveid}}\n\n'
+
             out += "% Game's diagrams\n" + \
-                '\\newchessgame[id=theGame]\n' + \
+                '\\newchessgame[id={theGame}\n' + \
+                '               ,result={' + pgn_dict['Result'] + '}\n' + \
+                '               ,white={' + pgn_dict['White'] + '}\n' + \
+                '               ,black={' + pgn_dict['Black'] + '}]\n\n' + \
                 '\\hidemoves{' + pgn_dict['pgn'] + '}\n' + \
                 '\n'
 
