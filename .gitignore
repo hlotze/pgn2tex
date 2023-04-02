@@ -9,3 +9,4 @@ my_snippets.ipynb
 *.fls
 *.log
 *.synctex.gz
+Pipfile.lock
